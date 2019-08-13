@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"PPP",
+		"P P",
+		"   "
+	],
+	
+	"key":
+	{
+		"P": { "item": "easy_steel:steel_plate" }	
+	},
+	
+	"result": { "item": "easy_steel:armor_steel_head" }
+}

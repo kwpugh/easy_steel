@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"AA ",
+		"AA ",
+		"   "
+	],
+	
+	"key":
+	{
+		"A": { "item": "easy_steel:steel_ingot"  }
+	},
+	
+	"result": { "item": "easy_steel:steel_plate",
+	"count": 4
+	}
+}

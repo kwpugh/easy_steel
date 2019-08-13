@@ -1,0 +1,21 @@
+{
+	
+	"item.easy_steel.carbon": "Carbon",
+	"item.easy_steel.steel_ingot": "Steel Ingot",
+	"item.easy_steel.raw_steel": "Raw Steel",
+	
+	"item.easy_steel.steel_plate": "Steel Plate",
+	"item.easy_steel.steel_rod": "Steel Rod",
+	
+	"item.easy_steel.steel_sword": "Steel Sword",
+	"item.easy_steel.steel_pickaxe": "Steel Pickaxe",
+	"item.easy_steel.steel_axe": "Steel Axe",
+	"item.easy_steel.steel_shovel": "Steel Shovel",
+	
+	"item.easy_steel.armor_steel_head": "Steel Helmet",
+	"item.easy_steel.armor_steel_body": "Steel Chestplate",
+	"item.easy_steel.armor_steel_leggings": "Steel Leggings",
+	"item.easy_steel.armor_steel_boots": "Steel Boots",
+		
+	"itemGroup.easy_steel": "Easy Steel"
+}
