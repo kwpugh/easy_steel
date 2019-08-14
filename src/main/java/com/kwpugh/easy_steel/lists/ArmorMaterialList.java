@@ -12,9 +12,9 @@ import net.minecraft.util.SoundEvent;
 public enum ArmorMaterialList implements IArmorMaterial
 {
 	//Armor order: helmet, leggings, chestplate, boots
-	steel("armor_steel", 150, new int[] {3, 6, 7, 3}, 15, ItemList.steel_plate, "entity.chicken.ambient", 1.0f);
+	steel("armor_steel", 45, new int[] {3, 6, 8, 3}, 15, ItemList.steel_plate, "entity.chicken.ambient", 1.0f);
 	
-	private static final int[] max_damage_array = new int[]{8, 10, 12, 8};
+	private static final int[] max_damage_array = new int[]{13, 15, 16, 11};
 	private String name, equipSound;
 	private int durability, enchantability;
 	private Item repairItem;

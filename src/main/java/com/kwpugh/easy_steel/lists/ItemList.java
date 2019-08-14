@@ -18,6 +18,7 @@ public class ItemList
 	public static Item steel_pickaxe;
 	public static Item steel_axe;
 	public static Item steel_shovel;
+	public static Item steel_hoe;
 	public static Item steel_hammer;
 	public static Item steel_paxel;
 	

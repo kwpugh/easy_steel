@@ -1,6 +1,6 @@
 {
    "parent": "item/handheld",
    "textures": {
-       "layer0": "easy_steel:item/steel_sword"
+       "layer0": "easy_steel:item/steel_hoe"
    }
 }

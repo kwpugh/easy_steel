@@ -4,10 +4,11 @@ import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.Ingredient;
 
+
 public enum ToolMaterialList implements IItemTier
-{
-	steel(1.0f, 4.0f, 1900, 3, 20, ItemList.steel_ingot);
-	
+{	
+	steel(0.5F, 4.0f, 1900, 3, 8, ItemList.steel_ingot);
+
 	private float attackDamage, efficiency;
 	private int durability, harvestLevel, enchantability;
 	private Item repairMaterial;
