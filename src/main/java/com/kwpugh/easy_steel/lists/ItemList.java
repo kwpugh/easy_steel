@@ -1,4 +1,4 @@
-package com.kwpugh.easy_steel;
+package com.kwpugh.easy_steel.lists;
 
 import net.minecraft.item.Item;
 

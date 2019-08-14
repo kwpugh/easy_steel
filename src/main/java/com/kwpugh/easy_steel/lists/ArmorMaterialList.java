@@ -1,4 +1,6 @@
-package com.kwpugh.easy_steel;
+package com.kwpugh.easy_steel.lists;
+
+import com.kwpugh.easy_steel.EasySteel;
 
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;

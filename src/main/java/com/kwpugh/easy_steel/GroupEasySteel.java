@@ -1,5 +1,7 @@
 package com.kwpugh.easy_steel;
 
+import com.kwpugh.easy_steel.lists.ItemList;
+
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 

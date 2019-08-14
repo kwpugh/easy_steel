@@ -1,4 +1,12 @@
-package com.kwpugh.easy_steel;
+package com.kwpugh.easy_steel.init;
+
+import com.kwpugh.easy_steel.EasySteel;
+import com.kwpugh.easy_steel.items.CrackHammer;
+import com.kwpugh.easy_steel.items.SteelHammer;
+import com.kwpugh.easy_steel.items.SteelPaxel;
+import com.kwpugh.easy_steel.lists.ArmorMaterialList;
+import com.kwpugh.easy_steel.lists.ItemList;
+import com.kwpugh.easy_steel.lists.ToolMaterialList;
 
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;

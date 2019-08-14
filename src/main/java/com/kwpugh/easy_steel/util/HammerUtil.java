@@ -1,4 +1,4 @@
-package com.kwpugh.easy_steel;
+package com.kwpugh.easy_steel.util;
 
 import java.util.Random;
 import java.util.Set;

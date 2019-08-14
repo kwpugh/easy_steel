@@ -1,10 +1,12 @@
-package com.kwpugh.easy_steel;
+package com.kwpugh.easy_steel.items;
 
 import java.util.List;
 import java.util.Set;
 
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
+import com.kwpugh.easy_steel.lists.ItemList;
+import com.kwpugh.easy_steel.util.HammerUtil;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
