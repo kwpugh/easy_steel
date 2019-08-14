@@ -4,6 +4,9 @@ import net.minecraft.item.Item;
 
 public class ItemList 
 {
+	public static Item crack_hammer;
+	public static Item carbon_chunk;
+	
 	public static Item carbon;
 	public static Item steel_ingot;
 	public static Item raw_steel;
@@ -15,6 +18,8 @@ public class ItemList
 	public static Item steel_pickaxe;
 	public static Item steel_axe;
 	public static Item steel_shovel;
+	public static Item steel_hammer;
+	public static Item steel_paxel;
 	
 	public static Item armor_steel_head;
 	public static Item armor_steel_body;

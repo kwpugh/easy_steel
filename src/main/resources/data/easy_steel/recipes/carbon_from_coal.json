@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "minecraft:coal"
+  },
+  "result": "easy_steel:carbon",
+  "experience": 0.15,
+  "cookingtime": 400
+}

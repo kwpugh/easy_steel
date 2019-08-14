@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		" BA",
+		" SB",
+		"S  "
+	],
+	
+	"key":
+	{
+		"A": { "item": "minecraft:leather" },
+		"B": { "item": "minecraft:iron_ingot" },
+		"S": { "item": "minecraft:stick" }	
+	},
+	
+	"result": { "item": "easy_steel:crack_hammer" }
+}

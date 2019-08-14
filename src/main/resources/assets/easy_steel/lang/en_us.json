@@ -1,4 +1,6 @@
 {
+	"item.easy_steel.crack_hammer": "Crack Hammer",
+	"item.easy_steel.carbon_chunk": "Carbon Chunk",
 	
 	"item.easy_steel.carbon": "Carbon",
 	"item.easy_steel.steel_ingot": "Steel Ingot",
@@ -11,6 +13,8 @@
 	"item.easy_steel.steel_pickaxe": "Steel Pickaxe",
 	"item.easy_steel.steel_axe": "Steel Axe",
 	"item.easy_steel.steel_shovel": "Steel Shovel",
+	"item.easy_steel.steel_hammer": "Steel Hammer",
+	"item.easy_steel.steel_paxel": "Steel Paxel",
 	
 	"item.easy_steel.armor_steel_head": "Steel Helmet",
 	"item.easy_steel.armor_steel_body": "Steel Chestplate",

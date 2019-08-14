@@ -21,7 +21,10 @@ public class ItemInit
 		public static void registerItems(final RegistryEvent.Register<Item> event)
 		{
 			event.getRegistry().registerAll
-			(				
+			(
+				ItemList.crack_hammer = new CrackHammer(ToolMaterialList.steel, 1, 1.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("crack_hammer")),
+				ItemList.carbon_chunk = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("carbon_chunk")),
+						
 				ItemList.carbon = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("carbon")),
 				ItemList.raw_steel = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("raw_steel")),
 				
@@ -34,6 +37,8 @@ public class ItemInit
 				ItemList.steel_pickaxe = new PickaxeItem(ToolMaterialList.steel, 1, 1.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("steel_pickaxe")),
 				ItemList.steel_axe = new AxeItem(ToolMaterialList.steel, 1, 1.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("steel_axe")),
 				ItemList.steel_shovel = new ShovelItem(ToolMaterialList.steel, 1, 1.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("steel_shovel")),
+				ItemList.steel_hammer = new SteelHammer(ToolMaterialList.steel, 1, 1.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("steel_hammer")),
+				ItemList.steel_paxel = new SteelPaxel(1, 1.0f, ToolMaterialList.steel, null, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("steel_paxel")),
 				
 				ItemList.armor_steel_head = new ArmorItem(ArmorMaterialList.steel, EquipmentSlotType.HEAD, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("armor_steel_head")),
 				ItemList.armor_steel_body = new ArmorItem(ArmorMaterialList.steel, EquipmentSlotType.CHEST, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("armor_steel_body")),
