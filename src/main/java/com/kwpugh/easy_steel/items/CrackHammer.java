@@ -2,6 +2,7 @@ package com.kwpugh.easy_steel.items;
 
 import java.util.List;
 
+import com.kwpugh.easy_steel.lists.BlockList;
 import com.kwpugh.easy_steel.lists.ItemList;
 
 import net.minecraft.block.Block;
@@ -57,7 +58,21 @@ public class CrackHammer extends PickaxeItem
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.carbon_chunk, 2))); 
 	    	 spawnSpecialEffect(world, pos);    	 
 	     }
-     
+
+	     if(block == BlockList.bornite_ore)
+	     {
+	    	 world.removeBlock(pos, false);
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.copper_chunk, 2))); 
+	    	 spawnSpecialEffect(world, pos);    	 
+	     }
+	     
+	     if(block == BlockList.cassiterite_ore)
+	     {
+	    	 world.removeBlock(pos, false);
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.tin_chunk, 2))); 
+	    	 spawnSpecialEffect(world, pos);    	 
+	     }
+	     
 		 return ActionResultType.PASS;
 	}
 	

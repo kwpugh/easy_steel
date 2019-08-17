@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"AA ",
+		"AA ",
+		"   "
+	],
+	
+	"key":
+	{
+		"A": { "item": "easy_steel:bronze_ingot"  }
+	},
+	
+	"result": { "item": "easy_steel:bronze_plate",
+	"count": 4
+	}
+}

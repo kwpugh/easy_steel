@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"A  ",
+		"A  ",
+		"   "
+	],
+	
+	"key":
+	{
+		"A": { "item": "easy_steel:bronze_ingot"  }
+	},
+	
+	"result": { "item": "easy_steel:bronze_rod",
+	"count": 1
+	}
+}

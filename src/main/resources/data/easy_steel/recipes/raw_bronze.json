@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "easy_steel:copper_powder"
+        },
+        {
+            "item": "easy_steel:copper_powder"
+        },
+        {
+            "item": "easy_steel:copper_powder"
+        },
+        {
+            "item": "easy_steel:tin_powder"
+        }
+    ],
+    "result": {
+        "item": "easy_steel:raw_bronze",
+        "count": 4
+    }
+}

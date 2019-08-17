@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "easy_steel:raw_bronze"
+  },
+  "result": "easy_steel:bronze_ingot",
+  "experience": 0.15,
+  "cookingtime": 200
+}

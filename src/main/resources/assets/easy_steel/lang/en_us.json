@@ -21,6 +21,36 @@
 	"item.easy_steel.armor_steel_body": "Steel Chestplate",
 	"item.easy_steel.armor_steel_leggings": "Steel Leggings",
 	"item.easy_steel.armor_steel_boots": "Steel Boots",
+	
+	"block.easy_steel.bornite_ore": "Bornite",
+	"item.easy_steel.bornite_ore": "Bornite",
+	"block.easy_steel.cassiterite_ore": "Cassiterite",
+	"item.easy_steel.cassiterite_ore": "Cassiterite",
+	
+	"item.easy_steel.copper_chunk": "Copper Chunk",
+	"item.easy_steel.copper_powder": "Copper Powder",
+	
+	"item.easy_steel.tin_chunk": "Tin Chunk",
+	"item.easy_steel.tin_powder": "Tin Powder",
+	
+	"item.easy_steel.raw_bronze": "Raw Bronze",
+	
+	"item.easy_steel.bronze_ingot": "Bronze Ingot",
+	"item.easy_steel.bronze_plate": "Bronze Plate",
+	"item.easy_steel.bronze_rod": "Bronze Rod",
+	
+	"item.easy_steel.bronze_sword": "Bronze Sword",
+	"item.easy_steel.bronze_pickaxe": "Bronze Pickaxe",
+	"item.easy_steel.bronze_axe": "Bronze Axe",
+	"item.easy_steel.bronze_shovel": "Bronze Shovel",
+	"item.easy_steel.bronze_hoe": "Bronze Hoe",
+	"item.easy_steel.bronze_paxel": "Bronze Paxel",
+	"item.easy_steel.bronze_hammer": "Bronze Hammer",
+	
+	"item.easy_steel.armor_bronze_head": "Bronze Helmet",
+	"item.easy_steel.armor_bronze_body": "Bronze Chestplate",
+	"item.easy_steel.armor_bronze_leggings": "Bronze Leggings",
+	"item.easy_steel.armor_bronze_boots": "Bronze Boots",
 		
 	"itemGroup.easy_steel": "Easy Steel"
 }
