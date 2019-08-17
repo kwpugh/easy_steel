@@ -25,7 +25,7 @@ public class BlockInit
 				BlockList.bornite_ore = new OreBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0f, 3.0f).lightValue(1).sound(SoundType.METAL)).setRegistryName(location("bornite_ore")),
 				BlockList.cassiterite_ore = new OreBlock(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0f, 3.0f).lightValue(1).sound(SoundType.METAL)).setRegistryName(location("cassiterite_ore"))
 			);
-			EasySteel.logger.info("Blocks registered.");
+			EasySteel.logger.info("Blocks registered.");			
 		}
 	}
 	
