@@ -3,7 +3,9 @@
   "values": [
     "#forge:dusts/steel",
     "#forge:dusts/tin",
+    "#forge:dusts/iron",
     "#forge:dusts/copper",
-    "#forge:dusts/bronze"
+    "#forge:dusts/bronze",
+    "#forge:dusts/carbon"
   ]
 }

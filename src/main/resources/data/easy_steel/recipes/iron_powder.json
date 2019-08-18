@@ -1,9 +1,9 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "easy_steel:cassiterite_ore"
+    "item": "easy_steel:iron_chunk"
   },
-  "result": "easy_steel:tin_chunk",
+  "result": "easy_steel:iron_powder",
   "experience": 0.15,
   "cookingtime": 200
 }

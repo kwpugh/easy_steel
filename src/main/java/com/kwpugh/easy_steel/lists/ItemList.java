@@ -5,9 +5,13 @@ import net.minecraft.item.Item;
 public class ItemList 
 {
 	public static Item crack_hammer;
-	public static Item carbon_chunk;
 	
+	public static Item carbon_chunk;
 	public static Item carbon;
+	
+	public static Item iron_chunk;
+	public static Item iron_powder;
+	
 	public static Item steel_ingot;
 	public static Item raw_steel;
 	

@@ -8,10 +8,10 @@ authors="kwpugh" #optional
 
 [[mods]] #mandatory
 modId="easy_steel" #mandatory
-version="1.0.8" #mandatory
+version="1.0.9" #mandatory
 displayName="Easy Steel" #mandatory
 description='''
-Adds an easy method to make steel and armors and weapons
+Adds an easy method to make steel and bronze armors and weapons
 '''
 
 

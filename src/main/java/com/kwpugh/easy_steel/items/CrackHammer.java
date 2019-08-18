@@ -59,10 +59,17 @@ public class CrackHammer extends PickaxeItem
 	    	 spawnSpecialEffect(world, pos);    	 
 	     }
 
+	     if(block == Blocks.IRON_ORE)
+	     {
+	    	 world.removeBlock(pos, false);
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.iron_chunk, 2))); 
+	    	 spawnSpecialEffect(world, pos);    	 
+	     }
+	     
 	     if(block == BlockList.bornite_ore)
 	     {
 	    	 world.removeBlock(pos, false);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.copper_chunk, 2))); 
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.copper_chunk, 3))); 
 	    	 spawnSpecialEffect(world, pos);    	 
 	     }
 	     
@@ -101,8 +108,8 @@ public class CrackHammer extends PickaxeItem
 	public void addInformation(ItemStack stack, World world, List<ITextComponent> list, ITooltipFlag flag)
 	{
 		super.addInformation(stack, world, list, flag);				
-		list.add(new StringTextComponent(TextFormatting.GREEN + "Used to break Coal Ore into Carbon Chunks"));
-		list.add(new StringTextComponent(TextFormatting.BLUE + "Right-click on block to use"));
+		list.add(new StringTextComponent(TextFormatting.GREEN + "Used to break various ores into chunks"));
+		list.add(new StringTextComponent(TextFormatting.BLUE + "Right-click on ore to use"));
 
 	} 
 }

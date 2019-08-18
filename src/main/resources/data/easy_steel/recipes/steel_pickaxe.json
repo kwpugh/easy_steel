@@ -10,7 +10,7 @@
 	
 	"key":
 	{
-		"I": { "item": "easy_steel:steel_ingot" },
+		"I": { "tag": "forge:ingots/steel" },
 		"S": { "item": "easy_steel:steel_rod" }	
 	},
 	

@@ -10,10 +10,10 @@
 	
 	"key":
 	{
-		"A": { "item": "easy_steel:bronze_ingot"  }
+		"A": { "tag": "forge:ingots/bronze"  }
 	},
 	
 	"result": { "item": "easy_steel:bronze_rod",
-	"count": 1
+	"count": 2
 	}
 }
