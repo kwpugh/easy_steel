@@ -2,7 +2,6 @@
 	"replace": false,
 	"values":
 	[
-		"easy_steel:copper_powder",
-		"easy_steel:copper_chunk"
+		"easy_steel:copper_powder"
 	]	
 }

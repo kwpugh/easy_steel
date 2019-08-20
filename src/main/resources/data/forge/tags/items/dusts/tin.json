@@ -2,7 +2,6 @@
 	"replace": false,
 	"values":
 	[
-		"easy_steel:tin_powder",
-		"easy_steel:tin_chunk"
+		"easy_steel:tin_powder"
 	]	
 }
