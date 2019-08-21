@@ -8,6 +8,7 @@ import net.minecraft.item.crafting.Ingredient;
 public enum ToolMaterialList implements IItemTier
 {	
 	steel(0.5F, 4.0f, 975, 3, 8, ItemList.steel_ingot),
+	hardened_steel(0.5F, 4.0f, 1900, 3, 8, ItemList.hardened_steel_ingot),
 	bronze(0.5F, 4.0f, 215, 2, 10, ItemList.bronze_ingot);
 
 	private float attackDamage, efficiency;

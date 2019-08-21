@@ -10,11 +10,16 @@
 	"item.easy_steel.steel_ingot": "Steel Ingot",
 	"item.easy_steel.raw_steel": "Raw Steel",
 	
+	"item.easy_steel.raw_hardened_steel": "Raw Hardened Steel",
+	"item.easy_steel.hardened_steel_ingot": "Hardened Steel Ingot",
+	
 	"item.easy_steel.steel_plate": "Steel Plate",
 	"item.easy_steel.steel_rod": "Steel Rod",
 	
 	"item.easy_steel.steel_sword": "Steel Sword",
+	"item.easy_steel.hardened_steel_sword": "Hardened Steel Sword",
 	"item.easy_steel.steel_pickaxe": "Steel Pickaxe",
+	"item.easy_steel.hardened_steel_pickaxe": "Hardened Steel Pickaxe",
 	"item.easy_steel.steel_axe": "Steel Axe",
 	"item.easy_steel.steel_shovel": "Steel Shovel",
 	"item.easy_steel.steel_hoe": "Steel Hoe",

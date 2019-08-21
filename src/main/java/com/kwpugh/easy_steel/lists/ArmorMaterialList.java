@@ -12,7 +12,8 @@ import net.minecraft.util.SoundEvent;
 public enum ArmorMaterialList implements IArmorMaterial
 {
 	//Armor order: helmet, leggings, chestplate, boots
-	steel("armor_steel", 45, new int[] {3, 6, 8, 3}, 15, ItemList.steel_plate, "entity.chicken.ambient", 1.0f),
+	steel("armor_steel", 45, new int[] {3, 6, 8, 3}, 15, ItemList.steel_plate, "entity.chicken.ambient", 1.5f),
+	hardened_steel("armor_hardened_steel", 56, new int[] {3, 6, 8, 3}, 15, ItemList.steel_plate, "entity.chicken.ambient", 1.0f),
 	bronze("armor_bronze", 16, new int[] {2, 5, 6, 2}, 15, ItemList.bronze_plate, "entity.chicken.ambient", 0.5f);
 	
 	private static final int[] max_damage_array = new int[]{13, 15, 16, 11};
