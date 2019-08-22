@@ -5,6 +5,7 @@ import java.util.stream.Collectors;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.kwpugh.easy_steel.group.GroupEasySteel;
 import com.kwpugh.easy_steel.util.EasySteelConfig;
 import com.kwpugh.easy_steel.world.OreGenerator;
 

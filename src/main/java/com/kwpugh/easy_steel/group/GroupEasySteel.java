@@ -1,4 +1,4 @@
-package com.kwpugh.easy_steel;
+package com.kwpugh.easy_steel.group;
 
 import com.kwpugh.easy_steel.lists.ItemList;
 
