@@ -19,6 +19,15 @@
 	"item.easy_steel.steel_plate": "Steel Plate",
 	"item.easy_steel.steel_rod": "Steel Rod",
 	
+	"item.easy_steel.bronze_block": "Bronze Block",
+	"block.easy_steel.bronze_block": "Bronze Block",
+	
+	"item.easy_steel.steel_block": "Steel Block",
+	"block.easy_steel.steel_block": "Steel Block",
+	
+	"item.easy_steel.hardened_steel_block": "Hardened Steel Block",
+	"block.easy_steel.hardened_steel_block": "Hardened Steel Block",
+	
 	"item.easy_steel.steel_sword": "Steel Sword",
 	"item.easy_steel.hardened_steel_sword": "Hardened Steel Sword",
 	"item.easy_steel.steel_pickaxe": "Steel Pickaxe",

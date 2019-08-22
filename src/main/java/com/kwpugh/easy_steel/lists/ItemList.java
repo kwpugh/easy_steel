@@ -43,6 +43,10 @@ public class ItemList
 	public static Item bornite_ore;
 	public static Item cassiterite_ore;
 	
+	public static Item bronze_block;
+	public static Item steel_block;
+	public static Item hardened_steel_block;
+	
 	public static Item copper_chunk;
 	public static Item copper_powder;
 	
