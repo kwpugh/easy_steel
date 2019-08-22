@@ -4,6 +4,9 @@
 	"item.easy_steel.carbon_chunk": "Carbon Chunk",
 	"item.easy_steel.carbon": "Carbon Powder",
 	
+	"item.easy_steel.gold_chunk": "Gold Chunk",
+	"item.easy_steel.gold_powder": "Gold Powder",
+	
 	"item.easy_steel.iron_chunk": "Iron Chunk",
 	"item.easy_steel.iron_powder": "Iron Powder",
 	
@@ -22,6 +25,7 @@
 	"item.easy_steel.hardened_steel_pickaxe": "Hardened Steel Pickaxe",
 	"item.easy_steel.steel_axe": "Steel Axe",
 	"item.easy_steel.steel_shovel": "Steel Shovel",
+	"item.easy_steel.hardened_steel_shovel": "Hardened Steel Shovel",
 	"item.easy_steel.steel_hoe": "Steel Hoe",
 	"item.easy_steel.steel_hammer": "Steel Hammer",
 	"item.easy_steel.steel_paxel": "Steel Paxel",

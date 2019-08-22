@@ -66,6 +66,13 @@ public class CrackHammer extends PickaxeItem
 	    	 spawnSpecialEffect(world, pos);    	 
 	     }
 	     
+	     if(block == Blocks.GOLD_ORE)
+	     {
+	    	 world.removeBlock(pos, false);
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.gold_chunk, 2))); 
+	    	 spawnSpecialEffect(world, pos);    	 
+	     }
+	     
 	     if(block == BlockList.bornite_ore)
 	     {
 	    	 world.removeBlock(pos, false);

@@ -12,6 +12,9 @@ public class ItemList
 	public static Item iron_chunk;
 	public static Item iron_powder;
 	
+	public static Item gold_chunk;
+	public static Item gold_powder;
+	
 	public static Item steel_ingot;
 	public static Item raw_steel;
 	
@@ -27,6 +30,7 @@ public class ItemList
 	public static Item hardened_steel_pickaxe;
 	public static Item steel_axe;
 	public static Item steel_shovel;
+	public static Item hardened_steel_shovel;
 	public static Item steel_hoe;
 	public static Item steel_hammer;
 	public static Item steel_paxel;
