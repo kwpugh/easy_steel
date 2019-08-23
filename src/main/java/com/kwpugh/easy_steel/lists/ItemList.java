@@ -24,21 +24,31 @@ public class ItemList
 	public static Item steel_plate;
 	public static Item steel_rod;
 	
+	public static Item hardened_steel_plate;
+	
 	public static Item steel_sword;
-	public static Item hardened_steel_sword;
 	public static Item steel_pickaxe;
-	public static Item hardened_steel_pickaxe;
 	public static Item steel_axe;
 	public static Item steel_shovel;
-	public static Item hardened_steel_shovel;
-	public static Item steel_hoe;
+	public static Item steel_hoe;	
 	public static Item steel_hammer;
 	public static Item steel_paxel;
+	
+	public static Item hardened_steel_sword;
+	public static Item hardened_steel_pickaxe;
+	public static Item hardened_steel_axe;
+	public static Item hardened_steel_shovel;
+	public static Item hardened_steel_hoe;
 	
 	public static Item armor_steel_head;
 	public static Item armor_steel_body;
 	public static Item armor_steel_leggings;
 	public static Item armor_steel_boots;
+
+	public static Item armor_hardened_steel_head;
+	public static Item armor_hardened_steel_body;
+	public static Item armor_hardened_steel_leggings;
+	public static Item armor_hardened_steel_boots;
 	
 	public static Item bornite_ore;
 	public static Item cassiterite_ore;
