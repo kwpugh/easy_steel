@@ -11,7 +11,7 @@
 	"key":
 	{
 		"I": { "item": "easy_steel:hardened_steel_ingot" },
-		"S": { "item": "easy_steel:steel_rod" }	
+		"S": { "item": "easy_steel:hardened_steel_rod" }	
 	},
 	
 	"result": { "item": "easy_steel:hardened_steel_hoe" }

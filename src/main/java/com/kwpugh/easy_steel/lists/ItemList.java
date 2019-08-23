@@ -25,6 +25,7 @@ public class ItemList
 	public static Item steel_rod;
 	
 	public static Item hardened_steel_plate;
+	public static Item hardened_steel_rod;
 	
 	public static Item steel_sword;
 	public static Item steel_pickaxe;

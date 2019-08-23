@@ -39,10 +39,6 @@ public class ItemInit
 								
 				ItemList.cassiterite_ore = new BlockItem(BlockList.cassiterite_ore, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(BlockList.cassiterite_ore.getRegistryName()),
 				ItemList.bornite_ore = new BlockItem(BlockList.bornite_ore, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(BlockList.bornite_ore.getRegistryName()),
-				
-				ItemList.bronze_block = new BlockItem(BlockList.bronze_block, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(BlockList.bronze_block.getRegistryName()),
-				ItemList.steel_block = new BlockItem(BlockList.steel_block, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(BlockList.steel_block.getRegistryName()),
-				ItemList.hardened_steel_block = new BlockItem(BlockList.hardened_steel_block, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(BlockList.hardened_steel_block.getRegistryName()),
 						
 				ItemList.tin_chunk = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("tin_chunk")),		
 				ItemList.copper_chunk = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("copper_chunk")),		
@@ -63,6 +59,10 @@ public class ItemInit
 				ItemList.bronze_ingot = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("bronze_ingot")),
 				ItemList.steel_ingot = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("steel_ingot")),
 				ItemList.hardened_steel_ingot = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("hardened_steel_ingot")),
+				
+				ItemList.bronze_block = new BlockItem(BlockList.bronze_block, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(BlockList.bronze_block.getRegistryName()),
+				ItemList.steel_block = new BlockItem(BlockList.steel_block, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(BlockList.steel_block.getRegistryName()),
+				ItemList.hardened_steel_block = new BlockItem(BlockList.hardened_steel_block, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(BlockList.hardened_steel_block.getRegistryName()),
 						
 				ItemList.bronze_plate = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("bronze_plate")),
 				ItemList.steel_plate = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("steel_plate")),
@@ -70,6 +70,7 @@ public class ItemInit
 						
 				ItemList.bronze_rod = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("bronze_rod")),
 				ItemList.steel_rod = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("steel_rod")),
+				ItemList.hardened_steel_rod = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("hardened_steel_rod")),
 				
 				ItemList.bronze_sword = new SwordItem(ToolMaterialList.bronze, 4, -2.3f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("bronze_sword")),
 				ItemList.bronze_pickaxe = new PickaxeItem(ToolMaterialList.bronze, 2, -2.8f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("bronze_pickaxe")),
