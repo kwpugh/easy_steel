@@ -5,6 +5,7 @@ import net.minecraft.item.Item;
 public class ItemList 
 {
 	public static Item crack_hammer;
+	public static Item leather_strap;
 	
 	public static Item carbon_chunk;
 	public static Item carbon;

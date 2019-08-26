@@ -36,6 +36,8 @@ public class ItemInit
 			event.getRegistry().registerAll
 			(
 				ItemList.crack_hammer = new CrackHammer(ToolMaterialList.bronze, 1, -3.3f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("crack_hammer")),
+				
+				ItemList.leather_strap = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("leather_strap")),
 								
 				ItemList.cassiterite_ore = new BlockItem(BlockList.cassiterite_ore, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(BlockList.cassiterite_ore.getRegistryName()),
 				ItemList.bornite_ore = new BlockItem(BlockList.bornite_ore, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(BlockList.bornite_ore.getRegistryName()),
