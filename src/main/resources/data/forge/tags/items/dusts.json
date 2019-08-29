@@ -7,6 +7,8 @@
     "#forge:dusts/gold",
     "#forge:dusts/copper",
     "#forge:dusts/bronze",
+    "#forge:dusts/tungsten",
+    "#forge:dusts/diamond",
     "#forge:dusts/carbon"
   ]
 }

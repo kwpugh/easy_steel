@@ -2,16 +2,16 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
         {
-            "item": "easy_steel:copper_powder"
+            "tag": "forge:dusts/copper"
         },
         {
-            "item": "easy_steel:copper_powder"
+            "tag": "forge:dusts/copper"
         },
         {
-            "item": "easy_steel:copper_powder"
+            "tag": "forge:dusts/copper"
         },
         {
-            "item": "easy_steel:tin_powder"
+            "tag": "forge:dusts/tin"
         }
     ],
     "result": {

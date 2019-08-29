@@ -14,6 +14,14 @@ public class ItemList
 	
 	public static Item gold_chunk;
 	public static Item gold_powder;
+
+	public static Item diamond_chunk;
+	public static Item diamond_powder;
+	
+	public static Item tungsten_chunk;
+	public static Item tungsten_powder;
+	public static Item raw_tungsten_carbide;
+	public static Item tungsten_carbide_ingot;
 	
 	public static Item steel_ingot;
 	public static Item raw_steel;
@@ -26,6 +34,9 @@ public class ItemList
 	
 	public static Item hardened_steel_plate;
 	public static Item hardened_steel_rod;
+
+	public static Item tungsten_carbide_plate;
+	public static Item tungsten_carbide_rod;
 	
 	public static Item steel_sword;
 	public static Item steel_pickaxe;
@@ -40,6 +51,8 @@ public class ItemList
 	public static Item hardened_steel_axe;
 	public static Item hardened_steel_shovel;
 	public static Item hardened_steel_hoe;
+	public static Item hardened_steel_hammer;
+	public static Item hardened_steel_paxel;
 	
 	public static Item armor_steel_head;
 	public static Item armor_steel_body;
@@ -53,10 +66,12 @@ public class ItemList
 	
 	public static Item bornite_ore;
 	public static Item cassiterite_ore;
+	public static Item wolframite_ore;
 	
 	public static Item bronze_block;
 	public static Item steel_block;
 	public static Item hardened_steel_block;
+	public static Item tungsten_carbide_block;
 	
 	public static Item copper_chunk;
 	public static Item copper_powder;
@@ -82,4 +97,17 @@ public class ItemList
 	public static Item armor_bronze_body;
 	public static Item armor_bronze_leggings;
 	public static Item armor_bronze_boots;
+	
+	public static Item tungsten_carbide_sword;
+	public static Item tungsten_carbide_pickaxe;
+	public static Item tungsten_carbide_axe;
+	public static Item tungsten_carbide_shovel;
+	public static Item tungsten_carbide_hoe;
+	public static Item tungsten_carbide_hammer;
+	public static Item tungsten_carbide_paxel;
+	
+	public static Item armor_tungsten_carbide_head;
+	public static Item armor_tungsten_carbide_body;
+	public static Item armor_tungsten_carbide_leggings;
+	public static Item armor_tungsten_carbide_boots;
 }

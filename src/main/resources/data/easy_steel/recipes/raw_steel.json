@@ -5,7 +5,7 @@
             "tag": "forge:dusts/iron"
         },
         {
-            "item": "easy_steel:carbon"
+            "tag": "forge:dusts/carbon"
         }
     ],
     "result": {

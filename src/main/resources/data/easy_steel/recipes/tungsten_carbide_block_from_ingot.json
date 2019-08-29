@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"III",
+		"III",
+		"III"
+	],
+	
+	"key":
+	{
+		"I": { "item": "easy_steel:tungsten_carbide_ingot" }	
+	},
+	
+	"result": { "item": "easy_steel:tungsten_carbide_block" }
+}

@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"ABC",
+		" S ",
+		" S "
+	],
+	
+	"key":
+	{
+		"A": { "item": "easy_steel:tungsten_carbide_axe" },
+		"B": { "item": "easy_steel:tungsten_carbide_shovel" },
+		"C": { "item": "easy_steel:tungsten_carbide_pickaxe" },
+		"S": { "item": "easy_steel:tungsten_carbide_rod" }	
+	},
+	
+	"result": { "item": "easy_steel:tungsten_carbide_paxel" }
+}

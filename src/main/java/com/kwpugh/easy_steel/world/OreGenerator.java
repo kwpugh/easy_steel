@@ -24,6 +24,9 @@ public class OreGenerator
  
             if(GeneralModConfig.CASSITERITE_ORE_GENERATION.get())
                 biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(NATURAL_STONE, BlockList.cassiterite_ore.getDefaultState(), GeneralModConfig.CASSITERITE_ORE_SIZE.get().intValue()), COUNT_RANGE, new CountRangeConfig(GeneralModConfig.CASSITERITE_ORE_CHANCE.get(), GeneralModConfig.CASSITERITE_ORE_MIN_HEIGHT.get(), GeneralModConfig.CASSITERITE_ORE_MIN_HEIGHT.get(), GeneralModConfig.CASSITERITE_ORE_MAX_HEIGHT.get())));
+            
+            if(GeneralModConfig.WOLFRAMITE_ORE_GENERATION.get())
+                biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Biome.createDecoratedFeature(Feature.ORE, new OreFeatureConfig(NATURAL_STONE, BlockList.wolframite_ore.getDefaultState(), GeneralModConfig.WOLFRAMITE_ORE_SIZE.get().intValue()), COUNT_RANGE, new CountRangeConfig(GeneralModConfig.WOLFRAMITE_ORE_CHANCE.get(), GeneralModConfig.WOLFRAMITE_ORE_MIN_HEIGHT.get(), GeneralModConfig.WOLFRAMITE_ORE_MIN_HEIGHT.get(), GeneralModConfig.WOLFRAMITE_ORE_MAX_HEIGHT.get())));
         }
     }
 }

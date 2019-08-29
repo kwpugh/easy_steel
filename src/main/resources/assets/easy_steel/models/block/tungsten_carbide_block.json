@@ -1,0 +1,7 @@
+{
+    "parent": "block/cube_all",
+    "textures": 
+    {
+        "all": "easy_steel:block/tungsten_carbide_block"
+    }
+}

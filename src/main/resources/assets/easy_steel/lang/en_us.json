@@ -1,8 +1,21 @@
 {
 	"item.easy_steel.crack_hammer": "Crack Hammer",
 	
+	"block.easy_steel.bornite_ore": "Bornite",
+	"item.easy_steel.bornite_ore": "Bornite",
+	"block.easy_steel.cassiterite_ore": "Cassiterite",
+	"item.easy_steel.cassiterite_ore": "Cassiterite",
+	"block.easy_steel.wolframite_ore": "Wolframite",
+	"item.easy_steel.wolframite_ore": "Wolframite",
+	
 	"item.easy_steel.carbon_chunk": "Carbon Chunk",
 	"item.easy_steel.carbon": "Carbon Powder",
+	
+	"item.easy_steel.copper_chunk": "Copper Chunk",
+	"item.easy_steel.copper_powder": "Copper Powder",
+	
+	"item.easy_steel.tin_chunk": "Tin Chunk",
+	"item.easy_steel.tin_powder": "Tin Powder",
 	
 	"item.easy_steel.gold_chunk": "Gold Chunk",
 	"item.easy_steel.gold_powder": "Gold Powder",
@@ -10,26 +23,55 @@
 	"item.easy_steel.iron_chunk": "Iron Chunk",
 	"item.easy_steel.iron_powder": "Iron Powder",
 	
-	"item.easy_steel.steel_ingot": "Steel Ingot",
+	"item.easy_steel.diamond_chunk": "Diamond Chunk",
+	"item.easy_steel.diamond_powder": "Diamond Powder",
+	
+	"item.easy_steel.tungsten_chunk": "Tungsten Chunk",
+	"item.easy_steel.tungsten_powder": "Tungsten Powder",
+	
+	"item.easy_steel.raw_bronze": "Raw Bronze",
+	"item.easy_steel.bronze_ingot": "Bronze Ingot",
+	
 	"item.easy_steel.raw_steel": "Raw Steel",
+	"item.easy_steel.steel_ingot": "Steel Ingot",
 	
 	"item.easy_steel.raw_hardened_steel": "Raw Hardened Steel",
 	"item.easy_steel.hardened_steel_ingot": "Hardened Steel Ingot",
+
+	"item.easy_steel.raw_tungsten_carbide": "Raw Tungsten-Carbide",
+	"item.easy_steel.tungsten_carbide_ingot": "Tungsten-Carbide Ingot",
 	
-		"item.easy_steel.bronze_block": "Bronze Block",
-	"block.easy_steel.bronze_block": "Bronze Block",
+	"item.easy_steel.tungsten_carbide_plate": "Tungsten-Carbide Plate",
+	"item.easy_steel.tungsten_carbide_rod": "Tungsten-Carbide Rod",
+		
+	"item.easy_steel.bronze_plate": "Bronze Plate",
+	"item.easy_steel.bronze_rod": "Bronze Rod",
 	
 	"item.easy_steel.steel_plate": "Steel Plate",
 	"item.easy_steel.steel_rod": "Steel Rod",
-	
+
 	"item.easy_steel.hardened_steel_plate": "Hardened Steel Plate",
 	"item.easy_steel.hardened_steel_rod": "Hardened Steel Rod",
-	
+
+	"item.easy_steel.bronze_block": "Bronze Block",
+	"block.easy_steel.bronze_block": "Bronze Block",
+		
 	"item.easy_steel.steel_block": "Steel Block",
 	"block.easy_steel.steel_block": "Steel Block",
 	
 	"item.easy_steel.hardened_steel_block": "Hardened Steel Block",
 	"block.easy_steel.hardened_steel_block": "Hardened Steel Block",
+
+	"item.easy_steel.tungsten_carbide_block": "Tungsten-Carbide Block",
+	"block.easy_steel.tungsten_carbide_block": "Tungsten-Carbide Block",
+		
+	"item.easy_steel.bronze_sword": "Bronze Sword",
+	"item.easy_steel.bronze_pickaxe": "Bronze Pickaxe",
+	"item.easy_steel.bronze_axe": "Bronze Axe",
+	"item.easy_steel.bronze_shovel": "Bronze Shovel",
+	"item.easy_steel.bronze_hoe": "Bronze Hoe",
+	"item.easy_steel.bronze_paxel": "Bronze Paxel",
+	"item.easy_steel.bronze_hammer": "Bronze Hammer",
 	
 	"item.easy_steel.steel_sword": "Steel Sword",	
 	"item.easy_steel.steel_pickaxe": "Steel Pickaxe",
@@ -44,6 +86,21 @@
 	"item.easy_steel.hardened_steel_axe": "Hardened Steel Axe",
 	"item.easy_steel.hardened_steel_shovel": "Hardened Steel Shovel",
 	"item.easy_steel.hardened_steel_hoe": "Hardened Steel Hoe",
+	"item.easy_steel.hardened_steel_hammer": "Hardened Steel Hammer",
+	"item.easy_steel.hardened_steel_paxel": "Hardened Steel Paxel",
+	
+	"item.easy_steel.tungsten_carbide_sword": "Tungsten-Carbide Sword",
+	"item.easy_steel.tungsten_carbide_pickaxe": "Tungsten-Carbide Pickaxe",
+	"item.easy_steel.tungsten_carbide_axe": "Tungsten-Carbide Axe",
+	"item.easy_steel.tungsten_carbide_shovel": "Tungsten-Carbide Shovel",
+	"item.easy_steel.tungsten_carbide_hoe": "Tungsten-Carbide Hoe",
+	"item.easy_steel.tungsten_carbide_hammer": "Tungsten-Carbide Hammer",
+	"item.easy_steel.tungsten_carbide_paxel": "Tungsten-Carbide Paxel",
+	
+	"item.easy_steel.armor_bronze_head": "Bronze Helmet",
+	"item.easy_steel.armor_bronze_body": "Bronze Chestplate",
+	"item.easy_steel.armor_bronze_leggings": "Bronze Leggings",
+	"item.easy_steel.armor_bronze_boots": "Bronze Boots",
 	
 	"item.easy_steel.armor_steel_head": "Steel Helmet",
 	"item.easy_steel.armor_steel_body": "Steel Chestplate",
@@ -54,36 +111,11 @@
 	"item.easy_steel.armor_hardened_steel_body": "Hardened Steel Chestplate",
 	"item.easy_steel.armor_hardened_steel_leggings": "Hardened Steel Leggings",
 	"item.easy_steel.armor_hardened_steel_boots": "Hardened Steel Boots",
-		
-	"block.easy_steel.bornite_ore": "Bornite",
-	"item.easy_steel.bornite_ore": "Bornite",
-	"block.easy_steel.cassiterite_ore": "Cassiterite",
-	"item.easy_steel.cassiterite_ore": "Cassiterite",
-	
-	"item.easy_steel.copper_chunk": "Copper Chunk",
-	"item.easy_steel.copper_powder": "Copper Powder",
-	
-	"item.easy_steel.tin_chunk": "Tin Chunk",
-	"item.easy_steel.tin_powder": "Tin Powder",
-	
-	"item.easy_steel.raw_bronze": "Raw Bronze",
-	
-	"item.easy_steel.bronze_ingot": "Bronze Ingot",
-	"item.easy_steel.bronze_plate": "Bronze Plate",
-	"item.easy_steel.bronze_rod": "Bronze Rod",
-	
-	"item.easy_steel.bronze_sword": "Bronze Sword",
-	"item.easy_steel.bronze_pickaxe": "Bronze Pickaxe",
-	"item.easy_steel.bronze_axe": "Bronze Axe",
-	"item.easy_steel.bronze_shovel": "Bronze Shovel",
-	"item.easy_steel.bronze_hoe": "Bronze Hoe",
-	"item.easy_steel.bronze_paxel": "Bronze Paxel",
-	"item.easy_steel.bronze_hammer": "Bronze Hammer",
-	
-	"item.easy_steel.armor_bronze_head": "Bronze Helmet",
-	"item.easy_steel.armor_bronze_body": "Bronze Chestplate",
-	"item.easy_steel.armor_bronze_leggings": "Bronze Leggings",
-	"item.easy_steel.armor_bronze_boots": "Bronze Boots",
+
+	"item.easy_steel.armor_tungsten_carbide_head": "Tungsten-Carbide Helmet",
+	"item.easy_steel.armor_tungsten_carbide_body": "Tungsten-Carbide Chestplate",
+	"item.easy_steel.armor_tungsten_carbide_leggings": "Tungsten-Carbide Leggings",
+	"item.easy_steel.armor_tungsten_carbide_boots": "Tungsten-Carbide Boots",
 		
 	"itemGroup.easy_steel": "Easy Steel"
 }

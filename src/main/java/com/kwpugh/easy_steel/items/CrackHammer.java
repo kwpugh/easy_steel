@@ -74,6 +74,13 @@ public class CrackHammer extends PickaxeItem
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.gold_chunk, 2))); 
 	    	 spawnSpecialEffect(world, pos);    	 
 	     }
+
+	     if(block == Blocks.DIAMOND_ORE)
+	     {
+	    	 world.removeBlock(pos, false);
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.diamond_chunk, 2))); 
+	    	 spawnSpecialEffect(world, pos);    	 
+	     }
 	     
 	     if(block == BlockList.bornite_ore)
 	     {
@@ -89,6 +96,13 @@ public class CrackHammer extends PickaxeItem
 	    	 spawnSpecialEffect(world, pos);    	 
 	     }
 
+	     if(block == BlockList.wolframite_ore)
+	     {
+	    	 world.removeBlock(pos, false);
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.tungsten_chunk, 2))); 
+	    	 spawnSpecialEffect(world, pos);    	 
+	     }
+	     
 		 return ActionResultType.PASS;
 	}
 	

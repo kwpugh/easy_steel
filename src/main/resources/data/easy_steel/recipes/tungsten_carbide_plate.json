@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"AA ",
+		"AA ",
+		"   "
+	],
+	
+	"key":
+	{
+		"A": { "item": "easy_steel:tungsten_carbide_ingot"  }
+	},
+	
+	"result": { "item": "easy_steel:tungsten_carbide_plate",
+	"count": 4
+	}
+}
