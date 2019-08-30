@@ -4,6 +4,10 @@ import com.kwpugh.easy_steel.EasySteel;
 import com.kwpugh.easy_steel.items.BronzeHammer;
 import com.kwpugh.easy_steel.items.BronzePaxel;
 import com.kwpugh.easy_steel.items.CrackHammer;
+import com.kwpugh.easy_steel.items.FlintHatchet;
+import com.kwpugh.easy_steel.items.FlintKnife;
+import com.kwpugh.easy_steel.items.FlintMattock;
+import com.kwpugh.easy_steel.items.FlintShovel;
 import com.kwpugh.easy_steel.items.HardenedSteelHammer;
 import com.kwpugh.easy_steel.items.HardenedSteelPaxel;
 import com.kwpugh.easy_steel.items.SteelHammer;
@@ -21,6 +25,7 @@ import net.minecraft.item.AxeItem;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemTier;
 import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.item.SwordItem;
@@ -39,8 +44,13 @@ public class ItemInit
 		{
 			event.getRegistry().registerAll
 			(
-				ItemList.crack_hammer = new CrackHammer(ToolMaterialList.bronze, 1, -3.3f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("crack_hammer")),
-								
+				ItemList.flint_mattock = new FlintMattock(ToolMaterialList.flint, 1, -3.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("flint_mattock")),
+				ItemList.flint_shovel = new FlintShovel(ToolMaterialList.flint, 1, -3.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("flint_shovel")),
+				ItemList.flint_hatchet = new FlintHatchet(ToolMaterialList.flint, 5, -3.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("flint_hatchet")),
+				ItemList.flint_knife = new FlintKnife(ToolMaterialList.flint, 3, -3.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("flint_knife")),
+				
+				ItemList.crack_hammer = new CrackHammer(ItemTier.IRON, 1, -3.3f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("crack_hammer")),
+						
 				ItemList.cassiterite_ore = new BlockItem(BlockList.cassiterite_ore, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(BlockList.cassiterite_ore.getRegistryName()),
 				ItemList.bornite_ore = new BlockItem(BlockList.bornite_ore, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(BlockList.bornite_ore.getRegistryName()),
 				ItemList.wolframite_ore = new BlockItem(BlockList.wolframite_ore, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(BlockList.wolframite_ore.getRegistryName()),

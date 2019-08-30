@@ -2,15 +2,26 @@ package com.kwpugh.easy_steel.lists;
 
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 
 
 public enum ToolMaterialList implements IItemTier
 {	
-	bronze(0.5F, 4.0f, 215, 2, 10, ItemList.bronze_ingot),
-	steel(0.5F, 4.0f, 975, 3, 8, ItemList.steel_ingot),
-	hardened_steel(0.5F, 4.0f, 1700, 4, 8, ItemList.hardened_steel_ingot),
-	tungsten_carbide(0.75F, 4.0f, 2000, 4, 8, ItemList.tungsten_carbide_ingot);
+	/*
+	 * Durability:
+	 * Wood = 59
+	 * Stone = 131
+	 * Iron = 250
+	 * Diamond = 1561
+	 * Gold = 32
+	 * 
+	 */
+	flint(1.0F, 4.0f, 145, 1, 10, Items.FLINT),
+	bronze(0.5F, 4.0f, 225, 2, 10, ItemList.bronze_ingot),
+	steel(0.5F, 4.0f, 575, 3, 8, ItemList.steel_ingot),
+	hardened_steel(0.5F, 4.0f, 700, 4, 8, ItemList.hardened_steel_ingot),
+	tungsten_carbide(0.75F, 4.0f, 1350, 4, 8, ItemList.tungsten_carbide_ingot);
 	
 
 	private float attackDamage, efficiency;

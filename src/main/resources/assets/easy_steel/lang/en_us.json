@@ -1,6 +1,11 @@
 {
 	"item.easy_steel.crack_hammer": "Crack Hammer",
 	
+	"item.easy_steel.flint_mattock": "Flint Mattock",
+	"item.easy_steel.flint_shovel": "Flint Shovel",
+	"item.easy_steel.flint_hatchet": "Flint Hatchet",
+	"item.easy_steel.flint_knife": "Flint Knife",
+	
 	"block.easy_steel.bornite_ore": "Bornite",
 	"item.easy_steel.bornite_ore": "Bornite",
 	"block.easy_steel.cassiterite_ore": "Cassiterite",

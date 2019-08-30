@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		" B ",
+		"BS ",
+		"S  "
+	],
+	
+	"key":
+	{
+		"B": { "item": "minecraft:flint" },
+		"S": { "item": "minecraft:stick" }	
+	},
+	
+	"result": { "item": "easy_steel:flint_hatchet" }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "easy_steel:iron_powder"
+  },
+  "result": "minecraft:iron_ingot",
+  "experience": 0.15,
+  "cookingtime": 200
+}
