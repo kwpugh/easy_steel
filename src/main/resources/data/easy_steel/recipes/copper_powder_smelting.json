@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "easy_steel:copper_chunk"
+  },
+  "result": "easy_steel:copper_powder",
+  "experience": 0.15,
+  "cookingtime": 200
+}

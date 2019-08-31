@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "easy_steel:tin_chunk"
+  },
+  "result": "easy_steel:tin_powder",
+  "experience": 0.15,
+  "cookingtime": 200
+}

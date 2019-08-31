@@ -10,6 +10,8 @@ public class ItemList
 	public static Item flint_shovel;
 	public static Item flint_hatchet;
 	public static Item flint_knife;
+	public static Item flint_hoe;
+	
 	
 	public static Item carbon_chunk;
 	public static Item carbon;
