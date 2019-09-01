@@ -17,11 +17,11 @@ public enum ToolMaterialList implements IItemTier
 	 * Gold = 32
 	 * 
 	 */
-	flint(1.0F, 4.0f, 145, 1, 10, Items.FLINT),
-	bronze(0.5F, 4.0f, 225, 2, 10, ItemList.bronze_ingot),
-	steel(0.5F, 4.0f, 575, 3, 8, ItemList.steel_ingot),
-	hardened_steel(0.5F, 4.0f, 700, 4, 8, ItemList.hardened_steel_ingot),
-	tungsten_carbide(0.75F, 4.0f, 1350, 4, 8, ItemList.tungsten_carbide_ingot);
+	flint(1.0F, 5.5f, 145, 1, 10, Items.FLINT),
+	bronze(0.5F, 6.5f, 225, 2, 10, ItemList.bronze_ingot),
+	steel(0.5F, 7.5f, 575, 3, 8, ItemList.steel_ingot),
+	hardened_steel(0.5F, 7.5f, 700, 4, 8, ItemList.hardened_steel_ingot),
+	tungsten_carbide(0.75F, 9.0f, 1350, 4, 8, ItemList.tungsten_carbide_ingot);
 	
 
 	private float attackDamage, efficiency;
