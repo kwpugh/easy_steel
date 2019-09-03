@@ -6,6 +6,8 @@ public class ItemList
 {
 	public static Item crack_hammer;
 	
+	public static Item hand_shovel;
+	public static Item sharp_flint;
 	public static Item flint_mattock;
 	public static Item flint_shovel;
 	public static Item flint_hatchet;

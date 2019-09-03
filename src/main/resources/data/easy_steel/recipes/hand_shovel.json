@@ -3,16 +3,16 @@
 	
 	"pattern":
 	[
-		"  B",
-		" S ",
+		"   ",
+		" B ",
 		"S  "
 	],
 	
 	"key":
 	{
-		"B": { "item": "easy_steel:sharp_flint" },
+		"B": { "tag": "minecraft:planks" },
 		"S": { "item": "minecraft:stick" }	
 	},
 	
-	"result": { "item": "easy_steel:flint_shovel" }
+	"result": { "item": "easy_steel:hand_shovel" }
 }

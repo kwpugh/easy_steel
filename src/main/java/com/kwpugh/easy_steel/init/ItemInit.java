@@ -9,6 +9,7 @@ import com.kwpugh.easy_steel.items.FlintHoe;
 import com.kwpugh.easy_steel.items.FlintKnife;
 import com.kwpugh.easy_steel.items.FlintMattock;
 import com.kwpugh.easy_steel.items.FlintShovel;
+import com.kwpugh.easy_steel.items.HandShovel;
 import com.kwpugh.easy_steel.items.HardenedSteelHammer;
 import com.kwpugh.easy_steel.items.HardenedSteelPaxel;
 import com.kwpugh.easy_steel.items.SteelHammer;
@@ -45,6 +46,9 @@ public class ItemInit
 		{
 			event.getRegistry().registerAll
 			(
+				ItemList.sharp_flint = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("sharp_flint")),
+				ItemList.hand_shovel = new HandShovel(ItemTier.WOOD, 1, -3.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("hand_shovel")),
+				
 				ItemList.flint_mattock = new FlintMattock(ToolMaterialList.flint, 1, -3.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("flint_mattock")),
 				ItemList.flint_shovel = new FlintShovel(ToolMaterialList.flint, 1, -3.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("flint_shovel")),
 				ItemList.flint_hatchet = new FlintHatchet(ToolMaterialList.flint, 5, -3.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("flint_hatchet")),
