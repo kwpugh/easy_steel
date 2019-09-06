@@ -2,7 +2,6 @@ package com.kwpugh.easy_steel.lists;
 
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
-import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 
 
@@ -17,7 +16,7 @@ public enum ToolMaterialList implements IItemTier
 	 * Gold = 32
 	 * 
 	 */
-	flint(1.0F, 5.5f, 145, 1, 10, Items.FLINT),
+	flint(1.0F, 5.5f, 145, 1, 10, ItemList.sharp_flint),
 	bronze(0.5F, 6.5f, 225, 2, 10, ItemList.bronze_ingot),
 	steel(0.5F, 7.5f, 575, 3, 8, ItemList.steel_ingot),
 	hardened_steel(0.5F, 7.5f, 700, 4, 8, ItemList.hardened_steel_ingot),

@@ -2,7 +2,6 @@ package com.kwpugh.easy_steel.items;
 
 import java.util.List;
 
-import com.kwpugh.easy_steel.lists.BlockList;
 import com.kwpugh.easy_steel.lists.ItemList;
 
 import net.minecraft.block.Block;

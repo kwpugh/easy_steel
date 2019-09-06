@@ -2,6 +2,8 @@ package com.kwpugh.easy_steel.items;
 
 import java.util.List;
 
+import com.kwpugh.easy_steel.lists.ItemList;
+
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.IItemTier;
@@ -19,6 +21,18 @@ public class FlintHoe extends HoeItem
 		super(tier, attackSpeedIn, builder);
 	}
 
+	@Override
+	public boolean isBookEnchantable(ItemStack stack, ItemStack book)
+	{
+		return true;
+	}
+
+	@Override
+	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
+	{
+		return repair.getItem() == ItemList.sharp_flint;
+	}
+	
 	@Override
 	public void addInformation(ItemStack stack, World world, List<ITextComponent> list, ITooltipFlag flag)
 	{

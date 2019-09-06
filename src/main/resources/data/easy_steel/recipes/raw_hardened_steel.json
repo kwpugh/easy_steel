@@ -2,7 +2,7 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
         {
-            "tag": "forge:dusts/diamond"
+        "tag": "forge:dusts/carbon"
         },
         {
             "tag": "forge:dusts/carbon"
@@ -16,6 +16,6 @@
     ],
     "result": {
         "item": "easy_steel:raw_hardened_steel",
-        "count": 1
+        "count": 4
     }
 }
