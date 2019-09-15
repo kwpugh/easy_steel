@@ -9,9 +9,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.entity.monster.SilverfishEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IItemTier;
@@ -35,7 +33,7 @@ public class CrackHammer extends PickaxeItem
 	{
 		super(tier, attackDamageIn, attackSpeedIn, builder);
 	}
-
+	
 	@Override
 	public ActionResultType onItemUse(ItemUseContext context)
 	{
@@ -45,15 +43,15 @@ public class CrackHammer extends PickaxeItem
 		 BlockState state = world.getBlockState(pos);
 		 Block block = state.getBlock();
 		 ItemStack stack = context.getItem();
-		 Direction direction = context.getFace();
-		 
+		 Direction face = context.getFace();
+
 	     if (!world.isRemote && state.getBlockHardness(world, pos) != 0.0F)
 		 {
 	    	 stack.damageItem(1, player, (p_220038_0_) -> {
 	         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
 	         });
 	     }
-	      
+	     
 	     if(block == Blocks.COAL_ORE)
 	     {
 	    	 world.destroyBlock(pos, false);
@@ -62,6 +60,7 @@ public class CrackHammer extends PickaxeItem
 
 	     if(block == Blocks.IRON_ORE)
 	     {
+	    	 //world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3); 
 	    	 world.destroyBlock(pos, false);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.iron_chunk, 2)));    	 
 	     }
@@ -95,7 +94,7 @@ public class CrackHammer extends PickaxeItem
 	    	 world.destroyBlock(pos, false);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.tungsten_chunk, 2)));    	 
 	     }
-	     
+	
 		 return ActionResultType.PASS;
 	}
 	

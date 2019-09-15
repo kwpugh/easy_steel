@@ -2,6 +2,9 @@
   "replace": false,
   "values": [
     "#forge:ores/copper",
-    "#forge:ores/tin"
+    "#forge:ores/tin",
+    "#forge:ores/tungsten",
+    "#forge:ores/gold",
+    "#forge:ores/iron"
   ]
 }
