@@ -54,48 +54,48 @@ public class CrackHammer extends PickaxeItem
 	     
 	     if(block == Blocks.COAL_ORE)
 	     {
-	    	 world.destroyBlock(pos, false);
+	    	 //world.destroyBlock(pos, false);
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.carbon_chunk, 2)));    	 
 	     }
 
 	     if(block == Blocks.IRON_ORE)
 	     {
-	    	 //world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3); 
-	    	 world.destroyBlock(pos, false);
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.iron_chunk, 2)));    	 
 	     }
 	     
 	     if(block == Blocks.GOLD_ORE)
 	     {
-	    	 world.destroyBlock(pos, false);
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.gold_chunk, 2)));    	 
 	     }
 
 	     if(block == Blocks.DIAMOND_ORE)
 	     {
-	    	 world.destroyBlock(pos, false);
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.diamond_chunk, 2)));   	 
 	     }
 	     
 	     if(block == BlockList.bornite_ore)
 	     {
-	    	 world.destroyBlock(pos, false);
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);;
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.copper_chunk, 3)));    	 
 	     }
 	     
 	     if(block == BlockList.cassiterite_ore)
 	     {
-	    	 world.destroyBlock(pos, false);
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.tin_chunk, 2)));    	 
 	     }
 
 	     if(block == BlockList.wolframite_ore)
 	     {
-	    	 world.destroyBlock(pos, false);
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.tungsten_chunk, 2)));    	 
 	     }
 	
-		 return ActionResultType.PASS;
+		 return ActionResultType.SUCCESS;
 	}
 	
 	@Override
