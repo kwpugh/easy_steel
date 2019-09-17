@@ -50,8 +50,9 @@ public class HandShovel extends ShovelItem
 	      
 	     if(block == Blocks.GRAVEL)
 	     {
-	    	 world.destroyBlock(pos, false);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.sharp_flint, 1)));     	 
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.sharp_flint, 1))); 
+	    	 return ActionResultType.SUCCESS;
 	     }
 	     
 		 return ActionResultType.PASS;
