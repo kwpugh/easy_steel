@@ -1,7 +1,7 @@
 {
   "type": "minecraft:blasting",
   "ingredient": {
-    "item": "easy_steel:tungsten_chunk"
+    "item": "easy_steel:wolframite_ore"
   },
   "result": "easy_steel:tungsten_powder",
   "experience": 0.15,

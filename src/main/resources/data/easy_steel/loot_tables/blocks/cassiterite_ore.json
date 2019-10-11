@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "easy_steel:tin_chunk"
+          "name": "easy_steel:tin_powder"
         }
       ],
       "conditions": [

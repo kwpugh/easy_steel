@@ -55,48 +55,48 @@ public class CrackHammer extends PickaxeItem
 	     if(block == Blocks.COAL_ORE)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.carbon_chunk, 2))); 
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.carbon, 2))); 
 	    	 return ActionResultType.SUCCESS;
 	     }
 
 	     if(block == Blocks.IRON_ORE)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.iron_chunk, 2)));
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.iron_powder, 2)));
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     
 	     if(block == Blocks.GOLD_ORE)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.gold_chunk, 2)));   
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.gold_powder, 2)));   
 	    	 return ActionResultType.SUCCESS;
 	     }
 
 	     if(block == Blocks.DIAMOND_ORE)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.diamond_chunk, 2)));   
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.diamond_powder, 2)));   
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     
 	     if(block == BlockList.bornite_ore)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);;
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.copper_chunk, 3))); 
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.copper_powder, 3))); 
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     
 	     if(block == BlockList.cassiterite_ore)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.tin_chunk, 2)));    	 
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.tin_powder, 2)));    	 
 	     }
 
 	     if(block == BlockList.wolframite_ore)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.tungsten_chunk, 2)));  
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.tungsten_powder, 2)));  
 	    	 return ActionResultType.SUCCESS;
 	     }
 	
@@ -119,7 +119,7 @@ public class CrackHammer extends PickaxeItem
 	public void addInformation(ItemStack stack, World world, List<ITextComponent> list, ITooltipFlag flag)
 	{
 		super.addInformation(stack, world, list, flag);				
-		list.add(new StringTextComponent(TextFormatting.GREEN + "Used to break various ores into chunks"));
+		list.add(new StringTextComponent(TextFormatting.GREEN + "Used to break various ores into powders"));
 		list.add(new StringTextComponent(TextFormatting.BLUE + "Right-click on ore to use"));
 
 	} 
