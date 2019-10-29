@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "easy_steel:carbon_chunk"
-  },
-  "result": "easy_steel:carbon",
-  "experience": 0.15,
-  "cookingtime": 400
-}

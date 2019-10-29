@@ -61,14 +61,6 @@ public class ItemInit
 				ItemList.cassiterite_ore = new BlockItem(BlockList.cassiterite_ore, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(BlockList.cassiterite_ore.getRegistryName()),
 				ItemList.bornite_ore = new BlockItem(BlockList.bornite_ore, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(BlockList.bornite_ore.getRegistryName()),
 				ItemList.wolframite_ore = new BlockItem(BlockList.wolframite_ore, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(BlockList.wolframite_ore.getRegistryName()),
-						
-				ItemList.tin_chunk = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("tin_chunk")),		
-				ItemList.copper_chunk = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("copper_chunk")),		
-				ItemList.carbon_chunk = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("carbon_chunk")),
-				ItemList.iron_chunk = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("iron_chunk")),
-				ItemList.gold_chunk = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("gold_chunk")),
-				ItemList.diamond_chunk = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("diamond_chunk")),
-				ItemList.tungsten_chunk = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("tungsten_chunk")),
 										
 				ItemList.tin_powder = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("tin_powder")),
 				ItemList.copper_powder = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("copper_powder")),

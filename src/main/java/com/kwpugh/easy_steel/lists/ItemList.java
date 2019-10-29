@@ -15,19 +15,11 @@ public class ItemList
 	public static Item flint_hoe;
 	
 	
-	public static Item carbon_chunk;
-	public static Item carbon;
-	
-	public static Item iron_chunk;
+	public static Item carbon;	
 	public static Item iron_powder;
-	
-	public static Item gold_chunk;
 	public static Item gold_powder;
-
-	public static Item diamond_chunk;
 	public static Item diamond_powder;
 	
-	public static Item tungsten_chunk;
 	public static Item tungsten_powder;
 	public static Item raw_tungsten_carbide;
 	public static Item tungsten_carbide_ingot;
@@ -82,10 +74,8 @@ public class ItemList
 	public static Item hardened_steel_block;
 	public static Item tungsten_carbide_block;
 	
-	public static Item copper_chunk;
 	public static Item copper_powder;
 	
-	public static Item tin_chunk;
 	public static Item tin_powder;
 	
 	public static Item raw_bronze;

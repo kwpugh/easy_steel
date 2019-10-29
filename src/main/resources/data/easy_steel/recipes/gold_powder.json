@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "easy_steel:gold_chunk"
-  },
-  "result": "easy_steel:gold_powder",
-  "experience": 0.15,
-  "cookingtime": 200
-}
