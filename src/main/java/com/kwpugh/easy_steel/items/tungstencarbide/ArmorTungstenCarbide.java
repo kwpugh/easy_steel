@@ -4,6 +4,7 @@ package com.kwpugh.easy_steel.items.tungstencarbide;
 import java.util.List;
 
 import com.kwpugh.easy_steel.lists.ItemList;
+import com.kwpugh.easy_steel.util.SpecialAbilities;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
@@ -40,14 +41,18 @@ public class ArmorTungstenCarbide extends ArmorItem
 	    			feet.getItem() == ItemList.armor_tungsten_carbide_boots)
 	    	{
 				player.removeActivePotionEffect(Effects.POISON);
+				player.removeActivePotionEffect(Effects.SLOWNESS);
+				player.removeActivePotionEffect(Effects.WEAKNESS);
+				player.removeActivePotionEffect(Effects.MINING_FATIGUE);
+				player.removeActivePotionEffect(Effects.NAUSEA);
 	    	}	
 		    
 		    //Helmet
 		    if(head.getItem() == ItemList.armor_tungsten_carbide_head)
 			{
-//				int newfoodlevel = 1;
-//				float newsatlevel = 0.3F;
-//				SpecialAbilities.giveRegenffect(world, player, stack, newfoodlevel, newsatlevel);			
+				int newfoodlevel = 1;
+				float newsatlevel = 0.2F;
+				SpecialAbilities.giveRegenffect(world, player, stack, newfoodlevel, newsatlevel);			
 			}
 			else
 			{
