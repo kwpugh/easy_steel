@@ -1,4 +1,4 @@
-package com.kwpugh.easy_steel.items;
+package com.kwpugh.easy_steel.items.tungstencarbide;
 
 import java.util.List;
 import java.util.Set;

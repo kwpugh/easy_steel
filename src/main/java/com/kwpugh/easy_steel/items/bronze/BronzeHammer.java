@@ -1,4 +1,4 @@
-package com.kwpugh.easy_steel.items;
+package com.kwpugh.easy_steel.items.bronze;
 
 import java.util.List;
 import java.util.Set;
@@ -24,7 +24,7 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
-public class HardenedSteelHammer extends PickaxeItem
+public class BronzeHammer extends PickaxeItem
 {
 	private static final Set<Block> EFFECTIVE_ON = Sets.newHashSet(Blocks.ACTIVATOR_RAIL, Blocks.COAL_ORE, Blocks.COBBLESTONE, Blocks.DETECTOR_RAIL, Blocks.DIAMOND_BLOCK, Blocks.DIAMOND_ORE, 
 			Blocks.POWERED_RAIL, Blocks.GOLD_BLOCK, Blocks.GOLD_ORE, Blocks.ICE, Blocks.IRON_BLOCK, Blocks.IRON_ORE, Blocks.LAPIS_BLOCK, 
@@ -102,7 +102,7 @@ public class HardenedSteelHammer extends PickaxeItem
 	
 	public static final Set<Material> EFFECTIVE_MATERIALS = ImmutableSet.of(Material.ROCK, Material.IRON, Material.GLASS, Material.ICE, Material.PACKED_ICE, Material.ANVIL);
 
-	public HardenedSteelHammer(IItemTier tier, int attackDamageIn, float attackSpeedIn, Properties builder)
+	public BronzeHammer(IItemTier tier, int attackDamageIn, float attackSpeedIn, Properties builder)
 	{
 		super(tier, attackDamageIn, attackSpeedIn, builder);
 	}
@@ -135,7 +135,7 @@ public class HardenedSteelHammer extends PickaxeItem
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
-		return repair.getItem() == ItemList.hardened_steel_ingot;
+		return repair.getItem() == ItemList.bronze_ingot;
 	}
 	
 	@Override

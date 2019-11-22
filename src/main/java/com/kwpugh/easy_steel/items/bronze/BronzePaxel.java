@@ -1,4 +1,4 @@
-package com.kwpugh.easy_steel.items;
+package com.kwpugh.easy_steel.items.bronze;
 
 import java.util.List;
 import java.util.Set;
@@ -19,7 +19,7 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
-public class TungstenCarbidePaxel extends ToolItem
+public class BronzePaxel extends ToolItem
 {
 
 	public static final Set<Block> EFFECTIVE_ON = Sets.newHashSet(Blocks.ACTIVATOR_RAIL, Blocks.COAL_ORE,
@@ -50,7 +50,7 @@ public class TungstenCarbidePaxel extends ToolItem
 			Blocks.BLUE_CONCRETE_POWDER, Blocks.BROWN_CONCRETE_POWDER, Blocks.GREEN_CONCRETE_POWDER,
 			Blocks.RED_CONCRETE_POWDER, Blocks.BLACK_CONCRETE_POWDER, Blocks.BAMBOO, Blocks.CACTUS, Blocks.MELON, Blocks.PUMPKIN);
 	
-	public TungstenCarbidePaxel(float attackDamageIn, float attackSpeedIn, IItemTier tier, Set<Block> effectiveBlocksIn,
+	public BronzePaxel(float attackDamageIn, float attackSpeedIn, IItemTier tier, Set<Block> effectiveBlocksIn,
 			Properties builder)
 	{
 		super(attackDamageIn, attackSpeedIn, tier, EFFECTIVE_ON, builder);
@@ -78,7 +78,7 @@ public class TungstenCarbidePaxel extends ToolItem
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
-		return repair.getItem() == ItemList.tungsten_carbide_ingot;
+		return repair.getItem() == ItemList.bronze_ingot;
 	}
 	
 	@Override
