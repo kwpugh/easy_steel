@@ -19,6 +19,7 @@ public class ItemList
 	public static Item iron_powder;
 	public static Item gold_powder;
 	public static Item diamond_powder;
+	public static Item emerald_powder;
 	
 	public static Item tungsten_powder;
 	public static Item raw_tungsten_carbide;

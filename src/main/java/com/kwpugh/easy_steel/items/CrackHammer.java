@@ -80,6 +80,13 @@ public class CrackHammer extends PickaxeItem
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     
+	     if(block == Blocks.EMERALD_ORE)
+	     {
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.emerald_powder, 2)));   
+	    	 return ActionResultType.SUCCESS;
+	     }
+	     
 	     if(block == BlockList.bornite_ore)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);;

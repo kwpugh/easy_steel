@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "easy_steel:emerald_powder"
+  },
+  "result": "minecraft:emerald",
+  "experience": 0.15,
+  "cookingtime": 200
+}
