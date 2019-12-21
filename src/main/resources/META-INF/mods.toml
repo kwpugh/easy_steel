@@ -8,7 +8,7 @@ authors="kwpugh" #optional
 
 [[mods]] #mandatory
 modId="easy_steel" #mandatory
-version="1.0.50" #mandatory
+version="1.1.0" #mandatory
 displayName="Easy Steel & More" #mandatory
 description='''
 Adds steel, bronze, and tungsten-carbide gear
@@ -27,6 +27,6 @@ Adds steel, bronze, and tungsten-carbide gear
 [[dependencies.easy_steel]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.14.3, 1.14.4]"
+    versionRange="[1.15.1]"
     ordering="NONE"
     side="BOTH"
