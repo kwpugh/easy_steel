@@ -47,6 +47,7 @@ public class ItemList
 	public static Item steel_hoe;	
 	public static Item steel_hammer;
 	public static Item steel_paxel;
+	public static Item steel_crossbow;
 	
 	public static Item hardened_steel_sword;
 	public static Item hardened_steel_pickaxe;

@@ -1,0 +1,6 @@
+{
+    "parent": "easy_steel:item/steel_crossbow",
+    "textures": {
+        "layer0": "easy_steel:item/steel_crossbow_arrow"
+    }
+}
