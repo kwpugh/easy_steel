@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BCB",
+    "ADA",
+    " B "
+  ],
+  "key": {
+    "A": {
+      "item": "easy_steel:steel_string"
+    },
+    "B": {
+      "item": "easy_steel:steel_rod"
+    },
+    "C": {
+      "item": "easy_steel:steel_ingot"
+    },
+    "D": {
+      "item": "minecraft:tripwire_hook"
+    }
+  },
+  "result": {
+    "item": "easy_steel:steel_crossbow"
+  }
+}

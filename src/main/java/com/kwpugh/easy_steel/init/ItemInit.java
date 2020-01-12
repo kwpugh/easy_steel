@@ -28,6 +28,7 @@ import com.kwpugh.easy_steel.items.hardenedsteel.HardenedSteelSword;
 import com.kwpugh.easy_steel.items.powders.Carbon;
 import com.kwpugh.easy_steel.items.steel.ArmorSteel;
 import com.kwpugh.easy_steel.items.steel.SteelAxe;
+import com.kwpugh.easy_steel.items.steel.SteelCrossbow;
 import com.kwpugh.easy_steel.items.steel.SteelHammer;
 import com.kwpugh.easy_steel.items.steel.SteelHoe;
 import com.kwpugh.easy_steel.items.steel.SteelPaxel;
@@ -49,7 +50,6 @@ import com.kwpugh.easy_steel.lists.ToolMaterialList;
 
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.BlockItem;
-import net.minecraft.item.CrossbowItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemTier;
 import net.minecraft.util.ResourceLocation;
@@ -116,6 +116,8 @@ public class ItemInit
 				ItemList.hardened_steel_rod = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("hardened_steel_rod")),
 				ItemList.tungsten_carbide_rod = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("tungsten_carbide_rod")),
 				
+				ItemList.steel_string = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("steel_string")),
+						
 				ItemList.bronze_sword = new BronzeSword(ToolMaterialList.bronze, 4, -2.3f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("bronze_sword")),
 				ItemList.bronze_pickaxe = new BronzePickaxe(ToolMaterialList.bronze, 2, -2.8f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("bronze_pickaxe")),
 				ItemList.bronze_axe = new BronzeAxe(ToolMaterialList.bronze, 6, -3.1f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("bronze_axe")),
@@ -131,8 +133,8 @@ public class ItemInit
 				ItemList.steel_hoe = new SteelHoe(ToolMaterialList.steel, -0.5f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("steel_hoe")),					
 				ItemList.steel_hammer = new SteelHammer(ToolMaterialList.steel, 7, -3.3f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("steel_hammer")),
 				ItemList.steel_paxel = new SteelPaxel(7, -3.2f, ToolMaterialList.steel, null, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("steel_paxel")),	
-				ItemList.steel_crossbow = new CrossbowItem((new Item.Properties()).maxStackSize(1).group(EasySteel.easy_steel).maxDamage(500)).setRegistryName(location("steel_crossbow")),	
-						
+				ItemList.steel_crossbow = new SteelCrossbow((new Item.Properties()).maxStackSize(1).group(EasySteel.easy_steel).maxDamage(500)).setRegistryName(location("steel_crossbow")),
+				
 				ItemList.hardened_steel_sword = new HardenedSteelSword(ToolMaterialList.hardened_steel, 5, -2.2f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("hardened_steel_sword")),
 				ItemList.hardened_steel_pickaxe = new HardenedSteelPickaxe(ToolMaterialList.hardened_steel, 3, -2.2f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("hardened_steel_pickaxe")),
 				ItemList.hardened_steel_axe = new HardenedSteelAxe(ToolMaterialList.hardened_steel, 7, -3.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("hardened_steel_axe")),
