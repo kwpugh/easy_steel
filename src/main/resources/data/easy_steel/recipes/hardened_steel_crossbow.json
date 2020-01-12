@@ -7,19 +7,19 @@
   ],
   "key": {
     "A": {
-      "item": "easy_steel:steel_string"
+      "item": "easy_steel:hardened_steel_string"
     },
     "B": {
-      "item": "easy_steel:steel_rod"
+      "item": "easy_steel:hardened_steel_rod"
     },
     "C": {
-      "tag": "forge:ingots/steel"
+      "item": "easy_steel:hardened_steel_ingot"
     },
     "D": {
       "item": "minecraft:tripwire_hook"
     }
   },
   "result": {
-    "item": "easy_steel:steel_crossbow"
+    "item": "easy_steel:hardened_steel_crossbow"
   }
 }

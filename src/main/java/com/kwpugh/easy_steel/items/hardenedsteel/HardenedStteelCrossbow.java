@@ -1,4 +1,4 @@
-package com.kwpugh.easy_steel.items.steel;
+package com.kwpugh.easy_steel.items.hardenedsteel;
 
 import java.util.List;
 
@@ -26,9 +26,9 @@ import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
-public class SteelCrossbow extends CrossbowItem
+public class HardenedStteelCrossbow extends CrossbowItem
 {
-	public SteelCrossbow(Properties propertiesIn)
+	public HardenedStteelCrossbow(Properties propertiesIn)
 	{
 		super(propertiesIn);
 	}

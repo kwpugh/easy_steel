@@ -2,14 +2,14 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
         {
-            "tag": "forge:ingots/steel"
+            "item": "easy_steel:raw_hardened_steel"
         },
         {
             "item": "minecraft:string"
         }
     ],
     "result": {
-        "item": "easy_steel:steel_string",
+        "item": "easy_steel:hardened_steel_string",
         "count": 1
     }
 }

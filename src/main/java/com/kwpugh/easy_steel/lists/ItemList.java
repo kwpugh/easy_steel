@@ -33,10 +33,12 @@ public class ItemList
 	
 	public static Item steel_plate;
 	public static Item steel_rod;
+	public static Item steel_string;
 	
 	public static Item hardened_steel_plate;
 	public static Item hardened_steel_rod;
-
+	public static Item hardened_steel_string;
+	
 	public static Item tungsten_carbide_plate;
 	public static Item tungsten_carbide_rod;
 	
@@ -48,8 +50,6 @@ public class ItemList
 	public static Item steel_hammer;
 	public static Item steel_paxel;
 	public static Item steel_crossbow;
-	public static Item steel_arrow;
-	public static Item steel_string;
 	
 	public static Item hardened_steel_sword;
 	public static Item hardened_steel_pickaxe;
@@ -58,6 +58,7 @@ public class ItemList
 	public static Item hardened_steel_hoe;
 	public static Item hardened_steel_hammer;
 	public static Item hardened_steel_paxel;
+	public static Item hardened_steel_crossbow;
 	
 	public static Item armor_steel_head;
 	public static Item armor_steel_body;
