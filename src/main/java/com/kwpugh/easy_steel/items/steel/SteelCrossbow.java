@@ -225,6 +225,18 @@ public class SteelCrossbow extends CrossbowItem
    }
    
    @Override
+   public boolean isBookEnchantable(ItemStack stack, ItemStack book)
+   {
+	   return true;
+   }
+
+   @Override
+   public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
+   {
+	   return repair.getItem() == ItemList.steel_ingot;
+   }
+	
+   @Override
    public void addInformation(ItemStack stack, World world, List<ITextComponent> list, ITooltipFlag flag)
    {
 	   super.addInformation(stack, world, list, flag);				
