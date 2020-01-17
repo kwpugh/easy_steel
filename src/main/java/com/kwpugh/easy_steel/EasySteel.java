@@ -51,13 +51,13 @@ public class EasySteel
     {
     	OreGenerator.setupOregen();
     	
-        logger.info("Mod preinit");
+        logger.info("Easy Steel setup complete");
     }
 
     private void doClientStuff(final FMLClientSetupEvent event)
     {
 
-    	logger.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
+    	logger.info("Easy Steel got game settings {}", event.getMinecraftSupplier().get().gameSettings);
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
@@ -78,7 +78,7 @@ public class EasySteel
     public void onServerStarting(FMLServerStartingEvent event)
     {
 
-    	logger.info("Server starting");
+    	logger.info("Easy Steel server starting");
     }
 
     @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
@@ -88,7 +88,7 @@ public class EasySteel
         public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent)
         {
 
-        	logger.info("Blocks registered");
+        	logger.info("Easy Steel blocks registered");
         }
     }
 }

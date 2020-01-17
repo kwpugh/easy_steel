@@ -32,7 +32,7 @@ public class BlockInit
 				BlockList.tungsten_carbide_block = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(3.0f, 3.0f).lightValue(1).sound(SoundType.METAL)).setRegistryName(location("tungsten_carbide_block"))
 				
 			);
-			EasySteel.logger.info("Blocks registered.");			
+			EasySteel.logger.info("Easy Steel blocks registered.");			
 		}
 	}
 	

@@ -179,7 +179,7 @@ public class ItemInit
 				ItemList.armor_tungsten_carbide_leggings = new ArmorTungstenCarbide(ArmorMaterialList.tungsten_carbide, EquipmentSlotType.LEGS, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("armor_tungsten_carbide_leggings")),
 				ItemList.armor_tungsten_carbide_boots = new ArmorTungstenCarbide(ArmorMaterialList.tungsten_carbide, EquipmentSlotType.FEET, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("armor_tungsten_carbide_boots"))
 			);		
-			EasySteel.logger.info("Items registered.");
+			EasySteel.logger.info("Easy Steel items registered.");
 		}
 		 
 		private static ResourceLocation location(String name)
