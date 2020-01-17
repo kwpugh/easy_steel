@@ -4,6 +4,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import javax.annotation.Nonnull;
+
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 import com.google.common.collect.ImmutableMap.Builder;
 import com.kwpugh.easy_steel.lists.ItemList;
@@ -11,6 +15,7 @@ import com.kwpugh.easy_steel.lists.ItemList;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.CampfireBlock;
 import net.minecraft.block.RotatedPillarBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.util.ITooltipFlag;
@@ -20,6 +25,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.ToolItem;
 import net.minecraft.util.ActionResultType;
+import net.minecraft.util.Direction;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
@@ -27,6 +33,7 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
+import net.minecraftforge.common.util.Constants.WorldEvents;
 
 public class HardenedSteelPaxel extends ToolItem
 {
@@ -73,6 +80,8 @@ public class HardenedSteelPaxel extends ToolItem
 			Blocks.STRIPPED_SPRUCE_WOOD).put(Blocks.SPRUCE_LOG, 
 			Blocks.STRIPPED_SPRUCE_LOG).build();
 	
+	public static final Map<Block, BlockState> SHOVEL_LOOKUP = Maps.newHashMap(ImmutableMap.of(Blocks.GRASS_BLOCK, Blocks.GRASS_PATH.getDefaultState()));
+	
 	public HardenedSteelPaxel(float attackDamageIn, float attackSpeedIn, IItemTier tier, Set<Block> effectiveBlocksIn,
 			Properties builder)
 	{
@@ -92,38 +101,58 @@ public class HardenedSteelPaxel extends ToolItem
 						: this.efficiency;
 	}
 	
-	public ActionResultType onItemUse(ItemUseContext context)
-	{
-		World world = context.getWorld();
-	    BlockPos blockpos = context.getPos();
-	    BlockState blockstate = world.getBlockState(blockpos);
-	    Block block = BLOCK_STRIPPING_MAP.get(blockstate.getBlock());
-	  
-	    if (block != null)
-	    {
-	    	PlayerEntity playerentity = context.getPlayer();
-	        world.playSound(playerentity, blockpos, SoundEvents.ITEM_AXE_STRIP, SoundCategory.BLOCKS, 1.0F, 1.0F);
-	       
-	        if (!world.isRemote)
-	        {
-	        	world.setBlockState(blockpos, block.getDefaultState().with(RotatedPillarBlock.AXIS, blockstate.get(RotatedPillarBlock.AXIS)), 11);
-	            
-	        	if (playerentity != null)
-	        	{
-	               context.getItem().damageItem(1, playerentity, (p_220040_1_) -> {
-	                  p_220040_1_.sendBreakAnimation(context.getHand());
-	               });
-	            }
-	        }
-
-	        return ActionResultType.SUCCESS;
-	     
-	    }
-	    else
-	    {
-	    	return ActionResultType.PASS;
-	    }
-	}
+    @Nonnull
+    @Override
+    public ActionResultType onItemUse(ItemUseContext context)
+    {
+        World world = context.getWorld();
+        BlockPos blockpos = context.getPos();
+        PlayerEntity player = context.getPlayer();
+        BlockState blockstate = world.getBlockState(blockpos);
+        BlockState resultToSet = null;
+        Block strippedResult = BLOCK_STRIPPING_MAP.get(blockstate.getBlock());
+        
+        if (strippedResult != null)
+        {
+            world.playSound(player, blockpos, SoundEvents.ITEM_AXE_STRIP, SoundCategory.BLOCKS, 1.0F, 1.0F);
+            resultToSet = strippedResult.getDefaultState().with(RotatedPillarBlock.AXIS, blockstate.get(RotatedPillarBlock.AXIS));
+        }
+        else
+        {
+            if (context.getFace() == Direction.DOWN)
+            {
+                return ActionResultType.PASS;
+            }
+            
+            BlockState foundResult = SHOVEL_LOOKUP.get(blockstate.getBlock());
+            
+            if (foundResult != null && world.isAirBlock(blockpos.up()))
+            {
+                world.playSound(player, blockpos, SoundEvents.ITEM_SHOVEL_FLATTEN, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                resultToSet = foundResult;
+            }
+            else if (blockstate.getBlock() instanceof CampfireBlock && blockstate.get(CampfireBlock.LIT))
+            {
+                world.playEvent(null, WorldEvents.FIRE_EXTINGUISH_SOUND, blockpos, 0);
+                resultToSet = blockstate.with(CampfireBlock.LIT, false);
+            }
+        }
+        if (resultToSet == null)
+        {
+            return ActionResultType.PASS;
+        }
+        if (!world.isRemote)
+        {
+            world.setBlockState(blockpos, resultToSet, 11);
+            
+            if (player != null)
+            {
+                context.getItem().damageItem(1, player, onBroken -> onBroken.sendBreakAnimation(context.getHand()));
+            }
+        }
+        
+        return ActionResultType.SUCCESS;
+    }
 	
 	@Override
 	public boolean isBookEnchantable(ItemStack stack, ItemStack book)
