@@ -44,39 +44,37 @@ public class ArmorHardenedSteel extends ArmorItem
 		    //Helmet
 		    if(head.getItem() == ItemList.armor_hardened_steel_head)
 			{
-//				int newfoodlevel = 1;
-//				float newsatlevel = 0.3F;
-//				SpecialAbilities.giveRegenffect(world, player, stack, newfoodlevel, newsatlevel);			
+		    	//Unused			
 			}
 			else
 			{
-				//something
+				//Unused
 			}
 		    
 		    //Chestplate
 		    if(chest.getItem() == ItemList.armor_hardened_steel_body)
 			{
-		    	//something
+		    	//Unused
 			}
 		    
 		    //Leggings
 		    if(legs.getItem() == ItemList.armor_hardened_steel_leggings)
 			{
-		    	//something
+		    	//Unused
 			}
 			else
 			{
-				//something
+				//Unused
 			}
 		    
 		    //Boots
 		    if(feet.getItem() == ItemList.armor_hardened_steel_boots)
 			{
-		    	//something
+		    	//Unused
 			}
 			else
 			{
-				//something
+				//Unused
 			}		    	
 		}
 	}

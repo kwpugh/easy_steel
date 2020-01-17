@@ -240,7 +240,7 @@ public class SteelCrossbow extends CrossbowItem
    public void addInformation(ItemStack stack, World world, List<ITextComponent> list, ITooltipFlag flag)
    {
 	   super.addInformation(stack, world, list, flag);				
-	   list.add(new StringTextComponent(TextFormatting.GREEN + "A more accurate crossbow"));
+	   list.add(new StringTextComponent(TextFormatting.GREEN + "A more accurate and durable crossbow"));
 	   list.add(new StringTextComponent(TextFormatting.BLUE + "NOTE: Has a shorter charge interval"));
    } 
 }

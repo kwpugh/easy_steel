@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"   ",
+		"P P",
+		"P P"
+	],
+	
+	"key":
+	{
+		"P": { "item": "easy_steel:iron_links" }	
+	},
+	
+	"result": { "item": "minecraft:chainmail_boots" }
+}

@@ -25,6 +25,8 @@ public class ItemList
 	public static Item raw_tungsten_carbide;
 	public static Item tungsten_carbide_ingot;
 	
+	public static Item iron_links;
+	
 	public static Item steel_ingot;
 	public static Item raw_steel;
 	
@@ -49,7 +51,9 @@ public class ItemList
 	public static Item steel_hoe;	
 	public static Item steel_hammer;
 	public static Item steel_paxel;
+	public static Item steel_bow;
 	public static Item steel_crossbow;
+	public static Item steel_trident;
 	
 	public static Item hardened_steel_sword;
 	public static Item hardened_steel_pickaxe;
@@ -58,6 +62,7 @@ public class ItemList
 	public static Item hardened_steel_hoe;
 	public static Item hardened_steel_hammer;
 	public static Item hardened_steel_paxel;
+	public static Item hardened_steel_bow;
 	public static Item hardened_steel_crossbow;
 	
 	public static Item armor_steel_head;

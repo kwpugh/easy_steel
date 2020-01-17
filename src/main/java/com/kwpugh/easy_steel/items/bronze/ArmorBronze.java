@@ -44,39 +44,37 @@ public class ArmorBronze extends ArmorItem
 		    //Helmet
 		    if(head.getItem() == ItemList.armor_bronze_head)
 			{
-//				int newfoodlevel = 1;
-//				float newsatlevel = 0.3F;
-//				SpecialAbilities.giveRegenffect(world, player, stack, newfoodlevel, newsatlevel);			
+		    	//unused
 			}
 			else
 			{
-				//something
+				//unused
 			}
 		    
 		    //Chestplate
 		    if(chest.getItem() == ItemList.armor_bronze_body)
 			{
-		    	//something
+		    	//unused
 			}
 		    
 		    //Leggings
 		    if(legs.getItem() == ItemList.armor_bronze_leggings)
 			{
-		    	//something
+		    	//unused
 			}
 			else
 			{
-				//something
+				//unused
 			}
 		    
 		    //Boots
 		    if(feet.getItem() == ItemList.armor_bronze_boots)
 			{
-		    	//something
+		    	//unused
 			}
 			else
 			{
-				//something
+				//unused
 			}		    	
 		}
 	}

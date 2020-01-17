@@ -1,5 +1,6 @@
 {
 	"item.easy_steel.crack_hammer": "Crack Hammer",
+	"item.easy_steel.iron_links": "Iron Links",
 	
 	"item.easy_steel.sharp_flint": "Sharp Flint",
 	"item.easy_steel.hand_shovel": "Hand Shovel",
@@ -77,9 +78,10 @@
 	"item.easy_steel.steel_hoe": "Steel Hoe",
 	"item.easy_steel.steel_hammer": "Steel Hammer",
 	"item.easy_steel.steel_paxel": "Steel Paxel",
+	"item.easy_steel.steel_bow": "Steel Bow",
 	"item.easy_steel.steel_crossbow": "Steel Crossbow",
-	"item.easy_steel.steel_arrow": "Steel Arrow",
 	"item.easy_steel.steel_string": "Steel String",
+	"item.easy_steel.steel_trident": "Steel Trident",
 	
 	"item.easy_steel.hardened_steel_sword": "Hardened Steel Sword",
 	"item.easy_steel.hardened_steel_pickaxe": "Hardened Steel Pickaxe",
@@ -88,6 +90,7 @@
 	"item.easy_steel.hardened_steel_hoe": "Hardened Steel Hoe",
 	"item.easy_steel.hardened_steel_hammer": "Hardened Steel Hammer",
 	"item.easy_steel.hardened_steel_paxel": "Hardened Steel Paxel",
+	"item.easy_steel.hardened_steel_bow": "Hardened Steel Bow",
 	"item.easy_steel.hardened_steel_crossbow": "Hardened Steel Crossbow",
 	"item.easy_steel.hardened_steel_string": "Hardened Steel String",
 	

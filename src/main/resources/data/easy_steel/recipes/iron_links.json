@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		" A ",
+		"A A",
+		" A "
+	],
+	
+	"key":
+	{
+		"A": { "item": "minecraft:iron_nugget" }	
+	},
+	
+	"result": { "item": "easy_steel:iron_links",
+	"count": 2
+	}
+}

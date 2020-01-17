@@ -49,39 +49,37 @@ public class ArmorTungstenCarbide extends ArmorItem
 		    //Helmet
 		    if(head.getItem() == ItemList.armor_tungsten_carbide_head)
 			{
-//				int newfoodlevel = 1;
-//				float newsatlevel = 0.2F;
-//				SpecialAbilities.giveRegenffect(world, player, stack, newfoodlevel, newsatlevel);			
+		    	//Unused			
 			}
 			else
 			{
-				//something
+				//Unused
 			}
 		    
 		    //Chestplate
 		    if(chest.getItem() == ItemList.armor_tungsten_carbide_body)
 			{
-		    	//something
+		    	//Unused
 			}
 		    
 		    //Leggings
 		    if(legs.getItem() == ItemList.armor_tungsten_carbide_leggings)
 			{
-		    	//something
+		    	//Unused
 			}
 			else
 			{
-				//something
+				//Unused
 			}
 		    
 		    //Boots
 		    if(feet.getItem() == ItemList.armor_tungsten_carbide_boots)
 			{
-		    	//something
+		    	//Unused
 			}
 			else
 			{
-				//something
+				//Unused
 			}		    	
 		}
 	}
