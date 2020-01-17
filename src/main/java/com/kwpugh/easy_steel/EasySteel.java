@@ -69,7 +69,7 @@ public class EasySteel
     private void processIMC(final InterModProcessEvent event)
     {
 
-    	logger.info("Got IMC {}", event.getIMCStream().
+    	logger.info("Easy Steel got IMC {}", event.getIMCStream().
                 map(m->m.getMessageSupplier().get()).
                 collect(Collectors.toList()));
     }
