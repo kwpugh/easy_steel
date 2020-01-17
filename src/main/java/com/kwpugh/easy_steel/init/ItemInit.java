@@ -68,6 +68,10 @@ public class ItemInit
 		{
 			event.getRegistry().registerAll
 			(
+				ItemList.cassiterite_ore = new BlockItem(BlockList.cassiterite_ore, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(BlockList.cassiterite_ore.getRegistryName()),
+				ItemList.bornite_ore = new BlockItem(BlockList.bornite_ore, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(BlockList.bornite_ore.getRegistryName()),
+				ItemList.wolframite_ore = new BlockItem(BlockList.wolframite_ore, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(BlockList.wolframite_ore.getRegistryName()),
+					
 				ItemList.sharp_flint = new SharpFlint(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("sharp_flint")),
 				ItemList.hand_shovel = new HandShovel(ItemTier.WOOD, 1, -3.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("hand_shovel")),
 				
@@ -80,10 +84,6 @@ public class ItemInit
 				ItemList.crack_hammer = new CrackHammer(ItemTier.IRON, 1, -3.3f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("crack_hammer")),
 				
 				ItemList.iron_links = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("iron_links")),
-						
-				ItemList.cassiterite_ore = new BlockItem(BlockList.cassiterite_ore, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(BlockList.cassiterite_ore.getRegistryName()),
-				ItemList.bornite_ore = new BlockItem(BlockList.bornite_ore, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(BlockList.bornite_ore.getRegistryName()),
-				ItemList.wolframite_ore = new BlockItem(BlockList.wolframite_ore, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(BlockList.wolframite_ore.getRegistryName()),
 										
 				ItemList.tin_powder = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("tin_powder")),
 				ItemList.copper_powder = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("copper_powder")),
