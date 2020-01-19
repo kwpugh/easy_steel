@@ -17,6 +17,8 @@
 	"item.easy_steel.cassiterite_ore": "Cassiterite",
 	"block.easy_steel.wolframite_ore": "Wolframite",
 	"item.easy_steel.wolframite_ore": "Wolframite",
+	"block.easy_steel.rutile_ore": "Rutile",
+	"item.easy_steel.rutile_ore": "Rutile",
 
 	"item.easy_steel.carbon": "Carbon Powder",
 	"item.easy_steel.copper_powder": "Copper Powder",
@@ -26,6 +28,7 @@
 	"item.easy_steel.diamond_powder": "Diamond Powder",
 	"item.easy_steel.emerald_powder": "Emerald Powder",
 	"item.easy_steel.tungsten_powder": "Tungsten Powder",
+	"item.easy_steel.titanium_powder": "Titanium Powder",
 	
 	"item.easy_steel.raw_bronze": "Raw Bronze",
 	"item.easy_steel.bronze_ingot": "Bronze Ingot",
@@ -39,8 +42,14 @@
 	"item.easy_steel.raw_tungsten_carbide": "Raw Tungsten-Carbide",
 	"item.easy_steel.tungsten_carbide_ingot": "Tungsten-Carbide Ingot",
 	
+	"item.easy_steel.raw_titanium_alloy": "Raw Titanium Alloy",
+	"item.easy_steel.titanium_ingot": "Titanium Alloy Ingot",
+	
 	"item.easy_steel.tungsten_carbide_plate": "Tungsten-Carbide Plate",
 	"item.easy_steel.tungsten_carbide_rod": "Tungsten-Carbide Rod",
+	
+	"item.easy_steel.titanium_plate": "Titanium Alloy Plate",
+	"item.easy_steel.titanium_rod": "Titanium Alloy Rod",
 		
 	"item.easy_steel.bronze_plate": "Bronze Plate",
 	"item.easy_steel.bronze_rod": "Bronze Rod",
@@ -101,6 +110,14 @@
 	"item.easy_steel.tungsten_carbide_hoe": "Tungsten-Carbide Hoe",
 	"item.easy_steel.tungsten_carbide_hammer": "Tungsten-Carbide Hammer",
 	"item.easy_steel.tungsten_carbide_paxel": "Tungsten-Carbide Paxel",
+	
+	"item.easy_steel.titanium_sword": "Titanium Alloy Sword",
+	"item.easy_steel.titanium_pickaxe": "Titanium Alloy Pickaxe",
+	"item.easy_steel.titanium_axe": "Titanium Alloy Axe",
+	"item.easy_steel.titanium_shovel": "Titanium Alloy Shovel",
+	"item.easy_steel.titanium_hoe": "Titanium Alloy Hoe",
+	"item.easy_steel.titanium_hammer": "Titanium Alloy Hammer",
+	"item.easy_steel.titanium_paxel": "Titanium Alloy Paxel",
 	
 	"item.easy_steel.armor_bronze_head": "Bronze Helmet",
 	"item.easy_steel.armor_bronze_body": "Bronze Chestplate",

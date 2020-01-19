@@ -7,6 +7,7 @@ public class BlockList
 	public static Block bornite_ore;
 	public static Block cassiterite_ore;
 	public static Block wolframite_ore;
+	public static Block rutile_ore;
 	
 	public static Block bronze_block;
 	public static Block steel_block;

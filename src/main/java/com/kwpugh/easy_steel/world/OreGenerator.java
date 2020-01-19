@@ -26,6 +26,9 @@ public class OreGenerator
             
             if(GeneralModConfig.WOLFRAMITE_ORE_GENERATION.get())
             	biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.wolframite_ore.getDefaultState(), GeneralModConfig.WOLFRAMITE_ORE_SIZE.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(GeneralModConfig.WOLFRAMITE_ORE_CHANCE.get(), GeneralModConfig.WOLFRAMITE_ORE_MIN_HEIGHT.get(), GeneralModConfig.WOLFRAMITE_ORE_MIN_HEIGHT.get(), GeneralModConfig.WOLFRAMITE_ORE_MAX_HEIGHT.get()))));
+
+            if(GeneralModConfig.RUTILE_ORE_GENERATION.get())
+            	biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.func_225566_b_(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.NATURAL_STONE, BlockList.rutile_ore.getDefaultState(), GeneralModConfig.RUTILE_ORE_SIZE.get())).func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(new CountRangeConfig(GeneralModConfig.RUTILE_ORE_CHANCE.get(), GeneralModConfig.RUTILE_ORE_MIN_HEIGHT.get(), GeneralModConfig.RUTILE_ORE_MIN_HEIGHT.get(), GeneralModConfig.RUTILE_ORE_MAX_HEIGHT.get()))));
         }
     }
 }

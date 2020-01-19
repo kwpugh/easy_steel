@@ -36,6 +36,13 @@ import com.kwpugh.easy_steel.items.steel.SteelPaxel;
 import com.kwpugh.easy_steel.items.steel.SteelPickaxe;
 import com.kwpugh.easy_steel.items.steel.SteelShovel;
 import com.kwpugh.easy_steel.items.steel.SteelSword;
+import com.kwpugh.easy_steel.items.titanium.TitaniumAxe;
+import com.kwpugh.easy_steel.items.titanium.TitaniumHammer;
+import com.kwpugh.easy_steel.items.titanium.TitaniumHoe;
+import com.kwpugh.easy_steel.items.titanium.TitaniumPaxel;
+import com.kwpugh.easy_steel.items.titanium.TitaniumPickaxe;
+import com.kwpugh.easy_steel.items.titanium.TitaniumShovel;
+import com.kwpugh.easy_steel.items.titanium.TitaniumSword;
 import com.kwpugh.easy_steel.items.tungstencarbide.ArmorTungstenCarbide;
 import com.kwpugh.easy_steel.items.tungstencarbide.TungstenCarbideAxe;
 import com.kwpugh.easy_steel.items.tungstencarbide.TungstenCarbideHammer;
@@ -70,8 +77,9 @@ public class ItemInit
 			(
 				ItemList.cassiterite_ore = new BlockItem(BlockList.cassiterite_ore, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(BlockList.cassiterite_ore.getRegistryName()),
 				ItemList.bornite_ore = new BlockItem(BlockList.bornite_ore, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(BlockList.bornite_ore.getRegistryName()),
+				ItemList.rutile_ore = new BlockItem(BlockList.rutile_ore, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(BlockList.rutile_ore.getRegistryName()),
 				ItemList.wolframite_ore = new BlockItem(BlockList.wolframite_ore, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(BlockList.wolframite_ore.getRegistryName()),
-					
+						
 				ItemList.sharp_flint = new SharpFlint(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("sharp_flint")),
 				ItemList.hand_shovel = new HandShovel(ItemTier.WOOD, 1, -3.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("hand_shovel")),
 				
@@ -92,17 +100,23 @@ public class ItemInit
 				ItemList.gold_powder = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("gold_powder")),
 				ItemList.diamond_powder = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("diamond_powder")),
 				ItemList.emerald_powder = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("emerald_powder")),
+				ItemList.titanium_powder = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("titanium_powder")),
 				ItemList.tungsten_powder = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("tungsten_powder")),
+				
 						
 				ItemList.raw_bronze = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("raw_bronze")),
 				ItemList.raw_steel = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("raw_steel")),	
+				ItemList.raw_titanium_alloy = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("raw_titanium_alloy")),
 				ItemList.raw_hardened_steel = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("raw_hardened_steel")),
 				ItemList.raw_tungsten_carbide = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("raw_tungsten_carbide")),
+				
 						
 				ItemList.bronze_ingot = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("bronze_ingot")),
 				ItemList.steel_ingot = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("steel_ingot")),
+				ItemList.titanium_ingot = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("titanium_ingot")),
 				ItemList.hardened_steel_ingot = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("hardened_steel_ingot")),
 				ItemList.tungsten_carbide_ingot = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("tungsten_carbide_ingot")),
+				
 				
 				ItemList.bronze_block = new BlockItem(BlockList.bronze_block, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(BlockList.bronze_block.getRegistryName()),
 				ItemList.steel_block = new BlockItem(BlockList.steel_block, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(BlockList.steel_block.getRegistryName()),
@@ -111,13 +125,17 @@ public class ItemInit
 				
 				ItemList.bronze_plate = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("bronze_plate")),
 				ItemList.steel_plate = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("steel_plate")),
+				ItemList.titanium_plate = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("titanium_plate")),
 				ItemList.hardened_steel_plate = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("hardened_steel_plate")),
 				ItemList.tungsten_carbide_plate = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("tungsten_carbide_plate")),
+				
 						
 				ItemList.bronze_rod = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("bronze_rod")),
 				ItemList.steel_rod = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("steel_rod")),
+				ItemList.titanium_rod = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("titanium_rod")),
 				ItemList.hardened_steel_rod = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("hardened_steel_rod")),
 				ItemList.tungsten_carbide_rod = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("tungsten_carbide_rod")),
+				
 				
 				ItemList.steel_string = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("steel_string")),
 				ItemList.hardened_steel_string = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("hardened_steel_string")),
@@ -137,10 +155,18 @@ public class ItemInit
 				ItemList.steel_hoe = new SteelHoe(ToolMaterialList.steel, -0.5f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("steel_hoe")),					
 				ItemList.steel_hammer = new SteelHammer(ToolMaterialList.steel, 7, -3.3f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("steel_hammer")),
 				ItemList.steel_paxel = new SteelPaxel(7, -3.2f, ToolMaterialList.steel, null, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("steel_paxel")),
-				ItemList.steel_bow = new SteelBow((new Item.Properties()).maxStackSize(1).group(EasySteel.easy_steel).maxDamage(575)).setRegistryName(location("steel_bow")),
-				ItemList.steel_crossbow = new SteelCrossbow((new Item.Properties()).maxStackSize(1).group(EasySteel.easy_steel).maxDamage(575)).setRegistryName(location("steel_crossbow")),
+				ItemList.steel_bow = new SteelBow((new Item.Properties()).maxStackSize(1).group(EasySteel.easy_steel).maxDamage(482)).setRegistryName(location("steel_bow")),
+				ItemList.steel_crossbow = new SteelCrossbow((new Item.Properties()).maxStackSize(1).group(EasySteel.easy_steel).maxDamage(482)).setRegistryName(location("steel_crossbow")),
 				//ItemList.steel_trident = new TridentItem((new Item.Properties()).maxStackSize(1).group(EasySteel.easy_steel).maxDamage(575)).setRegistryName(location("steel_trident")),
 				
+				ItemList.titanium_sword = new TitaniumSword(ToolMaterialList.titanium, 5, -2.5f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("titanium_sword")),
+				ItemList.titanium_pickaxe = new TitaniumPickaxe(ToolMaterialList.titanium, 3, -2.8f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("titanium_pickaxe")),
+				ItemList.titanium_axe = new TitaniumAxe(ToolMaterialList.titanium, 7, -3.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("titanium_axe")),
+				ItemList.titanium_shovel = new TitaniumShovel(ToolMaterialList.titanium, 3, -3.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("titanium_shovel")),
+				ItemList.titanium_hoe = new TitaniumHoe(ToolMaterialList.titanium, -0.5f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("titanium_hoe")),
+				ItemList.titanium_hammer = new TitaniumHammer(ToolMaterialList.titanium, 7, -3.3f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("titanium_hammer")),
+				ItemList.titanium_paxel = new TitaniumPaxel(7, -3.2f, ToolMaterialList.titanium, null, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("titanium_paxel")),
+						
 				ItemList.hardened_steel_sword = new HardenedSteelSword(ToolMaterialList.hardened_steel, 5, -2.4f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("hardened_steel_sword")),
 				ItemList.hardened_steel_pickaxe = new HardenedSteelPickaxe(ToolMaterialList.hardened_steel, 3, -2.8f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("hardened_steel_pickaxe")),
 				ItemList.hardened_steel_axe = new HardenedSteelAxe(ToolMaterialList.hardened_steel, 7, -3.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("hardened_steel_axe")),
@@ -148,8 +174,8 @@ public class ItemInit
 				ItemList.hardened_steel_hoe = new HardenedSteelHoe(ToolMaterialList.hardened_steel, -0.5f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("hardened_steel_hoe")),
 				ItemList.hardened_steel_hammer = new HardenedSteelHammer(ToolMaterialList.hardened_steel, 7, -3.3f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("hardened_steel_hammer")),
 				ItemList.hardened_steel_paxel = new HardenedSteelPaxel(7, -3.2f, ToolMaterialList.hardened_steel, null, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("hardened_steel_paxel")),
-				ItemList.hardened_steel_bow = new SteelBow((new Item.Properties()).maxStackSize(1).group(EasySteel.easy_steel).maxDamage(700)).setRegistryName(location("hardened_steel_bow")),
-				ItemList.hardened_steel_crossbow = new SteelCrossbow((new Item.Properties()).maxStackSize(1).group(EasySteel.easy_steel).maxDamage(700)).setRegistryName(location("hardened_steel_crossbow")),
+				ItemList.hardened_steel_bow = new SteelBow((new Item.Properties()).maxStackSize(1).group(EasySteel.easy_steel).maxDamage(816)).setRegistryName(location("hardened_steel_bow")),
+				ItemList.hardened_steel_crossbow = new SteelCrossbow((new Item.Properties()).maxStackSize(1).group(EasySteel.easy_steel).maxDamage(816)).setRegistryName(location("hardened_steel_crossbow")),
 						
 				ItemList.tungsten_carbide_sword = new TungstenCarbideSword(ToolMaterialList.tungsten_carbide, 5, -2.4f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("tungsten_carbide_sword")),
 				ItemList.tungsten_carbide_pickaxe = new TungstenCarbidePickaxe(ToolMaterialList.tungsten_carbide, 3, -2.8f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("tungsten_carbide_pickaxe")),

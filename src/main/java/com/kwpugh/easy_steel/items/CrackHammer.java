@@ -106,6 +106,13 @@ public class CrackHammer extends PickaxeItem
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.tungsten_powder, 2)));  
 	    	 return ActionResultType.SUCCESS;
 	     }
+	     
+	     if(block == BlockList.rutile_ore)
+	     {
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.titanium_powder, 2)));  
+	    	 return ActionResultType.SUCCESS;
+	     }
 	
 		 return ActionResultType.PASS;
 	}

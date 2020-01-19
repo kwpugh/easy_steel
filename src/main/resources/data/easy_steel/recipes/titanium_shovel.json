@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"I",
+		"S",
+		"S"
+	],
+	
+	"key":
+	{
+		"I": { "item": "easy_steel:titanium_ingot" },
+		"S": { "item": "easy_steel:titanium_rod" }	
+	},
+	
+	"result": { "item": "easy_steel:titanium_shovel" }
+}

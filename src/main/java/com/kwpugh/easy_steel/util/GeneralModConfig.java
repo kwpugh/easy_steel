@@ -22,6 +22,12 @@ public class GeneralModConfig
     public static ForgeConfigSpec.IntValue WOLFRAMITE_ORE_SIZE;
     public static ForgeConfigSpec.IntValue WOLFRAMITE_ORE_MIN_HEIGHT;
     public static ForgeConfigSpec.IntValue WOLFRAMITE_ORE_MAX_HEIGHT;
+
+    public static ForgeConfigSpec.BooleanValue RUTILE_ORE_GENERATION;
+    public static ForgeConfigSpec.IntValue RUTILE_ORE_CHANCE;
+    public static ForgeConfigSpec.IntValue RUTILE_ORE_SIZE;
+    public static ForgeConfigSpec.IntValue RUTILE_ORE_MIN_HEIGHT;
+    public static ForgeConfigSpec.IntValue RUTILE_ORE_MAX_HEIGHT;
     
     public static ForgeConfigSpec.BooleanValue ENABLE_BRONZE_RELATED_ITEMS;
     
@@ -55,6 +61,16 @@ public class GeneralModConfig
         WOLFRAMITE_ORE_CHANCE = SERVER_BUILDER.comment("Chances of Wolframite Ore pocket being generated [0-100, default: 6]").defineInRange("wolframiteOreChance", 4, 0, 100);
         WOLFRAMITE_ORE_MIN_HEIGHT = SERVER_BUILDER.comment("Minimal height for Wolframite Ore pocket generation, [0-255, default: 1]").defineInRange("wolframiteOreMinHeight", 1, 0, 255);
         WOLFRAMITE_ORE_MAX_HEIGHT = SERVER_BUILDER.comment("Maximal height for Wolframite Ore pocket generation [0-255, default: 200]").defineInRange("wolframiteOreMaxHeight", 15, 0, 255);
+
+        SERVER_BUILDER.pop();
+        
+        SERVER_BUILDER.comment("Rutile Ore Generation").push("rutile");
+
+        RUTILE_ORE_GENERATION = SERVER_BUILDER.comment("Generate Rutile Ore in the world [true / false]").define("rutileOreGeneration", true);
+        RUTILE_ORE_SIZE = SERVER_BUILDER.comment("Size of Rutile Ore pockets [0-100, default: 5]").defineInRange("rutileOreSize", 4, 0, 100);
+        RUTILE_ORE_CHANCE = SERVER_BUILDER.comment("Chances of Rutile Ore pocket being generated [0-100, default: 6]").defineInRange("rutileOreChance", 4, 0, 100);
+        RUTILE_ORE_MIN_HEIGHT = SERVER_BUILDER.comment("Minimal height for Rutile Ore pocket generation, [0-255, default: 1]").defineInRange("rutileOreMinHeight", 1, 0, 255);
+        RUTILE_ORE_MAX_HEIGHT = SERVER_BUILDER.comment("Maximal height for Rutile Ore pocket generation [0-255, default: 200]").defineInRange("rutileOreMaxHeight", 15, 0, 255);
 
         SERVER_BUILDER.pop();
     }

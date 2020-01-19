@@ -25,6 +25,10 @@ public class ItemList
 	public static Item raw_tungsten_carbide;
 	public static Item tungsten_carbide_ingot;
 	
+	public static Item titanium_powder;
+	public static Item raw_titanium_alloy;
+	public static Item titanium_ingot;
+	
 	public static Item iron_links;
 	
 	public static Item steel_ingot;
@@ -43,6 +47,9 @@ public class ItemList
 	
 	public static Item tungsten_carbide_plate;
 	public static Item tungsten_carbide_rod;
+	
+	public static Item titanium_plate;
+	public static Item titanium_rod;
 	
 	public static Item steel_sword;
 	public static Item steel_pickaxe;
@@ -78,6 +85,7 @@ public class ItemList
 	public static Item bornite_ore;
 	public static Item cassiterite_ore;
 	public static Item wolframite_ore;
+	public static Item rutile_ore;
 	
 	public static Item bronze_block;
 	public static Item steel_block;
@@ -119,4 +127,13 @@ public class ItemList
 	public static Item armor_tungsten_carbide_body;
 	public static Item armor_tungsten_carbide_leggings;
 	public static Item armor_tungsten_carbide_boots;
+	
+	public static Item titanium_sword;
+	public static Item titanium_pickaxe;
+	public static Item titanium_axe;
+	public static Item titanium_shovel;
+	public static Item titanium_hoe;
+	public static Item titanium_hammer;
+	public static Item titanium_paxel;
+	
 }
