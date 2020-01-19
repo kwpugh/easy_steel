@@ -6,8 +6,8 @@ import java.util.Set;
 
 import javax.annotation.Nonnull;
 
-import com.google.common.collect.ImmutableMap.Builder;
 import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableMap.Builder;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 import com.kwpugh.easy_steel.lists.ItemList;
@@ -20,11 +20,9 @@ import net.minecraft.block.RotatedPillarBlock;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.AxeItem;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUseContext;
-import net.minecraft.item.ShovelItem;
 import net.minecraft.item.ToolItem;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Direction;

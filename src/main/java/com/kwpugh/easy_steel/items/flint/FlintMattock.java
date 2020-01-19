@@ -19,7 +19,7 @@ public class FlintMattock extends PickaxeItem
 	{
 		super(tier, attackDamageIn, attackSpeedIn, builder);
 	}
-
+	
 	@Override
 	public boolean isBookEnchantable(ItemStack stack, ItemStack book)
 	{

@@ -1,0 +1,7 @@
+{
+    "parent": "item/generated",
+    "textures": 
+    {
+        "layer0": "easy_steel:item/armor_titanium_boots"
+    }
+}

@@ -18,7 +18,6 @@ import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.Items;
 import net.minecraft.item.PickaxeItem;
 import net.minecraft.util.ActionResultType;
-import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
@@ -43,7 +42,6 @@ public class CrackHammer extends PickaxeItem
 		 BlockState state = world.getBlockState(pos);
 		 Block block = state.getBlock();
 		 ItemStack stack = context.getItem();
-		 Direction face = context.getFace();
 
 	     if (!world.isRemote && state.getBlockHardness(world, pos) != 0.0F)
 		 {

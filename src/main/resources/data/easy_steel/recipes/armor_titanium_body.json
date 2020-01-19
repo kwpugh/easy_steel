@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"P P",
+		"PPP",
+		"PPP"
+	],
+	
+	"key":
+	{
+		"P": { "item": "easy_steel:titanium_plate" }	
+	},
+	
+	"result": { "item": "easy_steel:armor_titanium_body" }
+}

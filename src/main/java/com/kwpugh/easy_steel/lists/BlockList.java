@@ -11,6 +11,7 @@ public class BlockList
 	
 	public static Block bronze_block;
 	public static Block steel_block;
+	public static Block titanium_block;
 	public static Block hardened_steel_block;
 	public static Block tungsten_carbide_block;
 }
