@@ -11,6 +11,8 @@
     "#forge:dusts/titanium",
     "#forge:dusts/diamond",
     "#forge:dusts/emerald",
+    "#forge:dusts/coal",
+    "#forge:dusts/charcoal",
     "#forge:dusts/carbon"
   ]
 }
