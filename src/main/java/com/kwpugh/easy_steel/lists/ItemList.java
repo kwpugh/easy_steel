@@ -77,7 +77,6 @@ public class ItemList
 	public static Item steel_paxel;
 	public static Item steel_bow;
 	public static Item steel_crossbow;
-	public static Item steel_trident;
 
 	public static Item titanium_sword;
 	public static Item titanium_pickaxe;
