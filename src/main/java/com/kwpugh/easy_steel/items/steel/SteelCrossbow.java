@@ -69,7 +69,7 @@ public class SteelCrossbow extends CrossbowItem
 	    {
 	         setCharged(stack, true);
 	         SoundCategory soundcategory = entityLiving instanceof PlayerEntity ? SoundCategory.PLAYERS : SoundCategory.HOSTILE;
-	         worldIn.playSound((PlayerEntity)null, entityLiving.func_226277_ct_(), entityLiving.func_226278_cu_(), entityLiving.func_226281_cx_(), SoundEvents.ITEM_CROSSBOW_LOADING_END, soundcategory, 1.0F, 1.0F / (random.nextFloat() * 0.5F + 1.0F) + 0.2F);
+	         worldIn.playSound((PlayerEntity)null, entityLiving.getPosX(), entityLiving.getPosY(), entityLiving.getPosZ(), SoundEvents.ITEM_CROSSBOW_LOADING_END, soundcategory, 1.0F, 1.0F / (random.nextFloat() * 0.5F + 1.0F) + 0.2F);
 	    }
 	}
 	      
