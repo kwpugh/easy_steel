@@ -13,5 +13,5 @@
 		"I": { "item": "easy_steel:carbon" }	
 	},
 	
-	"result": { "item": "minecraft:coal" }
+	"result": { "item": "minecraft:coal_block" }
 }
