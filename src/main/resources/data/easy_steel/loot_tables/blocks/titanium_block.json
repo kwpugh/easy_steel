@@ -2,12 +2,12 @@
   "type": "minecraft:block",
   "pools": [
     {
-      "name": "titanium_alloy_block",
+      "name": "titanium_block",
       "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "easy_steel:titanium_alloy_block"
+          "name": "easy_steel:titanium_block"
         }
       ],
       "conditions": [
