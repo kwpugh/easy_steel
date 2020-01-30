@@ -100,7 +100,7 @@ public class SteelHammer extends PickaxeItem
 			Blocks.SANDSTONE_STAIRS, Blocks.COBBLESTONE_STAIRS, Blocks.COBBLESTONE_STAIRS, Blocks.DARK_OAK_STAIRS, Blocks.JUNGLE_STAIRS, Blocks.NETHER_BRICK_STAIRS, Blocks.OAK_STAIRS, 
 			Blocks.RED_SANDSTONE_STAIRS, Blocks.SPRUCE_STAIRS, Blocks.STONE_BRICK_STAIRS, Blocks.HOPPER, Blocks.BEACON, Blocks.GLOWSTONE);
 	
-	public static final Set<Material> EFFECTIVE_MATERIALS = ImmutableSet.of(Material.ROCK, Material.IRON, Material.GLASS, Material.ICE, Material.PACKED_ICE, Material.ANVIL);
+	public static final Set<Material> EFFECTIVE_MATERIALS = ImmutableSet.of(Material.ROCK, Material.IRON, Material.GLASS, Material.ICE, Material.PACKED_ICE, Material.ANVIL, Material.EARTH);
 
 	public SteelHammer(IItemTier tier, int attackDamageIn, float attackSpeedIn, Properties builder)
 	{

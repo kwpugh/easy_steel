@@ -1,0 +1,6 @@
+{
+   "parent": "item/handheld",
+   "textures": {
+       "layer0": "easy_steel:item/tungsten_carbide_excavator"
+   }
+}

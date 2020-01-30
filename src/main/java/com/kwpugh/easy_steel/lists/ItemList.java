@@ -64,6 +64,7 @@ public class ItemList
 	public static Item bronze_pickaxe;
 	public static Item bronze_axe;
 	public static Item bronze_shovel;
+	public static Item bronze_excavator;
 	public static Item bronze_hoe;
 	public static Item bronze_hammer;
 	public static Item bronze_paxel;
@@ -74,6 +75,7 @@ public class ItemList
 	public static Item steel_shovel;
 	public static Item steel_hoe;	
 	public static Item steel_hammer;
+	public static Item steel_excavator;
 	public static Item steel_paxel;
 	public static Item steel_bow;
 	public static Item steel_crossbow;
@@ -84,6 +86,7 @@ public class ItemList
 	public static Item titanium_shovel;
 	public static Item titanium_hoe;
 	public static Item titanium_hammer;
+	public static Item titanium_excavator;
 	public static Item titanium_paxel;
 	
 	public static Item hardened_steel_sword;
@@ -92,6 +95,7 @@ public class ItemList
 	public static Item hardened_steel_shovel;
 	public static Item hardened_steel_hoe;
 	public static Item hardened_steel_hammer;
+	public static Item hardened_steel_excavator;
 	public static Item hardened_steel_paxel;
 	public static Item hardened_steel_bow;
 	public static Item hardened_steel_crossbow;
@@ -102,6 +106,7 @@ public class ItemList
 	public static Item tungsten_carbide_shovel;
 	public static Item tungsten_carbide_hoe;
 	public static Item tungsten_carbide_hammer;
+	public static Item tungsten_carbide_excavator;
 	public static Item tungsten_carbide_paxel;
 	
 	public static Item armor_bronze_head;

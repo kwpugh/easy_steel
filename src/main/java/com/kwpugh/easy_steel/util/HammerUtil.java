@@ -57,7 +57,6 @@ public class HammerUtil
         
         boolean witherImmune = BlockTags.WITHER_IMMUNE.contains(state.getBlock());
         
-        
         if(isEffective && !witherImmune)	
         {
         	world.destroyBlock(pos, false);  //true or false?

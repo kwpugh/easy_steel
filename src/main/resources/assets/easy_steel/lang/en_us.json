@@ -70,6 +70,7 @@
 	"item.easy_steel.bronze_hoe": "Bronze Hoe",
 	"item.easy_steel.bronze_paxel": "Bronze Paxel",
 	"item.easy_steel.bronze_hammer": "Bronze Hammer",
+	"item.easy_steel.bronze_excavator": "Bronze Excavator",
 	
 	"item.easy_steel.steel_sword": "Steel Sword",	
 	"item.easy_steel.steel_pickaxe": "Steel Pickaxe",
@@ -77,6 +78,7 @@
 	"item.easy_steel.steel_shovel": "Steel Shovel",
 	"item.easy_steel.steel_hoe": "Steel Hoe",
 	"item.easy_steel.steel_hammer": "Steel Hammer",
+	"item.easy_steel.steel_excavator": "Steel Excavator",
 	"item.easy_steel.steel_paxel": "Steel Paxel",
 	"item.easy_steel.steel_bow": "Steel Bow",
 	"item.easy_steel.steel_crossbow": "Steel Crossbow",
@@ -88,6 +90,7 @@
 	"item.easy_steel.titanium_shovel": "Titanium Alloy Shovel",
 	"item.easy_steel.titanium_hoe": "Titanium Alloy Hoe",
 	"item.easy_steel.titanium_hammer": "Titanium Alloy Hammer",
+	"item.easy_steel.titanium_excavator": "Titanium Alloy Excavator",
 	"item.easy_steel.titanium_paxel": "Titanium Alloy Paxel",
 		
 	"item.easy_steel.hardened_steel_sword": "Hardened Steel Sword",
@@ -96,6 +99,7 @@
 	"item.easy_steel.hardened_steel_shovel": "Hardened Steel Shovel",
 	"item.easy_steel.hardened_steel_hoe": "Hardened Steel Hoe",
 	"item.easy_steel.hardened_steel_hammer": "Hardened Steel Hammer",
+	"item.easy_steel.hardened_steel_excavator": "Hardened Steel Excavator",
 	"item.easy_steel.hardened_steel_paxel": "Hardened Steel Paxel",
 	"item.easy_steel.hardened_steel_bow": "Hardened Steel Bow",
 	"item.easy_steel.hardened_steel_crossbow": "Hardened Steel Crossbow",
@@ -107,6 +111,7 @@
 	"item.easy_steel.tungsten_carbide_shovel": "Tungsten-Carbide Shovel",
 	"item.easy_steel.tungsten_carbide_hoe": "Tungsten-Carbide Hoe",
 	"item.easy_steel.tungsten_carbide_hammer": "Tungsten-Carbide Hammer",
+	"item.easy_steel.tungsten_carbide_excavator": "Tungsten-Carbide Excavator",
 	"item.easy_steel.tungsten_carbide_paxel": "Tungsten-Carbide Paxel",
 	
 	"item.easy_steel.armor_bronze_head": "Bronze Helmet",

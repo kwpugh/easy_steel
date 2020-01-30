@@ -3,14 +3,14 @@
 	
 	"pattern":
 	[
-		"  B",
+		"  I",
 		" S ",
 		"S  "
 	],
 	
 	"key":
 	{
-		"B": { "item": "easy_steel:sharp_flint" },
+		"I": { "item": "easy_steel:sharp_flint" },
 		"S": { "item": "minecraft:stick" }	
 	},
 	

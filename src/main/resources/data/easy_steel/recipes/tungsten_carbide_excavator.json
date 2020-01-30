@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		" II",
+		" SI",
+		"S  "
+	],
+	
+	"key":
+	{
+		"I": { "item": "easy_steel:tungsten_carbide_ingot" },
+		"S": { "item": "easy_steel:tungsten_carbide_rod" }	
+	},
+	
+	"result": { "item": "easy_steel:tungsten_carbide_excavator" }
+}

@@ -6,6 +6,7 @@ import com.kwpugh.easy_steel.items.HandShovel;
 import com.kwpugh.easy_steel.items.SharpFlint;
 import com.kwpugh.easy_steel.items.bronze.ArmorBronze;
 import com.kwpugh.easy_steel.items.bronze.BronzeAxe;
+import com.kwpugh.easy_steel.items.bronze.BronzeExcavator;
 import com.kwpugh.easy_steel.items.bronze.BronzeHammer;
 import com.kwpugh.easy_steel.items.bronze.BronzeHoe;
 import com.kwpugh.easy_steel.items.bronze.BronzePaxel;
@@ -19,6 +20,7 @@ import com.kwpugh.easy_steel.items.flint.FlintMattock;
 import com.kwpugh.easy_steel.items.flint.FlintShovel;
 import com.kwpugh.easy_steel.items.hardenedsteel.ArmorHardenedSteel;
 import com.kwpugh.easy_steel.items.hardenedsteel.HardenedSteelAxe;
+import com.kwpugh.easy_steel.items.hardenedsteel.HardenedSteelExcavator;
 import com.kwpugh.easy_steel.items.hardenedsteel.HardenedSteelHammer;
 import com.kwpugh.easy_steel.items.hardenedsteel.HardenedSteelHoe;
 import com.kwpugh.easy_steel.items.hardenedsteel.HardenedSteelPaxel;
@@ -30,6 +32,7 @@ import com.kwpugh.easy_steel.items.steel.ArmorSteel;
 import com.kwpugh.easy_steel.items.steel.SteelAxe;
 import com.kwpugh.easy_steel.items.steel.SteelBow;
 import com.kwpugh.easy_steel.items.steel.SteelCrossbow;
+import com.kwpugh.easy_steel.items.steel.SteelExcavator;
 import com.kwpugh.easy_steel.items.steel.SteelHammer;
 import com.kwpugh.easy_steel.items.steel.SteelHoe;
 import com.kwpugh.easy_steel.items.steel.SteelPaxel;
@@ -38,6 +41,7 @@ import com.kwpugh.easy_steel.items.steel.SteelShovel;
 import com.kwpugh.easy_steel.items.steel.SteelSword;
 import com.kwpugh.easy_steel.items.titanium.ArmorTitanium;
 import com.kwpugh.easy_steel.items.titanium.TitaniumAxe;
+import com.kwpugh.easy_steel.items.titanium.TitaniumExcavator;
 import com.kwpugh.easy_steel.items.titanium.TitaniumHammer;
 import com.kwpugh.easy_steel.items.titanium.TitaniumHoe;
 import com.kwpugh.easy_steel.items.titanium.TitaniumPaxel;
@@ -46,6 +50,7 @@ import com.kwpugh.easy_steel.items.titanium.TitaniumShovel;
 import com.kwpugh.easy_steel.items.titanium.TitaniumSword;
 import com.kwpugh.easy_steel.items.tungstencarbide.ArmorTungstenCarbide;
 import com.kwpugh.easy_steel.items.tungstencarbide.TungstenCarbideAxe;
+import com.kwpugh.easy_steel.items.tungstencarbide.TungstenCarbideExcavator;
 import com.kwpugh.easy_steel.items.tungstencarbide.TungstenCarbideHammer;
 import com.kwpugh.easy_steel.items.tungstencarbide.TungstenCarbideHoe;
 import com.kwpugh.easy_steel.items.tungstencarbide.TungstenCarbidePaxel;
@@ -61,7 +66,6 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemTier;
-import net.minecraft.item.ShieldItem;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -142,9 +146,10 @@ public class ItemInit
 				ItemList.bronze_sword = new BronzeSword(ToolMaterialList.bronze, 4, -2.4f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("bronze_sword")),
 				ItemList.bronze_pickaxe = new BronzePickaxe(ToolMaterialList.bronze, 2, -2.8f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("bronze_pickaxe")),
 				ItemList.bronze_axe = new BronzeAxe(ToolMaterialList.bronze, 6, -3.1f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("bronze_axe")),
-				ItemList.bronze_shovel = new BronzeShovel(ToolMaterialList.bronze, 2, -3.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("bronze_shovel")),
+				ItemList.bronze_shovel = new BronzeShovel(ToolMaterialList.bronze, 2, -3.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("bronze_shovel")),			
 				ItemList.bronze_hoe = new BronzeHoe(ToolMaterialList.bronze, -1.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("bronze_hoe")),			
 				ItemList.bronze_hammer = new BronzeHammer(ToolMaterialList.bronze, 6, -3.3f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("bronze_hammer")),
+				ItemList.bronze_excavator = new BronzeExcavator(ToolMaterialList.bronze, 2, -3.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("bronze_excavator")),
 				ItemList.bronze_paxel = new BronzePaxel(6, -3.2f, ToolMaterialList.bronze, null, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("bronze_paxel")),
 						
 				ItemList.steel_sword = new SteelSword(ToolMaterialList.steel, 5, -2.4f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("steel_sword")),
@@ -153,6 +158,7 @@ public class ItemInit
 				ItemList.steel_shovel = new SteelShovel(ToolMaterialList.steel, 3, -3.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("steel_shovel")),
 				ItemList.steel_hoe = new SteelHoe(ToolMaterialList.steel, -0.5f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("steel_hoe")),					
 				ItemList.steel_hammer = new SteelHammer(ToolMaterialList.steel, 7, -3.3f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("steel_hammer")),
+				ItemList.steel_excavator = new SteelExcavator(ToolMaterialList.steel, 3, -3.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("steel_excavator")),
 				ItemList.steel_paxel = new SteelPaxel(7, -3.2f, ToolMaterialList.steel, null, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("steel_paxel")),
 				ItemList.steel_bow = new SteelBow((new Item.Properties()).maxStackSize(1).group(EasySteel.easy_steel).maxDamage(482)).setRegistryName(location("steel_bow")),
 				ItemList.steel_crossbow = new SteelCrossbow((new Item.Properties()).maxStackSize(1).group(EasySteel.easy_steel).maxDamage(482)).setRegistryName(location("steel_crossbow")),
@@ -163,6 +169,7 @@ public class ItemInit
 				ItemList.titanium_shovel = new TitaniumShovel(ToolMaterialList.titanium, 3, -3.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("titanium_shovel")),
 				ItemList.titanium_hoe = new TitaniumHoe(ToolMaterialList.titanium, -0.5f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("titanium_hoe")),
 				ItemList.titanium_hammer = new TitaniumHammer(ToolMaterialList.titanium, 7, -3.3f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("titanium_hammer")),
+				ItemList.titanium_excavator = new TitaniumExcavator(ToolMaterialList.titanium, 3, -3.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("titanium_excavator")),
 				ItemList.titanium_paxel = new TitaniumPaxel(7, -3.2f, ToolMaterialList.titanium, null, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("titanium_paxel")),
 						
 				ItemList.hardened_steel_sword = new HardenedSteelSword(ToolMaterialList.hardened_steel, 5, -2.4f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("hardened_steel_sword")),
@@ -171,6 +178,7 @@ public class ItemInit
 				ItemList.hardened_steel_shovel = new HardenedSteelShovel(ToolMaterialList.hardened_steel, 3, -3.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("hardened_steel_shovel")),
 				ItemList.hardened_steel_hoe = new HardenedSteelHoe(ToolMaterialList.hardened_steel, -0.5f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("hardened_steel_hoe")),
 				ItemList.hardened_steel_hammer = new HardenedSteelHammer(ToolMaterialList.hardened_steel, 7, -3.3f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("hardened_steel_hammer")),
+				ItemList.hardened_steel_excavator = new HardenedSteelExcavator(ToolMaterialList.hardened_steel, 3, -3.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("hardened_steel_excavator")),
 				ItemList.hardened_steel_paxel = new HardenedSteelPaxel(7, -3.2f, ToolMaterialList.hardened_steel, null, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("hardened_steel_paxel")),
 				ItemList.hardened_steel_bow = new SteelBow((new Item.Properties()).maxStackSize(1).group(EasySteel.easy_steel).maxDamage(816)).setRegistryName(location("hardened_steel_bow")),
 				ItemList.hardened_steel_crossbow = new SteelCrossbow((new Item.Properties()).maxStackSize(1).group(EasySteel.easy_steel).maxDamage(816)).setRegistryName(location("hardened_steel_crossbow")),
@@ -178,9 +186,10 @@ public class ItemInit
 				ItemList.tungsten_carbide_sword = new TungstenCarbideSword(ToolMaterialList.tungsten_carbide, 5, -2.4f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("tungsten_carbide_sword")),
 				ItemList.tungsten_carbide_pickaxe = new TungstenCarbidePickaxe(ToolMaterialList.tungsten_carbide, 3, -2.8f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("tungsten_carbide_pickaxe")),
 				ItemList.tungsten_carbide_axe = new TungstenCarbideAxe(ToolMaterialList.tungsten_carbide, 7, -3.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("tungsten_carbide_axe")),
-				ItemList.tungsten_carbide_shovel = new TungstenCarbideShovel(ToolMaterialList.tungsten_carbide, 3, -3.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("tungsten_carbide_shovel")),
+				ItemList.tungsten_carbide_shovel = new TungstenCarbideShovel(ToolMaterialList.tungsten_carbide, 3, -3.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("tungsten_carbide_shovel")),				
 				ItemList.tungsten_carbide_hoe = new TungstenCarbideHoe(ToolMaterialList.tungsten_carbide, -0.5f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("tungsten_carbide_hoe")),
 				ItemList.tungsten_carbide_hammer = new TungstenCarbideHammer(ToolMaterialList.tungsten_carbide, 7, -3.3f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("tungsten_carbide_hammer")),
+				ItemList.tungsten_carbide_excavator = new TungstenCarbideExcavator(ToolMaterialList.tungsten_carbide, 3, -3.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("tungsten_carbide_excavator")),
 				ItemList.tungsten_carbide_paxel = new TungstenCarbidePaxel(7, -3.2f, ToolMaterialList.tungsten_carbide, null, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("tungsten_carbide_paxel")),
 						
 				ItemList.armor_bronze_head = new ArmorBronze(ArmorMaterialList.bronze, EquipmentSlotType.HEAD, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("armor_bronze_head")),
