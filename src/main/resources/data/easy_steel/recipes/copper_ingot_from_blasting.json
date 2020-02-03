@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "easy_steel:copper_powder"
+  },
+  "result": "easy_steel:copper_ingot",
+  "experience": 0.15,
+  "cookingtime": 200
+}

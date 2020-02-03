@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "easy_steel:tin_powder"
+  },
+  "result": "easy_steel:tin_ingot",
+  "experience": 0.15,
+  "cookingtime": 200
+}

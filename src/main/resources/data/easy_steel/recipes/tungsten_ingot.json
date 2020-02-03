@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "easy_steel:tungsten_powder"
+  },
+  "result": "easy_steel:tungsten_ingot",
+  "experience": 0.15,
+  "cookingtime": 200
+}

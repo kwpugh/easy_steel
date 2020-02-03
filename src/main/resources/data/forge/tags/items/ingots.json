@@ -1,7 +1,12 @@
 {
   "replace": false,
   "values": [
+    "#forge:ingots/copper",
+    "#forge:ingots/tin",
     "#forge:ingots/steel",
-    "#forge:ingots/bronze"
+    "#forge:ingots/bronze",
+    "#forge:ingots/titanium",
+    "#forge:ingots/tungsten",
+    "#forge:ingots/tungsten_carbide"
   ]
 }

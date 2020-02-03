@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "tag": "forge:ingots/tungsten"
+        },
+        {
+            "tag": "forge:ingots/tungsten"
+        },
+        {
+            "tag": "forge:dusts/carbon"
+        }
+    ],
+    "result": {
+        "item": "easy_steel:raw_tungsten_carbide",
+        "count": 2
+    }
+}

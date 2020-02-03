@@ -108,13 +108,18 @@ public class ItemInit
 				ItemList.emerald_powder = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("emerald_powder")),
 				ItemList.titanium_powder = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("titanium_powder")),
 				ItemList.tungsten_powder = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("tungsten_powder")),
-									
+
+				ItemList.copper_ingot = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("copper_ingot")),
+				ItemList.tin_ingot = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("tin_ingot")),
+				ItemList.titanium_base_ingot = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("titanium_base_ingot")),
+				ItemList.tungsten_ingot = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("tungsten_ingot")),
+				
 				ItemList.raw_bronze = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("raw_bronze")),
 				ItemList.raw_steel = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("raw_steel")),	
 				ItemList.raw_titanium_alloy = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("raw_titanium_alloy")),
 				ItemList.raw_hardened_steel = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("raw_hardened_steel")),
 				ItemList.raw_tungsten_carbide = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("raw_tungsten_carbide")),			
-						
+
 				ItemList.bronze_ingot = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("bronze_ingot")),
 				ItemList.steel_ingot = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("steel_ingot")),
 				ItemList.titanium_ingot = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("titanium_ingot")),

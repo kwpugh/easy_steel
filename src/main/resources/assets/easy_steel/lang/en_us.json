@@ -30,6 +30,11 @@
 	"item.easy_steel.tungsten_powder": "Tungsten Powder",
 	"item.easy_steel.titanium_powder": "Titanium Powder",
 	
+	"item.easy_steel.copper_ingot": "Copper Ingot",
+	"item.easy_steel.tin_ingot": "Tin Ingot",
+	"item.easy_steel.titanium_base_ingot": "Titanium Ingot",
+	"item.easy_steel.tungsten_ingot": "Tungsten Ingot",
+	
 	"item.easy_steel.raw_bronze": "Raw Bronze",
 	"item.easy_steel.bronze_ingot": "Bronze Ingot",
 	"item.easy_steel.raw_steel": "Raw Steel",

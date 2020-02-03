@@ -28,6 +28,13 @@ public class ItemList
 	public static Item emerald_powder;
 	public static Item copper_powder;
 	public static Item tin_powder;
+	
+	public static Item copper_ingot;
+	public static Item tin_ingot;
+	public static Item titanium_base_ingot;
+	public static Item tungsten_ingot;
+
+	
 	public static Item raw_bronze;
 	public static Item bronze_ingot;
 	public static Item steel_ingot;
