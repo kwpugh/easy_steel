@@ -2,6 +2,8 @@ package com.kwpugh.easy_steel.items.steel;
 
 import java.util.List;
 
+import javax.annotation.Nullable;
+
 import com.google.common.collect.Lists;
 import com.kwpugh.easy_steel.lists.ItemList;
 
@@ -24,7 +26,10 @@ import net.minecraft.util.SoundEvents;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class SteelCrossbow extends CrossbowItem
 {
@@ -236,11 +241,11 @@ public class SteelCrossbow extends CrossbowItem
 	   return repair.getItem() == ItemList.steel_ingot;
    }
 	
-   @Override
-   public void addInformation(ItemStack stack, World world, List<ITextComponent> list, ITooltipFlag flag)
-   {
-	   super.addInformation(stack, world, list, flag);				
-	   list.add(new StringTextComponent(TextFormatting.GREEN + "A more accurate and durable crossbow"));
-	   list.add(new StringTextComponent(TextFormatting.BLUE + "NOTE: Has a shorter charge interval"));
-   } 
+	@OnlyIn(Dist.CLIENT)
+	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
+	{
+		super.addInformation(stack, worldIn, tooltip, flagIn);
+		tooltip.add((new TranslationTextComponent("item.easy_steel.crossbow.line1").applyTextStyle(TextFormatting.GREEN)));
+		tooltip.add((new TranslationTextComponent("item.easy_steel.crossbow.line2").applyTextStyle(TextFormatting.AQUA)));
+	}
 }

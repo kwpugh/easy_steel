@@ -1,24 +1,39 @@
 {
 	"item.easy_steel.crack_hammer": "Crack Hammer",
+	"item.easy_steel.crack_hammer.line1": "Used to break various ores into powders",
+	"item.easy_steel.crack_hammer.line2": "Right-click on ore to use",
+	
 	"item.easy_steel.iron_links": "Iron Links",
+	"item.easy_steel.iron_links.line1": "Used to make vanilla Chain Mail",
 	
 	"item.easy_steel.sharp_flint": "Sharp Flint",
+	"item.easy_steel.sharp_flint.line1": "A piece of flint with a very sharp edge",
+	"item.easy_steel.sharp_flint.line2": "Right-click with a hand shovel on gravel to obtain",	
 	"item.easy_steel.hand_shovel": "Hand Shovel",
-	
+	"item.easy_steel.hand_shovel.line1": "Used to collect sharp flint from gravel",
+	"item.easy_steel.hand_shovel.line2": "Right-click on gravel to use",	
+	"item.easy_steel.flint.line1": "Better than a stone tool",
+	"item.easy_steel.flint.line2": "Right-click on wool to get string",
 	"item.easy_steel.flint_mattock": "Flint Mattock",
 	"item.easy_steel.flint_shovel": "Flint Shovel",
 	"item.easy_steel.flint_hatchet": "Flint Hatchet",
+	
+	
 	"item.easy_steel.flint_knife": "Flint Knife",
 	"item.easy_steel.flint_hoe": "Flint Hoe",
 	
 	"block.easy_steel.bornite_ore": "Bornite",
 	"item.easy_steel.bornite_ore": "Bornite",
+	"item.easy_steel.bornite_ore.line1": "A natural source of copper",
 	"block.easy_steel.cassiterite_ore": "Cassiterite",
 	"item.easy_steel.cassiterite_ore": "Cassiterite",
+	"item.easy_steel.cassiterite_ore.line1": "A natural source of tin",
 	"block.easy_steel.wolframite_ore": "Wolframite",
 	"item.easy_steel.wolframite_ore": "Wolframite",
+	"item.easy_steel.wolframite_ore.line1": "A natural source of tungsten",
 	"block.easy_steel.rutile_ore": "Rutile",
 	"item.easy_steel.rutile_ore": "Rutile",
+	"item.easy_steel.rutile_ore.line1": "A natural source of titanium",
 
 	"item.easy_steel.carbon": "Carbon Powder",
 	"item.easy_steel.copper_powder": "Copper Powder",
@@ -67,7 +82,15 @@
 	"block.easy_steel.hardened_steel_block": "Hardened Steel Block",
 	"item.easy_steel.tungsten_carbide_block": "Tungsten-Carbide Block",
 	"block.easy_steel.tungsten_carbide_block": "Tungsten-Carbide Block",
-		
+	
+	"item.easy_steel.excavator": "A shovel that breaks blocks in a 3x3 area",
+	"item.easy_steel.hammer": "A hammer that breaks blocks in a 3x3 area",
+	"item.easy_steel.paxel": "Combines pickaxe, axe, and shovel",
+	"item.easy_steel.bow.line1": "More durable than a vanilla bow",
+	"item.easy_steel.crossbow.line1": "More accurate and durable than a vanilla crossbow",
+	"item.easy_steel.crossbow.line2": "NOTE: Has a shorter charge interval than vanilla",
+	
+	"item.easy_steel.bronze.line1": "Better than flint, less than iron",
 	"item.easy_steel.bronze_sword": "Bronze Sword",
 	"item.easy_steel.bronze_pickaxe": "Bronze Pickaxe",
 	"item.easy_steel.bronze_axe": "Bronze Axe",
@@ -77,6 +100,7 @@
 	"item.easy_steel.bronze_hammer": "Bronze Hammer",
 	"item.easy_steel.bronze_excavator": "Bronze Excavator",
 	
+	"item.easy_steel.steel.line1": "Better than iron",
 	"item.easy_steel.steel_sword": "Steel Sword",	
 	"item.easy_steel.steel_pickaxe": "Steel Pickaxe",
 	"item.easy_steel.steel_axe": "Steel Axe",
@@ -89,6 +113,7 @@
 	"item.easy_steel.steel_crossbow": "Steel Crossbow",
 	"item.easy_steel.steel_string": "Steel String",
 
+    "item.easy_steel.titanium.line1": "Better than steel",
 	"item.easy_steel.titanium_sword": "Titanium Alloy Sword",
 	"item.easy_steel.titanium_pickaxe": "Titanium Alloy Pickaxe",
 	"item.easy_steel.titanium_axe": "Titanium Alloy Axe",
@@ -97,7 +122,8 @@
 	"item.easy_steel.titanium_hammer": "Titanium Alloy Hammer",
 	"item.easy_steel.titanium_excavator": "Titanium Alloy Excavator",
 	"item.easy_steel.titanium_paxel": "Titanium Alloy Paxel",
-		
+	
+	"item.easy_steel.hardened_steel.line1": "A more durable steel",	
 	"item.easy_steel.hardened_steel_sword": "Hardened Steel Sword",
 	"item.easy_steel.hardened_steel_pickaxe": "Hardened Steel Pickaxe",
 	"item.easy_steel.hardened_steel_axe": "Hardened Steel Axe",
@@ -110,6 +136,7 @@
 	"item.easy_steel.hardened_steel_crossbow": "Hardened Steel Crossbow",
 	"item.easy_steel.hardened_steel_string": "Hardened Steel String",
 	
+	"item.easy_steel.tungsten_carbide.line1": "Almost as good as diamond",
 	"item.easy_steel.tungsten_carbide_sword": "Tungsten-Carbide Sword",
 	"item.easy_steel.tungsten_carbide_pickaxe": "Tungsten-Carbide Pickaxe",
 	"item.easy_steel.tungsten_carbide_axe": "Tungsten-Carbide Axe",
@@ -119,26 +146,32 @@
 	"item.easy_steel.tungsten_carbide_excavator": "Tungsten-Carbide Excavator",
 	"item.easy_steel.tungsten_carbide_paxel": "Tungsten-Carbide Paxel",
 	
+	
+	"item.easy_steel.armor_bronze_full.line1": "Much better than leather armor",
 	"item.easy_steel.armor_bronze_head": "Bronze Helmet",
 	"item.easy_steel.armor_bronze_body": "Bronze Chestplate",
 	"item.easy_steel.armor_bronze_leggings": "Bronze Leggings",
 	"item.easy_steel.armor_bronze_boots": "Bronze Boots",
 	
+	"item.easy_steel.armor_steel_full.line1": "Better than iron armor",
 	"item.easy_steel.armor_steel_head": "Steel Helmet",
 	"item.easy_steel.armor_steel_body": "Steel Chestplate",
 	"item.easy_steel.armor_steel_leggings": "Steel Leggings",
 	"item.easy_steel.armor_steel_boots": "Steel Boots",
 
+	"item.easy_steel.armor_titanium_full.line1": "More durable than steel",
 	"item.easy_steel.armor_titanium_head": "Titanium Helmet",
 	"item.easy_steel.armor_titanium_body": "Titanium Chestplate",
 	"item.easy_steel.armor_titanium_leggings": "Titanium Leggings",
 	"item.easy_steel.armor_titanium_boots": "Titanium Boots",
 	
+	"item.easy_steel.armor_hardened_steel_full.line1": "More durable than steel",
 	"item.easy_steel.armor_hardened_steel_head": "Hardened Steel Helmet",
 	"item.easy_steel.armor_hardened_steel_body": "Hardened Steel Chestplate",
 	"item.easy_steel.armor_hardened_steel_leggings": "Hardened Steel Leggings",
 	"item.easy_steel.armor_hardened_steel_boots": "Hardened Steel Boots",
 
+	"item.easy_steel.armor_tungsten_carbide_full.line1": "Almost as good as diamond",
 	"item.easy_steel.armor_tungsten_carbide_head": "Tungsten-Carbide Helmet",
 	"item.easy_steel.armor_tungsten_carbide_body": "Tungsten-Carbide Chestplate",
 	"item.easy_steel.armor_tungsten_carbide_leggings": "Tungsten-Carbide Leggings",

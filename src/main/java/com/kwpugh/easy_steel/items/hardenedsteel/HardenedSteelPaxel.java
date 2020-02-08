@@ -5,11 +5,12 @@ import java.util.Map;
 import java.util.Set;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.ImmutableMap.Builder;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
-import com.google.common.collect.ImmutableMap.Builder;
 import com.kwpugh.easy_steel.lists.ItemList;
 
 import net.minecraft.block.Block;
@@ -30,9 +31,11 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.util.Constants.WorldEvents;
 
 public class HardenedSteelPaxel extends ToolItem
@@ -166,10 +169,10 @@ public class HardenedSteelPaxel extends ToolItem
 		return repair.getItem() == ItemList.hardened_steel_ingot;
 	}
 	
-	@Override
-	public void addInformation(ItemStack stack, World world, List<ITextComponent> list, ITooltipFlag flag)
+	@OnlyIn(Dist.CLIENT)
+	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
-		super.addInformation(stack, world, list, flag);				
-		list.add(new StringTextComponent(TextFormatting.BLUE + "Combines pickaxe, axe, and shovel"));
-	} 
+		super.addInformation(stack, worldIn, tooltip, flagIn);
+		tooltip.add((new TranslationTextComponent("item.easy_steel.paxel").applyTextStyle(TextFormatting.GREEN)));
+	}
 }

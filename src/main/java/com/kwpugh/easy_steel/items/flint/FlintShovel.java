@@ -2,6 +2,8 @@ package com.kwpugh.easy_steel.items.flint;
 
 import java.util.List;
 
+import javax.annotation.Nullable;
+
 import com.kwpugh.easy_steel.lists.ItemList;
 
 import net.minecraft.block.Block;
@@ -18,9 +20,11 @@ import net.minecraft.item.ShovelItem;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class FlintShovel extends ShovelItem
 {
@@ -68,10 +72,10 @@ public class FlintShovel extends ShovelItem
 		return repair.getItem() == ItemList.sharp_flint;
 	}
 	
-	@Override
-	public void addInformation(ItemStack stack, World world, List<ITextComponent> list, ITooltipFlag flag)
+	@OnlyIn(Dist.CLIENT)
+	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
-		super.addInformation(stack, world, list, flag);				
-		list.add(new StringTextComponent(TextFormatting.GREEN + "A primitive tool for breaking earth"));
-	} 
+		super.addInformation(stack, worldIn, tooltip, flagIn);
+		tooltip.add((new TranslationTextComponent("item.easy_steel.flint.line1").applyTextStyle(TextFormatting.GREEN)));
+	}
 }

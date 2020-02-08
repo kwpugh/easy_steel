@@ -27,6 +27,7 @@ import com.kwpugh.easy_steel.items.hardenedsteel.HardenedSteelPaxel;
 import com.kwpugh.easy_steel.items.hardenedsteel.HardenedSteelPickaxe;
 import com.kwpugh.easy_steel.items.hardenedsteel.HardenedSteelShovel;
 import com.kwpugh.easy_steel.items.hardenedsteel.HardenedSteelSword;
+import com.kwpugh.easy_steel.items.misc.IronLinks;
 import com.kwpugh.easy_steel.items.powders.Carbon;
 import com.kwpugh.easy_steel.items.steel.ArmorSteel;
 import com.kwpugh.easy_steel.items.steel.SteelAxe;
@@ -97,7 +98,7 @@ public class ItemInit
 				
 				ItemList.crack_hammer = new CrackHammer(ItemTier.IRON, 1, -3.3f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("crack_hammer")),
 				
-				ItemList.iron_links = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("iron_links")),
+				ItemList.iron_links = new IronLinks(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("iron_links")),
 										
 				ItemList.tin_powder = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("tin_powder")),
 				ItemList.copper_powder = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("copper_powder")),

@@ -3,6 +3,8 @@ package com.kwpugh.easy_steel.items.steel;
 import java.util.List;
 import java.util.function.Predicate;
 
+import javax.annotation.Nullable;
+
 import com.kwpugh.easy_steel.lists.ItemList;
 
 import net.minecraft.client.util.ITooltipFlag;
@@ -24,9 +26,11 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class SteelBow extends BowItem
 {
@@ -182,10 +186,10 @@ public class SteelBow extends BowItem
 	   return repair.getItem() == ItemList.steel_ingot;
    }
    
-   @Override
-   public void addInformation(ItemStack stack, World world, List<ITextComponent> list, ITooltipFlag flag)
-   {
-	   super.addInformation(stack, world, list, flag);				
-	   list.add(new StringTextComponent(TextFormatting.GREEN + "A more durable bow"));
-   } 
+	@OnlyIn(Dist.CLIENT)
+	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
+	{
+		super.addInformation(stack, worldIn, tooltip, flagIn);
+		tooltip.add((new TranslationTextComponent("item.easy_steel.bow.line1").applyTextStyle(TextFormatting.GREEN)));
+	}
 }

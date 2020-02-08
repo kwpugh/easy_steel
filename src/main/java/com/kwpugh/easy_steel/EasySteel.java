@@ -15,9 +15,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
@@ -36,13 +34,13 @@ public class EasySteel
 
     public EasySteel()
     {
-    	ModLoadingContext.get().registerConfig(ModConfig.Type.SERVER, EasySteelConfig.SERVER_CONFIG);
-		EasySteelConfig.loadConfig(EasySteelConfig.SERVER_CONFIG, FMLPaths.CONFIGDIR.get().resolve("easy_steel-general.toml"));
+    	//ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, EasySteelConfig.CONFIG);
+		EasySteelConfig.loadConfig(EasySteelConfig.CONFIG, FMLPaths.CONFIGDIR.get().resolve("easy_steel-general.toml"));
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -54,7 +52,7 @@ public class EasySteel
         logger.info("Easy Steel setup complete");
     }
 
-    private void doClientStuff(final FMLClientSetupEvent event)
+    private void clientSetup(final FMLClientSetupEvent event)
     {
 
     	logger.info("Easy Steel got game settings {}", event.getMinecraftSupplier().get().gameSettings);

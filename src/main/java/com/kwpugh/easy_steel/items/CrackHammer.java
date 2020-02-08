@@ -2,7 +2,8 @@ package com.kwpugh.easy_steel.items;
 
 import java.util.List;
 
-import com.kwpugh.easy_steel.lists.BlockList;
+import javax.annotation.Nullable;
+
 import com.kwpugh.easy_steel.lists.ItemList;
 
 import net.minecraft.block.Block;
@@ -20,9 +21,11 @@ import net.minecraft.item.PickaxeItem;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class CrackHammer extends PickaxeItem
 {
@@ -42,73 +45,76 @@ public class CrackHammer extends PickaxeItem
 		 BlockState state = world.getBlockState(pos);
 		 Block block = state.getBlock();
 		 ItemStack stack = context.getItem();
-
+		 
+		 
 	     if (!world.isRemote && state.getBlockHardness(world, pos) != 0.0F)
 		 {
 	    	 stack.damageItem(1, player, (p_220038_0_) -> {
 	         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
 	         });
 	     }
-	     
-	     if(block == Blocks.COAL_ORE)
-	     {
-	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.carbon, 2))); 
-	    	 return ActionResultType.SUCCESS;
-	     }
 
-	     if(block == Blocks.IRON_ORE)
-	     {
-	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.iron_powder, 2)));
-	    	 return ActionResultType.SUCCESS;
-	     }
+	     String blockForgeTags = block.getTags().toString();
 	     
-	     if(block == Blocks.GOLD_ORE)
-	     {
-	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.gold_powder, 2)));   
-	    	 return ActionResultType.SUCCESS;
-	     }
-
-	     if(block == Blocks.DIAMOND_ORE)
-	     {
-	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.diamond_powder, 2)));   
-	    	 return ActionResultType.SUCCESS;
-	     }
-	     
-	     if(block == Blocks.EMERALD_ORE)
-	     {
-	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.emerald_powder, 2)));   
-	    	 return ActionResultType.SUCCESS;
-	     }
-	     
-	     if(block == BlockList.bornite_ore)
+	     if(blockForgeTags.contains("forge:ores/copper") || blockForgeTags.contains("forge:ores/malachite"))
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);;
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.copper_powder, 3))); 
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     
-	     if(block == BlockList.cassiterite_ore)
+	     if(blockForgeTags.contains("forge:ores/tin"))
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.tin_powder, 2)));    	 
 	     }
 
-	     if(block == BlockList.wolframite_ore)
+	     if(blockForgeTags.contains("forge:ores/tungsten"))
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.tungsten_powder, 2)));  
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     
-	     if(block == BlockList.rutile_ore)
+	     if(blockForgeTags.contains("forge:ores/titanium"))
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.titanium_powder, 2)));  
+	    	 return ActionResultType.SUCCESS;
+	     }
+	     
+	     if(blockForgeTags.contains("forge:ores/coal"))
+	     {
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.carbon, 2))); 
+	    	 return ActionResultType.SUCCESS;
+	     }
+	     
+	     if(blockForgeTags.contains("forge:ores/iron"))
+	     {
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.iron_powder, 2)));
+	    	 return ActionResultType.SUCCESS;
+	     }
+	    
+	     if(blockForgeTags.contains("forge:ores/gold"))
+	     {
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.gold_powder, 2)));   
+	    	 return ActionResultType.SUCCESS;
+	     }
+	     
+	     if(blockForgeTags.contains("forge:ores/diamond"))
+	     {
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.diamond_powder, 2)));   
+	    	 return ActionResultType.SUCCESS;
+	     }
+	     
+	     if(blockForgeTags.contains("forge:ores/emerald"))
+	     {
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.emerald_powder, 2)));   
 	    	 return ActionResultType.SUCCESS;
 	     }
 	
@@ -126,13 +132,12 @@ public class CrackHammer extends PickaxeItem
 	{
 		return repair.getItem() == Items.IRON_INGOT;
 	}
-	
-	@Override
-	public void addInformation(ItemStack stack, World world, List<ITextComponent> list, ITooltipFlag flag)
-	{
-		super.addInformation(stack, world, list, flag);				
-		list.add(new StringTextComponent(TextFormatting.GREEN + "Used to break various ores into powders"));
-		list.add(new StringTextComponent(TextFormatting.BLUE + "Right-click on ore to use"));
 
-	} 
+	@OnlyIn(Dist.CLIENT)
+	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
+	{
+		super.addInformation(stack, worldIn, tooltip, flagIn);
+		tooltip.add((new TranslationTextComponent("item.easy_steel.crack_hammer.line1").applyTextStyle(TextFormatting.GREEN)));
+		tooltip.add((new TranslationTextComponent("item.easy_steel.crack_hammer.line2").applyTextStyle(TextFormatting.AQUA)));
+	}
 }

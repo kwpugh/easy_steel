@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Set;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableMap.Builder;
@@ -30,14 +31,15 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.text.TextFormatting;
+import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.util.Constants.WorldEvents;
 
 public class BronzePaxel extends ToolItem
 {
-
 	public static final Set<Block> EFFECTIVE_ON = Sets.newHashSet(Blocks.ACTIVATOR_RAIL, Blocks.COAL_ORE,
 			Blocks.COBBLESTONE, Blocks.DETECTOR_RAIL, Blocks.DIAMOND_BLOCK, Blocks.DIAMOND_ORE, Blocks.POWERED_RAIL,
 			Blocks.GOLD_BLOCK, Blocks.GOLD_ORE, Blocks.ICE, Blocks.IRON_BLOCK, Blocks.IRON_ORE, Blocks.LAPIS_BLOCK,
@@ -85,8 +87,7 @@ public class BronzePaxel extends ToolItem
 	public BronzePaxel(float attackDamageIn, float attackSpeedIn, IItemTier tier, Set<Block> effectiveBlocksIn,
 			Properties builder)
 	{
-		super(attackDamageIn, attackSpeedIn, tier, EFFECTIVE_ON, builder);
-	
+		super(attackDamageIn, attackSpeedIn, tier, EFFECTIVE_ON, builder);	
 	}
 
 	public boolean canHarvestBlock(BlockState blockIn) {
@@ -100,8 +101,7 @@ public class BronzePaxel extends ToolItem
 				&& material != Material.WOOD && material != Material.PLANTS ? super.getDestroySpeed(stack, state)
 						: this.efficiency;
 	}
-	
-    
+	   
     @Nonnull
     @Override
     public ActionResultType onItemUse(ItemUseContext context)
@@ -167,10 +167,10 @@ public class BronzePaxel extends ToolItem
 		return repair.getItem() == ItemList.bronze_ingot;
 	}
 	
-	@Override
-	public void addInformation(ItemStack stack, World world, List<ITextComponent> list, ITooltipFlag flag)
+	@OnlyIn(Dist.CLIENT)
+	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
-		super.addInformation(stack, world, list, flag);				
-		list.add(new StringTextComponent(TextFormatting.BLUE + "Combines pickaxe, axe, and shovel"));
-	} 
+		super.addInformation(stack, worldIn, tooltip, flagIn);
+		tooltip.add((new TranslationTextComponent("item.easy_steel.paxel").applyTextStyle(TextFormatting.GREEN)));
+	}
 }

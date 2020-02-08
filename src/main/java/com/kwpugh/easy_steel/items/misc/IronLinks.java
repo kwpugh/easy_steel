@@ -1,4 +1,4 @@
-package com.kwpugh.easy_steel.items;
+package com.kwpugh.easy_steel.items.misc;
 
 import java.util.List;
 
@@ -14,18 +14,19 @@ import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class SharpFlint extends Item
+public class IronLinks extends Item
 {
-	public SharpFlint(Properties properties)
+
+	public IronLinks(Properties properties)
 	{
 		super(properties);
 	}
-
+	
 	@OnlyIn(Dist.CLIENT)
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
 		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.easy_steel.sharp_flint.line1").applyTextStyle(TextFormatting.GREEN)));
-		tooltip.add((new TranslationTextComponent("item.easy_steel.sharp_flint.line2").applyTextStyle(TextFormatting.AQUA)));
+		tooltip.add((new TranslationTextComponent("item.easy_steel.iron_links.line1").applyTextStyle(TextFormatting.GREEN)));
 	}
+
 }
