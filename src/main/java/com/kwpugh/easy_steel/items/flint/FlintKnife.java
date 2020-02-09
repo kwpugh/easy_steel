@@ -78,6 +78,21 @@ public class FlintKnife extends SwordItem
 	}
 	
 	@Override
+    public boolean hasContainerItem(ItemStack stack)
+    {
+        return true;
+    }
+
+    @Override
+    public ItemStack getContainerItem(ItemStack stackIn)
+    {
+    	ItemStack stack = stackIn.copy();
+    	stack.setDamage(getDamage(stack) + 1);
+
+        return stack;
+    }
+	    
+	@Override
 	public boolean isBookEnchantable(ItemStack stack, ItemStack book)
 	{
 		return true;

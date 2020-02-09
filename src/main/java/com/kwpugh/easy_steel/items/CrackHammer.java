@@ -90,6 +90,13 @@ public class CrackHammer extends PickaxeItem
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     
+	     if(blockForgeTags.contains("forge:storage_blocks/coal") || blockForgeTags.contains("forge:storage_blocks/charcoal"))
+	     {
+	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.carbon, 5))); 
+	    	 return ActionResultType.SUCCESS;
+	     }
+	     
 	     if(blockForgeTags.contains("forge:ores/iron"))
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);

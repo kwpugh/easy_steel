@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:white_wool"
+        },
+        {
+            "item": "easy_steel:flint_knife"
+        }
+    ],
+    "result": {
+        "item": "minecraft:string",
+        "count": 4
+    }
+}
