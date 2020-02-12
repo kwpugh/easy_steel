@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import com.kwpugh.easy_steel.lists.ItemList;
+import com.kwpugh.easy_steel.init.ItemInit;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -55,7 +55,7 @@ public class HandShovel extends ShovelItem
 	     if(block == Blocks.GRAVEL)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.sharp_flint, 1))); 
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.SHARP_FLINT.get(), 1))); 
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     

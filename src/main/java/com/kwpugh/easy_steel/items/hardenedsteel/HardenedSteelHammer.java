@@ -7,7 +7,7 @@ import javax.annotation.Nullable;
 
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
-import com.kwpugh.easy_steel.lists.ItemList;
+import com.kwpugh.easy_steel.init.ItemInit;
 import com.kwpugh.easy_steel.util.HammerUtil;
 
 import net.minecraft.block.Block;
@@ -139,7 +139,7 @@ public class HardenedSteelHammer extends PickaxeItem
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
-		return repair.getItem() == ItemList.hardened_steel_ingot;
+		return repair.getItem() == ItemInit.HARDENED_STEEL_INGOT.get();
 	}
 	
 	@OnlyIn(Dist.CLIENT)

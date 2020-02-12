@@ -6,13 +6,13 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.kwpugh.easy_steel.group.GroupEasySteel;
+import com.kwpugh.easy_steel.init.BlockInit;
+import com.kwpugh.easy_steel.init.ItemInit;
 import com.kwpugh.easy_steel.util.EasySteelConfig;
 import com.kwpugh.easy_steel.world.OreGenerator;
 
-import net.minecraft.block.Block;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
@@ -34,15 +34,17 @@ public class EasySteel
 
     public EasySteel()
     {
-    	//ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, EasySteelConfig.CONFIG);
 		EasySteelConfig.loadConfig(EasySteelConfig.CONFIG, FMLPaths.CONFIGDIR.get().resolve("easy_steel-general.toml"));
-
+		
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
+        
+    	BlockInit.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+		ItemInit.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
     private void setup(final FMLCommonSetupEvent event)
@@ -79,14 +81,14 @@ public class EasySteel
     	logger.info("Easy Steel server starting");
     }
 
-    @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
-    public static class RegistryEvents
-    {
-        @SubscribeEvent
-        public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent)
-        {
-
-        	logger.info("Easy Steel blocks registered");
-        }
-    }
+//    @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
+//    public static class RegistryEvents
+//    {
+//        @SubscribeEvent
+//        public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent)
+//        {
+//
+//        	logger.info("Easy Steel blocks registered");
+//        }
+//    }
 }

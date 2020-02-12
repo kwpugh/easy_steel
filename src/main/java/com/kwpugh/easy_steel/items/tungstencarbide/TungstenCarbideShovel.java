@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import com.kwpugh.easy_steel.lists.ItemList;
+import com.kwpugh.easy_steel.init.ItemInit;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.IItemTier;
@@ -33,7 +33,7 @@ public class TungstenCarbideShovel extends ShovelItem
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
-		return repair.getItem() == ItemList.tungsten_carbide_ingot;
+		return repair.getItem() == ItemInit.TUNGSTEN_CARBIDE_INGOT.get();
 	}
 	
 	@OnlyIn(Dist.CLIENT)

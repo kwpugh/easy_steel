@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import com.kwpugh.easy_steel.lists.ItemList;
+import com.kwpugh.easy_steel.init.ItemInit;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -59,69 +59,69 @@ public class CrackHammer extends PickaxeItem
 	     if(blockForgeTags.contains("forge:ores/copper") || blockForgeTags.contains("forge:ores/malachite"))
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);;
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.copper_powder, 3))); 
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.COPPER_POWDER.get(), 3))); 
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     
 	     if(blockForgeTags.contains("forge:ores/tin"))
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.tin_powder, 2)));    	 
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.TIN_POWDER.get(), 2)));    	 
 	     }
 
 	     if(blockForgeTags.contains("forge:ores/tungsten"))
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.tungsten_powder, 2)));  
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.TUNGSTEN_POWDER.get(), 2)));  
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     
 	     if(blockForgeTags.contains("forge:ores/titanium"))
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.titanium_powder, 2)));  
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.TITANIUM_POWDER.get(), 2)));  
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     
 	     if(blockForgeTags.contains("forge:ores/coal"))
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.carbon, 2))); 
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.CARBON.get(), 2))); 
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     
 	     if(blockForgeTags.contains("forge:storage_blocks/coal") || blockForgeTags.contains("forge:storage_blocks/charcoal"))
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.carbon, 5))); 
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.CARBON.get(), 5))); 
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     
 	     if(blockForgeTags.contains("forge:ores/iron"))
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.iron_powder, 2)));
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.IRON_POWDER.get(), 2)));
 	    	 return ActionResultType.SUCCESS;
 	     }
 	    
 	     if(blockForgeTags.contains("forge:ores/gold"))
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.gold_powder, 2)));   
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.GOLD_POWDER.get(), 2)));   
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     
 	     if(blockForgeTags.contains("forge:ores/diamond"))
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.diamond_powder, 2)));   
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.DIAMOND_POWDER.get(), 2)));   
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     
 	     if(blockForgeTags.contains("forge:ores/emerald"))
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.emerald_powder, 2)));   
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.EMERALD_POWDER.get(), 2)));   
 	    	 return ActionResultType.SUCCESS;
 	     }
 	

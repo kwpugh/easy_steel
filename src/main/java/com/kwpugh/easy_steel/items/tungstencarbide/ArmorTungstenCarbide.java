@@ -5,7 +5,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import com.kwpugh.easy_steel.lists.ItemList;
+import com.kwpugh.easy_steel.init.ItemInit;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
@@ -38,10 +38,10 @@ public class ArmorTungstenCarbide extends ArmorItem
 		    ItemStack feet = player.getItemStackFromSlot(EquipmentSlotType.FEET);
 		    
 		    //Full Set
-	    	if(head.getItem() == ItemList.armor_tungsten_carbide_head && 
-	    			chest.getItem() == ItemList.armor_tungsten_carbide_body && 
-	    			legs.getItem() == ItemList.armor_tungsten_carbide_leggings && 
-	    			feet.getItem() == ItemList.armor_tungsten_carbide_boots)
+	    	if(head.getItem() == ItemInit.ARMOR_TUNGSTEN_CARBIDE_HEAD.get() && 
+	    			chest.getItem() == ItemInit.ARMOR_TUNGSTEN_CARBIDE_BODY.get() && 
+	    			legs.getItem() == ItemInit.ARMOR_TUNGSTEN_CARBIDE_LEGGINGS.get() && 
+	    			feet.getItem() == ItemInit.ARMOR_TUNGSTEN_CARBIDE_BOOTS.get())
 	    	{
 				player.removeActivePotionEffect(Effects.POISON);
 				player.removeActivePotionEffect(Effects.SLOWNESS);
@@ -51,7 +51,7 @@ public class ArmorTungstenCarbide extends ArmorItem
 	    	}	
 		    
 		    //Helmet
-		    if(head.getItem() == ItemList.armor_tungsten_carbide_head)
+		    if(head.getItem() == ItemInit.ARMOR_TUNGSTEN_CARBIDE_HEAD.get())
 			{
 		    	//Unused			
 			}
@@ -61,13 +61,13 @@ public class ArmorTungstenCarbide extends ArmorItem
 			}
 		    
 		    //Chestplate
-		    if(chest.getItem() == ItemList.armor_tungsten_carbide_body)
+		    if(chest.getItem() == ItemInit.ARMOR_TUNGSTEN_CARBIDE_BODY.get())
 			{
 		    	//Unused
 			}
 		    
 		    //Leggings
-		    if(legs.getItem() == ItemList.armor_tungsten_carbide_leggings)
+		    if(legs.getItem() == ItemInit.ARMOR_TUNGSTEN_CARBIDE_LEGGINGS.get())
 			{
 		    	//Unused
 			}
@@ -77,7 +77,7 @@ public class ArmorTungstenCarbide extends ArmorItem
 			}
 		    
 		    //Boots
-		    if(feet.getItem() == ItemList.armor_tungsten_carbide_boots)
+		    if(feet.getItem() == ItemInit.ARMOR_TUNGSTEN_CARBIDE_BOOTS.get())
 			{
 		    	//Unused
 			}
@@ -97,7 +97,7 @@ public class ArmorTungstenCarbide extends ArmorItem
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
-		return repair.getItem() == ItemList.tungsten_carbide_ingot;
+		return repair.getItem() == ItemInit.TUNGSTEN_CARBIDE_INGOT.get();
 	}
 	
 	@OnlyIn(Dist.CLIENT)

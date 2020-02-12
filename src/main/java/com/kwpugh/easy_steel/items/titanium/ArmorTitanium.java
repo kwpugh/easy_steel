@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import com.kwpugh.easy_steel.lists.ItemList;
+import com.kwpugh.easy_steel.init.ItemInit;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
@@ -37,10 +37,10 @@ public class ArmorTitanium extends ArmorItem
 		    ItemStack feet = player.getItemStackFromSlot(EquipmentSlotType.FEET);
 		    
 		    //Full Set
-	    	if(head.getItem() == ItemList.armor_titanium_head && 
-	    			chest.getItem() == ItemList.armor_titanium_body && 
-	    			legs.getItem() == ItemList.armor_titanium_leggings && 
-	    			feet.getItem() == ItemList.armor_titanium_boots)
+	    	if(head.getItem() == ItemInit.ARMOR_TITANIUM_HEAD.get() && 
+	    			chest.getItem() == ItemInit.ARMOR_TITANIUM_BODY.get() && 
+	    			legs.getItem() == ItemInit.ARMOR_TITANIUM_LEGGINGS.get() && 
+	    			feet.getItem() == ItemInit.ARMOR_TITANIUM_BOOTS.get())
 	    	{
 				player.removeActivePotionEffect(Effects.POISON);
 				player.removeActivePotionEffect(Effects.WEAKNESS);
@@ -48,7 +48,7 @@ public class ArmorTitanium extends ArmorItem
 	    	}	
 		    
 		    //Helmet
-		    if(head.getItem() == ItemList.armor_titanium_head)
+		    if(head.getItem() == ItemInit.ARMOR_TITANIUM_HEAD.get())
 			{
 		    	//Unused			
 			}
@@ -58,13 +58,13 @@ public class ArmorTitanium extends ArmorItem
 			}
 		    
 		    //Chestplate
-		    if(chest.getItem() == ItemList.armor_titanium_body)
+		    if(chest.getItem() == ItemInit.ARMOR_TITANIUM_BODY.get())
 			{
 		    	//Unused
 			}
 		    
 		    //Leggings
-		    if(legs.getItem() == ItemList.armor_titanium_leggings)
+		    if(legs.getItem() == ItemInit.ARMOR_TITANIUM_LEGGINGS.get())
 			{
 		    	//Unused
 			}
@@ -74,7 +74,7 @@ public class ArmorTitanium extends ArmorItem
 			}
 		    
 		    //Boots
-		    if(feet.getItem() == ItemList.armor_titanium_boots)
+		    if(feet.getItem() == ItemInit.ARMOR_TITANIUM_BOOTS.get())
 			{
 		    	//Unused
 			}
@@ -94,7 +94,7 @@ public class ArmorTitanium extends ArmorItem
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
-		return repair.getItem() == ItemList.titanium_ingot;
+		return repair.getItem() == ItemInit.TITANIUM_INGOT.get();
 	}
 	
 	@OnlyIn(Dist.CLIENT)

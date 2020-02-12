@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import com.kwpugh.easy_steel.lists.ItemList;
+import com.kwpugh.easy_steel.init.ItemInit;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.PlayerEntity;
@@ -37,16 +37,16 @@ public class ArmorBronze extends ArmorItem
 		    ItemStack feet = player.getItemStackFromSlot(EquipmentSlotType.FEET);
 		    
 		    //Full Set
-	    	if(head.getItem() == ItemList.armor_bronze_head && 
-	    			chest.getItem() == ItemList.armor_bronze_body && 
-	    			legs.getItem() == ItemList.armor_bronze_leggings && 
-	    			feet.getItem() == ItemList.armor_bronze_boots)
+	    	if(head.getItem() == ItemInit.ARMOR_BRONZE_HEAD.get() && 
+	    			chest.getItem() == ItemInit.ARMOR_BRONZE_BODY.get() && 
+	    			legs.getItem() == ItemInit.ARMOR_BRONZE_LEGGINGS.get() && 
+	    			feet.getItem() == ItemInit.ARMOR_BRONZE_BOOTS.get())
 	    	{
 				player.removeActivePotionEffect(Effects.POISON);
 	    	}	
 		    
 		    //Helmet
-		    if(head.getItem() == ItemList.armor_bronze_head)
+		    if(head.getItem() == ItemInit.ARMOR_BRONZE_HEAD.get())
 			{
 		    	//unused
 			}
@@ -56,13 +56,13 @@ public class ArmorBronze extends ArmorItem
 			}
 		    
 		    //Chestplate
-		    if(chest.getItem() == ItemList.armor_bronze_body)
+		    if(chest.getItem() == ItemInit.ARMOR_BRONZE_BODY.get())
 			{
 		    	//unused
 			}
 		    
 		    //Leggings
-		    if(legs.getItem() == ItemList.armor_bronze_leggings)
+		    if(legs.getItem() == ItemInit.ARMOR_BRONZE_LEGGINGS.get())
 			{
 		    	//unused
 			}
@@ -72,7 +72,7 @@ public class ArmorBronze extends ArmorItem
 			}
 		    
 		    //Boots
-		    if(feet.getItem() == ItemList.armor_bronze_boots)
+		    if(feet.getItem() == ItemInit.ARMOR_BRONZE_BOOTS.get())
 			{
 		    	//unused
 			}
@@ -92,7 +92,7 @@ public class ArmorBronze extends ArmorItem
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
-		return repair.getItem() == ItemList.bronze_ingot;
+		return repair.getItem() == ItemInit.BRONZE_INGOT.get();
 	}
 	
 	@OnlyIn(Dist.CLIENT)
