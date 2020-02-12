@@ -34,6 +34,9 @@ public class EasySteel
 
     public EasySteel()
     {
+       	BlockInit.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+    	ItemInit.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
+    		
 		EasySteelConfig.loadConfig(EasySteelConfig.CONFIG, FMLPaths.CONFIGDIR.get().resolve("easy_steel-general.toml"));
 		
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
@@ -42,9 +45,6 @@ public class EasySteel
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
-        
-    	BlockInit.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
-		ItemInit.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
     }
 
     private void setup(final FMLCommonSetupEvent event)
