@@ -75,14 +75,4 @@ public class EasySteel
 
     	logger.info("Easy Steel server starting");
     }
-    
-//    @Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
-//    public static class RegistryEvents
-//    {
-//    	@SubscribeEvent
-//    	public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent)
-//    	{
-//    		logger.info("Easy Steel blocks registered");
-//    	}
-//    }
 }
