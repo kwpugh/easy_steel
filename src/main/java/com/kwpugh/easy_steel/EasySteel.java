@@ -9,10 +9,8 @@ import com.kwpugh.easy_steel.group.GroupEasySteel;
 import com.kwpugh.easy_steel.util.EasySteelConfig;
 import com.kwpugh.easy_steel.world.OreGenerator;
 
-import net.minecraft.block.Block;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
