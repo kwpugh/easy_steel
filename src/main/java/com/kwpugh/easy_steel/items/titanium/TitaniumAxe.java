@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import com.kwpugh.easy_steel.init.ItemInit;
+import com.kwpugh.easy_steel.lists.ItemList;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.client.util.ITooltipFlag;
@@ -58,7 +58,7 @@ public class TitaniumAxe extends AxeItem
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
-		return repair.getItem() == ItemInit.TITANIUM_INGOT.get();
+		return repair.getItem() == ItemList.titanium_ingot;
 	}
 
 	@OnlyIn(Dist.CLIENT)

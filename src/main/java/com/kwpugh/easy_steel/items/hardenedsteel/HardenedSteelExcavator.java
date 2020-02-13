@@ -7,7 +7,7 @@ import javax.annotation.Nullable;
 
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
-import com.kwpugh.easy_steel.init.ItemInit;
+import com.kwpugh.easy_steel.lists.ItemList;
 import com.kwpugh.easy_steel.util.HammerUtil;
 
 import net.minecraft.block.Block;
@@ -67,7 +67,7 @@ public class HardenedSteelExcavator extends ShovelItem
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
-		return repair.getItem() == ItemInit.HARDENED_STEEL_INGOT.get();
+		return repair.getItem() == ItemList.hardened_steel_ingot;
 	}
 	
 	@OnlyIn(Dist.CLIENT)

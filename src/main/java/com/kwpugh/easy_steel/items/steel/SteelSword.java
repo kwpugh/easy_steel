@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import com.kwpugh.easy_steel.init.ItemInit;
+import com.kwpugh.easy_steel.lists.ItemList;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.IItemTier;
@@ -33,7 +33,7 @@ public class SteelSword extends SwordItem
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
-		return repair.getItem() == ItemInit.STEEL_INGOT.get();
+		return repair.getItem() == ItemList.steel_ingot;
 	}
 	
 	@OnlyIn(Dist.CLIENT)

@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import com.kwpugh.easy_steel.init.ItemInit;
+import com.kwpugh.easy_steel.lists.ItemList;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -101,7 +101,7 @@ public class FlintKnife extends SwordItem
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
-		return repair.getItem() == ItemInit.SHARP_FLINT.get();
+		return repair.getItem() == ItemList.sharp_flint;
 	}
 	
 	@OnlyIn(Dist.CLIENT)

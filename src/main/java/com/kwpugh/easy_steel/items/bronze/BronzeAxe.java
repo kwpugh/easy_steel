@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import com.kwpugh.easy_steel.init.ItemInit;
+import com.kwpugh.easy_steel.lists.ItemList;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.client.util.ITooltipFlag;
@@ -58,7 +58,7 @@ public class BronzeAxe extends AxeItem
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
-		return repair.getItem() == ItemInit.BRONZE_INGOT.get();
+		return repair.getItem() == ItemList.bronze_ingot;
 	}
 
 	@OnlyIn(Dist.CLIENT)

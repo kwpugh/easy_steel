@@ -1,7 +1,5 @@
 package com.kwpugh.easy_steel.lists;
 
-import com.kwpugh.easy_steel.init.ItemInit;
-
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.Ingredient;
@@ -16,14 +14,13 @@ import net.minecraft.item.crafting.Ingredient;
   
 
 public enum ToolMaterialList implements IItemTier
-{	
-	flint(1.0F, 5.5f, 145, 1, 5, ItemInit.SHARP_FLINT.get()),
-	bronze(0.5F, 6.5f, 225, 2, 10, ItemInit.BRONZE_INGOT.get()),
-	steel(0.5F, 6.5f, 482, 3, 8, ItemInit.STEEL_INGOT.get()),
-	titanium(0.5F, 6.5f, 625, 4, 8, ItemInit.TITANIUM_INGOT.get()),   
-	hardened_steel(0.5F, 6.5f, 816, 4, 8, ItemInit.HARDENED_STEEL_INGOT.get()),
-	tungsten_carbide(0.75F, 6.5f, 1023, 4, 8, ItemInit.TUNGSTEN_CARBIDE_INGOT.get());
-	
+{		
+	flint(1.0F, 5.5f, 145, 1, 5, ItemList.sharp_flint),
+	bronze(0.5F, 6.5f, 225, 2, 10, ItemList.bronze_ingot),
+	steel(0.5F, 6.5f, 482, 3, 8, ItemList.steel_ingot),
+	titanium(0.5F, 6.5f, 625, 4, 8, ItemList.titanium_ingot),   
+	hardened_steel(0.5F, 6.5f, 816, 4, 8, ItemList.hardened_steel_ingot),
+	tungsten_carbide(0.75F, 6.5f, 1023, 4, 8, ItemList.tungsten_carbide_ingot);
 
 	private float attackDamage, efficiency;
 	private int durability, harvestLevel, enchantability;
@@ -68,7 +65,7 @@ public enum ToolMaterialList implements IItemTier
 	{
 		return this.durability;
 	}
-
+	   
 	@Override
 	public Ingredient getRepairMaterial() 
 	{

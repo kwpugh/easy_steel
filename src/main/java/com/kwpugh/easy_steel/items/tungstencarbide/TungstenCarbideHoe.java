@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import com.kwpugh.easy_steel.init.ItemInit;
+import com.kwpugh.easy_steel.lists.ItemList;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.HoeItem;
@@ -34,7 +34,7 @@ public class TungstenCarbideHoe extends HoeItem
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
-		return repair.getItem() == ItemInit.TUNGSTEN_CARBIDE_INGOT.get();
+		return repair.getItem() == ItemList.tungsten_carbide_ingot;
 	}
 	
 	@OnlyIn(Dist.CLIENT)

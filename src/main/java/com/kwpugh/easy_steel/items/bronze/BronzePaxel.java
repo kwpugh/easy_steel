@@ -11,7 +11,7 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableMap.Builder;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
-import com.kwpugh.easy_steel.init.ItemInit;
+import com.kwpugh.easy_steel.lists.ItemList;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -164,7 +164,7 @@ public class BronzePaxel extends ToolItem
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
-		return repair.getItem() == ItemInit.BRONZE_INGOT.get();
+		return repair.getItem() == ItemList.bronze_ingot;
 	}
 	
 	@OnlyIn(Dist.CLIENT)

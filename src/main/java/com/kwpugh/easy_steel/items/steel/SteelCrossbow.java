@@ -5,7 +5,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 import com.google.common.collect.Lists;
-import com.kwpugh.easy_steel.init.ItemInit;
+import com.kwpugh.easy_steel.lists.ItemList;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -79,7 +79,7 @@ public class SteelCrossbow extends CrossbowItem
 	      
 	private static float func_220013_l(ItemStack p_220013_0_)
 	{
-		return p_220013_0_.getItem() == ItemInit.STEEL_CROSSBOW.get() && hasChargedProjectile(p_220013_0_, Items.FIREWORK_ROCKET) ? 2.5F : 4.0F;
+		return p_220013_0_.getItem() == ItemList.steel_crossbow && hasChargedProjectile(p_220013_0_, Items.FIREWORK_ROCKET) ? 2.5F : 4.0F;
 	}
 
 	private static boolean hasChargedProjectile(ItemStack stack, Item ammoItem)
@@ -237,7 +237,7 @@ public class SteelCrossbow extends CrossbowItem
    @Override
    public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
    {
-	   return repair.getItem() == ItemInit.STEEL_INGOT.get();
+	   return repair.getItem() == ItemList.steel_ingot;
    }
 	
 	@OnlyIn(Dist.CLIENT)
