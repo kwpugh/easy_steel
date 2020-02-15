@@ -30,6 +30,11 @@ import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+/*
+ * Taken directly from CrossbowItem and customized a bit
+ * 
+ */
+
 public class SteelCrossbow extends CrossbowItem
 {
 	public SteelCrossbow(Properties propertiesIn)
@@ -44,10 +49,10 @@ public class SteelCrossbow extends CrossbowItem
 	     
 	    if (isCharged(itemstack))
 	    {
-		    fireProjectiles(worldIn, playerIn, handIn, itemstack, func_220013_l(itemstack), 0.0F);
+		    fireProjectiles(worldIn, playerIn, handIn, itemstack, 5.5F, 0.0F);   // set inaccuracy to 0.0 and velocity to 5.5F
 		    setCharged(itemstack, false);
 
-		    return ActionResult.func_226249_b_(itemstack);
+		    return ActionResult.resultConsume(itemstack);
 	    }
 	    else if (!playerIn.findAmmo(itemstack).isEmpty())
 	    {
@@ -55,18 +60,19 @@ public class SteelCrossbow extends CrossbowItem
 	    	{
 	            playerIn.setActiveHand(handIn);
 	        }
-	    		return ActionResult.func_226249_b_(itemstack);
+	    		return ActionResult.resultConsume(itemstack);
 	    }
 	    else
       	{
-      		return ActionResult.func_226251_d_(itemstack);
+      		return ActionResult.resultFail(itemstack);
       	}
 	}
 	   
 	@Override
 	public void onPlayerStoppedUsing(ItemStack stack, World worldIn, LivingEntity entityLiving, int timeLeft)
 	{
-		int i = this.getUseDuration(stack) - timeLeft;
+		int i = this.getUseDuration(stack);  // Removing timeLeft creates a builtin Quickcharge
+		//int i = this.getUseDuration(stack) - timeLeft;
 	    float f = getCharge(i, stack);
 	    
 	    if (f >= 0.6F && !isCharged(stack) && hasAmmo(entityLiving, stack)) //Had to reduce the test down from >= 1.0F because it was never reached
@@ -131,16 +137,15 @@ public class SteelCrossbow extends CrossbowItem
    public static int getChargeTime(ItemStack stack)
    {
       int i = EnchantmentHelper.getEnchantmentLevel(Enchantments.QUICK_CHARGE, stack);
-      //System.out.println(i);
       return i == 0 ? 25 : 25 - 5 * i;
    }
 	      
    private static float getCharge(int useTime, ItemStack stack)
    {
       float f = (float)useTime / (float)getChargeTime(stack);
-      if (f > 1.0F)
+      if (f > 0.6F)
       {
-         f = 1.0F;
+         f = 0.6F;
       }
       
       return f;
