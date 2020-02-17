@@ -122,7 +122,6 @@ public class TungstenCarbideHammer extends PickaxeItem
         }
         return super.onBlockDestroyed(stack, world, state, pos, entity);
     }
-
     
 	@Override
 	public int getBurnTime(ItemStack itemStack)

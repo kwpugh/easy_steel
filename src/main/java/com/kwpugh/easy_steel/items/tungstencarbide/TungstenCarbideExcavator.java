@@ -8,7 +8,7 @@ import javax.annotation.Nullable;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
 import com.kwpugh.easy_steel.lists.ItemList;
-import com.kwpugh.easy_steel.util.HammerUtil;
+import com.kwpugh.easy_steel.util.ExcavatorUtil;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -55,11 +55,10 @@ public class TungstenCarbideExcavator extends ShovelItem
 
         if (entity instanceof PlayerEntity)
         {
-        	HammerUtil.attemptBreakNeighbors(world, pos, (PlayerEntity) entity, EFFECTIVE_ON, EFFECTIVE_MATERIALS);
+        	ExcavatorUtil.attemptBreakNeighbors(world, pos, (PlayerEntity) entity, EFFECTIVE_ON, EFFECTIVE_MATERIALS);
         }
         return super.onBlockDestroyed(stack, world, state, pos, entity);
     }
-
     
 	@Override
 	public int getBurnTime(ItemStack itemStack)

@@ -13,14 +13,15 @@ import net.minecraft.item.crafting.Ingredient;
 //    DIAMOND(3, 1561, 8.0F, 3.0F, 10)
   
 
+//All material harvest levels are under diamond level 3
 public enum ToolMaterialList implements IItemTier
 {		
 	flint(1.0F, 5.5f, 145, 1, 5, ItemList.sharp_flint),
 	bronze(0.5F, 6.5f, 225, 2, 10, ItemList.bronze_ingot),
-	steel(0.5F, 6.5f, 482, 3, 8, ItemList.steel_ingot),
-	titanium(0.5F, 6.5f, 625, 4, 8, ItemList.titanium_ingot),   
-	hardened_steel(0.5F, 6.5f, 816, 4, 8, ItemList.hardened_steel_ingot),
-	tungsten_carbide(0.75F, 6.5f, 1023, 4, 8, ItemList.tungsten_carbide_ingot);
+	steel(0.5F, 6.5f, 482, 2, 8, ItemList.steel_ingot),
+	titanium(0.5F, 6.5f, 625, 2, 8, ItemList.titanium_ingot),   
+	hardened_steel(0.5F, 6.5f, 816, 2, 8, ItemList.hardened_steel_ingot),
+	tungsten_carbide(0.75F, 6.5f, 1023, 2, 8, ItemList.tungsten_carbide_ingot);
 
 	private float attackDamage, efficiency;
 	private int durability, harvestLevel, enchantability;
