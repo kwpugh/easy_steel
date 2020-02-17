@@ -11,7 +11,7 @@
 	"key":
 	{
 		"I": { "tag": "forge:ingots/steel" },
-		"S": { "item": "easy_steel:steel_rod" }	
+		"S": { "item": "minecraft:stick" }	
 	},
 	
 	"result": { "item": "easy_steel:steel_sword" }

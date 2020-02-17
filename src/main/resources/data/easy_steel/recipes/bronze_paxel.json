@@ -13,7 +13,7 @@
 		"A": { "item": "easy_steel:bronze_axe" },
 		"B": { "item": "easy_steel:bronze_shovel" },
 		"C": { "item": "easy_steel:bronze_pickaxe" },
-		"S": { "item": "easy_steel:bronze_rod" }	
+		"S": { "item": "minecraft:stick" }	
 	},
 	
 	"result": { "item": "easy_steel:bronze_paxel" }

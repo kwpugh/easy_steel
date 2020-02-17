@@ -11,7 +11,7 @@
 	"key":
 	{
 		"I": { "item": "easy_steel:tungsten_carbide_ingot" },
-		"S": { "item": "easy_steel:tungsten_carbide_rod" }	
+		"S": { "item": "minecraft:stick" }	
 	},
 	
 	"result": { "item": "easy_steel:tungsten_carbide_pickaxe" }

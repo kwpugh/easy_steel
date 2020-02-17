@@ -13,7 +13,7 @@
 		"A": { "item": "easy_steel:hardened_steel_axe" },
 		"B": { "item": "easy_steel:hardened_steel_shovel" },
 		"C": { "item": "easy_steel:hardened_steel_pickaxe" },
-		"S": { "item": "easy_steel:hardened_steel_rod" }	
+		"S": { "item": "minecraft:stick" }	
 	},
 	
 	"result": { "item": "easy_steel:hardened_steel_paxel" }
