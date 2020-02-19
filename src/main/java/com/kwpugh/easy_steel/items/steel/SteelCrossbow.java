@@ -82,7 +82,7 @@ public class SteelCrossbow extends CrossbowItem
 	         worldIn.playSound((PlayerEntity)null, entityLiving.getPosX(), entityLiving.getPosY(), entityLiving.getPosZ(), SoundEvents.ITEM_CROSSBOW_LOADING_END, soundcategory, 1.0F, 1.0F / (random.nextFloat() * 0.5F + 1.0F) + 0.2F);
 	    }
 	}
-	      
+
 	private static float func_220013_l(ItemStack p_220013_0_)
 	{
 		return p_220013_0_.getItem() == ItemList.steel_crossbow && hasChargedProjectile(p_220013_0_, Items.FIREWORK_ROCKET) ? 2.5F : 4.0F;
