@@ -92,7 +92,8 @@ public class CrackHammer extends PickaxeItem
 	     if(blockForgeTags.contains("forge:ores/tin"))
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.tin_powder, drops)));    	 
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.tin_powder, drops)));  
+	    	 return ActionResultType.SUCCESS;
 	     }
 
 	     if(blockForgeTags.contains("forge:ores/tungsten"))

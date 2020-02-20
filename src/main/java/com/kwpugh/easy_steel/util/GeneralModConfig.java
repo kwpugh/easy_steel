@@ -77,11 +77,11 @@ public class GeneralModConfig
 
         SERVER_BUILDER.pop();
         
-        SERVER_BUILDER.comment("Crack Hammer drop chances, numbers represent a sequence of evaluating a random number").push("crack_hammer");
-
-        STONE_DROP_CHANCE = SERVER_BUILDER.comment("Chance of Crack Hammer dropping Stone Powder [0-1, default: .20]").defineInRange("stone_drop_chance", .01, 0, 1);
-        ONE_DROP_CHANCE = SERVER_BUILDER.comment("Chance of Crack Hammer dropping (2) of the target powders [0-1, default: .70]").defineInRange("one_drop_chance", .97, 0, 1);
-        TWO_DROP_CHANCE = SERVER_BUILDER.comment("Chance of Crack Hammer dropping (3) of the target powders [0-1, default: .90]").defineInRange("two_drop_chance", .99, 0, 1);
+        SERVER_BUILDER.comment("Crack Hammer drop chances, numbers represent a sequence of evaluating a random number. Stone_drop, one_drop, and two_drop numbers need to be in ascending order and not overlap.").push("crack_hammer");
+        
+        STONE_DROP_CHANCE = SERVER_BUILDER.comment("Chance of Crack Hammer dropping Stone Powder [0-1, default: .001]").defineInRange("stone_drop_chance", .001, 0, 1);
+        ONE_DROP_CHANCE = SERVER_BUILDER.comment("Chance of Crack Hammer dropping (2) of the target powders [0-1, default: .997]").defineInRange("one_drop_chance", .997, 0, 1);
+        TWO_DROP_CHANCE = SERVER_BUILDER.comment("Chance of Crack Hammer dropping (3) of the target powders [0-1, default: .999]").defineInRange("two_drop_chance", .999, 0, 1);
 
         SERVER_BUILDER.pop();
     }
