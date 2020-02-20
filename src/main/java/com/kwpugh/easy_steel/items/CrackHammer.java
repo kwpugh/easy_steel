@@ -61,10 +61,10 @@ public class CrackHammer extends PickaxeItem
 	     
 	     if(chance <= GeneralModConfig.STONE_DROP_CHANCE.get())  
 	     {
-	    	 if(blockForgeTags.contains("forge:ores"))
+	    	 if(blockForgeTags.contains("forge:ores") || blockForgeTags.contains("forge:stone") || block == Blocks.STONE)
 	    	 {
 	        	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);;
-		    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.stone_powder, 1)));     		 
+		    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.stone_powder, 2)));     		 
 	    	 }
 	
 	    	 return ActionResultType.SUCCESS;
@@ -81,7 +81,7 @@ public class CrackHammer extends PickaxeItem
 	     {
 	    	 drops = 3;
 	     }
-     
+	     
 	     if(blockForgeTags.contains("forge:ores/copper") || blockForgeTags.contains("forge:ores/malachite"))
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);;

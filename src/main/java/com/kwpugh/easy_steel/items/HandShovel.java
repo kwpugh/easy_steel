@@ -5,6 +5,7 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 import com.kwpugh.easy_steel.lists.ItemList;
+import com.kwpugh.easy_steel.util.GeneralModConfig;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -51,11 +52,22 @@ public class HandShovel extends ShovelItem
 	         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
 	         });
 	     }
-	      
+	     
+	     double chance = random.nextDouble();
+	     
 	     if(block == Blocks.GRAVEL)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.sharp_flint, 1))); 
+	    	 
+	    	 if(chance <= GeneralModConfig.SHARP_FLINT_DROP_CHANCE.get())
+	    	 {
+	    		 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.sharp_flint, 1))); 	 
+	    	 }
+	    	 else
+	    	 {
+	    		 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.FLINT, 1))); 
+	    	 }
+	    	 
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     
