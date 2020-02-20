@@ -99,7 +99,8 @@ public class ItemInit
 				ItemList.crack_hammer = new CrackHammer(ItemTier.IRON, 1, -3.3f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("crack_hammer")),
 				
 				ItemList.iron_links = new IronLinks(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("iron_links")),
-										
+				
+				ItemList.stone_powder = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("stone_powder")),
 				ItemList.tin_powder = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("tin_powder")),
 				ItemList.copper_powder = new Item(new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("copper_powder")),
 				ItemList.carbon = new Carbon(new Item.Properties().group(EasySteel.easy_steel), "carbon", 600),

@@ -31,7 +31,10 @@ public class GeneralModConfig
     
     public static ForgeConfigSpec.BooleanValue ENABLE_BRONZE_RELATED_ITEMS;
     
-    
+    public static ForgeConfigSpec.DoubleValue STONE_DROP_CHANCE;
+    public static ForgeConfigSpec.DoubleValue ONE_DROP_CHANCE;
+    public static ForgeConfigSpec.DoubleValue TWO_DROP_CHANCE;
+
     public static void init(ForgeConfigSpec.Builder SERVER_BUILDER)
     {
         SERVER_BUILDER.comment("Bornite Ore Generation").push("bornite_ore");
@@ -71,6 +74,14 @@ public class GeneralModConfig
         RUTILE_ORE_CHANCE = SERVER_BUILDER.comment("Chances of Rutile Ore pocket being generated [0-100, default: 6]").defineInRange("rutileOreChance", 4, 0, 100);
         RUTILE_ORE_MIN_HEIGHT = SERVER_BUILDER.comment("Minimal height for Rutile Ore pocket generation, [0-255, default: 1]").defineInRange("rutileOreMinHeight", 1, 0, 255);
         RUTILE_ORE_MAX_HEIGHT = SERVER_BUILDER.comment("Maximal height for Rutile Ore pocket generation [0-255, default: 200]").defineInRange("rutileOreMaxHeight", 15, 0, 255);
+
+        SERVER_BUILDER.pop();
+        
+        SERVER_BUILDER.comment("Crack Hammer drop chances, numbers represent a sequence of evaluating a random number").push("crack_hammer");
+
+        STONE_DROP_CHANCE = SERVER_BUILDER.comment("Chance of Crack Hammer dropping Stone Powder [0-1, default: .20]").defineInRange("stone_drop_chance", .01, 0, 1);
+        ONE_DROP_CHANCE = SERVER_BUILDER.comment("Chance of Crack Hammer dropping (2) of the target powders [0-1, default: .70]").defineInRange("one_drop_chance", .97, 0, 1);
+        TWO_DROP_CHANCE = SERVER_BUILDER.comment("Chance of Crack Hammer dropping (3) of the target powders [0-1, default: .90]").defineInRange("two_drop_chance", .99, 0, 1);
 
         SERVER_BUILDER.pop();
     }

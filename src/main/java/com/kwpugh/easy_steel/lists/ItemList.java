@@ -21,6 +21,7 @@ public class ItemList
 	
 	public static Item iron_links;
 	
+	public static Item stone_powder;	
 	public static Item carbon;	
 	public static Item iron_powder;
 	public static Item gold_powder;
