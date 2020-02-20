@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "easy_steel:crack_hammer"
+        },
+        {
+            "item": "minecraft:gold_ore"
+        }
+    ],
+    "result": {
+        "item": "easy_steel:gold_powder",
+        "count": 2
+    }
+}

@@ -11,6 +11,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -35,43 +36,70 @@ public class HandShovel extends ShovelItem
 	{
 		super(tier, attackDamageIn, attackSpeedIn, builder);
 	}
-	   
+
+	public boolean onBlockDestroyed(ItemStack stack, World worldIn, BlockState state, BlockPos pos, LivingEntity entityLiving)
+	{
+		Block block = state.getBlock();
+		
+		if (!worldIn.isRemote && state.getBlockHardness(worldIn, pos) != 0.0F)
+		{
+			if(block == Blocks.GRAVEL)
+			{
+		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
+		        
+		        double chance = random.nextDouble();
+		        
+		        if(chance <= .5)
+		        {
+		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.sharp_flint, 1)));	
+		        }
+			}
+	    }
+
+		return true;
+	}	
+	
+	//Hand Shovel right-click ability, enabled by default
 	@Override
 	public ActionResultType onItemUse(ItemUseContext context)
 	{
-		 World world = context.getWorld();
-		 PlayerEntity player = context.getPlayer();
-		 BlockPos pos = context.getPos();
-		 BlockState state = world.getBlockState(pos);
-		 Block block = state.getBlock();
-		 ItemStack stack = context.getItem();
-		 
-	     if (!world.isRemote && state.getBlockHardness(world, pos) != 0.0F)
-		 {
-	    	 stack.damageItem(1, player, (p_220038_0_) -> {
-	         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
-	         });
-	     }
-	     
-	     double chance = random.nextDouble();
-	     
-	     if(block == Blocks.GRAVEL)
-	     {
-	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 
-	    	 if(chance <= GeneralModConfig.SHARP_FLINT_DROP_CHANCE.get())
-	    	 {
-	    		 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.sharp_flint, 1))); 	 
-	    	 }
-	    	 else
-	    	 {
-	    		 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.FLINT, 1))); 
-	    	 }
-	    	 
-	    	 return ActionResultType.SUCCESS;
-	     }
-	     
-		 return ActionResultType.PASS;
+		if(GeneralModConfig.ENABLE_HAND_SHOVEL_RIGHT_CLICK.get())
+		{
+			 World world = context.getWorld();
+			 PlayerEntity player = context.getPlayer();
+			 BlockPos pos = context.getPos();
+			 BlockState state = world.getBlockState(pos);
+			 Block block = state.getBlock();
+			 ItemStack stack = context.getItem();
+			 
+		     if (!world.isRemote && state.getBlockHardness(world, pos) != 0.0F)
+			 {
+		    	 stack.damageItem(1, player, (p_220038_0_) -> {
+		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
+		     }
+		     
+		     double chance = random.nextDouble();
+		     
+		     if(block == Blocks.GRAVEL)
+		     {
+		    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
+		    	 
+		    	 if(chance <= GeneralModConfig.SHARP_FLINT_DROP_CHANCE.get())
+		    	 {
+		    		 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.sharp_flint, 1))); 	 
+		    	 }
+		    	 else
+		    	 {
+		    		 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.FLINT, 1))); 
+		    	 }
+		    	 
+		    	 return ActionResultType.SUCCESS;
+		     }
+		}
+		return ActionResultType.PASS;
 	}
 	
 	@Override

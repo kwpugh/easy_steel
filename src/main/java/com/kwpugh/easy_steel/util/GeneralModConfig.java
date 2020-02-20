@@ -31,9 +31,13 @@ public class GeneralModConfig
     
     public static ForgeConfigSpec.BooleanValue ENABLE_BRONZE_RELATED_ITEMS;
     
+    public static ForgeConfigSpec.BooleanValue ENABLE_CRACK_HAMMER_RIGHT_CLICK;
+    
     public static ForgeConfigSpec.DoubleValue STONE_DROP_CHANCE;
     public static ForgeConfigSpec.DoubleValue ONE_DROP_CHANCE;
     public static ForgeConfigSpec.DoubleValue TWO_DROP_CHANCE;
+    
+    public static ForgeConfigSpec.BooleanValue ENABLE_HAND_SHOVEL_RIGHT_CLICK;
     
     public static ForgeConfigSpec.DoubleValue SHARP_FLINT_DROP_CHANCE; 
 
@@ -79,11 +83,23 @@ public class GeneralModConfig
 
         SERVER_BUILDER.pop();
         
-        SERVER_BUILDER.comment("Crack Hammer drop chances, numbers represent a sequence of evaluating a random number. Stone_drop, one_drop, and two_drop numbers need to be in ascending order and not overlap.").push("crack_hammer");
+        SERVER_BUILDER.comment("Enable the Crack Hammer's right-click ability").push("crack_hammer_ability");
+        
+        ENABLE_CRACK_HAMMER_RIGHT_CLICK = SERVER_BUILDER.comment("Enable Crack Hammer's right-click ability [true / false default: true]").define("crack_hammer_right_click", true);
+
+        SERVER_BUILDER.pop();
+        
+        SERVER_BUILDER.comment("Crack Hammer right-click drop chances, numbers represent a sequence of evaluating a random number. Stone_drop, one_drop, and two_drop numbers need to be in ascending order and not overlap.").push("crack_hammer_drops");
         
         STONE_DROP_CHANCE = SERVER_BUILDER.comment("Chance of Crack Hammer dropping Stone Powder [0-1, default: .03]").defineInRange("stone_drop_chance", .03, 0, 1);
         ONE_DROP_CHANCE = SERVER_BUILDER.comment("Chance of Crack Hammer dropping (2) of the target powders [0-1, default: .70]").defineInRange("one_drop_chance", .70, 0, 1);
         TWO_DROP_CHANCE = SERVER_BUILDER.comment("Chance of Crack Hammer dropping (3) of the target powders [0-1, default: .80]").defineInRange("two_drop_chance", .90, 0, 1);
+
+        SERVER_BUILDER.pop();
+        
+        SERVER_BUILDER.comment("Enable the Hand Shovel's right-click ability").push("hand_shovel_ability");
+        
+        ENABLE_HAND_SHOVEL_RIGHT_CLICK = SERVER_BUILDER.comment("Enable Hand Shovel's right-click ability [true / false default: true]").define("hand_shovel_right_click", true);
 
         SERVER_BUILDER.pop();
         

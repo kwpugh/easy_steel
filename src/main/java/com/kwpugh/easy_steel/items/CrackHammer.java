@@ -11,6 +11,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -35,124 +36,162 @@ public class CrackHammer extends PickaxeItem
 	public CrackHammer(IItemTier tier, int attackDamageIn, float attackSpeedIn, Properties builder)
 	{
 		super(tier, attackDamageIn, attackSpeedIn, builder);
-	}
+	}	
 	
+    @Override
+    public boolean hasContainerItem(ItemStack stack)
+    {
+        return true;
+    }
+
+    @Override
+    public ItemStack getContainerItem(ItemStack stackIn)
+    {
+    	ItemStack stack = stackIn.copy();
+    	stack.setDamage(getDamage(stack) + 1);
+
+        return stack;
+    }	
+    
+	public boolean onBlockDestroyed(ItemStack stack, World worldIn, BlockState state, BlockPos pos, LivingEntity entityLiving)
+	{
+		Block block = state.getBlock();
+		
+		if (!worldIn.isRemote && state.getBlockHardness(worldIn, pos) != 0.0F)
+		{
+			if(block == Blocks.COAL_ORE)
+			{
+		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
+		        
+		        worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.carbon, 1)));  		         	 
+			}
+	    }
+
+		return true;
+	}		
+		
+	//Crack Hammer right-click ability, enabled by defualt	
 	@Override
 	public ActionResultType onItemUse(ItemUseContext context)
 	{
-		 World world = context.getWorld();
-		 PlayerEntity player = context.getPlayer();
-		 BlockPos pos = context.getPos();
-		 BlockState state = world.getBlockState(pos);
-		 Block block = state.getBlock();
-		 ItemStack stack = context.getItem();
-		 int drops;
-		 
-	     if (!world.isRemote && state.getBlockHardness(world, pos) != 0.0F)
-		 {
-	    	 stack.damageItem(1, player, (p_220038_0_) -> {
-	         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
-	         });
-	     }
+		if(GeneralModConfig.ENABLE_CRACK_HAMMER_RIGHT_CLICK.get())
+		{
+			World world = context.getWorld();
+			 PlayerEntity player = context.getPlayer();
+			 BlockPos pos = context.getPos();
+			 BlockState state = world.getBlockState(pos);
+			 Block block = state.getBlock();
+			 ItemStack stack = context.getItem();
+			 int drops;
+			 
+		     if (!world.isRemote && state.getBlockHardness(world, pos) != 0.0F)
+			 {
+		    	 stack.damageItem(1, player, (p_220038_0_) -> {
+		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
+		     }
 
-	     String blockForgeTags = block.getTags().toString();
-	     
-	     double chance = random.nextDouble();
-	     
-	     if(chance <= GeneralModConfig.STONE_DROP_CHANCE.get())  
-	     {
-	    	 if(blockForgeTags.contains("forge:ores") || blockForgeTags.contains("forge:stone") || block == Blocks.STONE)
-	    	 {
-	        	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);;
-		    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.stone_powder, 2)));     		 
-	    	 }
-	
-	    	 return ActionResultType.SUCCESS;
-	     }
-	     else if(chance <= GeneralModConfig.ONE_DROP_CHANCE.get())  
-	     {
-	    	 drops = 1;
-	     }
-	     else if(chance <= GeneralModConfig.TWO_DROP_CHANCE.get())  
-	     {
-	    	 drops = 2;
-	     }
-	     else   
-	     {
-	    	 drops = 3;
-	     }
-	     
-	     if(blockForgeTags.contains("forge:ores/copper") || blockForgeTags.contains("forge:ores/malachite"))
-	     {
-	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);;
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.copper_powder, drops))); 
-	    	 return ActionResultType.SUCCESS;
-	     }
-	     
-	     if(blockForgeTags.contains("forge:ores/tin"))
-	     {
-	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.tin_powder, drops)));  
-	    	 return ActionResultType.SUCCESS;
-	     }
+		     String blockForgeTags = block.getTags().toString();
+		     
+		     double chance = random.nextDouble();
+		     
+		     if(chance <= GeneralModConfig.STONE_DROP_CHANCE.get())  
+		     {
+		    	 if(blockForgeTags.contains("forge:ores") || blockForgeTags.contains("forge:stone") || block == Blocks.STONE)
+		    	 {
+		        	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);;
+			    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.stone_powder, 2)));     		 
+		    	 }
+		
+		    	 return ActionResultType.SUCCESS;
+		     }
+		     else if(chance <= GeneralModConfig.ONE_DROP_CHANCE.get())  
+		     {
+		    	 drops = 1;
+		     }
+		     else if(chance <= GeneralModConfig.TWO_DROP_CHANCE.get())  
+		     {
+		    	 drops = 2;
+		     }
+		     else   
+		     {
+		    	 drops = 3;
+		     }
+		     
+		     if(blockForgeTags.contains("forge:ores/copper") || blockForgeTags.contains("forge:ores/malachite"))
+		     {
+		    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);;
+		    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.copper_powder, drops))); 
+		    	 return ActionResultType.SUCCESS;
+		     }
+		     
+		     if(blockForgeTags.contains("forge:ores/tin"))
+		     {
+		    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
+		    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.tin_powder, drops)));  
+		    	 return ActionResultType.SUCCESS;
+		     }
 
-	     if(blockForgeTags.contains("forge:ores/tungsten"))
-	     {
-	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.tungsten_powder, drops)));  
-	    	 return ActionResultType.SUCCESS;
-	     }
-	     
-	     if(blockForgeTags.contains("forge:ores/titanium"))
-	     {
-	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.titanium_powder, drops)));  
-	    	 return ActionResultType.SUCCESS;
-	     }
-	     
-	     if(blockForgeTags.contains("forge:ores/coal"))
-	     {
-	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.carbon, drops))); 
-	    	 return ActionResultType.SUCCESS;
-	     }
-	     
-	     if(blockForgeTags.contains("forge:storage_blocks/coal") || blockForgeTags.contains("forge:storage_blocks/charcoal"))
-	     {
-	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.carbon, 5))); 
-	    	 return ActionResultType.SUCCESS;
-	     }
-	     
-	     if(blockForgeTags.contains("forge:ores/iron"))
-	     {
-	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.iron_powder, drops)));
-	    	 return ActionResultType.SUCCESS;
-	     }
-	    
-	     if(blockForgeTags.contains("forge:ores/gold"))
-	     {
-	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.gold_powder, drops)));   
-	    	 return ActionResultType.SUCCESS;
-	     }
-	     
-	     if(blockForgeTags.contains("forge:ores/diamond"))
-	     {
-	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.diamond_powder, drops)));   
-	    	 return ActionResultType.SUCCESS;
-	     }
-	     
-	     if(blockForgeTags.contains("forge:ores/emerald"))
-	     {
-	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.emerald_powder, drops)));   
-	    	 return ActionResultType.SUCCESS;
-	     }
+		     if(blockForgeTags.contains("forge:ores/tungsten"))
+		     {
+		    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
+		    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.tungsten_powder, drops)));  
+		    	 return ActionResultType.SUCCESS;
+		     }
+		     
+		     if(blockForgeTags.contains("forge:ores/titanium"))
+		     {
+		    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
+		    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.titanium_powder, drops)));  
+		    	 return ActionResultType.SUCCESS;
+		     }
+		     
+		     if(blockForgeTags.contains("forge:ores/coal"))
+		     {
+		    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
+		    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.carbon, drops))); 
+		    	 return ActionResultType.SUCCESS;
+		     }
+		     
+		     if(blockForgeTags.contains("forge:storage_blocks/coal") || blockForgeTags.contains("forge:storage_blocks/charcoal"))
+		     {
+		    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
+		    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.carbon, 5))); 
+		    	 return ActionResultType.SUCCESS;
+		     }
+		     
+		     if(blockForgeTags.contains("forge:ores/iron"))
+		     {
+		    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
+		    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.iron_powder, drops)));
+		    	 return ActionResultType.SUCCESS;
+		     }
+		    
+		     if(blockForgeTags.contains("forge:ores/gold"))
+		     {
+		    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
+		    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.gold_powder, drops)));   
+		    	 return ActionResultType.SUCCESS;
+		     }
+		     
+		     if(blockForgeTags.contains("forge:ores/diamond"))
+		     {
+		    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
+		    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.diamond_powder, drops)));   
+		    	 return ActionResultType.SUCCESS;
+		     }
+		     
+		     if(blockForgeTags.contains("forge:ores/emerald"))
+		     {
+		    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
+		    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.emerald_powder, drops)));   
+		    	 return ActionResultType.SUCCESS;
+		     }
+		}
 	
-		 return ActionResultType.PASS;
+		return ActionResultType.PASS;
 	}
 	
 	@Override
