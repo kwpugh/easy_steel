@@ -41,9 +41,7 @@ public class EasySteel
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
-
-        
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);    
     }
 
     private void setup(final FMLCommonSetupEvent event)

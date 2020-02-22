@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "easy_steel:crack_hammer"
+        },
+        {
+            "tag": "forge:ores/tungsten"
+        }
+    ],
+    "result": {
+        "item": "easy_steel:tungsten_powder",
+        "count": 2
+    }
+}
