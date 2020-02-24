@@ -154,7 +154,7 @@ public class ItemInit
 				ItemList.bronze_pickaxe = new BronzePickaxe(ToolMaterialList.bronze, 2, -2.8f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("bronze_pickaxe")),
 				ItemList.bronze_axe = new BronzeAxe(ToolMaterialList.bronze, 6, -3.1f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("bronze_axe")),
 				ItemList.bronze_shovel = new BronzeShovel(ToolMaterialList.bronze, 2, -3.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("bronze_shovel")),			
-				ItemList.bronze_hoe = new BronzeHoe(ToolMaterialList.bronze, -1.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("bronze_hoe")),			
+				ItemList.bronze_hoe = new BronzeHoe(ToolMaterialList.bronze, -1.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("bronze_hoe")),	
 				ItemList.bronze_hammer = new BronzeHammer(ToolMaterialList.bronze, 6, -3.3f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("bronze_hammer")),
 				ItemList.bronze_excavator = new BronzeExcavator(ToolMaterialList.bronze, 2, -3.0f, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("bronze_excavator")),
 				ItemList.bronze_paxel = new BronzePaxel(6, -3.2f, ToolMaterialList.bronze, null, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("bronze_paxel")),
@@ -222,8 +222,9 @@ public class ItemInit
 				ItemList.armor_tungsten_carbide_head = new ArmorTungstenCarbide(ArmorMaterialList.tungsten_carbide, EquipmentSlotType.HEAD, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("armor_tungsten_carbide_head")),
 				ItemList.armor_tungsten_carbide_body = new ArmorTungstenCarbide(ArmorMaterialList.tungsten_carbide, EquipmentSlotType.CHEST, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("armor_tungsten_carbide_body")),
 				ItemList.armor_tungsten_carbide_leggings = new ArmorTungstenCarbide(ArmorMaterialList.tungsten_carbide, EquipmentSlotType.LEGS, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("armor_tungsten_carbide_leggings")),
-				ItemList.armor_tungsten_carbide_boots = new ArmorTungstenCarbide(ArmorMaterialList.tungsten_carbide, EquipmentSlotType.FEET, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("armor_tungsten_carbide_boots"))
-			);		
+				ItemList.armor_tungsten_carbide_boots = new ArmorTungstenCarbide(ArmorMaterialList.tungsten_carbide, EquipmentSlotType.FEET, new Item.Properties().group(EasySteel.easy_steel)).setRegistryName(location("armor_tungsten_carbide_boots"))		
+			);
+			
 			EasySteel.logger.info("Easy Steel items registered.");
 		}
 		 

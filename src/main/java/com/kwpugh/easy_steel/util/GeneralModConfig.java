@@ -40,6 +40,7 @@ public class GeneralModConfig
     public static ForgeConfigSpec.BooleanValue ENABLE_HAND_SHOVEL_RIGHT_CLICK;
     
     public static ForgeConfigSpec.DoubleValue SHARP_FLINT_DROP_CHANCE; 
+    
 
     public static void init(ForgeConfigSpec.Builder SERVER_BUILDER)
     {
