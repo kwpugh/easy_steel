@@ -1,5 +1,5 @@
 {
-    "parent": "item/hardened_steel_crossbow",
+    "parent": "easy_steel:item/hardened_steel_crossbow",
     "textures": {
         "layer0": "easy_steel:item/hardened_steel_crossbow_firework"
     }
