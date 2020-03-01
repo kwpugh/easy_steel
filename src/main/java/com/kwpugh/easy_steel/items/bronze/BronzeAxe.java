@@ -6,16 +6,10 @@ import javax.annotation.Nullable;
 
 import com.kwpugh.easy_steel.init.ItemInit;
 
-import net.minecraft.block.BlockState;
 import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.AxeItem;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemUseContext;
-import net.minecraft.util.ActionResultType;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.TranslationTextComponent;
@@ -28,25 +22,6 @@ public class BronzeAxe extends AxeItem
 	public BronzeAxe(IItemTier tier, int attackDamageIn, float attackSpeedIn, Properties builder)
 	{
 		super(tier, attackDamageIn, attackSpeedIn, builder);
-	}
-
-	@Override
-	public ActionResultType onItemUse(ItemUseContext context)
-	{
-		 World world = context.getWorld();
-		 PlayerEntity player = context.getPlayer();
-		 BlockPos pos = context.getPos();
-		 BlockState state = world.getBlockState(pos);
-		 ItemStack stack = context.getItem();
-		 
-	     if (!world.isRemote && state.getBlockHardness(world, pos) != 0.0F)
-		 {
-	    	 stack.damageItem(1, player, (p_220038_0_) -> {
-	         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
-	         });
-	     }
-	     
-		 return ActionResultType.PASS;
 	}
 	
 	@Override

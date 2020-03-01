@@ -41,22 +41,19 @@ public class HandShovel extends ShovelItem
 	{
 		Block block = state.getBlock();
 		
-		if (!worldIn.isRemote && state.getBlockHardness(worldIn, pos) != 0.0F)
+		if(block == Blocks.GRAVEL)
 		{
-			if(block == Blocks.GRAVEL)
-			{
-		        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
-		            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
-		         });
-		        
-		        double chance = random.nextDouble();
-		        
-		        if(chance <= .5)
-		        {
-		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.SHARP_FLINT.get(), 1)));	
-		        }
-			}
-	    }
+	        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+	            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+	         });
+	        
+	        double chance = random.nextDouble();
+	        
+	        if(chance <= .5)
+	        {
+	        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.SHARP_FLINT.get(), 1)));	
+	        }
+		}
 
 		return true;
 	}	
@@ -73,13 +70,6 @@ public class HandShovel extends ShovelItem
 			 BlockState state = world.getBlockState(pos);
 			 Block block = state.getBlock();
 			 ItemStack stack = context.getItem();
-			 
-		     if (!world.isRemote && state.getBlockHardness(world, pos) != 0.0F)
-			 {
-		    	 stack.damageItem(1, player, (p_220038_0_) -> {
-		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
-		         });
-		     }
 		     
 		     double chance = random.nextDouble();
 		     
@@ -89,11 +79,17 @@ public class HandShovel extends ShovelItem
 		    	 
 		    	 if(chance <= GeneralModConfig.SHARP_FLINT_DROP_CHANCE.get())
 		    	 {
-		    		 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.SHARP_FLINT.get(), 1))); 	 
+		    		 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.SHARP_FLINT.get(), 1))); 
+			    	 stack.damageItem(1, player, (p_220038_0_) -> {
+				         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+				         });
 		    	 }
 		    	 else
 		    	 {
 		    		 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.FLINT, 1))); 
+			    	 stack.damageItem(1, player, (p_220038_0_) -> {
+				         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+				         });
 		    	 }
 		    	 
 		    	 return ActionResultType.SUCCESS;

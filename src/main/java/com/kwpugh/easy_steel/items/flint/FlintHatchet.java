@@ -43,13 +43,6 @@ public class FlintHatchet extends AxeItem
 		 BlockState state = world.getBlockState(pos);
 		 Block block = state.getBlock();
 		 ItemStack stack = context.getItem();
-		 
-	     if (!world.isRemote && state.getBlockHardness(world, pos) != 0.0F)
-		 {
-	    	 stack.damageItem(1, player, (p_220038_0_) -> {
-	         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
-	         });
-	     }
 	      
 	     if(block == Blocks.WHITE_WOOL ||
 	    		 block == Blocks.BLACK_WOOL ||
@@ -70,7 +63,10 @@ public class FlintHatchet extends AxeItem
 	    		 )
 	     {
 	    	 world.destroyBlock(pos, false);
-	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.STRING, 4)));    	 
+	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.STRING, 4)));  
+	    	 stack.damageItem(1, player, (p_220038_0_) -> {
+		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
 	     }     
 	     
 		 return ActionResultType.PASS;

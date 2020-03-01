@@ -42,18 +42,15 @@ public class FlintShovel extends ShovelItem
 		 BlockState state = world.getBlockState(pos);
 		 Block block = state.getBlock();
 		 ItemStack stack = context.getItem();
-		 
-	     if (!world.isRemote && state.getBlockHardness(world, pos) != 0.0F)
-		 {
-	    	 stack.damageItem(1, player, (p_220038_0_) -> {
-	         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
-	         });
-	     }
-	      
+
 	     if(block == Blocks.GRAVEL)
 	     {
 	    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 	    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.SHARP_FLINT.get(), 1))); 
+	    	 stack.damageItem(1, player, (p_220038_0_) -> {
+		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });
+	    	 
 	    	 return ActionResultType.SUCCESS;
 	     }
 	     

@@ -85,13 +85,6 @@ public class CrackHammer extends PickaxeItem
 			 Block block = state.getBlock();
 			 ItemStack stack = context.getItem();
 			 int drops;
-			 
-		     if (!world.isRemote && state.getBlockHardness(world, pos) != 0.0F)
-			 {
-		    	 stack.damageItem(1, player, (p_220038_0_) -> {
-		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
-		         });
-		     }
 
 		     String blockForgeTags = block.getTags().toString();
 		     
@@ -124,6 +117,10 @@ public class CrackHammer extends PickaxeItem
 		     {
 		    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);;
 		    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.COPPER_POWDER.get(), drops))); 
+		    	 stack.damageItem(1, player, (p_220038_0_) -> {
+		    		p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		    	 	});
+		    	 
 		    	 return ActionResultType.SUCCESS;
 		     }
 		     
@@ -131,6 +128,10 @@ public class CrackHammer extends PickaxeItem
 		     {
 		    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 		    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.TIN_POWDER.get(), drops)));  
+		    	 stack.damageItem(1, player, (p_220038_0_) -> {
+		    		p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		    	 	});
+		    	 
 		    	 return ActionResultType.SUCCESS;
 		     }
 
@@ -138,20 +139,32 @@ public class CrackHammer extends PickaxeItem
 		     {
 		    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 		    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.TUNGSTEN_POWDER.get(), drops)));  
+		    	 stack.damageItem(1, player, (p_220038_0_) -> {
+		    		p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		    	 	});
+		    	 
 		    	 return ActionResultType.SUCCESS;
 		     }
 		     
 		     if(blockForgeTags.contains("forge:ores/titanium"))
 		     {
 		    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-		    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.TITANIUM_POWDER.get(), drops)));  
+		    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.TITANIUM_POWDER.get(), drops))); 
+		    	 stack.damageItem(1, player, (p_220038_0_) -> {
+			         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+			         });
+		    	 
 		    	 return ActionResultType.SUCCESS;
 		     }
 		     
 		     if(blockForgeTags.contains("forge:ores/coal"))
 		     {
 		    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-		    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.CARBON.get(), drops))); 
+		    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.CARBON.get(), drops)));
+		    	 stack.damageItem(1, player, (p_220038_0_) -> {
+			         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+			         });
+		    	 
 		    	 return ActionResultType.SUCCESS;
 		     }
 		     
@@ -159,6 +172,10 @@ public class CrackHammer extends PickaxeItem
 		     {
 		    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 		    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.CARBON.get(), 5))); 
+		    	 stack.damageItem(1, player, (p_220038_0_) -> {
+			         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+			         });
+		    	 
 		    	 return ActionResultType.SUCCESS;
 		     }
 		     
@@ -166,6 +183,10 @@ public class CrackHammer extends PickaxeItem
 		     {
 		    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 		    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.IRON_POWDER.get(), drops)));
+		    	 stack.damageItem(1, player, (p_220038_0_) -> {
+			         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+			         });
+		    	 
 		    	 return ActionResultType.SUCCESS;
 		     }
 		    
@@ -173,6 +194,10 @@ public class CrackHammer extends PickaxeItem
 		     {
 		    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 		    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.GOLD_POWDER.get(), drops)));   
+		    	 stack.damageItem(1, player, (p_220038_0_) -> {
+			         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+			         });
+		    	 
 		    	 return ActionResultType.SUCCESS;
 		     }
 		     
@@ -180,13 +205,21 @@ public class CrackHammer extends PickaxeItem
 		     {
 		    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
 		    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.DIAMOND_POWDER.get(), drops)));   
+		    	 stack.damageItem(1, player, (p_220038_0_) -> {
+			         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+			         });
+		    	 
 		    	 return ActionResultType.SUCCESS;
 		     }
 		     
 		     if(blockForgeTags.contains("forge:ores/emerald"))
 		     {
 		    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-		    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.EMERALD_POWDER.get(), drops)));   
+		    	 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.EMERALD_POWDER.get(), drops)));  
+		    	 stack.damageItem(1, player, (p_220038_0_) -> {
+			         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+			         });
+		    	 
 		    	 return ActionResultType.SUCCESS;
 		     }
 		}
