@@ -11,7 +11,7 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableMap.Builder;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
-import com.kwpugh.easy_steel.lists.ItemList;
+import com.kwpugh.easy_steel.init.ItemInit;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -167,7 +167,7 @@ public class TungstenCarbidePaxel extends ToolItem
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
-		return repair.getItem() == ItemList.tungsten_carbide_ingot;
+		return repair.getItem() == ItemInit.TUNGSTEN_CARBIDE_INGOT.get();
 	}
 	
 	@OnlyIn(Dist.CLIENT)

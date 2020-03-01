@@ -7,7 +7,7 @@ import javax.annotation.Nullable;
 
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
-import com.kwpugh.easy_steel.lists.ItemList;
+import com.kwpugh.easy_steel.init.ItemInit;
 import com.kwpugh.easy_steel.util.ExcavatorUtil;
 
 import net.minecraft.block.Block;
@@ -76,7 +76,7 @@ public class BronzeExcavator extends ShovelItem
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
-		return repair.getItem() == ItemList.bronze_ingot;
+		return repair.getItem() == ItemInit.BRONZE_INGOT.get();
 	}
 	
 	@OnlyIn(Dist.CLIENT)

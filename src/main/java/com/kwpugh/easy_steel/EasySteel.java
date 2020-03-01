@@ -6,6 +6,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.kwpugh.easy_steel.group.GroupEasySteel;
+import com.kwpugh.easy_steel.init.BlockInit;
+import com.kwpugh.easy_steel.init.ItemInit;
 import com.kwpugh.easy_steel.util.EasySteelConfig;
 import com.kwpugh.easy_steel.world.OreGenerator;
 
@@ -34,14 +36,15 @@ public class EasySteel
     {		
 		EasySteelConfig.loadConfig(EasySteelConfig.CONFIG, FMLPaths.CONFIGDIR.get().resolve("easy_steel-general.toml"));
 		
-    	MinecraftForge.EVENT_BUS.register(this);
+    	BlockInit.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+    	ItemInit.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
     	
-		//NewConfig.register(ModLoadingContext.get());
-		
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);    
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup); 
+        
+        MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void setup(final FMLCommonSetupEvent event)

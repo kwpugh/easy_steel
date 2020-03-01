@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import com.kwpugh.easy_steel.lists.ItemList;
+import com.kwpugh.easy_steel.init.ItemInit;
 import com.kwpugh.easy_steel.util.GeneralModConfig;
 
 import net.minecraft.block.Block;
@@ -53,7 +53,7 @@ public class HandShovel extends ShovelItem
 		        
 		        if(chance <= .5)
 		        {
-		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.sharp_flint, 1)));	
+		        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.SHARP_FLINT.get(), 1)));	
 		        }
 			}
 	    }
@@ -89,7 +89,7 @@ public class HandShovel extends ShovelItem
 		    	 
 		    	 if(chance <= GeneralModConfig.SHARP_FLINT_DROP_CHANCE.get())
 		    	 {
-		    		 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemList.sharp_flint, 1))); 	 
+		    		 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.SHARP_FLINT.get(), 1))); 	 
 		    	 }
 		    	 else
 		    	 {

@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import com.kwpugh.easy_steel.lists.ItemList;
+import com.kwpugh.easy_steel.init.ItemInit;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -34,7 +34,7 @@ public class ArmorHardenedSteel extends ArmorItem
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
-		return repair.getItem() == ItemList.hardened_steel_ingot;
+		return repair.getItem() == ItemInit.HARDENED_STEEL_INGOT.get();
 	}
 	
 	@OnlyIn(Dist.CLIENT)

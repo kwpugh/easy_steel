@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import com.kwpugh.easy_steel.lists.ItemList;
+import com.kwpugh.easy_steel.init.ItemInit;
 
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.HoeItem;
@@ -33,7 +33,7 @@ public class BronzeHoe extends HoeItem
 	@Override
 	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
 	{
-		return repair.getItem() == ItemList.bronze_ingot;
+		return repair.getItem() == ItemInit.BRONZE_INGOT.get();
 	}
 	
 	@OnlyIn(Dist.CLIENT)

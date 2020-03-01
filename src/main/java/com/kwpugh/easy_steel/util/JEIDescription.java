@@ -1,7 +1,7 @@
 package com.kwpugh.easy_steel.util;
 
 import com.kwpugh.easy_steel.EasySteel;
-import com.kwpugh.easy_steel.lists.ItemList;
+import com.kwpugh.easy_steel.init.ItemInit;
 
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
@@ -24,7 +24,7 @@ public class JEIDescription implements IModPlugin
 	@Override
 	public void registerRecipes(IRecipeRegistration registry)
 	{
-		registry.addIngredientInfo(new ItemStack(ItemList.crack_hammer), VanillaTypes.ITEM, 
+		registry.addIngredientInfo(new ItemStack(ItemInit.CRACK_HAMMER.get()), VanillaTypes.ITEM, 
 				"item.easy_steel.crack_hammer.jei.line1",
 				" ",
 				"item.easy_steel.crack_hammer.jei.line2",
@@ -33,7 +33,7 @@ public class JEIDescription implements IModPlugin
 				" ",
 				"item.easy_steel.crack_hammer.jei.line4");
 
-		registry.addIngredientInfo(new ItemStack(ItemList.hand_shovel), VanillaTypes.ITEM, 
+		registry.addIngredientInfo(new ItemStack(ItemInit.HAND_SHOVEL.get()), VanillaTypes.ITEM, 
 				" ",
 				"item.easy_steel.hand_shovel.jei.line1",
 				" ",
@@ -43,7 +43,7 @@ public class JEIDescription implements IModPlugin
 				" ",
 				"item.easy_steel.hand_shovel.jei.line4");
 				
-		registry.addIngredientInfo(new ItemStack(ItemList.sharp_flint), VanillaTypes.ITEM, 
+		registry.addIngredientInfo(new ItemStack(ItemInit.SHARP_FLINT.get()), VanillaTypes.ITEM, 
 				"item.easy_steel.sharp_flint.jei.line1",
 				" ",
 				"item.easy_steel.sharp_flint.jei.line2",
