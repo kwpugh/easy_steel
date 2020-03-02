@@ -77,12 +77,6 @@ public class ItemInit
 	public static final RegistryObject<Item> RUTILE_ORE = ITEMS.register("rutile_ore", () -> new BlockItem(BlockInit.WOLFRAMITE_ORE.get(), new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> WOLFRAMITE_ORE = ITEMS.register("wolframite_ore", () -> new BlockItem(BlockInit.RUTILE_ORE.get(), new Item.Properties().group(EasySteel.easy_steel)));
 	
-	public static final RegistryObject<Item> BRONZE_BLOCK = ITEMS.register("bronze_block", () -> new BlockItem(BlockInit.BRONZE_BLOCK.get(), new Item.Properties().group(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> STEEL_BLOCK = ITEMS.register("steel_block", () -> new BlockItem(BlockInit.STEEL_BLOCK.get(), new Item.Properties().group(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> TITANIUM_BLOCK = ITEMS.register("titanium_block", () -> new BlockItem(BlockInit.TITANIUM_BLOCK.get(), new Item.Properties().group(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> HARDENED_STEEL_BLOCK = ITEMS.register("hardened_steel_block", () -> new BlockItem(BlockInit.HARDENED_STEEL_BLOCK.get(), new Item.Properties().group(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_BLOCK = ITEMS.register("tungsten_carbide_block", () -> new BlockItem(BlockInit.TUNGSTEN_CARBIDE_BLOCK.get(), new Item.Properties().group(EasySteel.easy_steel)));
-	
 	public static final RegistryObject<Item> HAND_SHOVEL = ITEMS.register("hand_shovel", () -> new HandShovel(ItemTier.WOOD, 1, -3.0f, new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> SHARP_FLINT = ITEMS.register("sharp_flint", () -> new SharpFlint(new Item.Properties().group(EasySteel.easy_steel)));
 	
@@ -93,8 +87,6 @@ public class ItemInit
 	public static final RegistryObject<Item> FLINT_HOE = ITEMS.register("flint_hoe", () -> new FlintHoe(ToolMaterialList.FLINT, -1.0f, new Item.Properties().group(EasySteel.easy_steel)));
 	
 	public static final RegistryObject<Item> CRACK_HAMMER = ITEMS.register("crack_hammer", () -> new CrackHammer(ItemTier.IRON, 1, -3.3f, new Item.Properties().group(EasySteel.easy_steel)));
-	
-	public static final RegistryObject<Item> IRON_LINKS = ITEMS.register("iron_links", () -> new IronLinks(new Item.Properties().group(EasySteel.easy_steel)));
 	
 	public static final RegistryObject<Item> STONE_POWDER = ITEMS.register("stone_powder", () -> new Item(new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> TIN_POWDER = ITEMS.register("tin_powder", () -> new Item(new Item.Properties().group(EasySteel.easy_steel)));
@@ -112,6 +104,8 @@ public class ItemInit
 	public static final RegistryObject<Item> TITANIUM_BASE_INGOT = ITEMS.register("titanium_base_ingot", () -> new Item(new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> TUNGSTEN_INGOT = ITEMS.register("tungsten_ingot", () -> new Item(new Item.Properties().group(EasySteel.easy_steel)));
 	
+	public static final RegistryObject<Item> IRON_LINKS = ITEMS.register("iron_links", () -> new IronLinks(new Item.Properties().group(EasySteel.easy_steel)));
+	
 	public static final RegistryObject<Item> RAW_BRONZE = ITEMS.register("raw_bronze", () -> new Item(new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> RAW_STEEL = ITEMS.register("raw_steel", () -> new Item(new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> RAW_TITANIUM_ALLOY = ITEMS.register("raw_titanium_alloy", () -> new Item(new Item.Properties().group(EasySteel.easy_steel)));
@@ -123,6 +117,12 @@ public class ItemInit
 	public static final RegistryObject<Item> TITANIUM_INGOT = ITEMS.register("titanium_ingot", () -> new Item(new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> HARDENED_STEEL_INGOT = ITEMS.register("hardened_steel_ingot", () -> new Item(new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_INGOT = ITEMS.register("tungsten_carbide_ingot", () -> new Item(new Item.Properties().group(EasySteel.easy_steel)));
+	
+	public static final RegistryObject<Item> BRONZE_BLOCK = ITEMS.register("bronze_block", () -> new BlockItem(BlockInit.BRONZE_BLOCK.get(), new Item.Properties().group(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> STEEL_BLOCK = ITEMS.register("steel_block", () -> new BlockItem(BlockInit.STEEL_BLOCK.get(), new Item.Properties().group(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> TITANIUM_BLOCK = ITEMS.register("titanium_block", () -> new BlockItem(BlockInit.TITANIUM_BLOCK.get(), new Item.Properties().group(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> HARDENED_STEEL_BLOCK = ITEMS.register("hardened_steel_block", () -> new BlockItem(BlockInit.HARDENED_STEEL_BLOCK.get(), new Item.Properties().group(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_BLOCK = ITEMS.register("tungsten_carbide_block", () -> new BlockItem(BlockInit.TUNGSTEN_CARBIDE_BLOCK.get(), new Item.Properties().group(EasySteel.easy_steel)));
 	
 	public static final RegistryObject<Item> BRONZE_PLATE = ITEMS.register("bronze_plate", () -> new Item(new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> STEEL_PLATE = ITEMS.register("steel_plate", () -> new Item(new Item.Properties().group(EasySteel.easy_steel)));
@@ -186,8 +186,7 @@ public class ItemInit
 	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_HOE = ITEMS.register("tungsten_carbide_hoe", () -> new TungstenCarbideHoe(ToolMaterialList.TUNGSTEN_CARBIDE, -0.5f, new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_HAMMER = ITEMS.register("tungsten_carbide_hammer", () -> new TungstenCarbideHammer(ToolMaterialList.TUNGSTEN_CARBIDE, 7, -3.3f, new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_EXCAVATOR = ITEMS.register("tungsten_carbide_excavator", () -> new TungstenCarbideExcavator(ToolMaterialList.TUNGSTEN_CARBIDE, 3, -3.0f, new Item.Properties().group(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_PAXEL = ITEMS.register("tungsten_carbide_paxel", () -> new TungstenCarbidePaxel(7, -3.2f, ToolMaterialList.TUNGSTEN_CARBIDE, null, new Item.Properties().group(EasySteel.easy_steel)));
-			
+	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_PAXEL = ITEMS.register("tungsten_carbide_paxel", () -> new TungstenCarbidePaxel(7, -3.2f, ToolMaterialList.TUNGSTEN_CARBIDE, null, new Item.Properties().group(EasySteel.easy_steel)));			
 
 	public static final RegistryObject<Item> ARMOR_BRONZE_HEAD = ITEMS.register("armor_bronze_head", () -> new ArmorBronze(ArmorMaterialList.BRONZE, EquipmentSlotType.HEAD, new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> ARMOR_BRONZE_BODY = ITEMS.register("armor_bronze_body", () -> new ArmorBronze(ArmorMaterialList.BRONZE, EquipmentSlotType.CHEST, new Item.Properties().group(EasySteel.easy_steel)));
