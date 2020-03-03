@@ -41,6 +41,11 @@ public class GeneralModConfig
     
     public static ForgeConfigSpec.DoubleValue SHARP_FLINT_DROP_CHANCE; 
     
+    public static ForgeConfigSpec.DoubleValue ATTACK_DAMAGE_MODIFIER;
+    public static ForgeConfigSpec.IntValue DURABILITY_MODIFIER;
+    public static ForgeConfigSpec.IntValue DAMAGE_REDUCTION_MODIFIER;
+    
+    
 
     public static void init(ForgeConfigSpec.Builder SERVER_BUILDER)
     {
@@ -107,6 +112,14 @@ public class GeneralModConfig
         SERVER_BUILDER.comment("Hand Sovel drop chances").push("hand_shovel");
         
         SHARP_FLINT_DROP_CHANCE = SERVER_BUILDER.comment("Chance of Hand Shovel dropping Sharp Flint [0-1, default: .30]").defineInRange("sharp_flint_drop_chance", .30, 0, 1);
+
+        SERVER_BUILDER.pop();
+        
+        SERVER_BUILDER.comment("Tool/Armor Material Modifiers").push("material_modifiers");
+        
+        ATTACK_DAMAGE_MODIFIER = SERVER_BUILDER.comment("Modifies material base damage by this amount [1.0-50.0, default: 1.0]").defineInRange("attack_damage_modifier", 1.0, 0, 50.0);
+        DURABILITY_MODIFIER = SERVER_BUILDER.comment("Modifies material base durability by this amount [1-5, default: 1]").defineInRange("durability_modifier", 1, 0, 5);
+        DAMAGE_REDUCTION_MODIFIER = SERVER_BUILDER.comment("Modifies material base damage reduction used by armors by this amount [1-5, default: 1]").defineInRange("damage_reduction_modifier", 1, 0, 5);
 
         SERVER_BUILDER.pop();
     }

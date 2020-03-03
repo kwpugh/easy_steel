@@ -2,6 +2,7 @@ package com.kwpugh.easy_steel.lists;
 
 import com.kwpugh.easy_steel.EasySteel;
 import com.kwpugh.easy_steel.init.ItemInit;
+import com.kwpugh.easy_steel.util.GeneralModConfig;
 
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
@@ -20,10 +21,13 @@ public enum ArmorMaterialList implements IArmorMaterial
 	HARDENED_STEEL("armor_hardened_steel", 23, new int[] {3, 6, 7, 3}, 15, ItemInit.HARDENED_STEEL_PLATE.get(), "entity.elder_guardian.curse", 1.5f),
 	TUNGSTEN_CARBIDE("armor_tungsten_carbide", 25, new int[] {3, 6, 8, 3}, 15, ItemInit.TUNGSTEN_CARBIDE_PLATE.get(), "entity.ender_dragon.growl", 1.75f);
 
+	private int damageReductionMultiplierFromConfig = GeneralModConfig.DAMAGE_REDUCTION_MODIFIER.get();
+	
 	private static final int[] max_damage_array = new int[]{13, 15, 16, 11};
 	
 	private String name, equipSound;
-	private int durability, enchantability;
+	private int durability;
+	private int enchantability;
 	private Item repairItem;
 	private int[] damageReductionAmounts;
 	private float toughness;
@@ -35,6 +39,12 @@ public enum ArmorMaterialList implements IArmorMaterial
 		this.durability = durability;
 		this.enchantability = enchantability;
 		this.repairItem = repairItem;
+		
+		for (int i = 0; i < damageReductionAmounts.length; i++)
+		{
+			damageReductionAmounts[i] = damageReductionAmounts[i] * damageReductionMultiplierFromConfig;
+		}
+		
 		this.damageReductionAmounts = damageReductionAmounts;
 		this.toughness = toughness;
 	}

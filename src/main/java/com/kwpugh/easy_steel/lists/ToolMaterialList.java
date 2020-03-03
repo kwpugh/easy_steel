@@ -3,7 +3,7 @@ package com.kwpugh.easy_steel.lists;
 import java.util.function.Supplier;
 
 import com.kwpugh.easy_steel.init.ItemInit;
-
+import com.kwpugh.easy_steel.util.GeneralModConfig;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.LazyValue;
@@ -17,10 +17,12 @@ import net.minecraft.util.LazyValue;
 //    DIAMOND(3, 1561, 8.0F, 3.0F, 10)
   
 
+
 //All material harvest levels are under diamond level 3
+//Something in Forge seems to add 1 to whatever attack damage you send it
 public enum ToolMaterialList implements IItemTier
 {
-    FLINT(1.0F, 5.5f, 145, 1, 5, () -> {
+    FLINT(0.5F, 5.5f, 145, 1, 5, () -> {
         return Ingredient.fromItems(ItemInit.SHARP_FLINT.get());
     }),
     
@@ -51,15 +53,22 @@ public enum ToolMaterialList implements IItemTier
 //	hardened_steel(0.5F, 6.5f, 816, 2, 8, ItemInit.HARDENED_STEEL_INGOT.get()),
 //	tungsten_carbide(0.75F, 6.5f, 1023, 2, 8, ItemInit.TUNGSTEN_CARBIDE_INGOT.get());
 
-	private float attackDamage, efficiency;
-	private int durability, harvestLevel, enchantability;
+	private double attackMultiplierFromConfig = GeneralModConfig.ATTACK_DAMAGE_MODIFIER.get();
+	private float attackMultiplier = (float) attackMultiplierFromConfig;
+
+	private int durabilityMultiplierFromConfig = GeneralModConfig.DURABILITY_MODIFIER.get();
+	
+	private float attackDamage;
+	private float efficiency;
+	private int durability;
+	private int harvestLevel, enchantability;
 	final LazyValue<Ingredient> repairMaterial;
 	
 	private ToolMaterialList(float attackDamage, float efficiency, int durability, int harvestLevel, int enchantability, Supplier<Ingredient> repairMaterial)
 	{
-		this.attackDamage = attackDamage;
+		this.attackDamage = attackDamage * attackMultiplier;
 		this.efficiency = efficiency;
-		this.durability = durability;
+		this.durability = durability * durabilityMultiplierFromConfig;
 		this.harvestLevel = harvestLevel;
 		this.enchantability = enchantability;
 		this.repairMaterial = new LazyValue<>(repairMaterial);

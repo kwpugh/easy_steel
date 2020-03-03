@@ -69,7 +69,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public class ItemInit
-{
+{	
 	public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, EasySteel.modid);
 	
 	public static final RegistryObject<Item> BORNITE_ORE = ITEMS.register("bornite_ore", () -> new BlockItem(BlockInit.BORNITE_ORE.get(), new Item.Properties().group(EasySteel.easy_steel)));
