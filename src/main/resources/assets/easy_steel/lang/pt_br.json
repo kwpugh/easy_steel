@@ -1,17 +1,27 @@
 {
  	"item.easy_steel.crack_hammer": "Marreta",
  	"item.easy_steel.crack_hammer.line1": "Usado para quebrar vários minérios em pó",
- 	"item.easy_steel.crack_hammer.line2": "Botão-direito em minérios para usar",
+ 	"item.easy_steel.crack_hammer.line2": "Funciona apenas em minérios 'Vanilla' e 'Easy Steel'", 
+	"item.easy_steel.crack_hammer.jei.line1": "A Marreta é usada para obter pós para a fabricação de várias ligas como Bronze, Aço, Titânio, Aço Endurecido e Carbeto de Tungstênio.",
+	"item.easy_steel.crack_hammer.jei.line2": "Use a Marreta em minérios 'Vanilla' e 'Easy Steel' para obter pós. A quantidade de pó de metal que vai cair pode variar de 1 a 3. Há uma chance de você receber apenas Pó de Pedra.",
+	"item.easy_steel.crack_hammer.jei.line3": "Além disso, a Marreta pode ser usada em uma bancada de trabalho com blocos de minério para obter o pó corespondente.",
+	"item.easy_steel.crack_hammer.jei.line4": "A Marreta é uma ferramenta lenta e desajeitada e pode ser melhorada um pouco com o encantamento da eficiência.",
+	"item.easy_steel.crack_hammer.jei.line5": "As chances de drop podem ser ajustadas no arquivo de configuração do mod",
 
  	"item.easy_steel.iron_links": "Argolas de Ferro",
- 	"item.easy_steel.iron_links.line1": "Usado para fazer armadura de malha §l§oVanila§r",
+ 	"item.easy_steel.iron_links.line1": "Usado para fazer armadura de malha Vanilla",
 
  	"item.easy_steel.sharp_flint": "Sílex Afiado",
  	"item.easy_steel.sharp_flint.line1": "Um pedaço de sílex com uma borda muito afiada",
- 	"item.easy_steel.sharp_flint.line2": "Botão-direito no cascalho com uma pá pequena de madeira",	
- 	"item.easy_steel.hand_shovel": "Pá Pequena de Madeira",
+ 	"item.easy_steel.sharp_flint.line2": "Botão-direito no cascalho com uma Pazinha de Madeira",	
+	"item.easy_steel.sharp_flint.jei.line1": "O Sílex Afiado, como o nome indica, é uma forma de sílex com uma aresta muito afiada, tornando-o especialmente bom para ferramentas primitivas.",
+	"item.easy_steel.sharp_flint.jei.line2": "As ferramentas feitas com o Sílex Afiado são geralmente melhores do que as ferramentas de pedra na maioria dos aspectos.",
+	"item.easy_steel.sharp_flint.jei.line3": "O Sílex Afiado pode ser obtido usando uma Pá Pequena de Madeira no cascalho.",	
+ 	"item.easy_steel.hand_shovel": "Pazinha de Madeira",
  	"item.easy_steel.hand_shovel.line1": "Usado para coletar Sílex Afiado do cascalho",
- 	"item.easy_steel.hand_shovel.line2": "Botão-direito no cascalho para usar",	
+	"item.easy_steel.hand_shovel.jei.line1": "A Pazinha de Madeira é uma ferramenta útil no início do jogo para obter Sharp Flint",	
+	"item.easy_steel.hand_shovel.jei.line2": "Pode ser usada como uma pá comum no cascalho, com a chance de dropar o Sílex Afiado ou o Sílex comum.",	
+	"item.easy_steel.hand_shovel.jei.line3": "As chances de drop podem ser ajustadas no arquivo de configuração do mod",	
  	"item.easy_steel.flint.line1": "Melhor que uma ferramenta de pedra",
  	"item.easy_steel.flint.line2": "Botão-direito na lã para obter linha",
  	"item.easy_steel.flint_mattock": "Picareta de Sílex",
@@ -87,9 +97,9 @@
  	"item.easy_steel.excavator": "Uma pá que quebra blocos em uma área de 3x3",
  	"item.easy_steel.hammer": "Um martelo que quebra blocos em uma área de 3x3",
  	"item.easy_steel.paxel": "Combina picareta, machado e pá",
- 	"item.easy_steel.bow.line1": "Mais resistente que um arco §l§oVanila§r",
- 	"item.easy_steel.crossbow.line1": "Mais precisa e resistente do que uma besta §l§oVanila§r",
- 	"item.easy_steel.crossbow.line2": "NOTA: Possui um intervalo de carga menor que o da besta §l§oVanila§r",
+ 	"item.easy_steel.bow.line1": "Mais resistente que um arco Vanilla",
+ 	"item.easy_steel.crossbow.line1": "Mais precisa e resistente do que uma besta Vanilla",
+ 	"item.easy_steel.crossbow.line2": "NOTA: Possui um intervalo de carga menor que o da besta Vanilla",
 
  	"item.easy_steel.bronze.line1": "Melhor que sílex, mas pior que ferro",
  	"item.easy_steel.bronze_sword": "Espada de Bronze",
@@ -178,5 +188,5 @@
  	"item.easy_steel.armor_tungsten_carbide_leggings": "Calças de Carbeto de Tungstênio",
  	"item.easy_steel.armor_tungsten_carbide_boots": "Botas de Carbeto de Tungstênio",
 
- 	"itemGroup.easy_steel": "Easy Steel [Aço Fácil]"
+ 	"itemGroup.easy_steel": "Easy Steel"
  }
