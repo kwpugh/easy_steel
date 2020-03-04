@@ -5,7 +5,6 @@ import java.util.List;
 import javax.annotation.Nullable;
 
 import com.kwpugh.easy_steel.init.ItemInit;
-import com.kwpugh.easy_steel.util.GeneralModConfig;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -13,14 +12,11 @@ import net.minecraft.block.Blocks;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.Items;
 import net.minecraft.item.ShovelItem;
-import net.minecraft.util.ActionResultType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextFormatting;
@@ -58,46 +54,6 @@ public class HandShovel extends ShovelItem
 		return true;
 	}	
 	
-	//Hand Shovel right-click ability, enabled by default
-	@Override
-	public ActionResultType onItemUse(ItemUseContext context)
-	{
-		if(GeneralModConfig.ENABLE_HAND_SHOVEL_RIGHT_CLICK.get())
-		{
-			 World world = context.getWorld();
-			 PlayerEntity player = context.getPlayer();
-			 BlockPos pos = context.getPos();
-			 BlockState state = world.getBlockState(pos);
-			 Block block = state.getBlock();
-			 ItemStack stack = context.getItem();
-		     
-		     double chance = random.nextDouble();
-		     
-		     if(block == Blocks.GRAVEL)
-		     {
-		    	 world.setBlockState(pos, Blocks.AIR.getDefaultState(), 3);
-		    	 
-		    	 if(chance <= GeneralModConfig.SHARP_FLINT_DROP_CHANCE.get())
-		    	 {
-		    		 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.SHARP_FLINT.get(), 1))); 
-			    	 stack.damageItem(1, player, (p_220038_0_) -> {
-				         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
-				         });
-		    	 }
-		    	 else
-		    	 {
-		    		 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.FLINT, 1))); 
-			    	 stack.damageItem(1, player, (p_220038_0_) -> {
-				         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
-				         });
-		    	 }
-		    	 
-		    	 return ActionResultType.SUCCESS;
-		     }
-		}
-		return ActionResultType.PASS;
-	}
-	
 	@Override
 	public boolean isBookEnchantable(ItemStack stack, ItemStack book)
 	{
@@ -115,6 +71,5 @@ public class HandShovel extends ShovelItem
 	{
 		super.addInformation(stack, worldIn, tooltip, flagIn);
 		tooltip.add((new TranslationTextComponent("item.easy_steel.hand_shovel.line1").applyTextStyle(TextFormatting.GREEN)));
-		tooltip.add((new TranslationTextComponent("item.easy_steel.hand_shovel.line2").applyTextStyle(TextFormatting.AQUA)));
 	}
 }

@@ -8,21 +8,16 @@ import net.minecraft.item.IItemTier;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.LazyValue;
 
-
-//   Vanilla Material Reference:
-//    GOLD(0, 32, 12.0F, 0.0F, 22)
-//    WOOD(0, 59, 2.0F, 0.0F, 15)
-//    STONE(1, 131, 4.0F, 1.0F, 5)
-//    IRON(2, 250, 6.0F, 2.0F, 14)
-//    DIAMOND(3, 1561, 8.0F, 3.0F, 10)
-  
-
-
 //All material harvest levels are under diamond level 3
 //Something in Forge seems to add 1 to whatever attack damage you send it
 public enum ToolMaterialList implements IItemTier
 {
-    FLINT(0.5F, 5.5f, 145, 1, 5, () -> {
+	//Bad Iron is used only to give Crack Hammer iron durability and harvest level 0
+	BAD_IRON(0.5F, 5.5f, 250, 0, 25, () -> {
+        return Ingredient.fromItems(ItemInit.SHARP_FLINT.get());
+    }),
+	
+	FLINT(0.5F, 5.5f, 145, 1, 5, () -> {
         return Ingredient.fromItems(ItemInit.SHARP_FLINT.get());
     }),
     
@@ -45,13 +40,6 @@ public enum ToolMaterialList implements IItemTier
     TUNGSTEN_CARBIDE(0.75F, 6.5f, 1023, 2, 8, () -> {
         return Ingredient.fromItems(ItemInit.TUNGSTEN_CARBIDE_INGOT.get());
     });
-	
-//	flint(1.0F, 5.5f, 145, 1, 5, ItemInit.SHARP_FLINT.get()),
-//	bronze(0.5F, 6.5f, 225, 2, 10, ItemInit.BRONZE_INGOT.get()),
-//	steel(0.5F, 6.5f, 482, 2, 8, ItemInit.STEEL_INGOT.get()),
-//	titanium(0.5F, 6.5f, 625, 2, 8, ItemInit.TITANIUM_INGOT.get()),   
-//	hardened_steel(0.5F, 6.5f, 816, 2, 8, ItemInit.HARDENED_STEEL_INGOT.get()),
-//	tungsten_carbide(0.75F, 6.5f, 1023, 2, 8, ItemInit.TUNGSTEN_CARBIDE_INGOT.get());
 
 	private double attackMultiplierFromConfig = GeneralModConfig.ATTACK_DAMAGE_MODIFIER.get();
 	private float attackMultiplier = (float) attackMultiplierFromConfig;

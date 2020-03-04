@@ -31,7 +31,9 @@ public class JEIDescription implements IModPlugin
 				" ",
 				"item.easy_steel.crack_hammer.jei.line3",
 				" ",
-				"item.easy_steel.crack_hammer.jei.line4");
+				"item.easy_steel.crack_hammer.jei.line4",
+				" ",
+				"item.easy_steel.crack_hammer.jei.line5");
 
 		registry.addIngredientInfo(new ItemStack(ItemInit.HAND_SHOVEL.get()), VanillaTypes.ITEM, 
 				" ",
@@ -39,9 +41,7 @@ public class JEIDescription implements IModPlugin
 				" ",
 				"item.easy_steel.hand_shovel.jei.line2",
 				" ",
-				"item.easy_steel.hand_shovel.jei.line3",
-				" ",
-				"item.easy_steel.hand_shovel.jei.line4");
+				"item.easy_steel.hand_shovel.jei.line3");
 				
 		registry.addIngredientInfo(new ItemStack(ItemInit.SHARP_FLINT.get()), VanillaTypes.ITEM, 
 				"item.easy_steel.sharp_flint.jei.line1",

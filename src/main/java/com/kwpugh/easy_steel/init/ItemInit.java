@@ -74,8 +74,8 @@ public class ItemInit
 	
 	public static final RegistryObject<Item> BORNITE_ORE = ITEMS.register("bornite_ore", () -> new BlockItem(BlockInit.BORNITE_ORE.get(), new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> CASSITERITE_ORE = ITEMS.register("cassiterite_ore", () -> new BlockItem(BlockInit.CASSITERITE_ORE.get(), new Item.Properties().group(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> RUTILE_ORE = ITEMS.register("rutile_ore", () -> new BlockItem(BlockInit.WOLFRAMITE_ORE.get(), new Item.Properties().group(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> WOLFRAMITE_ORE = ITEMS.register("wolframite_ore", () -> new BlockItem(BlockInit.RUTILE_ORE.get(), new Item.Properties().group(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> RUTILE_ORE = ITEMS.register("rutile_ore", () -> new BlockItem(BlockInit.RUTILE_ORE.get(), new Item.Properties().group(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> WOLFRAMITE_ORE = ITEMS.register("wolframite_ore", () -> new BlockItem(BlockInit.WOLFRAMITE_ORE.get(), new Item.Properties().group(EasySteel.easy_steel)));
 	
 	public static final RegistryObject<Item> HAND_SHOVEL = ITEMS.register("hand_shovel", () -> new HandShovel(ItemTier.WOOD, 1, -3.0f, new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> SHARP_FLINT = ITEMS.register("sharp_flint", () -> new SharpFlint(new Item.Properties().group(EasySteel.easy_steel)));
@@ -86,7 +86,7 @@ public class ItemInit
 	public static final RegistryObject<Item> FLINT_KNIFE = ITEMS.register("flint_knife", () -> new FlintKnife(ToolMaterialList.FLINT, 3, -3.0f, new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> FLINT_HOE = ITEMS.register("flint_hoe", () -> new FlintHoe(ToolMaterialList.FLINT, -1.0f, new Item.Properties().group(EasySteel.easy_steel)));
 	
-	public static final RegistryObject<Item> CRACK_HAMMER = ITEMS.register("crack_hammer", () -> new CrackHammer(ItemTier.IRON, 1, -3.3f, new Item.Properties().group(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> CRACK_HAMMER = ITEMS.register("crack_hammer", () -> new CrackHammer(ToolMaterialList.BAD_IRON, 1, -3.3f, new Item.Properties().group(EasySteel.easy_steel)));
 	
 	public static final RegistryObject<Item> STONE_POWDER = ITEMS.register("stone_powder", () -> new Item(new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> TIN_POWDER = ITEMS.register("tin_powder", () -> new Item(new Item.Properties().group(EasySteel.easy_steel)));
