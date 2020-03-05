@@ -50,7 +50,13 @@ public class HandShovel extends ShovelItem
 	        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.SHARP_FLINT.get(), 1)));	
 	        }
 		}
-
+		else
+		{
+		    stack.damageItem(1, entityLiving, (p_220038_0_) -> {
+	            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+	         });	
+		}
+	    
 		return true;
 	}	
 	
