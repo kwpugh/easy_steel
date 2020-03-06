@@ -1,17 +1,27 @@
 package com.kwpugh.easy_steel.items.steel;
 
 import java.util.List;
+import java.util.Random;
 
 import javax.annotation.Nullable;
 
 import com.google.common.collect.Lists;
 import com.kwpugh.easy_steel.init.ItemInit;
 
+import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.client.renderer.Quaternion;
+import net.minecraft.client.renderer.Vector3f;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.ICrossbowUser;
+import net.minecraft.entity.IProjectile;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.item.FireworkRocketEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.projectile.AbstractArrowEntity;
 import net.minecraft.item.ArrowItem;
 import net.minecraft.item.CrossbowItem;
 import net.minecraft.item.Item;
@@ -19,10 +29,12 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.nbt.ListNBT;
+import net.minecraft.stats.Stats;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.TranslationTextComponent;
@@ -83,17 +95,128 @@ public class SteelCrossbow extends CrossbowItem
 	    }
 	}
 
-	private static float func_220013_l(ItemStack p_220013_0_)
-	{
-		return p_220013_0_.getItem() == ItemInit.STEEL_CROSSBOW.get() && hasChargedProjectile(p_220013_0_, Items.FIREWORK_ROCKET) ? 2.5F : 4.0F;
-	}
+   public static void fireProjectiles(World worldIn, LivingEntity shooter, Hand handIn, ItemStack stack, float velocityIn, float inaccuracyIn)
+   {
+	   List<ItemStack> list = getChargedProjectiles(stack);
+	   float[] afloat = getRandomSoundPitches(shooter.getRNG());
 
-	private static boolean hasChargedProjectile(ItemStack stack, Item ammoItem)
-	{
-		return getChargedProjectiles(stack).stream().anyMatch((p_220010_1_) -> {
-	         return p_220010_1_.getItem() == ammoItem;
-	      });
-	}
+	   for(int i = 0; i < list.size(); ++i) 
+	   {
+		   ItemStack itemstack = list.get(i);
+		   boolean flag = shooter instanceof PlayerEntity && ((PlayerEntity)shooter).abilities.isCreativeMode;
+		   if (!itemstack.isEmpty())
+		   {
+			   if (i == 0) {
+				   fireProjectile(worldIn, shooter, handIn, stack, itemstack, afloat[i], flag, velocityIn, inaccuracyIn, 0.0F);
+			   }
+			   else if (i == 1)
+			   {
+				   fireProjectile(worldIn, shooter, handIn, stack, itemstack, afloat[i], flag, velocityIn, inaccuracyIn, -10.0F);
+			   }
+			   else if (i == 2)
+			   {
+				   fireProjectile(worldIn, shooter, handIn, stack, itemstack, afloat[i], flag, velocityIn, inaccuracyIn, 10.0F);
+			   }
+		   }
+	   }
+
+	   fireProjectilesAfter(worldIn, shooter, stack);
+   }
+   
+   private static void fireProjectile(World worldIn, LivingEntity shooter, Hand handIn, ItemStack crossbow, ItemStack projectile, float soundPitch, boolean isCreativeMode, float velocity, float inaccuracy, float projectileAngle)
+   {
+	  if (!worldIn.isRemote)
+	  {
+	     boolean flag = projectile.getItem() == Items.FIREWORK_ROCKET;
+	     IProjectile iprojectile;
+	     if (flag)
+	     {
+	        iprojectile = new FireworkRocketEntity(worldIn, projectile, shooter.getPosX(), shooter.getPosYEye() - (double)0.15F, shooter.getPosZ(), true);
+	     }
+	     else
+	     {
+	        iprojectile = createArrow(worldIn, shooter, crossbow, projectile);
+	        if (isCreativeMode || projectileAngle != 0.0F)
+	        {
+	           ((AbstractArrowEntity)iprojectile).pickupStatus = AbstractArrowEntity.PickupStatus.CREATIVE_ONLY;
+	        }
+	     }
+	
+	     if (shooter instanceof ICrossbowUser)
+	     {
+	        ICrossbowUser icrossbowuser = (ICrossbowUser)shooter;
+	        icrossbowuser.shoot(icrossbowuser.getAttackTarget(), crossbow, iprojectile, projectileAngle);
+	     }
+	     else
+	     {
+	        Vec3d vec3d1 = shooter.getUpVector(1.0F);
+	        Quaternion quaternion = new Quaternion(new Vector3f(vec3d1), projectileAngle, true);
+	        Vec3d vec3d = shooter.getLook(1.0F);
+	        Vector3f vector3f = new Vector3f(vec3d);
+	        vector3f.transform(quaternion);
+	        iprojectile.shoot((double)vector3f.getX(), (double)vector3f.getY(), (double)vector3f.getZ(), velocity, inaccuracy);
+	     }
+	
+	     crossbow.damageItem(flag ? 3 : 1, shooter, (p_220017_1_) -> {
+	        p_220017_1_.sendBreakAnimation(handIn);
+	     });
+	     worldIn.addEntity((Entity)iprojectile);
+	     worldIn.playSound((PlayerEntity)null, shooter.getPosX(), shooter.getPosY(), shooter.getPosZ(), SoundEvents.ITEM_CROSSBOW_SHOOT, SoundCategory.PLAYERS, 1.0F, soundPitch);
+	  }
+   }
+	   
+   private static AbstractArrowEntity createArrow(World worldIn, LivingEntity shooter, ItemStack crossbow, ItemStack ammo) 
+   {
+	   ArrowItem arrowitem = (ArrowItem)(ammo.getItem() instanceof ArrowItem ? ammo.getItem() : Items.ARROW);
+	   AbstractArrowEntity abstractarrowentity = arrowitem.createArrow(worldIn, ammo, shooter);
+
+	   //Better than you average Crossbow
+	   abstractarrowentity.setIsCritical(true);
+	   abstractarrowentity.setHitSound(SoundEvents.ITEM_CROSSBOW_HIT);
+	   abstractarrowentity.setShotFromCrossbow(true);
+	   abstractarrowentity.setPierceLevel((byte)5);
+
+	   return abstractarrowentity;
+   }
+	 
+   private static void fireProjectilesAfter(World worldIn, LivingEntity shooter, ItemStack stack)
+   {
+      if (shooter instanceof ServerPlayerEntity)
+      {
+         ServerPlayerEntity serverplayerentity = (ServerPlayerEntity)shooter;
+         if (!worldIn.isRemote)
+         {
+            CriteriaTriggers.SHOT_CROSSBOW.func_215111_a(serverplayerentity, stack);
+         }
+
+         serverplayerentity.addStat(Stats.ITEM_USED.get(stack.getItem()));
+      }
+
+      clearProjectiles(stack);
+   }
+	   
+   private static void clearProjectiles(ItemStack stack)
+   {
+      CompoundNBT compoundnbt = stack.getTag();
+      if (compoundnbt != null)
+      {
+         ListNBT listnbt = compoundnbt.getList("ChargedProjectiles", 9);
+         listnbt.clear();
+         compoundnbt.put("ChargedProjectiles", listnbt);
+      }
+   }
+	   
+   private static float[] getRandomSoundPitches(Random rand)
+   {
+      boolean flag = rand.nextBoolean();
+      return new float[]{1.0F, getRandomSoundPitch(flag), getRandomSoundPitch(!flag)};
+   }
+
+   private static float getRandomSoundPitch(boolean flagIn)
+   {
+      float f = flagIn ? 0.63F : 0.43F;
+      return 1.0F / (random.nextFloat() * 0.5F + 1.8F) + f;
+   }
 	   
 	private static List<ItemStack> getChargedProjectiles(ItemStack stack)
 	{
@@ -112,7 +235,7 @@ public class SteelCrossbow extends CrossbowItem
 				}
 			}
 		}
-
+	
 		return list;
 	}
 	   
