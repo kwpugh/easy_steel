@@ -26,8 +26,7 @@ import net.minecraftforge.fml.loading.FMLPaths;
 
 @Mod("easy_steel")
 public class EasySteel
-{
-	
+{	
 	public static final String modid = "easy_steel";
 	public static final Logger logger = LogManager.getLogger(modid);	
 	public static final ItemGroup easy_steel = new GroupEasySteel();
@@ -77,7 +76,6 @@ public class EasySteel
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event)
     {
-
     	logger.info("Easy Steel server starting");
     }
 }
