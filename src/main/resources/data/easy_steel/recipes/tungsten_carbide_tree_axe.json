@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"II ",
+		"IS ",
+		" S "
+	],
+	
+	"key":
+	{
+		"I": { "item": "easy_steel:tungsten_carbide_block" },
+		"S": { "item": "minecraft:stick" }	
+	},
+	
+	"result": { "item": "easy_steel:tungsten_carbide_tree_axe" }
+}

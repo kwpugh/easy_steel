@@ -12,11 +12,6 @@ import net.minecraft.util.LazyValue;
 //Something in Forge seems to add 1 to whatever attack damage you send it
 public enum ToolMaterialList implements IItemTier
 {
-	//Bad Iron is used only to give Crack Hammer iron durability and harvest level 0
-	BAD_IRON(0.5F, 5.5f, 250, 0, 25, () -> {
-        return Ingredient.fromItems(ItemInit.SHARP_FLINT.get());
-    }),
-	
 	FLINT(0.5F, 5.5f, 145, 1, 5, () -> {
         return Ingredient.fromItems(ItemInit.SHARP_FLINT.get());
     }),

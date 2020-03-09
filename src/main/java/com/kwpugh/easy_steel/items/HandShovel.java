@@ -27,7 +27,6 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class HandShovel extends ShovelItem
 {
-
 	public HandShovel(IItemTier tier, float attackDamageIn, float attackSpeedIn, Properties builder)
 	{
 		super(tier, attackDamageIn, attackSpeedIn, builder);

@@ -57,6 +57,7 @@ import com.kwpugh.easy_steel.items.tungstencarbide.TungstenCarbidePaxel;
 import com.kwpugh.easy_steel.items.tungstencarbide.TungstenCarbidePickaxe;
 import com.kwpugh.easy_steel.items.tungstencarbide.TungstenCarbideShovel;
 import com.kwpugh.easy_steel.items.tungstencarbide.TungstenCarbideSword;
+import com.kwpugh.easy_steel.items.tungstencarbide.TungstenCarbideTreeAxe;
 import com.kwpugh.easy_steel.lists.ArmorMaterialList;
 import com.kwpugh.easy_steel.lists.ToolMaterialList;
 
@@ -86,7 +87,7 @@ public class ItemInit
 	public static final RegistryObject<Item> FLINT_KNIFE = ITEMS.register("flint_knife", () -> new FlintKnife(ToolMaterialList.FLINT, 3, -3.0f, new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> FLINT_HOE = ITEMS.register("flint_hoe", () -> new FlintHoe(ToolMaterialList.FLINT, -1.0f, new Item.Properties().group(EasySteel.easy_steel)));
 	
-	public static final RegistryObject<Item> CRACK_HAMMER = ITEMS.register("crack_hammer", () -> new CrackHammer(ToolMaterialList.BAD_IRON, 1, -3.3f, new Item.Properties().group(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> CRACK_HAMMER = ITEMS.register("crack_hammer", () -> new CrackHammer(new Item.Properties().maxDamage(251).group(EasySteel.easy_steel)));
 	
 	public static final RegistryObject<Item> STONE_POWDER = ITEMS.register("stone_powder", () -> new Item(new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> TIN_POWDER = ITEMS.register("tin_powder", () -> new Item(new Item.Properties().group(EasySteel.easy_steel)));
@@ -182,6 +183,7 @@ public class ItemInit
 	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_SWORD = ITEMS.register("tungsten_carbide_sword", () -> new TungstenCarbideSword(ToolMaterialList.TUNGSTEN_CARBIDE, 5, -2.4f, new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_PICKAXE = ITEMS.register("tungsten_carbide_pickaxe", () -> new TungstenCarbidePickaxe(ToolMaterialList.TUNGSTEN_CARBIDE, 5, -2.4f, new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_AXE = ITEMS.register("tungsten_carbide_axe", () -> new TungstenCarbideAxe(ToolMaterialList.TUNGSTEN_CARBIDE, 7, -3.0f, new Item.Properties().group(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_TREE_AXE = ITEMS.register("tungsten_carbide_tree_axe", () -> new TungstenCarbideTreeAxe(ToolMaterialList.TUNGSTEN_CARBIDE, 7, -3.0f, new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_SHOVEL = ITEMS.register("tungsten_carbide_shovel", () -> new TungstenCarbideShovel(ToolMaterialList.TUNGSTEN_CARBIDE, 3, -3.0f, new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_HOE = ITEMS.register("tungsten_carbide_hoe", () -> new TungstenCarbideHoe(ToolMaterialList.TUNGSTEN_CARBIDE, -0.5f, new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_HAMMER = ITEMS.register("tungsten_carbide_hammer", () -> new TungstenCarbideHammer(ToolMaterialList.TUNGSTEN_CARBIDE, 7, -3.3f, new Item.Properties().group(EasySteel.easy_steel)));

@@ -8,7 +8,7 @@
             "tag": "forge:ingots/titanium"
         },
         {
-            "item": "minecraft:charcoal"
+            "tag": "forge:dusts/carbon"
         }
     ],
     "result": {

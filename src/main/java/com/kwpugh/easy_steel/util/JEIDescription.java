@@ -27,13 +27,7 @@ public class JEIDescription implements IModPlugin
 		registry.addIngredientInfo(new ItemStack(ItemInit.CRACK_HAMMER.get()), VanillaTypes.ITEM, 
 				"item.easy_steel.crack_hammer.jei.line1",
 				" ",
-				"item.easy_steel.crack_hammer.jei.line2",
-				" ",
-				"item.easy_steel.crack_hammer.jei.line3",
-				" ",
-				"item.easy_steel.crack_hammer.jei.line4",
-				" ",
-				"item.easy_steel.crack_hammer.jei.line5");
+				"item.easy_steel.crack_hammer.jei.line2");
 
 		registry.addIngredientInfo(new ItemStack(ItemInit.HAND_SHOVEL.get()), VanillaTypes.ITEM, 
 				" ",

@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "easy_steel:tin_powder"
+          "name": "easy_steel:cassiterite_ore"
         }
       ],
       "conditions": [

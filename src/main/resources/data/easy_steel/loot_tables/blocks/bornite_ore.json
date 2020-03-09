@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "easy_steel:copper_powder"
+          "name": "easy_steel:bornite_ore"
         }
       ],
       "conditions": [
