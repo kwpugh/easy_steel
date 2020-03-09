@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "easy_steel:crack_hammer"
+        },
+        {
+            "item": "minecraft:emerald"
+        }
+    ],
+    "result": {
+        "item": "easy_steel:emerald_powder",
+        "count": 2
+    }
+}
