@@ -5,11 +5,11 @@
             "item": "easy_steel:crack_hammer"
         },
         {
-            "item": "minecraft:gold_ore"
+            "tag": "forge:ores/iron"
         }
     ],
     "result": {
-        "item": "easy_steel:gold_powder",
+        "item": "easy_steel:iron_powder",
         "count": 2
     }
 }
