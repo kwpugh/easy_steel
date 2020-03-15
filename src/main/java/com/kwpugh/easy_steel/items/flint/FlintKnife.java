@@ -10,6 +10,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -20,6 +21,7 @@ import net.minecraft.item.Items;
 import net.minecraft.item.SwordItem;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.TranslationTextComponent;
@@ -71,6 +73,20 @@ public class FlintKnife extends SwordItem
 	     
 	     
 		 return ActionResultType.PASS;
+	}
+	
+	public boolean onLeftClickEntity(ItemStack stack, PlayerEntity player, Entity entity)
+	{
+		World world = player.world;
+		Vec3d pos = entity.getPositionVec();
+		
+		 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.STRING, 1))); 
+    	 stack.damageItem(1, player, (p_220038_0_) -> {
+	         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+	         });
+    	 
+		return true;
+		
 	}
 	
 	@Override

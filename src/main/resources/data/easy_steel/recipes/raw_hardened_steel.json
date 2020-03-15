@@ -2,16 +2,16 @@
     "type": "minecraft:crafting_shapeless",
     "ingredients": [
         {
-            "tag": "forge:dusts/carbon"
-        },
-        {
-            "tag": "forge:dusts/carbon"
-        },
-        {
             "item": "easy_steel:raw_steel"
         },
         {
             "item": "easy_steel:raw_steel"
+        },
+        {
+            "tag": "forge:dusts/carbon"
+        },
+        {
+            "tag": "forge:dusts/carbon"
         }
     ],
     "result": {

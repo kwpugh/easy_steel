@@ -21,7 +21,7 @@ public class CrackHammer extends Item
 	{
 		super(properties);
 	}
-	
+
 	@Override
     public boolean hasContainerItem(ItemStack stack)
     {
@@ -30,10 +30,17 @@ public class CrackHammer extends Item
 
     @Override
     public ItemStack getContainerItem(ItemStack stackIn)
-    {
+    {	
     	ItemStack stack = stackIn.copy();
     	stack.setDamage(getDamage(stack) + 1);
 
+    	if(stack.getDamage() >= stack.getMaxDamage())
+    	{
+    		stack.shrink(1);
+    	}
+    	
+    	System.out.println("getDamage() " + stack.getDamage());
+    	
         return stack;
     }		
 	
