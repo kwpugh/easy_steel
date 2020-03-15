@@ -12,6 +12,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.item.ItemEntity;
+import net.minecraft.entity.passive.SheepEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IItemTier;
@@ -77,13 +78,16 @@ public class FlintKnife extends SwordItem
 	
 	public boolean onLeftClickEntity(ItemStack stack, PlayerEntity player, Entity entity)
 	{
-		World world = player.world;
-		Vec3d pos = entity.getPositionVec();
-		
-		 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.STRING, 1))); 
-    	 stack.damageItem(1, player, (p_220038_0_) -> {
-	         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
-	         });
+		if(entity instanceof SheepEntity)
+		{
+			World world = player.world;
+			Vec3d pos = entity.getPositionVec();
+			
+			 world.addEntity(new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(Items.STRING, 1))); 
+	    	 stack.damageItem(1, player, (p_220038_0_) -> {
+		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		         });	
+		}
     	 
 		return true;
 		
