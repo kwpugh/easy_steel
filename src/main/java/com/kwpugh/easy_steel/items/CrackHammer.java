@@ -39,8 +39,6 @@ public class CrackHammer extends Item
     		stack.shrink(1);
     	}
     	
-    	System.out.println("getDamage() " + stack.getDamage());
-    	
         return stack;
     }		
 	
