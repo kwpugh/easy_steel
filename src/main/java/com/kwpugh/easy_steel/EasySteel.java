@@ -50,13 +50,13 @@ public class EasySteel
     {
     	OreGenerator.setupOregen();
     	
-        logger.info("Easy Steel setup complete");
+        logger.info("EasySteel common setup");
     }
 
     private void clientSetup(final FMLClientSetupEvent event)
     {
 
-    	logger.info("Easy Steel got game settings {}", event.getMinecraftSupplier().get().gameSettings);
+    	logger.info("EasySteel clcient setup", event.getMinecraftSupplier().get().gameSettings);
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
@@ -68,7 +68,7 @@ public class EasySteel
     private void processIMC(final InterModProcessEvent event)
     {
 
-    	logger.info("Easy Steel got IMC {}", event.getIMCStream().
+    	logger.info("EasySteel IMC {}", event.getIMCStream().
                 map(m->m.getMessageSupplier().get()).
                 collect(Collectors.toList()));
     }
@@ -76,6 +76,6 @@ public class EasySteel
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event)
     {
-    	logger.info("Easy Steel server starting");
+    	logger.info("EasySteel server starting");
     }
 }
