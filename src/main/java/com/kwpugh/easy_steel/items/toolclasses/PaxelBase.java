@@ -90,7 +90,10 @@ public class PaxelBase extends ToolItem
 	public PaxelBase(float attackDamageIn, float attackSpeedIn, IItemTier tier, Set<Block> effectiveBlocksIn,
 			Properties builder)
 	{
-		super(attackDamageIn, attackSpeedIn, tier, EFFECTIVE_ON, builder);	
+		super(attackDamageIn, attackSpeedIn, tier, EFFECTIVE_ON, 
+				builder.addToolType(net.minecraftforge.common.ToolType.AXE, tier.getHarvestLevel())
+				.addToolType(net.minecraftforge.common.ToolType.PICKAXE, tier.getHarvestLevel())
+				.addToolType(net.minecraftforge.common.ToolType.SHOVEL, tier.getHarvestLevel()));		
 	}
 
 	public boolean canHarvestBlock(BlockState blockIn) {
