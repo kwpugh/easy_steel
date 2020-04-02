@@ -76,6 +76,6 @@ public class EasySteel
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event)
     {
-    	logger.info("EasySteel server starting");
+    	logger.info("EasySteel server setup");
     }
 }
