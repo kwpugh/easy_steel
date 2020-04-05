@@ -42,8 +42,8 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
  * - and few others I don't remember
  * 
  * 
- * 
  */
+
 public class AxeUtil extends AxeItem {
 
    
