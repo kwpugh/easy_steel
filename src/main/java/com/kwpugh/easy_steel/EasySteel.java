@@ -55,19 +55,16 @@ public class EasySteel
 
     private void clientSetup(final FMLClientSetupEvent event)
     {
-
     	logger.info("EasySteel clcient setup", event.getMinecraftSupplier().get().gameSettings);
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
     {
-
         InterModComms.sendTo("easy_steel", "helloworld", () -> { logger.info("Hello world from EasySteel"); return "Hello world"; });
     }
 
     private void processIMC(final InterModProcessEvent event)
     {
-
     	logger.info("EasySteel IMC {}", event.getIMCStream().
                 map(m->m.getMessageSupplier().get()).
                 collect(Collectors.toList()));
