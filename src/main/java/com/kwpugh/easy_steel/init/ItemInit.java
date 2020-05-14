@@ -63,9 +63,7 @@ import com.kwpugh.easy_steel.lists.ToolMaterialList;
 
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.BlockItem;
-import net.minecraft.item.HorseArmorItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemTier;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -79,7 +77,7 @@ public class ItemInit
 	public static final RegistryObject<Item> RUTILE_ORE = ITEMS.register("rutile_ore", () -> new BlockItem(BlockInit.RUTILE_ORE.get(), new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> WOLFRAMITE_ORE = ITEMS.register("wolframite_ore", () -> new BlockItem(BlockInit.WOLFRAMITE_ORE.get(), new Item.Properties().group(EasySteel.easy_steel)));
 	
-	public static final RegistryObject<Item> HAND_SHOVEL = ITEMS.register("hand_shovel", () -> new HandShovel(ItemTier.WOOD, 1, -3.0f, new Item.Properties().group(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> HAND_SHOVEL = ITEMS.register("hand_shovel", () -> new HandShovel(ToolMaterialList.MYWOOD, 1, -3.0f, new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> SHARP_FLINT = ITEMS.register("sharp_flint", () -> new SharpFlint(new Item.Properties().group(EasySteel.easy_steel)));
 	
 	public static final RegistryObject<Item> FLINT_MATTOCK = ITEMS.register("flint_mattock", () -> new FlintMattock(ToolMaterialList.FLINT, 1, -3.0f, new Item.Properties().group(EasySteel.easy_steel)));
@@ -161,7 +159,7 @@ public class ItemInit
 	public static final RegistryObject<Item> STEEL_BOW = ITEMS.register("steel_bow", () -> new SteelBow(new Item.Properties().maxStackSize(1).maxDamage(482).group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> STEEL_CROSSBOW = ITEMS.register("steel_crossbow", () -> new SteelCrossbow(new Item.Properties().maxStackSize(1).maxDamage(482).group(EasySteel.easy_steel)));
 	
-	public static final RegistryObject<Item> TITANIUM_SWORD = ITEMS.register("titanium_sword", () -> new TitaniumSword(ToolMaterialList.TITANIUM, 5, -2.5f, new Item.Properties().group(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> TITANIUM_SWORD = ITEMS.register("titanium_sword", () -> new TitaniumSword(ToolMaterialList.TITANIUM, 5, -2.4f, new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> TITANIUM_PICKAXE = ITEMS.register("titanium_pickaxe", () -> new TitaniumPickaxe(ToolMaterialList.TITANIUM, 3, -2.8f, new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> TITANIUM_AXE = ITEMS.register("titanium_axe", () -> new TitaniumAxe(ToolMaterialList.TITANIUM, 7, -3.0f, new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> TITANIUM_SHOVEL = ITEMS.register("titanium_shovel", () -> new TitaniumShovel(ToolMaterialList.TITANIUM, 3, -3.0f, new Item.Properties().group(EasySteel.easy_steel)));

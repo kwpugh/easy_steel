@@ -10,7 +10,7 @@
 	
 	"key":
 	{
-		"B": { "tag": "minecraft:planks" },
+		"B": { "item": "minecraft:oak_planks" },
 		"S": { "item": "minecraft:stick" }	
 	},
 	

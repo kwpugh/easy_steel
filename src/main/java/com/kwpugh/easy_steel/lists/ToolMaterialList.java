@@ -5,6 +5,7 @@ import java.util.function.Supplier;
 import com.kwpugh.easy_steel.init.ItemInit;
 import com.kwpugh.easy_steel.util.GeneralModConfig;
 import net.minecraft.item.IItemTier;
+import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.LazyValue;
 
@@ -12,6 +13,10 @@ import net.minecraft.util.LazyValue;
 //Something in Forge seems to add 1 to whatever attack damage you send it
 public enum ToolMaterialList implements IItemTier
 {
+	MYWOOD(0.5F, 5.5f, 145, 1, 5, () -> {
+        return Ingredient.fromItems(Items.OAK_PLANKS);
+    }),
+	
 	FLINT(0.5F, 5.5f, 145, 1, 5, () -> {
         return Ingredient.fromItems(ItemInit.SHARP_FLINT.get());
     }),
