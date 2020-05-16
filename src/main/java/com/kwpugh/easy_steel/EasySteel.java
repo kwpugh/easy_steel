@@ -26,36 +26,36 @@ import net.minecraftforge.fml.loading.FMLPaths;
 
 @Mod("easy_steel")
 public class EasySteel
-{	
+{
 	public static final String modid = "easy_steel";
-	public static final Logger logger = LogManager.getLogger(modid);	
+	public static final Logger logger = LogManager.getLogger(modid);
 	public static final ItemGroup easy_steel = new GroupEasySteel();
 
     public EasySteel()
-    {		
+    {
 		EasySteelConfig.loadConfig(EasySteelConfig.CONFIG, FMLPaths.CONFIGDIR.get().resolve("easy_steel-general.toml"));
-		
+
     	BlockInit.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
     	ItemInit.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
-    	
+
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup); 
-        
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
+
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void setup(final FMLCommonSetupEvent event)
     {
     	OreGenerator.setupOregen();
-    	
+
         logger.info("EasySteel common setup");
     }
 
     private void clientSetup(final FMLClientSetupEvent event)
     {
-    	logger.info("EasySteel clcient setup", event.getMinecraftSupplier().get().gameSettings);
+    	logger.info("EasySteel client setup");
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
