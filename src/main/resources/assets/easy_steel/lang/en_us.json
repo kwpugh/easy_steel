@@ -26,6 +26,7 @@
 	
 	
 	"item.easy_steel.flint_knife": "Flint Knife",
+	"item.easy_steel.flint_knife.line1": "Not a weapon.  Used to obtain string from wool and sheeps",
 	"item.easy_steel.flint_hoe": "Flint Hoe",
 	
 	"block.easy_steel.bornite_ore": "Bornite",

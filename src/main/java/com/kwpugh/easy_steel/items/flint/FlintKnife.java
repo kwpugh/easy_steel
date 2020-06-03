@@ -21,6 +21,7 @@ import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.Items;
 import net.minecraft.item.SwordItem;
 import net.minecraft.util.ActionResultType;
+import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.text.ITextComponent;
@@ -71,8 +72,7 @@ public class FlintKnife extends SwordItem
 		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
 		         });
 	     }
-	     
-	     
+
 		 return ActionResultType.PASS;
 	}
 	
@@ -88,6 +88,11 @@ public class FlintKnife extends SwordItem
 		         p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
 		         });	
 		}
+		else
+		{
+			entity.attackEntityFrom(DamageSource.GENERIC, 4.5F);
+		}
+
     	 
 		return true;
 		
@@ -124,7 +129,7 @@ public class FlintKnife extends SwordItem
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
 		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.easy_steel.flint.line1").applyTextStyle(TextFormatting.GREEN)));
-		tooltip.add((new TranslationTextComponent("item.easy_steel.flint.line2").applyTextStyle(TextFormatting.AQUA)));
+		tooltip.add((new TranslationTextComponent("item.easy_steel.flint_knife").applyTextStyle(TextFormatting.GREEN)));
+		tooltip.add((new TranslationTextComponent("item.easy_steel.flint_knife.line1").applyTextStyle(TextFormatting.AQUA)));
 	}
 }
