@@ -90,4 +90,18 @@ public enum ArmorMaterialList implements IArmorMaterial
 	{
 		return this.toughness;
 	}
+
+//	@Override
+//	public float func_230304_f_()
+//	{
+//		// TODO Auto-generated method stub
+//		return 0;
+//	}
+
+	@Override
+	public float getKnockbackResistance()
+	{
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }

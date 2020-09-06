@@ -26,7 +26,7 @@ public class OreBornite extends OreBlock
 	public void addInformation(ItemStack stack, @Nullable IBlockReader worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
 		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.easy_steel.bornite_ore.line1").applyTextStyle(TextFormatting.GREEN)));
+		tooltip.add((new TranslationTextComponent("item.easy_steel.bornite_ore.line1").mergeStyle(TextFormatting.GREEN)));
 
 	}
 }

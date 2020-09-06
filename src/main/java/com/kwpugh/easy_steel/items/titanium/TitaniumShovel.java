@@ -40,6 +40,6 @@ public class TitaniumShovel extends ShovelItem
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
 		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent( "item.easy_steel.titanium.line1").applyTextStyle(TextFormatting.GREEN)));
+		tooltip.add((new TranslationTextComponent( "item.easy_steel.titanium.line1").mergeStyle(TextFormatting.GREEN)));
 	} 
 }

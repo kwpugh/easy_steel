@@ -171,6 +171,6 @@ public class PaxelBase extends ToolItem
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 	{
 		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.easy_steel.paxel").applyTextStyle(TextFormatting.GREEN)));
+		tooltip.add((new TranslationTextComponent("item.easy_steel.paxel").mergeStyle(TextFormatting.GREEN)));
 	}
 }
