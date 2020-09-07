@@ -1,5 +1,5 @@
-//package com.kwpugh.easy_steel.items.flint;
-//
+package com.kwpugh.easy_steel.items.flint;
+
 //import java.util.List;
 //
 //import javax.annotation.Nullable;
@@ -40,6 +40,6 @@
 //	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
 //	{
 //		super.addInformation(stack, worldIn, tooltip, flagIn);
-//		tooltip.add((new TranslationTextComponent("item.easy_steel.flint.line1").func_240699_a_(TextFormatting.GREEN)));
+//		tooltip.add((new TranslationTextComponent("item.easy_steel.flint.line1").mergeStyle(TextFormatting.GREEN)));
 //	}
 //}
