@@ -9,6 +9,7 @@ import com.kwpugh.easy_steel.group.GroupEasySteel;
 import com.kwpugh.easy_steel.init.BlockInit;
 import com.kwpugh.easy_steel.init.ItemInit;
 import com.kwpugh.easy_steel.util.EasySteelConfig;
+import com.kwpugh.easy_steel.world.OreGenerator;
 
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.MinecraftForge;
@@ -48,6 +49,7 @@ public class EasySteel
     private void setup(final FMLCommonSetupEvent event)
     {
     	//OreGenerator.setupOregen();
+    	OreGenerator.addFeatures();
 
         logger.info("EasySteel common setup");
     }
