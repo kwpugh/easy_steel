@@ -47,22 +47,22 @@ public class OreGenerator
         	{
             	if(GeneralModConfig.CASSITERITE_ORE_GENERATION.get())
             	{
-            		addFeatureToBiome(biome, GenerationStage.Decoration.UNDERGROUND_ORES, OreGenerator.ORE_CASSITERITE); 
+            		BiomeUtil.addFeature(biome, GenerationStage.Decoration.UNDERGROUND_ORES, OreGenerator.ORE_CASSITERITE); 
             	}
             	
             	if(GeneralModConfig.BORNITE_ORE_GENERATION.get())
             	{
-            		addFeatureToBiome(biome, GenerationStage.Decoration.UNDERGROUND_ORES, OreGenerator.ORE_BORNITE); 
+            		BiomeUtil.addFeature(biome, GenerationStage.Decoration.UNDERGROUND_ORES, OreGenerator.ORE_BORNITE); 
             	}
             		
             	if(GeneralModConfig.RUTILE_ORE_GENERATION.get())
             	{
-            		addFeatureToBiome(biome, GenerationStage.Decoration.UNDERGROUND_ORES, OreGenerator.ORE_RUTILE);
+            		BiomeUtil.addFeature(biome, GenerationStage.Decoration.UNDERGROUND_ORES, OreGenerator.ORE_RUTILE);
             	}
             	
             	if(GeneralModConfig.WOLFRAMITE_ORE_GENERATION.get())
             	{
-            		addFeatureToBiome(biome, GenerationStage.Decoration.UNDERGROUND_ORES, OreGenerator.ORE_WOLFRAMITEE); 
+            		BiomeUtil.addFeature(biome, GenerationStage.Decoration.UNDERGROUND_ORES, OreGenerator.ORE_WOLFRAMITEE); 
             	}
         	}
         }
