@@ -9,7 +9,7 @@ license="MIT"
 
 [[mods]] #mandatory
 modId="easy_steel" #mandatory
-version="1.2.7" #mandatory
+version="1.2.9" #mandatory
 displayName="Easy Steel & More" #mandatory
 description='''
 Adds steel, bronze, titanium, hardened steel, and tungsten-carbide gear
@@ -28,6 +28,6 @@ Adds steel, bronze, titanium, hardened steel, and tungsten-carbide gear
 [[dependencies.easy_steel]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.3]"
+    versionRange="[1.16.3, 1.16.4]"
     ordering="NONE"
     side="BOTH"
