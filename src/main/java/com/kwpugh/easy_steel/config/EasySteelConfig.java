@@ -1,4 +1,4 @@
-package com.kwpugh.easy_steel.util;
+package com.kwpugh.easy_steel.config;
 
 import java.nio.file.Path;
 

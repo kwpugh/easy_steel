@@ -2,8 +2,9 @@ package com.kwpugh.easy_steel.lists;
 
 import java.util.function.Supplier;
 
+import com.kwpugh.easy_steel.config.GeneralModConfig;
 import com.kwpugh.easy_steel.init.ItemInit;
-import com.kwpugh.easy_steel.util.GeneralModConfig;
+
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;

@@ -5,11 +5,12 @@ import java.util.stream.Collectors;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.kwpugh.easy_steel.config.EasySteelConfig;
 import com.kwpugh.easy_steel.group.GroupEasySteel;
 import com.kwpugh.easy_steel.init.BlockInit;
 import com.kwpugh.easy_steel.init.ItemInit;
-import com.kwpugh.easy_steel.util.EasySteelConfig;
-import com.kwpugh.easy_steel.world.OreGenerator;
+import com.kwpugh.easy_steel.world.EasySteelConfiguredFeature;
+import com.kwpugh.easy_steel.world.EasySteelOreGen;
 
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.MinecraftForge;
@@ -48,15 +49,16 @@ public class EasySteel
 
     private void setup(final FMLCommonSetupEvent event)
     {
-    	//OreGenerator.setupOregen();
-    	OreGenerator.addFeatures();
+    	EasySteelConfiguredFeature.initModFeatures();
+    	EasySteelOreGen.setupOreGenerator();
+    	
 
-        logger.info("EasySteel common setup");
+        logger.info("EasySteel common setup complete");
     }
 
     private void clientSetup(final FMLClientSetupEvent event)
     {
-    	logger.info("EasySteel client setup");
+    	logger.info("EasySteel client setup complete");
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
@@ -74,6 +76,6 @@ public class EasySteel
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event)
     {
-    	logger.info("EasySteel server setup");
+    	logger.info("EasySteel server setup complete");
     }
 }
