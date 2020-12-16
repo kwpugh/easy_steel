@@ -59,8 +59,11 @@ public class HammerUtil
         
         if(isEffective && !witherImmune && isWithinHarvestLevel)	
         {
-        	world.destroyBlock(pos, false);  
-	    	Block.spawnDrops(state, world, pos, null, player, player.getHeldItemMainhand());
+        	if(!state.hasTileEntity())
+        	{
+        		world.destroyBlock(pos, false);  
+    	    	Block.spawnDrops(state, world, pos, null, player, player.getHeldItemMainhand());	
+        	}
         }
     }
     	
