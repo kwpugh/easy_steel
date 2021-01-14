@@ -15,11 +15,11 @@ import net.minecraft.util.SoundEvent;
 public enum ArmorMaterialList implements IArmorMaterial
 {
 	//Armor order: helmet, leggings, chestplate, boots
-	BRONZE("armor_bronze", 14, new int[] {2, 5, 6, 2}, 15, ItemInit.BRONZE_PLATE.get(), "entity.wolf.growl", 0.5f),
-	STEEL("armor_steel", 19, new int[] {3, 6, 7, 3}, 15, ItemInit.STEEL_PLATE.get(), "entity.cat.purreow", 1.0f),
-	TITANIUM("armor_titanium", 22, new int[] {3, 6, 7, 3}, 15, ItemInit.TITANIUM_PLATE.get(), "entity.cat.purreow", 1.25f),
-	HARDENED_STEEL("armor_hardened_steel", 23, new int[] {3, 6, 7, 3}, 15, ItemInit.HARDENED_STEEL_PLATE.get(), "entity.elder_guardian.curse", 1.5f),
-	TUNGSTEN_CARBIDE("armor_tungsten_carbide", 25, new int[] {3, 6, 8, 3}, 15, ItemInit.TUNGSTEN_CARBIDE_PLATE.get(), "entity.ender_dragon.growl", 1.75f);
+	BRONZE("armor_bronze", 14, new int[] {2, 5, 6, 2}, 15, ItemInit.BRONZE_PLATE.get(), "item.armor.equip_iron", 0.5f),
+	STEEL("armor_steel", 19, new int[] {3, 6, 7, 3}, 15, ItemInit.STEEL_PLATE.get(), "item.armor.equip_iron", 1.0f),
+	TITANIUM("armor_titanium", 22, new int[] {3, 6, 7, 3}, 15, ItemInit.TITANIUM_PLATE.get(), "item.armor.equip_iron", 1.25f),
+	HARDENED_STEEL("armor_hardened_steel", 23, new int[] {3, 6, 7, 3}, 15, ItemInit.HARDENED_STEEL_PLATE.get(), "item.armor.equip_iron", 1.5f),
+	TUNGSTEN_CARBIDE("armor_tungsten_carbide", 25, new int[] {3, 6, 8, 3}, 15, ItemInit.TUNGSTEN_CARBIDE_PLATE.get(), "item.armor.equip_iron", 1.75f);
 
 	private int damageReductionMultiplierFromConfig = GeneralModConfig.DAMAGE_REDUCTION_MODIFIER.get();
 	
@@ -91,17 +91,9 @@ public enum ArmorMaterialList implements IArmorMaterial
 		return this.toughness;
 	}
 
-//	@Override
-//	public float func_230304_f_()
-//	{
-//		// TODO Auto-generated method stub
-//		return 0;
-//	}
-
 	@Override
 	public float getKnockbackResistance()
 	{
-		// TODO Auto-generated method stub
 		return 0;
 	}
 }

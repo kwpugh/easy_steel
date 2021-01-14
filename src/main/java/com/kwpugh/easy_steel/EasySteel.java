@@ -35,15 +35,12 @@ public class EasySteel
     public EasySteel()
     {
 		EasySteelConfig.loadConfig(EasySteelConfig.CONFIG, FMLPaths.CONFIGDIR.get().resolve("easy_steel-general.toml"));
-
     	BlockInit.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
     	ItemInit.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
-
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
-
         MinecraftForge.EVENT_BUS.register(this);
     }
 
@@ -52,7 +49,6 @@ public class EasySteel
     	EasySteelConfiguredFeature.initModFeatures();
     	EasySteelOreGen.setupOreGenerator();
     	
-
         logger.info("EasySteel common setup complete");
     }
 
