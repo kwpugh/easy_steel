@@ -9,8 +9,7 @@ import com.kwpugh.easy_steel.config.EasySteelConfig;
 import com.kwpugh.easy_steel.group.GroupEasySteel;
 import com.kwpugh.easy_steel.init.BlockInit;
 import com.kwpugh.easy_steel.init.ItemInit;
-import com.kwpugh.easy_steel.world.EasySteelConfiguredFeature;
-import com.kwpugh.easy_steel.world.EasySteelOreGen;
+import com.kwpugh.easy_steel.world.OreGenerator;
 
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.common.MinecraftForge;
@@ -37,7 +36,8 @@ public class EasySteel
 		EasySteelConfig.loadConfig(EasySteelConfig.CONFIG, FMLPaths.CONFIGDIR.get().resolve("easy_steel-general.toml"));
     	BlockInit.BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
     	ItemInit.ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
+        
+    	FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
@@ -46,8 +46,7 @@ public class EasySteel
 
     private void setup(final FMLCommonSetupEvent event)
     {
-    	EasySteelConfiguredFeature.initModFeatures();
-    	EasySteelOreGen.setupOreGenerator();
+    	OreGenerator.ores();
     	
         logger.info("EasySteel common setup complete");
     }
