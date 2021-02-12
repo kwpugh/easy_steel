@@ -114,6 +114,7 @@ public class ItemInit
 	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_INGOT = ITEMS.register("tungsten_carbide_ingot", () -> new Item(new Item.Properties().group(EasySteel.easy_steel)));
 	
 	public static final RegistryObject<Item> BRONZE_BLOCK = ITEMS.register("bronze_block", () -> new BlockItem(BlockInit.BRONZE_BLOCK.get(), new Item.Properties().group(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> TUNGSTEN_BLOCK = ITEMS.register("tungsten_block", () -> new BlockItem(BlockInit.TUNGSTEN_BLOCK.get(), new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> STEEL_BLOCK = ITEMS.register("steel_block", () -> new BlockItem(BlockInit.STEEL_BLOCK.get(), new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> TITANIUM_BLOCK = ITEMS.register("titanium_block", () -> new BlockItem(BlockInit.TITANIUM_BLOCK.get(), new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> HARDENED_STEEL_BLOCK = ITEMS.register("hardened_steel_block", () -> new BlockItem(BlockInit.HARDENED_STEEL_BLOCK.get(), new Item.Properties().group(EasySteel.easy_steel)));

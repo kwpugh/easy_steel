@@ -1,0 +1,11 @@
+{
+    "replace": false,
+    "values": [
+        "#forge:storage_blocks/bronze",
+        "#forge:storage_blocks/hardened_steel",
+        "#forge:storage_blocks/steel",
+        "#forge:storage_blocks/titanium",
+        "#forge:storage_blocks/tungsten",
+        "#forge:storage_blocks/tungsten_carbide"
+    ]
+} 
