@@ -26,6 +26,7 @@
 
 
  	"item.easy_steel.flint_knife": "Faca de Sílex",
+ 	"item.easy_steel.flint_knife.line1": "Não é uma arma. Usado para obter Linha de Lã e Ovelhas",
  	"item.easy_steel.flint_hoe": "Enxada de Sílex",
 
  	"block.easy_steel.bornite_ore": "Minério de Bornita",
@@ -81,6 +82,8 @@
 
  	"item.easy_steel.bronze_block": "Bloco de Bronze",
  	"block.easy_steel.bronze_block": "Bloco de Bronze",	
+ 	"item.easy_steel.tungsten_block": "Bloco de Tungstênio",
+ 	"block.easy_steel.tungsten_block": "Bloco de Tungstênio",
  	"item.easy_steel.steel_block": "Bloco de Aço",
  	"block.easy_steel.steel_block": "Bloco de Aço",
  	"item.easy_steel.titanium_block": "Bloco de Liga de Titânio",
