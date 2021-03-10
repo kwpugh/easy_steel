@@ -91,6 +91,7 @@ public class ItemInit
 	public static final RegistryObject<Item> GOLD_POWDER = ITEMS.register("gold_powder", () -> new Item(new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> DIAMOND_POWDER = ITEMS.register("diamond_powder", () -> new Item(new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> EMERALD_POWDER = ITEMS.register("emerald_powder", () -> new Item(new Item.Properties().group(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> NETHERITE_POWDER = ITEMS.register("netherite_powder", () -> new Item(new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> TITANIUM_POWDER = ITEMS.register("titanium_powder", () -> new Item(new Item.Properties().group(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> TUNGSTEN_POWDER = ITEMS.register("tungsten_powder", () -> new Item(new Item.Properties().group(EasySteel.easy_steel)));
 	

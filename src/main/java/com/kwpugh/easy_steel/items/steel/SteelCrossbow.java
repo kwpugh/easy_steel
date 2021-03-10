@@ -143,7 +143,7 @@ public class SteelCrossbow extends CrossbowItem
 	     if (shooter instanceof ICrossbowUser)
 	     {
 	        ICrossbowUser icrossbowuser = (ICrossbowUser)shooter;
-	        icrossbowuser.func_230284_a_(icrossbowuser.getAttackTarget(), crossbow, projectileentity, projectileAngle);
+	        icrossbowuser.fireProjectile(icrossbowuser.getAttackTarget(), crossbow, projectileentity, projectileAngle);
 	     }
 	     else
 	     {

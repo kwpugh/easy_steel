@@ -29,16 +29,19 @@ public class OreGenerator
 	{
 		BORNITE_ORE = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, 
 				BlockInit.BORNITE_ORE.get().getDefaultState(), GeneralModConfig.BORNITE_ORE_SIZE.get())).withPlacement(Placement.RANGE.configure(
-				new TopSolidRangeConfig(0, 0, GeneralModConfig.BORNITE_ORE_MAX_HEIGHT.get()))).square().func_242731_b(GeneralModConfig.BORNITE_ORE_CHANCE.get());
+				new TopSolidRangeConfig(0, 0, GeneralModConfig.BORNITE_ORE_MAX_HEIGHT.get()))).square().count(GeneralModConfig.BORNITE_ORE_CHANCE.get());
+				
 		CASSITERITE_ORE = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, 
 				BlockInit.CASSITERITE_ORE.get().getDefaultState(), GeneralModConfig.CASSITERITE_ORE_SIZE.get())).withPlacement(Placement.RANGE.configure(
-				new TopSolidRangeConfig(0, 0, GeneralModConfig.CASSITERITE_ORE_MAX_HEIGHT.get()))).square().func_242731_b(GeneralModConfig.CASSITERITE_ORE_CHANCE.get());
+				new TopSolidRangeConfig(0, 0, GeneralModConfig.CASSITERITE_ORE_MAX_HEIGHT.get()))).square().count(GeneralModConfig.CASSITERITE_ORE_CHANCE.get());
+		
 		RUTILE_ORE = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, 
 				BlockInit.RUTILE_ORE.get().getDefaultState(), GeneralModConfig.RUTILE_ORE_SIZE.get())).withPlacement(Placement.RANGE.configure(
-				new TopSolidRangeConfig(0, 0, GeneralModConfig.RUTILE_ORE_MAX_HEIGHT.get()))).square().func_242731_b(GeneralModConfig.RUTILE_ORE_CHANCE.get());
+				new TopSolidRangeConfig(0, 0, GeneralModConfig.RUTILE_ORE_MAX_HEIGHT.get()))).square().count(GeneralModConfig.RUTILE_ORE_CHANCE.get());
+		
 		WOLFRAMITE_ORE = Feature.ORE.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, 
 				BlockInit.WOLFRAMITE_ORE.get().getDefaultState(), GeneralModConfig.WOLFRAMITE_ORE_SIZE.get())).withPlacement(Placement.RANGE.configure(
-				new TopSolidRangeConfig(0, 0, GeneralModConfig.WOLFRAMITE_ORE_MAX_HEIGHT.get()))).square().func_242731_b(GeneralModConfig.WOLFRAMITE_ORE_CHANCE.get());
+				new TopSolidRangeConfig(0, 0, GeneralModConfig.WOLFRAMITE_ORE_MAX_HEIGHT.get()))).square().count(GeneralModConfig.WOLFRAMITE_ORE_CHANCE.get());
 		
 		Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation(EasySteel.modid, "bornite_ore"), BORNITE_ORE);
 		Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, new ResourceLocation(EasySteel.modid, "cassiterite_ore"), CASSITERITE_ORE);
