@@ -8,21 +8,23 @@ import javax.annotation.Nullable;
 import com.google.common.collect.ImmutableSet;
 import com.kwpugh.easy_steel.util.HammerUtil;
 
-import net.minecraft.block.BlockState;
-import net.minecraft.block.material.Material;
-import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.IItemTier;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.PickaxeItem;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.text.TranslationTextComponent;
-import net.minecraft.world.World;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+
+import net.minecraft.world.item.Item.Properties;
 
 /*
  * This is the base class for all types of Hammers
@@ -31,29 +33,23 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class HammerBase extends PickaxeItem
 {	
-	public static final Set<Material> EFFECTIVE_MATERIALS = ImmutableSet.of(Material.ROCK, Material.IRON, Material.GLASS, Material.ICE, Material.PACKED_ICE, Material.ANVIL);
+	public static final Set<Material> EFFECTIVE_MATERIALS = ImmutableSet.of(Material.STONE, Material.METAL, Material.GLASS, Material.ICE, Material.ICE_SOLID, Material.HEAVY_METAL);
 
-	public HammerBase(IItemTier tier, int attackDamageIn, float attackSpeedIn, Properties builder)
+	public HammerBase(Tier tier, int attackDamageIn, float attackSpeedIn, Properties builder)
 	{
 		super(tier, attackDamageIn, attackSpeedIn, builder);
 	}
 
-    public boolean onBlockDestroyed(ItemStack stack, World world, BlockState state, BlockPos pos, LivingEntity entity)
+    public boolean mineBlock(ItemStack stack, Level world, BlockState state, BlockPos pos, LivingEntity entity)
     {
-        stack.attemptDamageItem(1, random, null);
+        stack.hurt(1, world.random, null);
 
-        if (entity instanceof PlayerEntity)
+        if (entity instanceof Player)
         {
-        	HammerUtil.attemptBreakNeighbors(world, pos, (PlayerEntity) entity, EFFECTIVE_MATERIALS);
+        	HammerUtil.attemptBreakNeighbors(world, pos, (Player) entity, EFFECTIVE_MATERIALS);
         }
-        return super.onBlockDestroyed(stack, world, state, pos, entity);
+        return super.mineBlock(stack, world, state, pos, entity);
     }
-   
-	@Override
-	public int getBurnTime(ItemStack itemStack)
-	{
-		return 400;
-	}
 	
 	@Override
 	public boolean isBookEnchantable(ItemStack stack, ItemStack book)
@@ -62,9 +58,9 @@ public class HammerBase extends PickaxeItem
 	}
 	
 	@OnlyIn(Dist.CLIENT)
-	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
+	public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn)
 	{
-		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.easy_steel.hammer").mergeStyle(TextFormatting.GREEN)));
+		super.appendHoverText(stack, worldIn, tooltip, flagIn);
+		tooltip.add((new TranslatableComponent("item.easy_steel.hammer").withStyle(ChatFormatting.GREEN)));
 	}
 }

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "easy_steel:raw_tungsten_carbide"
+  },
+  "result": "easy_steel:tungsten_carbide_ingot",
+  "experience": 0.15,
+  "cookingtime": 400
+}

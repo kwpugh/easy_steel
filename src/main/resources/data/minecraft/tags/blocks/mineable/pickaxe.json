@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "easy_steel:cassiterite_ore",
+    "easy_steel:wolframite_ore",
+    "easy_steel:rutile_ore",
+    "easy_steel:bronze_block",
+    "easy_steel:tungsten_block",
+    "easy_steel:steel_block",
+    "easy_steel:titanium_block",
+    "easy_steel:hardened_steel_block",
+    "easy_steel:tungsten_carbide_block"
+  ]
+}

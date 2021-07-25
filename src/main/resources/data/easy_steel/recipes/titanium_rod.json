@@ -10,7 +10,7 @@
 	
 	"key":
 	{
-		"A": { "item": "easy_steel:titanium_ingot"  }
+		"A": { "item": "easy_steel:titanium_alloy_ingot"  }
 	},
 	
 	"result": { "item": "easy_steel:titanium_rod",

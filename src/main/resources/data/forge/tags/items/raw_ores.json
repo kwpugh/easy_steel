@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:raw_ores/raw_irons",
+    "#forge:raw_ores/raw_golds",
+    "#forge:raw_ores/raw_coppers",
+    "#forge:raw_ores/raw_tins",
+    "#forge:raw_ores/raw_titaniums",
+    "#forge:raw_ores/raw_tungstens"
+  ]
+}

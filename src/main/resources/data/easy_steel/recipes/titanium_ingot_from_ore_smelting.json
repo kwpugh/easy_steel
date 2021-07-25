@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "easy_steel:rutile_ore"
+  },
+  "result": "easy_steel:titanium_ingot",
+  "experience": 0.15,
+  "cookingtime": 200
+}

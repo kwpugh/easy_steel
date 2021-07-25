@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "easy_steel:wolframite_ore"
+  },
+  "result": "easy_steel:tungsten_ingot",
+  "experience": 0.15,
+  "cookingtime": 200
+}

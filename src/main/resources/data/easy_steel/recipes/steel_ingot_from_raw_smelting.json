@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "easy_steel:raw_steel"
+  },
+  "result": "easy_steel:steel_ingot",
+  "experience": 0.15,
+  "cookingtime": 400
+}

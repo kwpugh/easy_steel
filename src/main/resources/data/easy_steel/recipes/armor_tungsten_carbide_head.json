@@ -10,7 +10,7 @@
 	
 	"key":
 	{
-		"P": { "item": "easy_steel:tungsten_carbide_plate" }	
+		"P": { "item": "easy_steel:tungsten_carbide_ingot" }
 	},
 	
 	"result": { "item": "easy_steel:armor_tungsten_carbide_head" }

@@ -10,7 +10,7 @@
 	
 	"key":
 	{
-		"P": { "item": "easy_steel:titanium_plate" }	
+		"P": { "item": "easy_steel:titanium_alloy_ingot" }
 	},
 	
 	"result": { "item": "easy_steel:armor_titanium_boots" }

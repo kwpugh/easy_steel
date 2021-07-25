@@ -6,53 +6,55 @@ import javax.annotation.Nullable;
 
 import com.kwpugh.easy_steel.init.ItemInit;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.item.ItemEntity;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.IItemTier;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.item.ShovelItem;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.util.text.TranslationTextComponent;
-import net.minecraft.world.World;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.ShovelItem;
+import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
+import net.minecraft.world.item.Item.Properties;
+
 public class HandShovel extends ShovelItem
 {
-	public HandShovel(IItemTier tier, float attackDamageIn, float attackSpeedIn, Properties builder)
+	public HandShovel(Tier tier, float attackDamageIn, float attackSpeedIn, Properties builder)
 	{
 		super(tier, attackDamageIn, attackSpeedIn, builder);
 	}
 
-	public boolean onBlockDestroyed(ItemStack stack, World worldIn, BlockState state, BlockPos pos, LivingEntity entityLiving)
+	public boolean mineBlock(ItemStack stack, Level worldIn, BlockState state, BlockPos pos, LivingEntity entityLiving)
 	{
 		Block block = state.getBlock();
 		
 		if(block == Blocks.GRAVEL)
 		{
-	        stack.damageItem(1, entityLiving, (p_220038_0_) -> {
-	            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+	        stack.hurtAndBreak(1, entityLiving, (p_220038_0_) -> {
+	            p_220038_0_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
 	         });
 	        
-	        double chance = random.nextDouble();
+	        double chance = worldIn.random.nextDouble();
 	        
 	        if(chance <= .5)
 	        {
-	        	worldIn.addEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.SHARP_FLINT.get(), 1)));	
+	        	worldIn.addFreshEntity(new ItemEntity(worldIn, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ItemInit.SHARP_FLINT.get(), 1)));	
 	        }
 		}
 		else
 		{
-		    stack.damageItem(1, entityLiving, (p_220038_0_) -> {
-	            p_220038_0_.sendBreakAnimation(EquipmentSlotType.MAINHAND);
+		    stack.hurtAndBreak(1, entityLiving, (p_220038_0_) -> {
+	            p_220038_0_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
 	         });	
 		}
 	    
@@ -66,15 +68,15 @@ public class HandShovel extends ShovelItem
 	}
 
 	@Override
-	public boolean getIsRepairable(ItemStack toRepair, ItemStack repair)
+	public boolean isValidRepairItem(ItemStack toRepair, ItemStack repair)
 	{
 		return repair.getItem() == Items.OAK_PLANKS;
 	}
 	
 	@OnlyIn(Dist.CLIENT)
-	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn)
+	public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn)
 	{
-		super.addInformation(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslationTextComponent("item.easy_steel.hand_shovel.line1").mergeStyle(TextFormatting.GREEN)));
+		super.appendHoverText(stack, worldIn, tooltip, flagIn);
+		tooltip.add((new TranslatableComponent("item.easy_steel.hand_shovel.line1").withStyle(ChatFormatting.GREEN)));
 	}
 }

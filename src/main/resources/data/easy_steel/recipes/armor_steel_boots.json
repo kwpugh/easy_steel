@@ -10,7 +10,7 @@
 	
 	"key":
 	{
-		"P": { "item": "easy_steel:steel_plate" }	
+		"P": { "item": "easy_steel:steel_ingot" }
 	},
 	
 	"result": { "item": "easy_steel:armor_steel_boots" }

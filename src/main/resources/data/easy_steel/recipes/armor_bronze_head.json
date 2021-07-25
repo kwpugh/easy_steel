@@ -10,7 +10,7 @@
 	
 	"key":
 	{
-		"P": { "item": "easy_steel:bronze_plate" }	
+		"P": { "item": "easy_steel:bronze_ingot" }
 	},
 	
 	"result": { "item": "easy_steel:armor_bronze_head" }

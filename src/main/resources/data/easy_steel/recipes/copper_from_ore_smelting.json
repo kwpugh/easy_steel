@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "easy_steel:bornite_ore"
-  },
-  "result": "easy_steel:copper_powder",
-  "experience": 0.15,
-  "cookingtime": 200
-}

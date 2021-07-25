@@ -28,10 +28,7 @@
 	"item.easy_steel.flint_knife": "Flint Knife",
 	"item.easy_steel.flint_knife.line1": "Not a weapon.  Used to obtain string from wool and sheeps",
 	"item.easy_steel.flint_hoe": "Flint Hoe",
-	
-	"block.easy_steel.bornite_ore": "Bornite",
-	"item.easy_steel.bornite_ore": "Bornite",
-	"item.easy_steel.bornite_ore.line1": "This ore is a natural source of copper",
+
 	"block.easy_steel.cassiterite_ore": "Cassiterite",
 	"item.easy_steel.cassiterite_ore": "Cassiterite",
 	"item.easy_steel.cassiterite_ore.line1": "This ore is a natural source of tin",
@@ -41,6 +38,10 @@
 	"block.easy_steel.rutile_ore": "Rutile",
 	"item.easy_steel.rutile_ore": "Rutile",
 	"item.easy_steel.rutile_ore.line1": "This ore is a natural source of titanium",
+
+	"item.easy_steel.raw_tin": "Raw Tin",
+	"item.easy_steel.raw_titanium": "Raw Titanium",
+	"item.easy_steel.raw_tungsten": "Raw Tungsten",
 
 	"item.easy_steel.stone_powder": "Stone Powder",
 	"item.easy_steel.carbon": "Carbon Powder",
@@ -53,10 +54,9 @@
 	"item.easy_steel.netherite_powder": "Netherite Powder",
 	"item.easy_steel.tungsten_powder": "Tungsten Powder",
 	"item.easy_steel.titanium_powder": "Titanium Powder",
-	
-	"item.easy_steel.copper_ingot": "Copper Ingot",
+
 	"item.easy_steel.tin_ingot": "Tin Ingot",
-	"item.easy_steel.titanium_base_ingot": "Titanium Ingot",
+	"item.easy_steel.titanium_ingot": "Titanium Ingot",
 	"item.easy_steel.tungsten_ingot": "Tungsten Ingot",
 	
 	"item.easy_steel.raw_bronze": "Raw Bronze",
@@ -68,7 +68,7 @@
 	"item.easy_steel.raw_tungsten_carbide": "Raw Tungsten-Carbide",
 	"item.easy_steel.tungsten_carbide_ingot": "Tungsten-Carbide Ingot",
 	"item.easy_steel.raw_titanium_alloy": "Raw Titanium Alloy",
-	"item.easy_steel.titanium_ingot": "Titanium Alloy Ingot",
+	"item.easy_steel.titanium_alloy_ingot": "Titanium Alloy Ingot",
 	
 	"item.easy_steel.bronze_plate": "Bronze Plate",
 	"item.easy_steel.bronze_rod": "Bronze Rod",
@@ -87,8 +87,8 @@
 	"block.easy_steel.tungsten_block": "Tungsten Block",	
 	"item.easy_steel.steel_block": "Steel Block",
 	"block.easy_steel.steel_block": "Steel Block",
-	"item.easy_steel.titanium_block": "Titanium Alloy Block",
-	"block.easy_steel.titanium_block": "Titanium Alloy Block",
+	"item.easy_steel.titanium_alloy_block": "Titanium Alloy Block",
+	"block.easy_steel.titanium_alloy_block": "Titanium Alloy Block",
 	"item.easy_steel.hardened_steel_block": "Hardened Steel Block",
 	"block.easy_steel.hardened_steel_block": "Hardened Steel Block",
 	"item.easy_steel.tungsten_carbide_block": "Tungsten-Carbide Block",

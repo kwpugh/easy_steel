@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "easy_steel:crack_hammer"
+    },
+    {
+      "tag": "forge:raw_ores/raw_irons"
+    }
+  ],
+  "result": {
+    "item": "easy_steel:iron_powder",
+    "count": 2
+  }
+}

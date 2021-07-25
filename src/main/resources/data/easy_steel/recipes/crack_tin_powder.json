@@ -5,7 +5,7 @@
             "item": "easy_steel:crack_hammer"
         },
         {
-            "tag": "forge:ores/tin"
+            "tag": "forge:raw_ores/raw_tins"
         }
     ],
     "result": {

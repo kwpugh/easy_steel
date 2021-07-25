@@ -7,7 +7,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "easy_steel:wolframite_ore"
+          "name": "easy_steel:raw_tungsten"
         }
       ],
       "conditions": [

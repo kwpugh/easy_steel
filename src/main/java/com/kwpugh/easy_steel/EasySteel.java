@@ -2,6 +2,7 @@ package com.kwpugh.easy_steel;
 
 import java.util.stream.Collectors;
 
+import net.minecraftforge.fmlserverevents.FMLServerStartingEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -11,7 +12,7 @@ import com.kwpugh.easy_steel.init.BlockInit;
 import com.kwpugh.easy_steel.init.ItemInit;
 import com.kwpugh.easy_steel.world.OreGenerator;
 
-import net.minecraft.item.ItemGroup;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
@@ -20,7 +21,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
-import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
 
@@ -29,7 +29,7 @@ public class EasySteel
 {
 	public static final String modid = "easy_steel";
 	public static final Logger logger = LogManager.getLogger(modid);
-	public static final ItemGroup easy_steel = new GroupEasySteel();
+	public static final CreativeModeTab easy_steel = new GroupEasySteel();
 
     public EasySteel()
     {
@@ -46,8 +46,8 @@ public class EasySteel
 
     private void setup(final FMLCommonSetupEvent event)
     {
-    	OreGenerator.ores();
-    	
+        OreGenerator.registerConfiguredFeatures();
+
         logger.info("EasySteel common setup complete");
     }
 
@@ -58,7 +58,7 @@ public class EasySteel
 
     private void enqueueIMC(final InterModEnqueueEvent event)
     {
-        InterModComms.sendTo("easy_steel", "helloworld", () -> { logger.info("Hello world from EasySteel"); return "Hello world"; });
+        InterModComms.sendTo("easy_steel", "hello world", () -> { logger.info("Hello world from EasySteel"); return "Hello world"; });
     }
 
     private void processIMC(final InterModProcessEvent event)

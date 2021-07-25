@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "tag": "forge:ingots/titanium"
+        },
+        {
+            "tag": "forge:ingots/titanium"
+        },
+        {
+            "tag": "forge:dusts/carbon"
+        }
+    ],
+    "result": {
+        "item": "easy_steel:titanium_alloy_ingot",
+        "count": 2
+    }
+}

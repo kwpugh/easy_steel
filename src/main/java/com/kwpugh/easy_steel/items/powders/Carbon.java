@@ -2,13 +2,13 @@ package com.kwpugh.easy_steel.items.powders;
 
 import java.util.List;
 
-import net.minecraft.client.util.ITooltipFlag;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraft.world.World;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.ChatFormatting;
+import net.minecraft.world.level.Level;
 
 public class Carbon extends Item
 {	
@@ -21,17 +21,17 @@ public class Carbon extends Item
 	    this.burnTime = 600;
 	}
 	
-	@Override
-	public int getBurnTime(ItemStack itemStack)
-	{
-	    return this.burnTime;
-	}
+//	@Override
+//	public int getBurnTime(ItemStack itemStack)
+//	{
+//	    return this.burnTime;
+//	}
 	
 	@Override
-	public void addInformation(ItemStack stack, World world, List<ITextComponent> list, ITooltipFlag flag)
+	public void appendHoverText(ItemStack stack, Level world, List<Component> list, TooltipFlag flag)
 	{
-		super.addInformation(stack, world, list, flag);				
-		list.add(new StringTextComponent(TextFormatting.BLUE + "Used for crafting and also a fuel"));
-		list.add(new StringTextComponent(TextFormatting.YELLOW + "Burntime: 600"));
+		super.appendHoverText(stack, world, list, flag);				
+		list.add(new TextComponent(ChatFormatting.BLUE + "Used for crafting and also a fuel"));
+		list.add(new TextComponent(ChatFormatting.YELLOW + "Burntime: 600"));
 	} 
 }
