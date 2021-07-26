@@ -25,6 +25,7 @@ import com.kwpugh.easy_steel.items.hardenedsteel.HardenedSteelPickaxe;
 import com.kwpugh.easy_steel.items.hardenedsteel.HardenedSteelShovel;
 import com.kwpugh.easy_steel.items.hardenedsteel.HardenedSteelSword;
 import com.kwpugh.easy_steel.items.misc.IronLinks;
+import com.kwpugh.easy_steel.items.powders.Carbon;
 import com.kwpugh.easy_steel.items.steel.ArmorSteel;
 import com.kwpugh.easy_steel.items.steel.SteelAxe;
 import com.kwpugh.easy_steel.items.steel.SteelBow;
@@ -89,7 +90,7 @@ public class ItemInit
 	public static final RegistryObject<Item> STONE_POWDER = ITEMS.register("stone_powder", () -> new Item(new Item.Properties().tab(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> TIN_POWDER = ITEMS.register("tin_powder", () -> new Item(new Item.Properties().tab(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> COPPER_POWDER = ITEMS.register("copper_powder", () -> new Item(new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> CARBON = ITEMS.register("carbon", () -> new Item(new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> CARBON = ITEMS.register("carbon", () -> new Carbon(new Item.Properties().tab(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> IRON_POWDER = ITEMS.register("iron_powder", () -> new Item(new Item.Properties().tab(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> GOLD_POWDER = ITEMS.register("gold_powder", () -> new Item(new Item.Properties().tab(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> DIAMOND_POWDER = ITEMS.register("diamond_powder", () -> new Item(new Item.Properties().tab(EasySteel.easy_steel)));

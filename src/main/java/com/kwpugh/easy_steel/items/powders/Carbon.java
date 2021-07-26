@@ -8,24 +8,26 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.ChatFormatting;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
+
+import javax.annotation.Nullable;
 
 public class Carbon extends Item
 {	
 	private int burnTime;
 	
-	public Carbon(Properties p_i48487_1_, String name, int burnTime)
+	public Carbon(Properties settings)
 	{
-	    super(p_i48487_1_);
-	    this.setRegistryName(name);
+	    super(settings);
 	    this.burnTime = 600;
 	}
-	
-//	@Override
-//	public int getBurnTime(ItemStack itemStack)
-//	{
-//	    return this.burnTime;
-//	}
+
+	@Override
+	public int getBurnTime(ItemStack stack, @Nullable RecipeType<?> recipeType)
+	{
+		return this.burnTime;
+	}
 	
 	@Override
 	public void appendHoverText(ItemStack stack, Level world, List<Component> list, TooltipFlag flag)

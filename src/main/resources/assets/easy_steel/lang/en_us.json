@@ -69,16 +69,11 @@
 	"item.easy_steel.tungsten_carbide_ingot": "Tungsten-Carbide Ingot",
 	"item.easy_steel.raw_titanium_alloy": "Raw Titanium Alloy",
 	"item.easy_steel.titanium_alloy_ingot": "Titanium Alloy Ingot",
-	
-	"item.easy_steel.bronze_plate": "Bronze Plate",
+
 	"item.easy_steel.bronze_rod": "Bronze Rod",
-	"item.easy_steel.steel_plate": "Steel Plate",
 	"item.easy_steel.steel_rod": "Steel Rod",
-	"item.easy_steel.titanium_plate": "Titanium Alloy Plate",
 	"item.easy_steel.titanium_rod": "Titanium Alloy Rod",
-	"item.easy_steel.hardened_steel_plate": "Hardened Steel Plate",
 	"item.easy_steel.hardened_steel_rod": "Hardened Steel Rod",
-	"item.easy_steel.tungsten_carbide_plate": "Tungsten-Carbide Plate",
 	"item.easy_steel.tungsten_carbide_rod": "Tungsten-Carbide Rod",
 	
 	"item.easy_steel.bronze_block": "Bronze Block",
@@ -173,10 +168,10 @@
 	"item.easy_steel.armor_steel_boots": "Steel Boots",
 
 	"item.easy_steel.armor_titanium_full.line1": "More durable than steel",
-	"item.easy_steel.armor_titanium_head": "Titanium Helmet",
-	"item.easy_steel.armor_titanium_body": "Titanium Chestplate",
-	"item.easy_steel.armor_titanium_leggings": "Titanium Leggings",
-	"item.easy_steel.armor_titanium_boots": "Titanium Boots",
+	"item.easy_steel.armor_titanium_head": "Titanium Alloy Helmet",
+	"item.easy_steel.armor_titanium_body": "Titanium Alloy Chestplate",
+	"item.easy_steel.armor_titanium_leggings": "Titanium Alloy Leggings",
+	"item.easy_steel.armor_titanium_boots": "Titanium Alloy Boots",
 	
 	"item.easy_steel.armor_hardened_steel_full.line1": "More durable than steel",
 	"item.easy_steel.armor_hardened_steel_head": "Hardened Steel Helmet",
