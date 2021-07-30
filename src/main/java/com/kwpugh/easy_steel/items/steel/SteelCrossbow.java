@@ -42,7 +42,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 /*
  * Taken directly from CrossbowItem and customized a bit
- * 
+ *
  */
 
 public class SteelCrossbow extends CrossbowItem
@@ -58,7 +58,7 @@ public class SteelCrossbow extends CrossbowItem
 	public InteractionResultHolder<ItemStack> use(Level worldIn, Player playerIn, InteractionHand handIn)
 	{
 		ItemStack itemstack = playerIn.getItemInHand(handIn);
-	     
+
 	    if (isCharged(itemstack))
 	    {
 		    fireProjectiles(worldIn, playerIn, handIn, itemstack, 5.5F, 0.0F);   // set inaccuracy to 0.0 and velocity to 5.5F
@@ -79,14 +79,14 @@ public class SteelCrossbow extends CrossbowItem
       		return InteractionResultHolder.fail(itemstack);
       	}
 	}
-	   
+
 	@Override
 	public void releaseUsing(ItemStack stack, Level worldIn, LivingEntity entityLiving, int timeLeft)
 	{
 		int i = this.getUseDuration(stack);  // Removing timeLeft creates a builtin Quickcharge
 		//int i = this.getUseDuration(stack) - timeLeft;
 	    float f = getCharge(i, stack);
-	    
+
 	    if (f >= 0.6F && !isCharged(stack) && hasAmmo(entityLiving, stack)) //Had to reduce the test down from >= 1.0F because it was never reached
 	    {
 	         setCharged(stack, true);
@@ -100,7 +100,7 @@ public class SteelCrossbow extends CrossbowItem
 	   List<ItemStack> list = getChargedProjectiles(stack);
 	   float[] afloat = getRandomSoundPitches(shooter.getRandom());
 
-	   for(int i = 0; i < list.size(); ++i) 
+	   for(int i = 0; i < list.size(); ++i)
 	   {
 		   ItemStack itemstack = list.get(i);
 		   boolean flag = shooter instanceof Player && ((Player)shooter).getAbilities().instabuild;
@@ -122,7 +122,7 @@ public class SteelCrossbow extends CrossbowItem
 
 	   fireProjectilesAfter(worldIn, shooter, stack);
    }
-   
+
    private static void fireProjectile(Level worldIn, LivingEntity shooter, InteractionHand handIn, ItemStack crossbow, ItemStack projectile, float soundPitch, boolean isCreativeMode, float velocity, float inaccuracy, float projectileAngle)
    {
 	  if (!worldIn.isClientSide)
@@ -141,7 +141,7 @@ public class SteelCrossbow extends CrossbowItem
 	           ((AbstractArrow)projectileentity).pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
 	        }
 	     }
-	
+
 	     if (shooter instanceof CrossbowAttackMob)
 	     {
 	        CrossbowAttackMob icrossbowuser = (CrossbowAttackMob)shooter;
@@ -156,7 +156,7 @@ public class SteelCrossbow extends CrossbowItem
 	        vector3f.transform(quaternion);
 	        projectileentity.shoot((double)vector3f.x(), (double)vector3f.y(), (double)vector3f.z(), velocity, inaccuracy);
 	     }
-	
+
 	     crossbow.hurtAndBreak(flag ? 3 : 1, shooter, (p_220017_1_) -> {
 	        p_220017_1_.broadcastBreakEvent(handIn);
 	     });
@@ -164,8 +164,8 @@ public class SteelCrossbow extends CrossbowItem
 	     worldIn.playSound((Player)null, shooter.getX(), shooter.getY(), shooter.getZ(), SoundEvents.CROSSBOW_SHOOT, SoundSource.PLAYERS, 1.0F, soundPitch);
 	  }
    }
-	   
-   private static AbstractArrow createArrow(Level worldIn, LivingEntity shooter, ItemStack crossbow, ItemStack ammo) 
+
+   private static AbstractArrow createArrow(Level worldIn, LivingEntity shooter, ItemStack crossbow, ItemStack ammo)
    {
 	   ArrowItem arrowitem = (ArrowItem)(ammo.getItem() instanceof ArrowItem ? ammo.getItem() : Items.ARROW);
 	   AbstractArrow abstractarrowentity = arrowitem.createArrow(worldIn, ammo, shooter);
@@ -178,7 +178,7 @@ public class SteelCrossbow extends CrossbowItem
 
 	   return abstractarrowentity;
    }
-	 
+
    private static void fireProjectilesAfter(Level worldIn, LivingEntity shooter, ItemStack stack)
    {
       if (shooter instanceof ServerPlayer)
@@ -194,7 +194,7 @@ public class SteelCrossbow extends CrossbowItem
 
       clearProjectiles(stack);
    }
-	   
+
    private static void clearProjectiles(ItemStack stack)
    {
       CompoundTag compoundnbt = stack.getTag();
@@ -205,7 +205,7 @@ public class SteelCrossbow extends CrossbowItem
          compoundnbt.put("ChargedProjectiles", listnbt);
       }
    }
-	   
+
    private static float[] getRandomSoundPitches(Random rand)
    {
       boolean flag = rand.nextBoolean();
@@ -217,12 +217,12 @@ public class SteelCrossbow extends CrossbowItem
       float f = flagIn ? 0.63F : 0.43F;
       return 1.0F / (random.nextFloat() * 0.5F + 1.8F) + f;
    }
-	   
+
 	private static List<ItemStack> getChargedProjectiles(ItemStack stack)
 	{
 		List<ItemStack> list = Lists.newArrayList();
 		CompoundTag compoundnbt = stack.getTag();
-		
+
 		if (compoundnbt != null && compoundnbt.contains("ChargedProjectiles", 9))
 		{
 			ListTag listnbt = compoundnbt.getList("ChargedProjectiles", 10);
@@ -235,34 +235,34 @@ public class SteelCrossbow extends CrossbowItem
 				}
 			}
 		}
-	
+
 		return list;
 	}
-	   
+
    public static void setCharged(ItemStack stack, boolean chargedIn)
    {
 	  CompoundTag compoundnbt = stack.getOrCreateTag();
 	  compoundnbt.putBoolean("Charged", chargedIn);
    }
-	   
+
    public static boolean isCharged(ItemStack stack)
    {
       CompoundTag compoundnbt = stack.getTag();
       return compoundnbt != null && compoundnbt.getBoolean("Charged");
    }
-	  
+
    public int getUseDuration(ItemStack stack)
    {
       return getChargeTime(stack) + 3;
    }
-	   
+
 
    public static int getChargeTime(ItemStack stack)
    {
       int i = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.QUICK_CHARGE, stack);
       return i == 0 ? 25 : 25 - 5 * i;
    }
-	      
+
    private static float getCharge(int useTime, ItemStack stack)
    {
       float f = (float)useTime / (float)getChargeTime(stack);
@@ -270,17 +270,17 @@ public class SteelCrossbow extends CrossbowItem
       {
          f = 0.6F;
       }
-      
+
       return f;
    }
-	   
+
    private static boolean hasAmmo(LivingEntity entityIn, ItemStack stack)
    {
 	   int i = EnchantmentHelper.getItemEnchantmentLevel(Enchantments.MULTISHOT, stack);
 	   int j = i == 0 ? 1 : 3;
-	   
+
 	   boolean flag = entityIn instanceof Player && ((Player)entityIn).getAbilities().instabuild;
-	   
+
 	   ItemStack itemstack = entityIn.getProjectile(stack);
 	   ItemStack itemstack1 = itemstack.copy();
 
@@ -290,7 +290,7 @@ public class SteelCrossbow extends CrossbowItem
 		   {
 			   itemstack = itemstack1.copy();
 		   }
-	
+
 		   if (itemstack.isEmpty() && flag)
 		   {
 			   itemstack = new ItemStack(Items.ARROW);
@@ -305,7 +305,7 @@ public class SteelCrossbow extends CrossbowItem
 
 	   return true;
    }
-	      
+
    private static boolean loadProjectile(LivingEntity p_220023_0_, ItemStack p_220023_1_, ItemStack p_220023_2_, boolean p_220023_3_, boolean p_220023_4_)
    {
 	   if (p_220023_2_.isEmpty())
@@ -316,11 +316,11 @@ public class SteelCrossbow extends CrossbowItem
 	   {
 		   boolean flag = p_220023_4_ && p_220023_2_.getItem() instanceof ArrowItem;
 		   ItemStack itemstack;
-		   
+
 		   if (!flag && !p_220023_4_ && !p_220023_3_)
 		   {
 			   itemstack = p_220023_2_.split(1);
-			   
+
 			   if (p_220023_2_.isEmpty() && p_220023_0_ instanceof Player)
 			   {
 				   ((Player)p_220023_0_).getInventory().removeItem(p_220023_2_);
@@ -332,16 +332,16 @@ public class SteelCrossbow extends CrossbowItem
 		   }
 
 		   addChargedProjectile(p_220023_1_, itemstack);
-        
+
 		   return true;
 	   }
    }
-	   
+
    private static void addChargedProjectile(ItemStack crossbow, ItemStack projectile)
    {
 	   CompoundTag compoundnbt = crossbow.getOrCreateTag();
 	   ListTag listnbt;
-	
+
 	   if (compoundnbt.contains("ChargedProjectiles", 9))
 	   {
          listnbt = compoundnbt.getList("ChargedProjectiles", 10);
@@ -355,7 +355,7 @@ public class SteelCrossbow extends CrossbowItem
 	   listnbt.add(compoundnbt1);
 	   compoundnbt.put("ChargedProjectiles", listnbt);
    }
-   
+
    @Override
    public boolean isBookEnchantable(ItemStack stack, ItemStack book)
    {
@@ -367,12 +367,12 @@ public class SteelCrossbow extends CrossbowItem
    {
 	   return repair.getItem() == ItemInit.STEEL_INGOT.get();
    }
-	
+
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn)
 	{
 		super.appendHoverText(stack, worldIn, tooltip, flagIn);
 		tooltip.add((new TranslatableComponent("item.easy_steel.crossbow.line1").withStyle(ChatFormatting.GREEN)));
-		tooltip.add((new TranslatableComponent("item.easy_steel.crossbow.line2").withStyle(ChatFormatting.AQUA)));
+		//tooltip.add((new TranslatableComponent("item.easy_steel.crossbow.line2").withStyle(ChatFormatting.AQUA)));
 	}
 }

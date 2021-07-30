@@ -48,7 +48,7 @@ public class SteelBow extends BowItem
 
          int i = this.getUseDuration(stack) - timeLeft;
          i = net.minecraftforge.event.ForgeEventFactory.onArrowLoose(stack, worldIn, playerentity, i, !itemstack.isEmpty() || flag);
-         
+
          if (i < 0) return;
 
          if (!itemstack.isEmpty() || flag)
@@ -165,13 +165,13 @@ public class SteelBow extends BowItem
    public AbstractArrow customeArrow(AbstractArrow arrow) {
       return arrow;
    }
-   
+
    @Override
    public boolean isValidRepairItem(ItemStack toRepair, ItemStack repair)
    {
 	   return repair.getItem() == ItemInit.STEEL_INGOT.get();
    }
-   
+
 	@OnlyIn(Dist.CLIENT)
 	public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn)
 	{

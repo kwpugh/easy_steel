@@ -1,4 +1,4 @@
-package com.kwpugh.easy_steel.items;
+package com.kwpugh.easy_steel.items.misc;
 
 import java.util.List;
 
