@@ -2,7 +2,7 @@ package com.kwpugh.easy_steel;
 
 import com.kwpugh.easy_steel.init.ItemInit;
 
-import com.kwpugh.easy_steel.items.steel.SteelCrossbow;
+import com.kwpugh.easy_steel.items.baseclasses.CrossbowBase;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
@@ -55,20 +55,20 @@ public class EasySteelClient
             }
             else
             {
-                return SteelCrossbow.isCharged(p_174620_) ? 0.0F : (float)(p_174620_.getUseDuration() - p_174622_.getUseItemRemainingTicks()) / (float)SteelCrossbow.getChargeDuration(p_174620_);
+                return CrossbowBase.isCharged(p_174620_) ? 0.0F : (float)(p_174620_.getUseDuration() - p_174622_.getUseItemRemainingTicks()) / (float) CrossbowBase.getChargeDuration(p_174620_);
             }
         });
         ItemProperties.register(ItemInit.STEEL_CROSSBOW.get(), new ResourceLocation("pulling"), (p_174615_, p_174616_, p_174617_, p_174618_) ->
         {
-            return p_174617_ != null && p_174617_.isUsingItem() && p_174617_.getUseItem() == p_174615_ && !SteelCrossbow.isCharged(p_174615_) ? 1.0F : 0.0F;
+            return p_174617_ != null && p_174617_.isUsingItem() && p_174617_.getUseItem() == p_174615_ && !CrossbowBase.isCharged(p_174615_) ? 1.0F : 0.0F;
         });
         ItemProperties.register(ItemInit.STEEL_CROSSBOW.get(), new ResourceLocation("charged"), (p_174610_, p_174611_, p_174612_, p_174613_) ->
         {
-            return p_174612_ != null && SteelCrossbow.isCharged(p_174610_) ? 1.0F : 0.0F;
+            return p_174612_ != null && CrossbowBase.isCharged(p_174610_) ? 1.0F : 0.0F;
         });
         ItemProperties.register(ItemInit.STEEL_CROSSBOW.get(), new ResourceLocation("firework"), (p_174605_, p_174606_, p_174607_, p_174608_) ->
         {
-            return p_174607_ != null && SteelCrossbow.isCharged(p_174605_) && SteelCrossbow.containsChargedProjectile(p_174605_, Items.FIREWORK_ROCKET) ? 1.0F : 0.0F;
+            return p_174607_ != null && CrossbowBase.isCharged(p_174605_) && CrossbowBase.containsChargedProjectile(p_174605_, Items.FIREWORK_ROCKET) ? 1.0F : 0.0F;
         });
 
 
@@ -81,20 +81,20 @@ public class EasySteelClient
             }
             else
             {
-                return SteelCrossbow.isCharged(p_174620_) ? 0.0F : (float)(p_174620_.getUseDuration() - p_174622_.getUseItemRemainingTicks()) / (float)SteelCrossbow.getChargeDuration(p_174620_);
+                return CrossbowBase.isCharged(p_174620_) ? 0.0F : (float)(p_174620_.getUseDuration() - p_174622_.getUseItemRemainingTicks()) / (float) CrossbowBase.getChargeDuration(p_174620_);
             }
         });
         ItemProperties.register(ItemInit.HARDENED_STEEL_CROSSBOW.get(), new ResourceLocation("pulling"), (p_174615_, p_174616_, p_174617_, p_174618_) ->
         {
-            return p_174617_ != null && p_174617_.isUsingItem() && p_174617_.getUseItem() == p_174615_ && !SteelCrossbow.isCharged(p_174615_) ? 1.0F : 0.0F;
+            return p_174617_ != null && p_174617_.isUsingItem() && p_174617_.getUseItem() == p_174615_ && !CrossbowBase.isCharged(p_174615_) ? 1.0F : 0.0F;
         });
         ItemProperties.register(ItemInit.HARDENED_STEEL_CROSSBOW.get(), new ResourceLocation("charged"), (p_174610_, p_174611_, p_174612_, p_174613_) ->
         {
-            return p_174612_ != null && SteelCrossbow.isCharged(p_174610_) ? 1.0F : 0.0F;
+            return p_174612_ != null && CrossbowBase.isCharged(p_174610_) ? 1.0F : 0.0F;
         });
         ItemProperties.register(ItemInit.HARDENED_STEEL_CROSSBOW.get(), new ResourceLocation("firework"), (p_174605_, p_174606_, p_174607_, p_174608_) ->
         {
-            return p_174607_ != null && SteelCrossbow.isCharged(p_174605_) && SteelCrossbow.containsChargedProjectile(p_174605_, Items.FIREWORK_ROCKET) ? 1.0F : 0.0F;
+            return p_174607_ != null && CrossbowBase.isCharged(p_174605_) && CrossbowBase.containsChargedProjectile(p_174605_, Items.FIREWORK_ROCKET) ? 1.0F : 0.0F;
         });
     }
 }

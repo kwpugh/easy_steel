@@ -1,4 +1,4 @@
-package com.kwpugh.easy_steel.items.steel;
+package com.kwpugh.easy_steel.items.baseclasses;
 
 import java.util.List;
 import java.util.Random;
@@ -34,8 +34,6 @@ import com.mojang.math.Quaternion;
 import net.minecraft.world.phys.Vec3;
 import com.mojang.math.Vector3f;
 import net.minecraft.network.chat.Component;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -45,11 +43,11 @@ import net.minecraftforge.api.distmarker.OnlyIn;
  *
  */
 
-public class SteelCrossbow extends CrossbowItem
+public class CrossbowBase extends CrossbowItem
 {
 	static Random random = new Random();
 
-	public SteelCrossbow(Properties propertiesIn)
+	public CrossbowBase(Properties propertiesIn)
 	{
 		super(propertiesIn);
 	}
@@ -372,7 +370,5 @@ public class SteelCrossbow extends CrossbowItem
 	public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn)
 	{
 		super.appendHoverText(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslatableComponent("item.easy_steel.crossbow.line1").withStyle(ChatFormatting.GREEN)));
-		//tooltip.add((new TranslatableComponent("item.easy_steel.crossbow.line2").withStyle(ChatFormatting.AQUA)));
 	}
 }

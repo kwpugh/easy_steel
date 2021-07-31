@@ -1,4 +1,4 @@
-package com.kwpugh.easy_steel.items.toolclasses;
+package com.kwpugh.easy_steel.items.baseclasses;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,8 +40,6 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-
-import net.minecraft.world.item.Item.Properties;
 
 /*
  * Adapted from several sources

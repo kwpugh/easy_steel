@@ -1,4 +1,4 @@
-package com.kwpugh.easy_steel.items.steel;
+package com.kwpugh.easy_steel.items.baseclasses;
 
 import java.util.List;
 import java.util.function.Predicate;
@@ -25,15 +25,13 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.network.chat.Component;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class SteelBow extends BowItem
+public class BowBase extends BowItem
 {
-   public SteelBow(Item.Properties builder)
+   public BowBase(Item.Properties builder)
    {
       super(builder);
    }
@@ -176,6 +174,5 @@ public class SteelBow extends BowItem
 	public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn)
 	{
 		super.appendHoverText(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslatableComponent("item.easy_steel.bow.line1").withStyle(ChatFormatting.GREEN)));
 	}
 }

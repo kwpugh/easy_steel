@@ -1,4 +1,4 @@
-package com.kwpugh.easy_steel.items.toolclasses;
+package com.kwpugh.easy_steel.items.baseclasses;
 
 import java.util.List;
 import java.util.Map;
@@ -37,8 +37,6 @@ import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.util.Constants.WorldEvents;
-
-import net.minecraft.world.item.Item.Properties;
 
 /*
  * This is the base class for all types of Paxels
