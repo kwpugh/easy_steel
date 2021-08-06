@@ -5,6 +5,7 @@ import com.kwpugh.easy_steel.init.ItemInit;
 import com.kwpugh.easy_steel.items.baseclasses.CrossbowBase;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.CrossbowItem;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -55,20 +56,20 @@ public class EasySteelClient
             }
             else
             {
-                return CrossbowBase.isCharged(itemStack) ? 0.0F : (float)(itemStack.getUseDuration() - livingEntity.getUseItemRemainingTicks()) / (float) CrossbowBase.getChargeDuration(itemStack);
+                return CrossbowItem.isCharged(itemStack) ? 0.0F : (float)(itemStack.getUseDuration() - livingEntity.getUseItemRemainingTicks()) / (float) CrossbowBase.getChargeDuration(itemStack);
             }
         });
         ItemProperties.register(ItemInit.STEEL_CROSSBOW.get(), new ResourceLocation("pulling"), (itemStack, world, livingEntity, seed) ->
         {
-            return livingEntity != null && livingEntity.isUsingItem() && livingEntity.getUseItem() == itemStack && !CrossbowBase.isCharged(itemStack) ? 1.0F : 0.0F;
+            return livingEntity != null && livingEntity.isUsingItem() && livingEntity.getUseItem() == itemStack && !CrossbowItem.isCharged(itemStack) ? 1.0F : 0.0F;
         });
         ItemProperties.register(ItemInit.STEEL_CROSSBOW.get(), new ResourceLocation("charged"), (itemStack, world, livingEntity, seed) ->
         {
-            return livingEntity != null && CrossbowBase.isCharged(itemStack) ? 1.0F : 0.0F;
+            return livingEntity != null && CrossbowItem.isCharged(itemStack) ? 1.0F : 0.0F;
         });
         ItemProperties.register(ItemInit.STEEL_CROSSBOW.get(), new ResourceLocation("firework"), (itemStack, world, livingEntity, seed) ->
         {
-            return livingEntity != null && CrossbowBase.isCharged(itemStack) && CrossbowBase.containsChargedProjectile(itemStack, Items.FIREWORK_ROCKET) ? 1.0F : 0.0F;
+            return livingEntity != null && CrossbowItem.isCharged(itemStack) && CrossbowItem.containsChargedProjectile(itemStack, Items.FIREWORK_ROCKET) ? 1.0F : 0.0F;
         });
 
 
@@ -81,20 +82,20 @@ public class EasySteelClient
             }
             else
             {
-                return CrossbowBase.isCharged(itemStack) ? 0.0F : (float)(itemStack.getUseDuration() - livingEntity.getUseItemRemainingTicks()) / (float) CrossbowBase.getChargeDuration(itemStack);
+                return CrossbowItem.isCharged(itemStack) ? 0.0F : (float)(itemStack.getUseDuration() - livingEntity.getUseItemRemainingTicks()) / (float) CrossbowItem.getChargeDuration(itemStack);
             }
         });
         ItemProperties.register(ItemInit.HARDENED_STEEL_CROSSBOW.get(), new ResourceLocation("pulling"), (itemStack, world, livingEntity, seed) ->
         {
-            return livingEntity != null && livingEntity.isUsingItem() && livingEntity.getUseItem() == itemStack && !CrossbowBase.isCharged(itemStack) ? 1.0F : 0.0F;
+            return livingEntity != null && livingEntity.isUsingItem() && livingEntity.getUseItem() == itemStack && !CrossbowItem.isCharged(itemStack) ? 1.0F : 0.0F;
         });
         ItemProperties.register(ItemInit.HARDENED_STEEL_CROSSBOW.get(), new ResourceLocation("charged"), (itemStack, world, livingEntity, seed) ->
         {
-            return livingEntity != null && CrossbowBase.isCharged(itemStack) ? 1.0F : 0.0F;
+            return livingEntity != null && CrossbowItem.isCharged(itemStack) ? 1.0F : 0.0F;
         });
         ItemProperties.register(ItemInit.HARDENED_STEEL_CROSSBOW.get(), new ResourceLocation("firework"), (itemStack, world, livingEntity, seed) ->
         {
-            return livingEntity != null && CrossbowBase.isCharged(itemStack) && CrossbowBase.containsChargedProjectile(itemStack, Items.FIREWORK_ROCKET) ? 1.0F : 0.0F;
+            return livingEntity != null && CrossbowItem.isCharged(itemStack) && CrossbowItem.containsChargedProjectile(itemStack, Items.FIREWORK_ROCKET) ? 1.0F : 0.0F;
         });
     }
 }
