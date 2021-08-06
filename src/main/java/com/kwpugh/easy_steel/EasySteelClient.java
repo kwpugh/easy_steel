@@ -47,54 +47,54 @@ public class EasySteelClient
 
 
         // Steel Crossbow
-        ItemProperties.register(ItemInit.STEEL_CROSSBOW.get(), new ResourceLocation("pull"), (p_174620_, p_174621_, p_174622_, p_174623_) ->
+        ItemProperties.register(ItemInit.STEEL_CROSSBOW.get(), new ResourceLocation("pull"), (itemStack, world, livingEntity, seed) ->
         {
-            if (p_174622_ == null)
+            if (livingEntity == null)
             {
                 return 0.0F;
             }
             else
             {
-                return CrossbowBase.isCharged(p_174620_) ? 0.0F : (float)(p_174620_.getUseDuration() - p_174622_.getUseItemRemainingTicks()) / (float) CrossbowBase.getChargeDuration(p_174620_);
+                return CrossbowBase.isCharged(itemStack) ? 0.0F : (float)(itemStack.getUseDuration() - livingEntity.getUseItemRemainingTicks()) / (float) CrossbowBase.getChargeDuration(itemStack);
             }
         });
-        ItemProperties.register(ItemInit.STEEL_CROSSBOW.get(), new ResourceLocation("pulling"), (p_174615_, p_174616_, p_174617_, p_174618_) ->
+        ItemProperties.register(ItemInit.STEEL_CROSSBOW.get(), new ResourceLocation("pulling"), (itemStack, world, livingEntity, seed) ->
         {
-            return p_174617_ != null && p_174617_.isUsingItem() && p_174617_.getUseItem() == p_174615_ && !CrossbowBase.isCharged(p_174615_) ? 1.0F : 0.0F;
+            return livingEntity != null && livingEntity.isUsingItem() && livingEntity.getUseItem() == itemStack && !CrossbowBase.isCharged(itemStack) ? 1.0F : 0.0F;
         });
-        ItemProperties.register(ItemInit.STEEL_CROSSBOW.get(), new ResourceLocation("charged"), (p_174610_, p_174611_, p_174612_, p_174613_) ->
+        ItemProperties.register(ItemInit.STEEL_CROSSBOW.get(), new ResourceLocation("charged"), (itemStack, world, livingEntity, seed) ->
         {
-            return p_174612_ != null && CrossbowBase.isCharged(p_174610_) ? 1.0F : 0.0F;
+            return livingEntity != null && CrossbowBase.isCharged(itemStack) ? 1.0F : 0.0F;
         });
-        ItemProperties.register(ItemInit.STEEL_CROSSBOW.get(), new ResourceLocation("firework"), (p_174605_, p_174606_, p_174607_, p_174608_) ->
+        ItemProperties.register(ItemInit.STEEL_CROSSBOW.get(), new ResourceLocation("firework"), (itemStack, world, livingEntity, seed) ->
         {
-            return p_174607_ != null && CrossbowBase.isCharged(p_174605_) && CrossbowBase.containsChargedProjectile(p_174605_, Items.FIREWORK_ROCKET) ? 1.0F : 0.0F;
+            return livingEntity != null && CrossbowBase.isCharged(itemStack) && CrossbowBase.containsChargedProjectile(itemStack, Items.FIREWORK_ROCKET) ? 1.0F : 0.0F;
         });
 
 
         // Hardened Steel Crossbow
-        ItemProperties.register(ItemInit.HARDENED_STEEL_CROSSBOW.get(), new ResourceLocation("pull"), (p_174620_, p_174621_, p_174622_, p_174623_) ->
+        ItemProperties.register(ItemInit.HARDENED_STEEL_CROSSBOW.get(), new ResourceLocation("pull"), (itemStack, world, livingEntity, seed) ->
         {
-            if (p_174622_ == null)
+            if (livingEntity == null)
             {
                 return 0.0F;
             }
             else
             {
-                return CrossbowBase.isCharged(p_174620_) ? 0.0F : (float)(p_174620_.getUseDuration() - p_174622_.getUseItemRemainingTicks()) / (float) CrossbowBase.getChargeDuration(p_174620_);
+                return CrossbowBase.isCharged(itemStack) ? 0.0F : (float)(itemStack.getUseDuration() - livingEntity.getUseItemRemainingTicks()) / (float) CrossbowBase.getChargeDuration(itemStack);
             }
         });
-        ItemProperties.register(ItemInit.HARDENED_STEEL_CROSSBOW.get(), new ResourceLocation("pulling"), (p_174615_, p_174616_, p_174617_, p_174618_) ->
+        ItemProperties.register(ItemInit.HARDENED_STEEL_CROSSBOW.get(), new ResourceLocation("pulling"), (itemStack, world, livingEntity, seed) ->
         {
-            return p_174617_ != null && p_174617_.isUsingItem() && p_174617_.getUseItem() == p_174615_ && !CrossbowBase.isCharged(p_174615_) ? 1.0F : 0.0F;
+            return livingEntity != null && livingEntity.isUsingItem() && livingEntity.getUseItem() == itemStack && !CrossbowBase.isCharged(itemStack) ? 1.0F : 0.0F;
         });
-        ItemProperties.register(ItemInit.HARDENED_STEEL_CROSSBOW.get(), new ResourceLocation("charged"), (p_174610_, p_174611_, p_174612_, p_174613_) ->
+        ItemProperties.register(ItemInit.HARDENED_STEEL_CROSSBOW.get(), new ResourceLocation("charged"), (itemStack, world, livingEntity, seed) ->
         {
-            return p_174612_ != null && CrossbowBase.isCharged(p_174610_) ? 1.0F : 0.0F;
+            return livingEntity != null && CrossbowBase.isCharged(itemStack) ? 1.0F : 0.0F;
         });
-        ItemProperties.register(ItemInit.HARDENED_STEEL_CROSSBOW.get(), new ResourceLocation("firework"), (p_174605_, p_174606_, p_174607_, p_174608_) ->
+        ItemProperties.register(ItemInit.HARDENED_STEEL_CROSSBOW.get(), new ResourceLocation("firework"), (itemStack, world, livingEntity, seed) ->
         {
-            return p_174607_ != null && CrossbowBase.isCharged(p_174605_) && CrossbowBase.containsChargedProjectile(p_174605_, Items.FIREWORK_ROCKET) ? 1.0F : 0.0F;
+            return livingEntity != null && CrossbowBase.isCharged(itemStack) && CrossbowBase.containsChargedProjectile(itemStack, Items.FIREWORK_ROCKET) ? 1.0F : 0.0F;
         });
     }
 }
