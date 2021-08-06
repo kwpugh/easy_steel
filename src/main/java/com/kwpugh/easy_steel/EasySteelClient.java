@@ -3,6 +3,7 @@ package com.kwpugh.easy_steel;
 import com.kwpugh.easy_steel.init.ItemInit;
 
 import com.kwpugh.easy_steel.items.baseclasses.CrossbowBase;
+
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CrossbowItem;
