@@ -158,28 +158,28 @@ public class ItemInit
 	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_EXCAVATOR = ITEMS.register("tungsten_carbide_excavator", () -> new ExcavatorBase(TUNGSTEN_TOOL_MATERIAL, 3, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_PAXEL = ITEMS.register("tungsten_carbide_paxel", () -> new PaxelBase(7, -3.2f, TUNGSTEN_TOOL_MATERIAL, TagInit.PAXEL_MINEABLE, new Item.Properties().tab(EasySteel.easy_steel)));
 
-	public static final RegistryObject<Item> ARMOR_BRONZE_HEAD = ITEMS.register("armor_bronze_head", () -> new ArmorBase(BRONZE_ARMOR_MATERIAL, EquipmentSlot.HEAD, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> ARMOR_BRONZE_BODY = ITEMS.register("armor_bronze_body", () -> new ArmorBase(BRONZE_ARMOR_MATERIAL, EquipmentSlot.CHEST, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> ARMOR_BRONZE_LEGGINGS = ITEMS.register("armor_bronze_leggings", () -> new ArmorBase(BRONZE_ARMOR_MATERIAL, EquipmentSlot.LEGS, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> ARMOR_BRONZE_BOOTS = ITEMS.register("armor_bronze_boots", () -> new ArmorBase(BRONZE_ARMOR_MATERIAL, EquipmentSlot.FEET, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> ARMOR_BRONZE_HEAD = ITEMS.register("armor_bronze_head", () -> new ArmorItem(BRONZE_ARMOR_MATERIAL, EquipmentSlot.HEAD, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> ARMOR_BRONZE_BODY = ITEMS.register("armor_bronze_body", () -> new ArmorItem(BRONZE_ARMOR_MATERIAL, EquipmentSlot.CHEST, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> ARMOR_BRONZE_LEGGINGS = ITEMS.register("armor_bronze_leggings", () -> new ArmorItem(BRONZE_ARMOR_MATERIAL, EquipmentSlot.LEGS, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> ARMOR_BRONZE_BOOTS = ITEMS.register("armor_bronze_boots", () -> new ArmorItem(BRONZE_ARMOR_MATERIAL, EquipmentSlot.FEET, new Item.Properties().tab(EasySteel.easy_steel)));
 
-	public static final RegistryObject<Item> ARMOR_STEEL_HEAD = ITEMS.register("armor_steel_head", () -> new ArmorBase(STEEL_ARMOR_MATERIAL, EquipmentSlot.HEAD, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> ARMOR_STEEL_BODY = ITEMS.register("armor_steel_body", () -> new ArmorBase(STEEL_ARMOR_MATERIAL, EquipmentSlot.CHEST, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> ARMOR_STEEL_LEGGINGS = ITEMS.register("armor_steel_leggings", () -> new ArmorBase(STEEL_ARMOR_MATERIAL, EquipmentSlot.LEGS, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> ARMOR_STEEL_BOOTS = ITEMS.register("armor_steel_boots", () -> new ArmorBase(STEEL_ARMOR_MATERIAL, EquipmentSlot.FEET, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> ARMOR_STEEL_HEAD = ITEMS.register("armor_steel_head", () -> new ArmorItem(STEEL_ARMOR_MATERIAL, EquipmentSlot.HEAD, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> ARMOR_STEEL_BODY = ITEMS.register("armor_steel_body", () -> new ArmorItem(STEEL_ARMOR_MATERIAL, EquipmentSlot.CHEST, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> ARMOR_STEEL_LEGGINGS = ITEMS.register("armor_steel_leggings", () -> new ArmorItem(STEEL_ARMOR_MATERIAL, EquipmentSlot.LEGS, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> ARMOR_STEEL_BOOTS = ITEMS.register("armor_steel_boots", () -> new ArmorItem(STEEL_ARMOR_MATERIAL, EquipmentSlot.FEET, new Item.Properties().tab(EasySteel.easy_steel)));
 	
-	public static final RegistryObject<Item> ARMOR_TITANIUM_HEAD = ITEMS.register("armor_titanium_head", () -> new ArmorBase(TITANIUM_ARMOR_MATERIAL, EquipmentSlot.HEAD, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> ARMOR_TITANIUM_BODY = ITEMS.register("armor_titanium_body", () -> new ArmorBase(TITANIUM_ARMOR_MATERIAL, EquipmentSlot.CHEST, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> ARMOR_TITANIUM_LEGGINGS = ITEMS.register("armor_titanium_leggings", () -> new ArmorBase(TITANIUM_ARMOR_MATERIAL, EquipmentSlot.LEGS, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> ARMOR_TITANIUM_BOOTS = ITEMS.register("armor_titanium_boots", () -> new ArmorBase(TITANIUM_ARMOR_MATERIAL, EquipmentSlot.FEET, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> ARMOR_TITANIUM_HEAD = ITEMS.register("armor_titanium_head", () -> new ArmorItem(TITANIUM_ARMOR_MATERIAL, EquipmentSlot.HEAD, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> ARMOR_TITANIUM_BODY = ITEMS.register("armor_titanium_body", () -> new ArmorItem(TITANIUM_ARMOR_MATERIAL, EquipmentSlot.CHEST, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> ARMOR_TITANIUM_LEGGINGS = ITEMS.register("armor_titanium_leggings", () -> new ArmorItem(TITANIUM_ARMOR_MATERIAL, EquipmentSlot.LEGS, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> ARMOR_TITANIUM_BOOTS = ITEMS.register("armor_titanium_boots", () -> new ArmorItem(TITANIUM_ARMOR_MATERIAL, EquipmentSlot.FEET, new Item.Properties().tab(EasySteel.easy_steel)));
 	
-	public static final RegistryObject<Item> ARMOR_HARDENED_STEEL_HEAD = ITEMS.register("armor_hardened_steel_head", () -> new ArmorBase(HARDENED_STEEL_ARMOR_MATERIAL, EquipmentSlot.HEAD, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> ARMOR_HARDENED_STEEL_BODY = ITEMS.register("armor_hardened_steel_body", () -> new ArmorBase(HARDENED_STEEL_ARMOR_MATERIAL, EquipmentSlot.CHEST, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> ARMOR_HARDENED_STEEL_LEGGINGS = ITEMS.register("armor_hardened_steel_leggings", () -> new ArmorBase(HARDENED_STEEL_ARMOR_MATERIAL, EquipmentSlot.LEGS, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> ARMOR_HARDENED_STEEL_BOOTS = ITEMS.register("armor_hardened_steel_boots", () -> new ArmorBase(HARDENED_STEEL_ARMOR_MATERIAL, EquipmentSlot.FEET, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> ARMOR_HARDENED_STEEL_HEAD = ITEMS.register("armor_hardened_steel_head", () -> new ArmorItem(HARDENED_STEEL_ARMOR_MATERIAL, EquipmentSlot.HEAD, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> ARMOR_HARDENED_STEEL_BODY = ITEMS.register("armor_hardened_steel_body", () -> new ArmorItem(HARDENED_STEEL_ARMOR_MATERIAL, EquipmentSlot.CHEST, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> ARMOR_HARDENED_STEEL_LEGGINGS = ITEMS.register("armor_hardened_steel_leggings", () -> new ArmorItem(HARDENED_STEEL_ARMOR_MATERIAL, EquipmentSlot.LEGS, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> ARMOR_HARDENED_STEEL_BOOTS = ITEMS.register("armor_hardened_steel_boots", () -> new ArmorItem(HARDENED_STEEL_ARMOR_MATERIAL, EquipmentSlot.FEET, new Item.Properties().tab(EasySteel.easy_steel)));
 	
-	public static final RegistryObject<Item> ARMOR_TUNGSTEN_CARBIDE_HEAD = ITEMS.register("armor_tungsten_carbide_head", () -> new ArmorBase(TUNGSTEN_ARMOR_MATERIAL, EquipmentSlot.HEAD, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> ARMOR_TUNGSTEN_CARBIDE_BODY = ITEMS.register("armor_tungsten_carbide_body", () -> new ArmorBase(TUNGSTEN_ARMOR_MATERIAL, EquipmentSlot.CHEST, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> ARMOR_TUNGSTEN_CARBIDE_LEGGINGS = ITEMS.register("armor_tungsten_carbide_leggings", () -> new ArmorBase(TUNGSTEN_ARMOR_MATERIAL, EquipmentSlot.LEGS, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> ARMOR_TUNGSTEN_CARBIDE_BOOTS = ITEMS.register("armor_tungsten_carbide_boots", () -> new ArmorBase(TUNGSTEN_ARMOR_MATERIAL, EquipmentSlot.FEET, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> ARMOR_TUNGSTEN_CARBIDE_HEAD = ITEMS.register("armor_tungsten_carbide_head", () -> new ArmorItem(TUNGSTEN_ARMOR_MATERIAL, EquipmentSlot.HEAD, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> ARMOR_TUNGSTEN_CARBIDE_BODY = ITEMS.register("armor_tungsten_carbide_body", () -> new ArmorItem(TUNGSTEN_ARMOR_MATERIAL, EquipmentSlot.CHEST, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> ARMOR_TUNGSTEN_CARBIDE_LEGGINGS = ITEMS.register("armor_tungsten_carbide_leggings", () -> new ArmorItem(TUNGSTEN_ARMOR_MATERIAL, EquipmentSlot.LEGS, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> ARMOR_TUNGSTEN_CARBIDE_BOOTS = ITEMS.register("armor_tungsten_carbide_boots", () -> new ArmorItem(TUNGSTEN_ARMOR_MATERIAL, EquipmentSlot.FEET, new Item.Properties().tab(EasySteel.easy_steel)));
 }
