@@ -1,19 +1,14 @@
 package com.kwpugh.easy_steel;
 
-import java.util.stream.Collectors;
-
-import net.minecraftforge.fmlserverevents.FMLServerStartingEvent;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import com.kwpugh.easy_steel.config.EasySteelConfig;
 import com.kwpugh.easy_steel.group.GroupEasySteel;
 import com.kwpugh.easy_steel.init.BlockInit;
 import com.kwpugh.easy_steel.init.ItemInit;
-import com.kwpugh.easy_steel.world.OreGenerator;
-
+import com.kwpugh.easy_steel.world.EasySteelConfiguredFeature;
+import com.kwpugh.easy_steel.world.EasySteelPlacedFeature;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
@@ -23,6 +18,10 @@ import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLPaths;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.util.stream.Collectors;
 
 @Mod("easy_steel")
 public class EasySteel
@@ -46,7 +45,8 @@ public class EasySteel
 
     private void setup(final FMLCommonSetupEvent event)
     {
-        OreGenerator.registerConfiguredFeatures();
+        EasySteelConfiguredFeature.registerConfiguredFeatures();
+        EasySteelPlacedFeature.registerPlacedFeatures();
 
         logger.info("EasySteel common setup complete");
     }
@@ -69,7 +69,7 @@ public class EasySteel
     }
 
     @SubscribeEvent
-    public void onServerStarting(FMLServerStartingEvent event)
+    public void onServerStarting(ServerStartingEvent event)
     {
     	logger.info("EasySteel server setup complete");
     }

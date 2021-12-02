@@ -16,7 +16,7 @@ import com.kwpugh.easy_steel.lists.*;
 import net.minecraft.world.entity.EquipmentSlot;
 
 import net.minecraft.world.item.*;
-import net.minecraftforge.fmllegacy.RegistryObject;
+import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
@@ -44,8 +44,13 @@ public class ItemInit
 	public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, EasySteel.modid);
 
 	public static final RegistryObject<Item> CASSITERITE_ORE = ITEMS.register("cassiterite_ore", () -> new BlockItem(BlockInit.CASSITERITE_ORE.get(), new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> CASSITERITE_ORE_DEEPSLATE = ITEMS.register("cassiterite_ore_deepslate", () -> new BlockItem(BlockInit.CASSITERITE_ORE_DEEPSLATE.get(), new Item.Properties().tab(EasySteel.easy_steel)));
+
 	public static final RegistryObject<Item> RUTILE_ORE = ITEMS.register("rutile_ore", () -> new BlockItem(BlockInit.RUTILE_ORE.get(), new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> RUTILE_ORE_DEEPSLATE = ITEMS.register("rutile_ore_deepslate", () -> new BlockItem(BlockInit.RUTILE_ORE_DEEPSLATE.get(), new Item.Properties().tab(EasySteel.easy_steel)));
+
 	public static final RegistryObject<Item> WOLFRAMITE_ORE = ITEMS.register("wolframite_ore", () -> new BlockItem(BlockInit.WOLFRAMITE_ORE.get(), new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> WOLFRAMITE_ORE_DEEPSLATE = ITEMS.register("wolframite_ore_deepslate", () -> new BlockItem(BlockInit.WOLFRAMITE_ORE_DEEPSLATE.get(), new Item.Properties().tab(EasySteel.easy_steel)));
 
 	public static final RegistryObject<Item> RAW_TIN = ITEMS.register("raw_tin", () -> new Item(new Item.Properties().tab(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> RAW_TITANIUM = ITEMS.register("raw_titanium", () -> new Item(new Item.Properties().tab(EasySteel.easy_steel)));

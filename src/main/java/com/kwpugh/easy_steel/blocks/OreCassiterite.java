@@ -29,6 +29,5 @@ public class OreCassiterite extends OreBlock
 	{
 		super.appendHoverText(stack, worldIn, tooltip, flagIn);
 		tooltip.add((new TranslatableComponent("item.easy_steel.cassiterite_ore.line1").withStyle(ChatFormatting.GREEN)));
-
 	}
 }
