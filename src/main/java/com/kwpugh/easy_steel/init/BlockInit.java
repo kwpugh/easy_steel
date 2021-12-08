@@ -25,7 +25,11 @@ public class BlockInit
 
 	public static final RegistryObject<Block> RUTILE_ORE = BLOCKS.register("rutile_ore", () -> new OreRutile(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.METAL).strength(3.0F, 3.0F).requiresCorrectToolForDrops().sound(SoundType.METAL)));
 	public static final RegistryObject<Block> RUTILE_ORE_DEEPSLATE = BLOCKS.register("rutile_ore_deepslate", () -> new OreRutile(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.METAL).strength(3.0F, 3.0F).requiresCorrectToolForDrops().sound(SoundType.METAL)));
-	
+
+	public static final RegistryObject<Block> RAW_TIN_BLOCK = BLOCKS.register("raw_tin_block", () -> new Block(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(3.0F, 3.0F).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+	public static final RegistryObject<Block> RAW_TITANIUM_BLOCK = BLOCKS.register("raw_titanium_block", () -> new Block(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(3.0F, 3.0F).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+	public static final RegistryObject<Block> RAW_TUNGSTEN_BLOCK = BLOCKS.register("raw_tungsten_block", () -> new Block(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(3.0F, 3.0F).requiresCorrectToolForDrops().sound(SoundType.METAL)));
+
 	public static final RegistryObject<Block> BRONZE_BLOCK = BLOCKS.register("bronze_block", () -> new Block(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(3.0F, 3.0F).requiresCorrectToolForDrops().sound(SoundType.METAL)));
 	public static final RegistryObject<Block> TUNGSTEN_BLOCK = BLOCKS.register("tungsten_block", () -> new Block(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(3.0F, 3.0F).requiresCorrectToolForDrops().sound(SoundType.METAL)));
 	public static final RegistryObject<Block> STEEL_BLOCK = BLOCKS.register("steel_block", () -> new Block(Block.Properties.of(Material.METAL, MaterialColor.METAL).strength(3.0F, 3.0F).requiresCorrectToolForDrops().sound(SoundType.METAL)));

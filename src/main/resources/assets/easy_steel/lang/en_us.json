@@ -80,7 +80,14 @@
 	"item.easy_steel.titanium_rod": "Titanium Alloy Rod",
 	"item.easy_steel.hardened_steel_rod": "Hardened Steel Rod",
 	"item.easy_steel.tungsten_carbide_rod": "Tungsten-Carbide Rod",
-	
+
+	"item.easy_steel.raw_tin_block": "Raw Tin Block",
+	"block.easy_steel.raw_tin_block": "Raw Tin Block",
+	"item.easy_steel.raw_titanium_block": "Raw Titanium Block",
+	"block.easy_steel.raw_titanium_block": "Raw Titanium Block",
+	"item.easy_steel.raw_tungsten_block": "Raw Tungsten Block",
+	"block.easy_steel.raw_tungsten_block": "Raw Tungsten Block",
+
 	"item.easy_steel.bronze_block": "Bronze Block",
 	"block.easy_steel.bronze_block": "Bronze Block",	
 	"item.easy_steel.tungsten_block": "Tungsten Block",

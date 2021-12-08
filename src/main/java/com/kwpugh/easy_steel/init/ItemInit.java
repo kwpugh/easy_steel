@@ -96,7 +96,11 @@ public class ItemInit
 	public static final RegistryObject<Item> TITANIUM_ALLOY_INGOT = ITEMS.register("titanium_alloy_ingot", () -> new Item(new Item.Properties().tab(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> HARDENED_STEEL_INGOT = ITEMS.register("hardened_steel_ingot", () -> new Item(new Item.Properties().tab(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_INGOT = ITEMS.register("tungsten_carbide_ingot", () -> new Item(new Item.Properties().tab(EasySteel.easy_steel)));
-	
+
+	public static final RegistryObject<Item> RAW_TIN_BLOCK = ITEMS.register("raw_tin_block", () -> new BlockItem(BlockInit.RAW_TIN_BLOCK.get(), new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> RAW_TITANIUM_BLOCK = ITEMS.register("raw_titanium_block", () -> new BlockItem(BlockInit.RAW_TITANIUM_BLOCK.get(), new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> RAW_TUNGSTEN_BLOCK = ITEMS.register("raw_tungsten_block", () -> new BlockItem(BlockInit.RAW_TUNGSTEN_BLOCK.get(), new Item.Properties().tab(EasySteel.easy_steel)));
+
 	public static final RegistryObject<Item> BRONZE_BLOCK = ITEMS.register("bronze_block", () -> new BlockItem(BlockInit.BRONZE_BLOCK.get(), new Item.Properties().tab(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> TUNGSTEN_BLOCK = ITEMS.register("tungsten_block", () -> new BlockItem(BlockInit.TUNGSTEN_BLOCK.get(), new Item.Properties().tab(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> STEEL_BLOCK = ITEMS.register("steel_block", () -> new BlockItem(BlockInit.STEEL_BLOCK.get(), new Item.Properties().tab(EasySteel.easy_steel)));
