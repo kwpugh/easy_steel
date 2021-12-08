@@ -76,13 +76,34 @@ public class EasySteelPlacedFeature
     public static void registerBiomeModification(final BiomeLoadingEvent event)
     {
         // Add features to be inserted into biome generation
-		event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ORE_CASSITERITE_OVERWORLD);
-        event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ORE_RUTILE_OVERWORLD);
-        event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ORE_WOLFRAMITE_OVERWORLD);
+		if(GeneralModConfig.CASSITERITE_ORE_GENERATION.get())
+        {
+            event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ORE_CASSITERITE_OVERWORLD);
+        }
 
-        event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ORE_CASSITERITE_OVERWORLD_DEEPSLATE);
-        event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ORE_RUTILE_OVERWORLD_DEEPSLATE);
-        event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ORE_WOLFRAMITE_OVERWORLD_DEEPSLATE);
+		if(GeneralModConfig.RUTILE_ORE_GENERATION.get())
+        {
+            event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ORE_RUTILE_OVERWORLD);
+        }
+		if(GeneralModConfig.WOLFRAMITE_ORE_GENERATION.get())
+        {
+            event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ORE_WOLFRAMITE_OVERWORLD);
+        }
+
+		if(GeneralModConfig.CASSITERITE_ORE_DEEPSLATE_GENERATION.get())
+        {
+            event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ORE_CASSITERITE_OVERWORLD_DEEPSLATE);
+        }
+
+		if(GeneralModConfig.RUTILE_ORE_DEEPSLATE_GENERATION.get())
+        {
+            event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ORE_RUTILE_OVERWORLD_DEEPSLATE);
+        }
+
+		if(GeneralModConfig.WOLFRAMITE_ORE_DEEPSLATE_GENERATION.get())
+        {
+            event.getGeneration().getFeatures(GenerationStep.Decoration.UNDERGROUND_ORES).add(() -> ORE_WOLFRAMITE_OVERWORLD_DEEPSLATE);
+        }
 
     }
 
