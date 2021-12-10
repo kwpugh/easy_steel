@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"III",
+		"III",
+		"III"
+	],
+	
+	"key":
+	{
+		"I": { "item": "easy_steel:raw_titanium" }
+	},
+	
+	"result": { "item": "easy_steel:raw_titanium_block" }
+}

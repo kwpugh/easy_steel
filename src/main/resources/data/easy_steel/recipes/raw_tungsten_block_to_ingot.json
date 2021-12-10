@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shaped",
+	
+	"pattern":
+	[
+		"   ",
+		" B ",
+		"   "
+	],
+	
+	"key":
+	{
+		"B": { "item": "easy_steel:raw_tungsten_block" }
+	},
+	
+	"result": { "item": "easy_steel:raw_tungsten",
+	"count": 9 }
+}
