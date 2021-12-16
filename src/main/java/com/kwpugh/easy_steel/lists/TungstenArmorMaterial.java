@@ -16,8 +16,13 @@ public class TungstenArmorMaterial implements ArmorMaterial
     private static double toughness = GeneralModConfig.TUNGSTEN_ARMOR_TOUGHNESS.get();
     private static double knochback = GeneralModConfig.TUNGSTEN_ARMOR_KNOCKBACK_RESISTANCE.get();
 
+    private static int tungstenHead = GeneralModConfig.TUNGSTEN_ARMOR_PROTECTION_HEAD.get();
+    private static int tungstenBody = GeneralModConfig.TUNGSTEN_ARMOR_PROTECTION_BODY.get();
+    private static int tungstenLeggings = GeneralModConfig.TUNGSTEN_ARMOR_PROTECTION_LEGGINGS.get();
+    private static int tungstenFeet = GeneralModConfig.TUNGSTEN_ARMOR_PROTECTION_FEET.get();
+
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
-    private static final int[] PROTECTION_AMOUNT = new int[]{3, 6, 8, 3};
+    private static final int[] PROTECTION_AMOUNT = new int[]{tungstenHead, tungstenLeggings, tungstenBody, tungstenFeet};
 
     @Override
     public int getDurabilityForSlot(EquipmentSlot slot)

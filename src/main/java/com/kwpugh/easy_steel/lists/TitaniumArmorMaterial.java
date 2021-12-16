@@ -16,8 +16,13 @@ public class TitaniumArmorMaterial implements ArmorMaterial
     private static double toughness = GeneralModConfig.TITANIUM_ARMOR_TOUGHNESS.get();
     private static double knochback = GeneralModConfig.TITANIUM_ARMOR_KNOCKBACK_RESISTANCE.get();
 
+    private static int titaniumHead = GeneralModConfig.TITANIUM_ARMOR_PROTECTION_HEAD.get();
+    private static int titaniumBody = GeneralModConfig.TITANIUM_ARMOR_PROTECTION_BODY.get();
+    private static int titaniumLeggings = GeneralModConfig.TITANIUM_ARMOR_PROTECTION_LEGGINGS.get();
+    private static int titaniumFeet = GeneralModConfig.TITANIUM_ARMOR_PROTECTION_FEET.get();
+
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
-    private static final int[] PROTECTION_AMOUNT = new int[]{3, 6, 7, 3};
+    private static final int[] PROTECTION_AMOUNT = new int[]{titaniumHead, titaniumLeggings, titaniumBody, titaniumFeet};
 
     @Override
     public int getDurabilityForSlot(EquipmentSlot slot)

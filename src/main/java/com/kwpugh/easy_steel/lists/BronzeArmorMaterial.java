@@ -16,8 +16,13 @@ public class BronzeArmorMaterial implements ArmorMaterial
     private static double toughness = GeneralModConfig.BRONZE_ARMOR_TOUGHNESS.get();
     private static double knochback = GeneralModConfig.BRONZE_ARMOR_KNOCKBACK_RESISTANCE.get();
 
+    private static int bronzeHead = GeneralModConfig.BRONZE_ARMOR_PROTECTION_HEAD.get();
+    private static int bronzeBody = GeneralModConfig.BRONZE_ARMOR_PROTECTION_BODY.get();
+    private static int bronzeLeggings = GeneralModConfig.BRONZE_ARMOR_PROTECTION_LEGGINGS.get();
+    private static int bronzeFeet = GeneralModConfig.BRONZE_ARMOR_PROTECTION_FEET.get();
+
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
-    private static final int[] PROTECTION_AMOUNT = new int[]{2, 5, 6, 2};
+    private static final int[] PROTECTION_AMOUNT = new int[]{bronzeHead, bronzeLeggings, bronzeBody, bronzeFeet};
 
     @Override
     public int getDurabilityForSlot(EquipmentSlot slot)

@@ -82,26 +82,46 @@ public class GeneralModConfig
     public static ForgeConfigSpec.IntValue BRONZE_ARMOR_ENCHANTABILITY;
     public static ForgeConfigSpec.DoubleValue BRONZE_ARMOR_TOUGHNESS;
     public static ForgeConfigSpec.DoubleValue BRONZE_ARMOR_KNOCKBACK_RESISTANCE;
+    public static ForgeConfigSpec.IntValue BRONZE_ARMOR_PROTECTION_HEAD;
+    public static ForgeConfigSpec.IntValue BRONZE_ARMOR_PROTECTION_BODY;
+    public static ForgeConfigSpec.IntValue BRONZE_ARMOR_PROTECTION_LEGGINGS;
+    public static ForgeConfigSpec.IntValue BRONZE_ARMOR_PROTECTION_FEET;
 
     public static ForgeConfigSpec.IntValue STEEL_ARMOR_DURABILITY_MULTIPLIER;
     public static ForgeConfigSpec.IntValue STEEL_ARMOR_ENCHANTABILITY;
     public static ForgeConfigSpec.DoubleValue STEEL_ARMOR_TOUGHNESS;
     public static ForgeConfigSpec.DoubleValue STEEL_ARMOR_KNOCKBACK_RESISTANCE;
+    public static ForgeConfigSpec.IntValue STEEL_ARMOR_PROTECTION_HEAD;
+    public static ForgeConfigSpec.IntValue STEEL_ARMOR_PROTECTION_BODY;
+    public static ForgeConfigSpec.IntValue STEEL_ARMOR_PROTECTION_LEGGINGS;
+    public static ForgeConfigSpec.IntValue STEEL_ARMOR_PROTECTION_FEET;
 
     public static ForgeConfigSpec.IntValue TITANIUM_ARMOR_DURABILITY_MULTIPLIER;
     public static ForgeConfigSpec.IntValue TITANIUM_ARMOR_ENCHANTABILITY;
     public static ForgeConfigSpec.DoubleValue TITANIUM_ARMOR_TOUGHNESS;
     public static ForgeConfigSpec.DoubleValue TITANIUM_ARMOR_KNOCKBACK_RESISTANCE;
+    public static ForgeConfigSpec.IntValue TITANIUM_ARMOR_PROTECTION_HEAD;
+    public static ForgeConfigSpec.IntValue TITANIUM_ARMOR_PROTECTION_BODY;
+    public static ForgeConfigSpec.IntValue TITANIUM_ARMOR_PROTECTION_LEGGINGS;
+    public static ForgeConfigSpec.IntValue TITANIUM_ARMOR_PROTECTION_FEET;
 
     public static ForgeConfigSpec.IntValue HARDENED_STEEL_ARMOR_DURABILITY_MULTIPLIER;
     public static ForgeConfigSpec.IntValue HARDENED_STEEL_ARMOR_ENCHANTABILITY;
     public static ForgeConfigSpec.DoubleValue HARDENED_STEEL_ARMOR_TOUGHNESS;
     public static ForgeConfigSpec.DoubleValue HARDENED_STEEL_ARMOR_KNOCKBACK_RESISTANCE;
+    public static ForgeConfigSpec.IntValue HARDENED_STEEL_ARMOR_PROTECTION_HEAD;
+    public static ForgeConfigSpec.IntValue HARDENED_STEEL_ARMOR_PROTECTION_BODY;
+    public static ForgeConfigSpec.IntValue HARDENED_STEEL_ARMOR_PROTECTION_LEGGINGS;
+    public static ForgeConfigSpec.IntValue HARDENED_STEEL_ARMOR_PROTECTION_FEET;
 
     public static ForgeConfigSpec.IntValue TUNGSTEN_ARMOR_DURABILITY_MULTIPLIER;
     public static ForgeConfigSpec.IntValue TUNGSTEN_ARMOR_ENCHANTABILITY;
     public static ForgeConfigSpec.DoubleValue TUNGSTEN_ARMOR_TOUGHNESS;
     public static ForgeConfigSpec.DoubleValue TUNGSTEN_ARMOR_KNOCKBACK_RESISTANCE;
+    public static ForgeConfigSpec.IntValue TUNGSTEN_ARMOR_PROTECTION_HEAD;
+    public static ForgeConfigSpec.IntValue TUNGSTEN_ARMOR_PROTECTION_BODY;
+    public static ForgeConfigSpec.IntValue TUNGSTEN_ARMOR_PROTECTION_LEGGINGS;
+    public static ForgeConfigSpec.IntValue TUNGSTEN_ARMOR_PROTECTION_FEET;
 
     public static void init(ForgeConfigSpec.Builder SERVER_BUILDER)
     {           
@@ -250,6 +270,10 @@ public class GeneralModConfig
         BRONZE_ARMOR_ENCHANTABILITY = SERVER_BUILDER.comment("Bronze armor enchantability [1-31, default: 15]").defineInRange("bronzeArmorEnchantability", 15, 1, 31);
         BRONZE_ARMOR_TOUGHNESS = SERVER_BUILDER.comment("Bronze armor toughness [0.0-4.0, default: 0.5]").defineInRange("bronzeArmorToughness", 0.5, 0.0, 4.0);
         BRONZE_ARMOR_KNOCKBACK_RESISTANCE = SERVER_BUILDER.comment("Bronze armor knockback resistance [0.0-4.0, default: 0.0]").defineInRange("bronzeArmorKnockbackResistance", 0.0, 0.0, 4.0);
+        BRONZE_ARMOR_PROTECTION_HEAD = SERVER_BUILDER.comment("Bronze armor protection head [1-50, default: 2]").defineInRange("bronzeArmorProtectionHead", 2, 1, 50);
+        BRONZE_ARMOR_PROTECTION_BODY = SERVER_BUILDER.comment("Bronze armor protection body [1-50, default: 6]").defineInRange("bronzeArmorProtectionBody", 6, 1, 50);
+        BRONZE_ARMOR_PROTECTION_LEGGINGS = SERVER_BUILDER.comment("Bronze armor protection leggings [1-50, default: 5]").defineInRange("bronzeArmorProtectionLeggings", 5, 1, 50);
+        BRONZE_ARMOR_PROTECTION_FEET = SERVER_BUILDER.comment("Bronze armor protection feet [1-50, default: 2]").defineInRange("bronzeArmorProtectionFeet", 2, 1, 50);
 
         SERVER_BUILDER.pop();
 
@@ -260,6 +284,10 @@ public class GeneralModConfig
         STEEL_ARMOR_ENCHANTABILITY = SERVER_BUILDER.comment("Steel armor enchantability [1-31, default: 15]").defineInRange("steelArmorEnchantability", 15, 1, 31);
         STEEL_ARMOR_TOUGHNESS = SERVER_BUILDER.comment("Steel armor toughness [0.0-4.0, default: 1.0]").defineInRange("steelArmorToughness", 1.0, 0.0, 4.0);
         STEEL_ARMOR_KNOCKBACK_RESISTANCE = SERVER_BUILDER.comment("Steel armor knockback resistance [0.0-4.0, default: 0.1]").defineInRange("steelArmorKnockbackResistance", 0.1, 0.0, 4.0);
+        STEEL_ARMOR_PROTECTION_HEAD = SERVER_BUILDER.comment("Steel armor protection head [1-50, default: 3]").defineInRange("steelArmorProtectionHead", 3, 1, 50);
+        STEEL_ARMOR_PROTECTION_BODY = SERVER_BUILDER.comment("Steel armor protection body [1-50, default: 7]").defineInRange("steelArmorProtectionBody", 7, 1, 50);
+        STEEL_ARMOR_PROTECTION_LEGGINGS = SERVER_BUILDER.comment("Steel armor protection leggings [1-50, default: 6]").defineInRange("steelArmorProtectionLeggings", 6, 1, 50);
+        STEEL_ARMOR_PROTECTION_FEET = SERVER_BUILDER.comment("Steel armor protection feet [1-50, default: 3]").defineInRange("steelArmorProtectionFeet", 3, 1, 50);
 
         SERVER_BUILDER.pop();
 
@@ -270,6 +298,11 @@ public class GeneralModConfig
         TITANIUM_ARMOR_ENCHANTABILITY = SERVER_BUILDER.comment("Titanium armor enchantability [1-31, default: 15]").defineInRange("titaniumArmorEnchantability", 15, 1, 31);
         TITANIUM_ARMOR_TOUGHNESS = SERVER_BUILDER.comment("Titanium armor toughness [0.0-4.0, default: 1.25]").defineInRange("titaniumArmorToughness", 1.25, 0.0, 4.0);
         TITANIUM_ARMOR_KNOCKBACK_RESISTANCE = SERVER_BUILDER.comment("Titanium armor knockback resistance [0.0-4.0, default: 0.1]").defineInRange("titaniumArmorKnockbackResistance", 0.2, 0.0, 4.0);
+        TITANIUM_ARMOR_PROTECTION_HEAD = SERVER_BUILDER.comment("Titanium armor protection head [1-50, default: 3]").defineInRange("titaniumArmorProtectionHead", 3, 1, 50);
+        TITANIUM_ARMOR_PROTECTION_BODY = SERVER_BUILDER.comment("Titanium armor protection body [1-50, default: 7]").defineInRange("titaniumArmorProtectionBody", 7, 1, 50);
+        TITANIUM_ARMOR_PROTECTION_LEGGINGS = SERVER_BUILDER.comment("Titanium armor protection leggings [1-50, default: 6]").defineInRange("titaniumArmorProtectionLeggings", 6, 1, 50);
+        TITANIUM_ARMOR_PROTECTION_FEET = SERVER_BUILDER.comment("Titanium armor protection feet [1-50, default: 3]").defineInRange("titaniumArmorProtectionFeet", 3, 1, 50);
+
 
         SERVER_BUILDER.pop();
 
@@ -280,6 +313,10 @@ public class GeneralModConfig
         HARDENED_STEEL_ARMOR_ENCHANTABILITY = SERVER_BUILDER.comment("Hardened Steel armor enchantability [1-31, default: 15]").defineInRange("hardenedSteelArmorEnchantability", 15, 1, 31);
         HARDENED_STEEL_ARMOR_TOUGHNESS = SERVER_BUILDER.comment("Hardened Steel armor toughness [0.0-4.0, default: 1.5]").defineInRange("hardenedSteelArmorToughness", 1.5, 0.0, 4.0);
         HARDENED_STEEL_ARMOR_KNOCKBACK_RESISTANCE = SERVER_BUILDER.comment("Hardened Steel armor knockback resistance [0.0-4.0, default: 0.1]").defineInRange("hardenedSteelArmorKnockbackResistance", 0.2, 0.0, 4.0);
+        HARDENED_STEEL_ARMOR_PROTECTION_HEAD = SERVER_BUILDER.comment("Hardened Steel armor protection head [1-50, default: 3]").defineInRange("hardenedSteelArmorProtectionHead", 3, 1, 50);
+        HARDENED_STEEL_ARMOR_PROTECTION_BODY = SERVER_BUILDER.comment("Hardened Steel armor protection body [1-50, default: 7]").defineInRange("hardenedSteelArmorProtectionBody", 7, 1, 50);
+        HARDENED_STEEL_ARMOR_PROTECTION_LEGGINGS = SERVER_BUILDER.comment("Hardened Steel armor protection leggings [1-50, default: 6]").defineInRange("hardenedSteelArmorProtectionLeggings", 6, 1, 50);
+        HARDENED_STEEL_ARMOR_PROTECTION_FEET = SERVER_BUILDER.comment("Hardened Steel armor protection feet [1-50, default: 3]").defineInRange("hardenedSteelArmorProtectionFeet", 3, 1, 50);
 
         SERVER_BUILDER.pop();
 
@@ -290,6 +327,10 @@ public class GeneralModConfig
         TUNGSTEN_ARMOR_ENCHANTABILITY = SERVER_BUILDER.comment("Tungsten armor enchantability [1-31, default: 15]").defineInRange("tungstenArmorEnchantability", 15, 1, 31);
         TUNGSTEN_ARMOR_TOUGHNESS = SERVER_BUILDER.comment("Tungsten armor toughness [0.0-4.0, default: 1.75]").defineInRange("tungstenArmorToughness", 1.75, 0.0, 4.0);
         TUNGSTEN_ARMOR_KNOCKBACK_RESISTANCE = SERVER_BUILDER.comment("Tungsten armor knockback resistance [0.0-4.0, default: 0.1]").defineInRange("tungstenArmorKnockbackResistance", 0.3, 0.0, 4.0);
+        TUNGSTEN_ARMOR_PROTECTION_HEAD = SERVER_BUILDER.comment("Tungsten armor protection head [1-50, default: 3]").defineInRange("tungstenArmorProtectionHead", 3, 1, 50);
+        TUNGSTEN_ARMOR_PROTECTION_BODY = SERVER_BUILDER.comment("Tungsten armor protection body [1-50, default: 8]").defineInRange("tungstenArmorProtectionBody", 8, 1, 50);
+        TUNGSTEN_ARMOR_PROTECTION_LEGGINGS = SERVER_BUILDER.comment("Tungsten armor protection leggings [1-50, default: 6]").defineInRange("tungstenArmorProtectionLeggings", 6, 1, 50);
+        TUNGSTEN_ARMOR_PROTECTION_FEET = SERVER_BUILDER.comment("Tungsten armor protection feet [1-50, default: 3]").defineInRange("tungstenArmorProtectionFeet", 3, 1, 50);
 
         SERVER_BUILDER.pop();
     }

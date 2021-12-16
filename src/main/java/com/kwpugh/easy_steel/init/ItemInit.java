@@ -37,7 +37,7 @@ public class ItemInit
 	// Armor stats can be adjusted in config
 	public static final ArmorMaterial BRONZE_ARMOR_MATERIAL = new BronzeArmorMaterial();
 	public static final ArmorMaterial STEEL_ARMOR_MATERIAL = new SteelArmorMaterial();
-	public static final ArmorMaterial TITANIUM_ARMOR_MATERIAL = new SteelArmorMaterial();
+	public static final ArmorMaterial TITANIUM_ARMOR_MATERIAL = new TitaniumArmorMaterial();
 	public static final ArmorMaterial HARDENED_STEEL_ARMOR_MATERIAL = new HardenedSteelArmorMaterial();
 	public static final ArmorMaterial TUNGSTEN_ARMOR_MATERIAL = new TungstenArmorMaterial();
 

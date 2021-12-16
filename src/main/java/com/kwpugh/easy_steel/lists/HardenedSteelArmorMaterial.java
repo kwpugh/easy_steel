@@ -16,8 +16,13 @@ public class HardenedSteelArmorMaterial implements ArmorMaterial
     private static double toughness = GeneralModConfig.HARDENED_STEEL_ARMOR_TOUGHNESS.get();
     private static double knochback = GeneralModConfig.HARDENED_STEEL_ARMOR_KNOCKBACK_RESISTANCE.get();
 
+    private static int hardenedSteelHead = GeneralModConfig.HARDENED_STEEL_ARMOR_PROTECTION_HEAD.get();
+    private static int hardenedSteelBody = GeneralModConfig.HARDENED_STEEL_ARMOR_PROTECTION_BODY.get();
+    private static int hardenedSteelLeggings = GeneralModConfig.HARDENED_STEEL_ARMOR_PROTECTION_LEGGINGS.get();
+    private static int hardenedSteelFeet = GeneralModConfig.HARDENED_STEEL_ARMOR_PROTECTION_FEET.get();
+
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
-    private static final int[] PROTECTION_AMOUNT = new int[]{3, 6, 7, 3};
+    private static final int[] PROTECTION_AMOUNT = new int[]{hardenedSteelHead, hardenedSteelLeggings, hardenedSteelBody, hardenedSteelFeet};
 
     @Override
     public int getDurabilityForSlot(EquipmentSlot slot)

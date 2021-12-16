@@ -1,6 +1,6 @@
 modLoader="javafml" #mandatory
 
-loaderVersion="[38,)" #mandatory (37 is current forge version)
+loaderVersion="[39,)" #mandatory (37 is current forge version)
 
 credits="Thanks to Udemy for great Java courses." #optional
 
@@ -9,7 +9,7 @@ license="MIT"
 
 [[mods]] #mandatory
 modId="easy_steel" #mandatory
-version="1.5.5" #mandatory
+version="1.5.6" #mandatory
 displayName="Easy Steel & More" #mandatory
 description='''
 Adds steel, bronze, titanium, hardened steel, and tungsten-carbide gear
@@ -19,7 +19,7 @@ Adds steel, bronze, titanium, hardened steel, and tungsten-carbide gear
 [[dependencies.easy_steel]] #optional
     modId="forge" #mandatory
     mandatory=true #mandatory
-    versionRange="[38,)" #mandatory
+    versionRange="[39,)" #mandatory
     ordering="NONE"
     side="BOTH"
 
