@@ -258,7 +258,7 @@ public class GeneralModConfig
         TUNGSTEN_TOOLS_DURABILITY = SERVER_BUILDER.comment("Tungsten tool durability [1-1000, default: 1023]").defineInRange("tungstenToolsDurability", 1023, 1, 1400);
         TUNGSTEN_TOOLS_MINING_SPEED = SERVER_BUILDER.comment("Tungsten tool mining speed [1-25, default: 6.5]").defineInRange("tungstenToolsSpeed", 6.5, 1, 25.0);
         TUNGSTEN_TOOLS_ATTACK_DAMAGE = SERVER_BUILDER.comment("Tungsten tool attack damage [1-100, default: 0.75]").defineInRange("tungstenToolsDamage", 0.75, 1, 100.0);
-        TUNGSTEN_TOOLS_MINING_LEVEL = SERVER_BUILDER.comment("Tungsten tool mining level [1-6, default: 2]").defineInRange("tungstenToolsMiningLevel", 2, 1, 6);
+        TUNGSTEN_TOOLS_MINING_LEVEL = SERVER_BUILDER.comment("Tungsten tool mining level [1-6, default: 3]").defineInRange("tungstenToolsMiningLevel", 3, 1, 6);
         TUNGSTEN_TOOLS_ENCHANTABILITY = SERVER_BUILDER.comment("Tungsten tool enchantability [0-50, default: 8]").defineInRange("tungstenToolsEnchantability", 8, 1, 50);
 
         SERVER_BUILDER.pop();
