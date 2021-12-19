@@ -22,14 +22,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class ItemInit
 {
-	// Tool stats can be adjusted in config
-	public static final Tier FLINT_TOOL_MATERIAL = new FlintToolMaterial();
-	public static final Tier BRONZE_TOOL_MATERIAL = new BronzeToolMaterial();
-	public static final Tier STEEL_TOOL_MATERIAL = new SteelToolMaterial();
-	public static final Tier TITANIUM_TOOL_MATERIAL = new TitaniumToolMaterial();
-	public static final Tier HARDENED_STEEL_TOOL_MATERIAL = new HardenedSteelToolMaterial();
-	public static final Tier TUNGSTEN_TOOL_MATERIAL = new TungstenToolMaterial();
-
 	// Used for bows & crossbows only
 	public static final int steelDurability = GeneralModConfig.STEEL_TOOLS_DURABILITY.get();
 	public static final int hardenedSteelDurability = GeneralModConfig.HARDENED_STEEL_TOOLS_DURABILITY.get();
@@ -56,14 +48,14 @@ public class ItemInit
 	public static final RegistryObject<Item> RAW_TITANIUM = ITEMS.register("raw_titanium", () -> new Item(new Item.Properties().tab(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> RAW_TUNGSTEN = ITEMS.register("raw_tungsten", () -> new Item(new Item.Properties().tab(EasySteel.easy_steel)));
 
-	public static final RegistryObject<Item> HAND_SHOVEL = ITEMS.register("hand_shovel", () -> new HandShovel(ModTiers.FLINT, 1, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> HAND_SHOVEL = ITEMS.register("hand_shovel", () -> new HandShovel(ToolMaterialTiers.FLINT, 1, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> SHARP_FLINT = ITEMS.register("sharp_flint", () -> new SharpFlint(new Item.Properties().tab(EasySteel.easy_steel)));
 	
-	public static final RegistryObject<Item> FLINT_MATTOCK = ITEMS.register("flint_mattock", () -> new FlintMattock(ModTiers.FLINT, 1, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> FLINT_SHOVEL = ITEMS.register("flint_shovel", () -> new FlintShovel(ModTiers.FLINT, 1, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> FLINT_HATCHET = ITEMS.register("flint_hatchet", () -> new FlintHatchet(ModTiers.FLINT, 5, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> FLINT_KNIFE = ITEMS.register("flint_knife", () -> new FlintKnife(ModTiers.FLINT, 3, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> FLINT_HOE = ITEMS.register("flint_hoe", () -> new HoeItem(ModTiers.FLINT, -2, -2.0f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> FLINT_MATTOCK = ITEMS.register("flint_mattock", () -> new FlintMattock(ToolMaterialTiers.FLINT, 1, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> FLINT_SHOVEL = ITEMS.register("flint_shovel", () -> new FlintShovel(ToolMaterialTiers.FLINT, 1, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> FLINT_HATCHET = ITEMS.register("flint_hatchet", () -> new FlintHatchet(ToolMaterialTiers.FLINT, 5, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> FLINT_KNIFE = ITEMS.register("flint_knife", () -> new FlintKnife(ToolMaterialTiers.FLINT, 3, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> FLINT_HOE = ITEMS.register("flint_hoe", () -> new HoeItem(ToolMaterialTiers.FLINT, -2, -2.0f, new Item.Properties().tab(EasySteel.easy_steel)));
 	
 	public static final RegistryObject<Item> CRACK_HAMMER = ITEMS.register("crack_hammer", () -> new CrackHammer(new Item.Properties().durability(251).tab(EasySteel.easy_steel)));
 	
@@ -117,55 +109,55 @@ public class ItemInit
 	public static final RegistryObject<Item> STEEL_STRING = ITEMS.register("steel_string", () -> new Item(new Item.Properties().tab(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> HARDENED_STEEL_STRING = ITEMS.register("hardened_steel_string", () -> new Item(new Item.Properties().tab(EasySteel.easy_steel)));
 	
-	public static final RegistryObject<Item> BRONZE_SWORD = ITEMS.register("bronze_sword", () -> new SwordItem(ModTiers.BRONZE, 4, -2.4f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> BRONZE_PICKAXE = ITEMS.register("bronze_pickaxe", () -> new PickaxeItem(ModTiers.BRONZE, 2, -2.8f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> BRONZE_AXE = ITEMS.register("bronze_axe", () -> new AxeItem(ModTiers.BRONZE, 6, -3.1f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> BRONZE_SHOVEL = ITEMS.register("bronze_shovel", () -> new ShovelItem(ModTiers.BRONZE, 2, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> BRONZE_HOE = ITEMS.register("bronze_hoe", () -> new HoeItem(ModTiers.BRONZE, -2, -2.0f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> BRONZE_HAMMER = ITEMS.register("bronze_hammer", () -> new HammerBase(ModTiers.BRONZE,6, -3.3f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> BRONZE_EXCAVATOR = ITEMS.register("bronze_excavator", () -> new ExcavatorBase(ModTiers.BRONZE, 2, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> BRONZE_PAXEL = ITEMS.register("bronze_paxel", () -> new PaxelBase(6, -3.2f, ModTiers.BRONZE, TagInit.PAXEL_MINEABLE, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> BRONZE_SWORD = ITEMS.register("bronze_sword", () -> new SwordItem(ToolMaterialTiers.BRONZE, 4, -2.4f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> BRONZE_PICKAXE = ITEMS.register("bronze_pickaxe", () -> new PickaxeItem(ToolMaterialTiers.BRONZE, 2, -2.8f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> BRONZE_AXE = ITEMS.register("bronze_axe", () -> new AxeItem(ToolMaterialTiers.BRONZE, 6, -3.1f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> BRONZE_SHOVEL = ITEMS.register("bronze_shovel", () -> new ShovelItem(ToolMaterialTiers.BRONZE, 2, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> BRONZE_HOE = ITEMS.register("bronze_hoe", () -> new HoeItem(ToolMaterialTiers.BRONZE, -2, -2.0f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> BRONZE_HAMMER = ITEMS.register("bronze_hammer", () -> new HammerBase(ToolMaterialTiers.BRONZE,6, -3.3f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> BRONZE_EXCAVATOR = ITEMS.register("bronze_excavator", () -> new ExcavatorBase(ToolMaterialTiers.BRONZE, 2, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> BRONZE_PAXEL = ITEMS.register("bronze_paxel", () -> new PaxelBase(6, -3.2f, ToolMaterialTiers.BRONZE, TagInit.PAXEL_MINEABLE, new Item.Properties().tab(EasySteel.easy_steel)));
 	
-	public static final RegistryObject<Item> STEEL_SWORD = ITEMS.register("steel_sword", () -> new SwordItem(ModTiers.STEEL, 5, -2.4f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> STEEL_PICKAXE = ITEMS.register("steel_pickaxe", () -> new PickaxeItem(ModTiers.STEEL,  3, -2.8f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> STEEL_AXE = ITEMS.register("steel_axe", () -> new AxeItem(ModTiers.STEEL, 7, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> STEEL_SHOVEL = ITEMS.register("steel_shovel", () -> new ShovelItem(ModTiers.STEEL, 3, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> STEEL_HOE = ITEMS.register("steel_hoe", () -> new HoeItem(ModTiers.STEEL, -2, -1.5f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> STEEL_HAMMER = ITEMS.register("steel_hammer", () -> new HammerBase(ModTiers.STEEL, 7, -3.3f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> STEEL_EXCAVATOR = ITEMS.register("steel_excavator", () -> new ExcavatorBase(ModTiers.STEEL, 3, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> STEEL_PAXEL = ITEMS.register("steel_paxel", () -> new PaxelBase(7, -3.2f, ModTiers.STEEL, TagInit.PAXEL_MINEABLE, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> STEEL_SWORD = ITEMS.register("steel_sword", () -> new SwordItem(ToolMaterialTiers.STEEL, 5, -2.4f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> STEEL_PICKAXE = ITEMS.register("steel_pickaxe", () -> new PickaxeItem(ToolMaterialTiers.STEEL,  3, -2.8f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> STEEL_AXE = ITEMS.register("steel_axe", () -> new AxeItem(ToolMaterialTiers.STEEL, 7, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> STEEL_SHOVEL = ITEMS.register("steel_shovel", () -> new ShovelItem(ToolMaterialTiers.STEEL, 3, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> STEEL_HOE = ITEMS.register("steel_hoe", () -> new HoeItem(ToolMaterialTiers.STEEL, -2, -1.5f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> STEEL_HAMMER = ITEMS.register("steel_hammer", () -> new HammerBase(ToolMaterialTiers.STEEL, 7, -3.3f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> STEEL_EXCAVATOR = ITEMS.register("steel_excavator", () -> new ExcavatorBase(ToolMaterialTiers.STEEL, 3, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> STEEL_PAXEL = ITEMS.register("steel_paxel", () -> new PaxelBase(7, -3.2f, ToolMaterialTiers.STEEL, TagInit.PAXEL_MINEABLE, new Item.Properties().tab(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> STEEL_BOW = ITEMS.register("steel_bow", () -> new BowBase(new Item.Properties().stacksTo(1).durability(steelDurability).tab(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> STEEL_CROSSBOW = ITEMS.register("steel_crossbow", () -> new CrossbowItem(new Item.Properties().stacksTo(1).durability(steelDurability).tab(EasySteel.easy_steel)));
 	
-	public static final RegistryObject<Item> TITANIUM_SWORD = ITEMS.register("titanium_sword", () -> new SwordItem(ModTiers.TITANIUM, 5, -2.4f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> TITANIUM_PICKAXE = ITEMS.register("titanium_pickaxe", () -> new PickaxeItem(ModTiers.TITANIUM, 3, -2.8f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> TITANIUM_AXE = ITEMS.register("titanium_axe", () -> new AxeItem(ModTiers.TITANIUM, 7, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> TITANIUM_SHOVEL = ITEMS.register("titanium_shovel", () -> new ShovelItem(ModTiers.TITANIUM, 3, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> TITANIUM_HOE = ITEMS.register("titanium_hoe", () -> new HoeItem(ModTiers.TITANIUM, -2, -1.5f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> TITANIUM_HAMMER = ITEMS.register("titanium_hammer", () -> new HammerBase(ModTiers.TITANIUM, 7, -3.3f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> TITANIUM_EXCAVATOR = ITEMS.register("titanium_excavator", () -> new ExcavatorBase(ModTiers.TITANIUM, 3, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> TITANIUM_PAXEL = ITEMS.register("titanium_paxel", () -> new PaxelBase(7, -3.2f, ModTiers.TITANIUM, TagInit.PAXEL_MINEABLE, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> TITANIUM_SWORD = ITEMS.register("titanium_sword", () -> new SwordItem(ToolMaterialTiers.TITANIUM, 5, -2.4f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> TITANIUM_PICKAXE = ITEMS.register("titanium_pickaxe", () -> new PickaxeItem(ToolMaterialTiers.TITANIUM, 3, -2.8f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> TITANIUM_AXE = ITEMS.register("titanium_axe", () -> new AxeItem(ToolMaterialTiers.TITANIUM, 7, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> TITANIUM_SHOVEL = ITEMS.register("titanium_shovel", () -> new ShovelItem(ToolMaterialTiers.TITANIUM, 3, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> TITANIUM_HOE = ITEMS.register("titanium_hoe", () -> new HoeItem(ToolMaterialTiers.TITANIUM, -2, -1.5f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> TITANIUM_HAMMER = ITEMS.register("titanium_hammer", () -> new HammerBase(ToolMaterialTiers.TITANIUM, 7, -3.3f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> TITANIUM_EXCAVATOR = ITEMS.register("titanium_excavator", () -> new ExcavatorBase(ToolMaterialTiers.TITANIUM, 3, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> TITANIUM_PAXEL = ITEMS.register("titanium_paxel", () -> new PaxelBase(7, -3.2f, ToolMaterialTiers.TITANIUM, TagInit.PAXEL_MINEABLE, new Item.Properties().tab(EasySteel.easy_steel)));
 
-	public static final RegistryObject<Item> HARDENED_STEEL_SWORD = ITEMS.register("hardened_steel_sword", () -> new SwordItem(ModTiers.HARDENED_STEEL, 5, -2.4f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> HARDENED_STEEL_PICKAXE = ITEMS.register("hardened_steel_pickaxe", () -> new PickaxeItem(ModTiers.HARDENED_STEEL, 3, -2.8f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> HARDENED_STEEL_AXE = ITEMS.register("hardened_steel_axe", () -> new AxeItem(ModTiers.HARDENED_STEEL, 7, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> HARDENED_STEEL_SHOVEL = ITEMS.register("hardened_steel_shovel", () -> new ShovelItem(ModTiers.HARDENED_STEEL, 3, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> HARDENED_STEEL_HOE = ITEMS.register("hardened_steel_hoe", () -> new HoeItem(ModTiers.HARDENED_STEEL,  -2, -1.5f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> HARDENED_STEEL_HAMMER = ITEMS.register("hardened_steel_hammer", () -> new HammerBase(ModTiers.HARDENED_STEEL,  7, -3.3f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> HARDENED_STEEL_EXCAVATOR = ITEMS.register("hardened_steel_excavator", () -> new ExcavatorBase(ModTiers.HARDENED_STEEL,  3, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> HARDENED_STEEL_PAXEL = ITEMS.register("hardened_steel_paxel", () -> new PaxelBase(7, -3.2f, ModTiers.HARDENED_STEEL, TagInit.PAXEL_MINEABLE, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> HARDENED_STEEL_SWORD = ITEMS.register("hardened_steel_sword", () -> new SwordItem(ToolMaterialTiers.HARDENED_STEEL, 5, -2.4f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> HARDENED_STEEL_PICKAXE = ITEMS.register("hardened_steel_pickaxe", () -> new PickaxeItem(ToolMaterialTiers.HARDENED_STEEL, 3, -2.8f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> HARDENED_STEEL_AXE = ITEMS.register("hardened_steel_axe", () -> new AxeItem(ToolMaterialTiers.HARDENED_STEEL, 7, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> HARDENED_STEEL_SHOVEL = ITEMS.register("hardened_steel_shovel", () -> new ShovelItem(ToolMaterialTiers.HARDENED_STEEL, 3, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> HARDENED_STEEL_HOE = ITEMS.register("hardened_steel_hoe", () -> new HoeItem(ToolMaterialTiers.HARDENED_STEEL,  -2, -1.5f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> HARDENED_STEEL_HAMMER = ITEMS.register("hardened_steel_hammer", () -> new HammerBase(ToolMaterialTiers.HARDENED_STEEL,  7, -3.3f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> HARDENED_STEEL_EXCAVATOR = ITEMS.register("hardened_steel_excavator", () -> new ExcavatorBase(ToolMaterialTiers.HARDENED_STEEL,  3, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> HARDENED_STEEL_PAXEL = ITEMS.register("hardened_steel_paxel", () -> new PaxelBase(7, -3.2f, ToolMaterialTiers.HARDENED_STEEL, TagInit.PAXEL_MINEABLE, new Item.Properties().tab(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> HARDENED_STEEL_BOW = ITEMS.register("hardened_steel_bow", () -> new BowBase(new Item.Properties().stacksTo(1).durability(hardenedSteelDurability).tab(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> HARDENED_STEEL_CROSSBOW = ITEMS.register("hardened_steel_crossbow", () -> new CrossbowItem(new Item.Properties().stacksTo(1).durability(hardenedSteelDurability).tab(EasySteel.easy_steel)));
 
-	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_SWORD = ITEMS.register("tungsten_carbide_sword", () -> new SwordItem(ModTiers.TUNGSTEN, 5, -2.4f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_PICKAXE = ITEMS.register("tungsten_carbide_pickaxe", () -> new PickaxeItem(ModTiers.TUNGSTEN, 5, -2.4f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_AXE = ITEMS.register("tungsten_carbide_axe", () -> new AxeItem(ModTiers.TUNGSTEN, 7, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_TREE_AXE = ITEMS.register("tungsten_carbide_tree_axe", () -> new TreeAxeBase(ModTiers.TUNGSTEN, 7, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_SHOVEL = ITEMS.register("tungsten_carbide_shovel", () -> new ShovelItem(ModTiers.TUNGSTEN, 3, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_HOE = ITEMS.register("tungsten_carbide_hoe", () -> new HoeItem(ModTiers.TUNGSTEN, -2, -1.5f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_HAMMER = ITEMS.register("tungsten_carbide_hammer", () -> new HammerBase(ModTiers.TUNGSTEN, 7, -3.3f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_EXCAVATOR = ITEMS.register("tungsten_carbide_excavator", () -> new ExcavatorBase(ModTiers.TUNGSTEN, 3, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
-	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_PAXEL = ITEMS.register("tungsten_carbide_paxel", () -> new PaxelBase(7, -3.2f, ModTiers.TUNGSTEN, TagInit.PAXEL_MINEABLE, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_SWORD = ITEMS.register("tungsten_carbide_sword", () -> new SwordItem(ToolMaterialTiers.TUNGSTEN, 5, -2.4f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_PICKAXE = ITEMS.register("tungsten_carbide_pickaxe", () -> new PickaxeItem(ToolMaterialTiers.TUNGSTEN, 5, -2.4f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_AXE = ITEMS.register("tungsten_carbide_axe", () -> new AxeItem(ToolMaterialTiers.TUNGSTEN, 7, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_TREE_AXE = ITEMS.register("tungsten_carbide_tree_axe", () -> new TreeAxeBase(ToolMaterialTiers.TUNGSTEN, 7, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_SHOVEL = ITEMS.register("tungsten_carbide_shovel", () -> new ShovelItem(ToolMaterialTiers.TUNGSTEN, 3, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_HOE = ITEMS.register("tungsten_carbide_hoe", () -> new HoeItem(ToolMaterialTiers.TUNGSTEN, -2, -1.5f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_HAMMER = ITEMS.register("tungsten_carbide_hammer", () -> new HammerBase(ToolMaterialTiers.TUNGSTEN, 7, -3.3f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_EXCAVATOR = ITEMS.register("tungsten_carbide_excavator", () -> new ExcavatorBase(ToolMaterialTiers.TUNGSTEN, 3, -3.0f, new Item.Properties().tab(EasySteel.easy_steel)));
+	public static final RegistryObject<Item> TUNGSTEN_CARBIDE_PAXEL = ITEMS.register("tungsten_carbide_paxel", () -> new PaxelBase(7, -3.2f, ToolMaterialTiers.TUNGSTEN, TagInit.PAXEL_MINEABLE, new Item.Properties().tab(EasySteel.easy_steel)));
 
 	public static final RegistryObject<Item> ARMOR_BRONZE_HEAD = ITEMS.register("armor_bronze_head", () -> new ArmorItem(BRONZE_ARMOR_MATERIAL, EquipmentSlot.HEAD, new Item.Properties().tab(EasySteel.easy_steel)));
 	public static final RegistryObject<Item> ARMOR_BRONZE_BODY = ITEMS.register("armor_bronze_body", () -> new ArmorItem(BRONZE_ARMOR_MATERIAL, EquipmentSlot.CHEST, new Item.Properties().tab(EasySteel.easy_steel)));

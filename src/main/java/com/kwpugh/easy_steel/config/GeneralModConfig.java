@@ -203,7 +203,6 @@ public class GeneralModConfig
         FLINT_TOOLS_DURABILITY = SERVER_BUILDER.comment("Flint tool durability [1-250, default: 145]").defineInRange("flintToolsDurability", 145, 1, 250);
         FLINT_TOOLS_MINING_SPEED = SERVER_BUILDER.comment("Flint tool mining speed [1-25, default: 5.5]").defineInRange("flintToolsSpeed", 5.5, 1, 25.0);
         FLINT_TOOLS_ATTACK_DAMAGE = SERVER_BUILDER.comment("Flint tool attack damage [1-100, default: 0.5]").defineInRange("flintToolsDamage", 0.5, 1, 100.0);
-        FLINT_TOOLS_MINING_LEVEL = SERVER_BUILDER.comment("Flint tool mining level [1-6, default: 1]").defineInRange("flintToolsMiningLevel", 1, 1, 6);
         FLINT_TOOLS_ENCHANTABILITY = SERVER_BUILDER.comment("Flint tool enchantability [0-50, default: 5]").defineInRange("flintToolsEnchantability", 5, 1, 50);
 
         SERVER_BUILDER.pop();
@@ -214,7 +213,6 @@ public class GeneralModConfig
         BRONZE_TOOLS_DURABILITY = SERVER_BUILDER.comment("Bronze tool durability [1-800, default: 225]").defineInRange("bronzeToolsDurability", 225, 1, 800);
         BRONZE_TOOLS_MINING_SPEED = SERVER_BUILDER.comment("Bronze tool mining speed [1-25, default: 6.5]").defineInRange("bronzeToolsSpeed", 6.5, 1, 25.0);
         BRONZE_TOOLS_ATTACK_DAMAGE = SERVER_BUILDER.comment("Bronze tool attack damage [1-100, default: 0.5]").defineInRange("bronzeToolsDamage", 0.5, 1, 100.0);
-        BRONZE_TOOLS_MINING_LEVEL = SERVER_BUILDER.comment("Bronze tool mining level [1-6, default: 2]").defineInRange("bronzeToolsMiningLevel", 2, 1, 6);
         BRONZE_TOOLS_ENCHANTABILITY = SERVER_BUILDER.comment("Bronze tool enchantability [0-50, default: 10]").defineInRange("bronzeToolsEnchantability", 10, 1, 50);
 
         SERVER_BUILDER.pop();
@@ -225,7 +223,6 @@ public class GeneralModConfig
         STEEL_TOOLS_DURABILITY = SERVER_BUILDER.comment("Steel tool durability [1-800, default: 482]").defineInRange("steelToolsDurability", 482, 1, 800);
         STEEL_TOOLS_MINING_SPEED = SERVER_BUILDER.comment("Steel tool mining speed [1-25, default: 6.5]").defineInRange("steelToolsSpeed", 6.5, 1, 25.0);
         STEEL_TOOLS_ATTACK_DAMAGE = SERVER_BUILDER.comment("Steel tool attack damage [1-100, default: 0.5]").defineInRange("steelToolsDamage", 0.5, 1, 100.0);
-        STEEL_TOOLS_MINING_LEVEL = SERVER_BUILDER.comment("Steel tool mining level [1-6, default: 2]").defineInRange("steelToolsMiningLevel", 2, 1, 6);
         STEEL_TOOLS_ENCHANTABILITY = SERVER_BUILDER.comment("Steel tool enchantability [0-50, default: 8]").defineInRange("steelToolsEnchantability", 8, 1, 50);
 
         SERVER_BUILDER.pop();
@@ -236,7 +233,6 @@ public class GeneralModConfig
         TITANIUM_TOOLS_DURABILITY = SERVER_BUILDER.comment("Titanium tool durability [1-800, default: 625]").defineInRange("titaniumToolsDurability", 625, 1, 800);
         TITANIUM_TOOLS_MINING_SPEED = SERVER_BUILDER.comment("Titanium tool mining speed [1-25, default: 6.5]").defineInRange("titaniumToolsSpeed", 6.5, 1, 25.0);
         TITANIUM_TOOLS_ATTACK_DAMAGE = SERVER_BUILDER.comment("Titanium tool attack damage [1-100, default: 0.5]").defineInRange("titaniumToolsDamage", 0.5, 1, 100.0);
-        TITANIUM_TOOLS_MINING_LEVEL = SERVER_BUILDER.comment("Titanium tool mining level [1-6, default: 2]").defineInRange("titaniumToolsMiningLevel", 2, 1, 6);
         TITANIUM_TOOLS_ENCHANTABILITY = SERVER_BUILDER.comment("Titanium tool enchantability [0-50, default: 8]").defineInRange("titaniumToolsEnchantability", 8, 1, 50);
 
         SERVER_BUILDER.pop();
@@ -247,7 +243,6 @@ public class GeneralModConfig
         HARDENED_STEEL_TOOLS_DURABILITY = SERVER_BUILDER.comment("Hardened Steel tool durability [1-1000, default: 816]").defineInRange("hardenedSteelToolsDurability", 816, 1, 1000);
         HARDENED_STEEL_TOOLS_MINING_SPEED = SERVER_BUILDER.comment("Hardened Steel tool mining speed [1-25, default: 6.5]").defineInRange("hardenedSteelToolsSpeed", 6.5, 1, 25.0);
         HARDENED_STEEL_TOOLS_ATTACK_DAMAGE = SERVER_BUILDER.comment("Hardened Steel tool attack damage [1-100, default: 0.5]").defineInRange("hardenedSteelToolsDamage", 0.5, 1, 100.0);
-        HARDENED_STEEL_TOOLS_MINING_LEVEL = SERVER_BUILDER.comment("Hardened Steel tool mining level [1-6, default: 2]").defineInRange("hardenedSteelToolsMiningLevel", 2, 1, 6);
         HARDENED_STEEL_TOOLS_ENCHANTABILITY = SERVER_BUILDER.comment("Hardened Steel tool enchantability [0-50, default: 8]").defineInRange("hardenedSteelToolsEnchantability", 8, 1, 50);
 
         SERVER_BUILDER.pop();
@@ -258,7 +253,6 @@ public class GeneralModConfig
         TUNGSTEN_TOOLS_DURABILITY = SERVER_BUILDER.comment("Tungsten tool durability [1-1000, default: 1023]").defineInRange("tungstenToolsDurability", 1023, 1, 1400);
         TUNGSTEN_TOOLS_MINING_SPEED = SERVER_BUILDER.comment("Tungsten tool mining speed [1-25, default: 6.5]").defineInRange("tungstenToolsSpeed", 6.5, 1, 25.0);
         TUNGSTEN_TOOLS_ATTACK_DAMAGE = SERVER_BUILDER.comment("Tungsten tool attack damage [1-100, default: 0.75]").defineInRange("tungstenToolsDamage", 0.75, 1, 100.0);
-        TUNGSTEN_TOOLS_MINING_LEVEL = SERVER_BUILDER.comment("Tungsten tool mining level [1-6, default: 3]").defineInRange("tungstenToolsMiningLevel", 3, 1, 6);
         TUNGSTEN_TOOLS_ENCHANTABILITY = SERVER_BUILDER.comment("Tungsten tool enchantability [0-50, default: 8]").defineInRange("tungstenToolsEnchantability", 8, 1, 50);
 
         SERVER_BUILDER.pop();
