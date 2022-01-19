@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "easy_steel:wolframite_ore"
+    "tag": "forge:ores/tungsten"
   },
   "result": "easy_steel:tungsten_ingot",
   "experience": 0.15,

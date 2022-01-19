@@ -2,6 +2,7 @@
 	"replace": false,
 	"values":
 	[
-		"easy_steel:rutile_ore"
+		"easy_steel:rutile_ore",
+		"easy_steel:rutile_ore_deepslate"
 	]	
 }
