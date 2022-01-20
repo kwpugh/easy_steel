@@ -1,0 +1,27 @@
+{
+  "key": "hardened_steel_string",
+  "category": "fibre",
+  "primary": 7,
+  "secondary": 3.3,
+  "tertiary": 4,
+  "durability": 600,
+  "integrityCost": 1,
+  "integrityGain": 5,
+  "magicCapacity": 84,
+  "toolLevel": 0,
+  "toolEfficiency": 0,
+  "tints": {
+    "glyph": "string_glyph",
+    "texture": "string"
+  },
+  "textures": [
+    "default"
+  ],
+  "material": {
+    "tag": "forge:hardened_steel_string",
+    "count": 2
+  },
+  "requiredTools": {
+    "cut": "minecraft:wood"
+  }
+}

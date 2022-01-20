@@ -185,6 +185,21 @@
 	"item.easy_steel.armor_tungsten_carbide_body": "Tungsten-Carbide Chestplate",
 	"item.easy_steel.armor_tungsten_carbide_leggings": "Tungsten-Carbide Leggings",
 	"item.easy_steel.armor_tungsten_carbide_boots": "Tungsten-Carbide Boots",
-		
+
+	"tetra.material.titanium": "Titanium",
+	"tetra.material.titanium.prefix": "Titanium",
+	"tetra.material.titanium_alloy": "Titanium Alloy",
+	"tetra.material.titanium_alloy.prefix": "Titanium Alloy",
+	"tetra.material.hardened_steel": "Hardened Steel",
+	"tetra.material.hardened_steel.prefix": "Hardened Steel",
+	"tetra.material.tungsten": "Tungsten",
+	"tetra.material.tungsten.prefix": "Tungsten",
+	"tetra.material.tungsten_carbide": "Tungsten-Carbide",
+	"tetra.material.tungsten_carbide.prefix": "Tungsten-Carbide",
+	"tetra.material.steel_string": "Steel String",
+	"tetra.material.steel_string.prefix": "Steel String",
+	"tetra.material.hardened_steel_string": "Hardened Steel String",
+	"tetra.material.hardened_steel_string.prefix": "Hardened Steel String",
+
 	"itemGroup.easy_steel": "Easy Steel"
 }

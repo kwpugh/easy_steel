@@ -1,0 +1,27 @@
+{
+  "key": "steel_string",
+  "category": "fibre",
+  "primary": 6,
+  "secondary": 2.3,
+  "tertiary": 3,
+  "durability": 400,
+  "integrityCost": 1,
+  "integrityGain": 4,
+  "magicCapacity": 74,
+  "toolLevel": 0,
+  "toolEfficiency": 0,
+  "tints": {
+    "glyph": "string_glyph",
+    "texture": "string"
+  },
+  "textures": [
+    "default"
+  ],
+  "material": {
+    "tag": "forge:steel_string",
+    "count": 2
+  },
+  "requiredTools": {
+    "cut": "minecraft:wood"
+  }
+}
