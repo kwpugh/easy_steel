@@ -58,7 +58,7 @@ public class EasySteel
 
     private void enqueueIMC(final InterModEnqueueEvent event)
     {
-        InterModComms.sendTo("easy_steel", "hello world", () -> { logger.info("Hello world from EasySteel"); return "Hello world"; });
+        InterModComms.sendTo(modid, "hello world", () -> { logger.info("Hello world from EasySteel"); return "Hello world"; });
     }
 
     private void processIMC(final InterModProcessEvent event)

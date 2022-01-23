@@ -21,6 +21,9 @@
   "material": {
     "items": [ "easy_steel:tungsten_ingot" ]
   },
+  "effects": {
+    "stabilizing": 5
+  },
   "requiredTools": {
     "hammer_dig": "minecraft:gold"
   }

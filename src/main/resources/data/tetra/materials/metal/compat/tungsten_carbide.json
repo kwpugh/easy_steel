@@ -21,7 +21,10 @@
   "material": {
     "tag": "forge:ingots/tungsten_carbide"
   },
+  "effects": {
+    "stabilizing": 12
+  },
   "requiredTools": {
-    "hammer_dig": "minecraft:wood"
+    "hammer_dig": "minecraft:gold"
   }
 }

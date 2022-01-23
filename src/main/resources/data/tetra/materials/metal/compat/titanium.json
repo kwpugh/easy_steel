@@ -21,6 +21,9 @@
   "material": {
     "items": [ "easy_steel:titanium_ingot" ]
   },
+  "effects": {
+    "stabilizing":3
+  },
   "requiredTools": {
     "hammer_dig": "minecraft:gold"
   }

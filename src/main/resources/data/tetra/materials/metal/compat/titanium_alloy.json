@@ -21,7 +21,10 @@
   "material": {
     "tag": "forge:ingots/titanium_alloy"
   },
+  "effects": {
+    "stabilizing":7
+  },
   "requiredTools": {
-    "hammer_dig": "minecraft:wood"
+    "hammer_dig": "minecraft:gold"
   }
 }

@@ -21,7 +21,10 @@
   "material": {
     "tag": "forge:ingots/hardened_steel"
   },
+  "effects": {
+    "stabilizing":9
+  },
   "requiredTools": {
-    "hammer_dig": "minecraft:wood"
+    "hammer_dig": "minecraft:gold"
   }
 }
