@@ -1,7 +1,7 @@
 {
   "key": "titanium_alloy",
   "category": "metal",
-  "primary": 6,
+  "primary": 8,
   "secondary": 3.8,
   "tertiary": 3,
   "durability": 625,
@@ -23,6 +23,9 @@
   },
   "effects": {
     "stabilizing":7
+  },
+  "improvements": {
+    "workable":3
   },
   "requiredTools": {
     "hammer_dig": "minecraft:gold"

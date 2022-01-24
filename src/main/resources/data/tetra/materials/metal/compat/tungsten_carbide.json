@@ -1,7 +1,7 @@
 {
   "key": "tungsten_carbide",
   "category": "metal",
-  "primary": 7,
+  "primary": 10,
   "secondary": 4.4,
   "tertiary": 4,
   "durability": 1023,
@@ -23,6 +23,9 @@
   },
   "effects": {
     "stabilizing": 12
+  },
+  "improvements": {
+    "workable":5
   },
   "requiredTools": {
     "hammer_dig": "minecraft:gold"
