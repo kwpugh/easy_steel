@@ -9,7 +9,7 @@
     }
   ],
   "availability": {
-    "tier": 3,
+    "tier": 2,
     "visible": true,
     "gear_blacklist": []
   },

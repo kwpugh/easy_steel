@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:strings/steel_string",
+    "#forge:strings/hardened_steel_string"
+  ]
+}

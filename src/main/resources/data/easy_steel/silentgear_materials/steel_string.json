@@ -1,0 +1,92 @@
+{
+  "type": "silentgear:standard",
+  "simple": true,
+  "availability": {
+    "tier": 1,
+    "categories": [
+      "metal",
+      "fiber"
+    ],
+    "visible": true,
+    "gear_blacklist": [],
+    "can_salvage": true
+  },
+  "crafting_items": {
+    "main": {
+      "tag": "forge:strings/steel"
+    }
+  },
+  "name": {
+    "translate": "Steel String"
+  },
+  "stats": {
+    "binding": {
+      "durability": {
+        "mul1": 0.1
+      },
+      "repair_efficiency": {
+        "mul1": 0.05
+      }
+    },
+    "cord": {
+      "durability": {
+        "mul1": 0.2
+      },
+      "ranged_damage": {
+        "mul1": 0.2
+      },
+      "rarity": {
+        "add": 20.0
+      }
+    }
+  },
+  "traits": {
+    "binding": [
+      {
+        "name": "silentgear:flexible",
+        "level": 1
+      }
+    ],
+    "cord": [
+      {
+        "name": "silentgear:flexible",
+        "level": 1
+      }
+    ]
+  },
+  "model": {
+    "binding/all": [
+      {
+        "texture": "silentgear:binding_generic",
+        "color": "#aaaba2"
+      }
+    ],
+    "binding/part": [
+      {
+        "texture": "silentgear:binding",
+        "color": "#aaaba2"
+      }
+    ],
+    "cord/all": [
+      {
+        "texture": "silentgear:bowstring_string",
+        "color": "#aaaba2"
+      },
+      {
+        "texture": "silentgear:arrow"
+      }
+    ],
+    "cord/part": [
+      {
+        "texture": "silentgear:bowstring",
+        "color": "#aaaba2"
+      }
+    ],
+    "main/fragment": [
+      {
+        "texture": "silentgear:cloth",
+        "color": "#aaaba2"
+      }
+    ]
+  }
+}

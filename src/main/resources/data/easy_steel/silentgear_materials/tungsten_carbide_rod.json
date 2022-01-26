@@ -1,0 +1,69 @@
+{
+  "type": "silentgear:standard",
+  "simple": true,
+  "availability": {
+    "tier": 2,
+    "categories": [
+      "metal"
+    ],
+    "visible": true,
+    "gear_blacklist": [],
+    "can_salvage": true
+  },
+  "crafting_items": {
+    "subs": {
+      "rod": {
+        "tag": "forge:rods/tungsten-carbide"
+      }
+    }
+  },
+  "name": {
+    "text": "Tungsten-Carbide Rod"
+  },
+  "stats": {
+    "rod": {
+      "durability": {
+        "mul2": 0.15
+      },
+      "harvest_speed": {
+        "add": 1.0
+      },
+      "melee_damage": {
+        "add": 1.0
+      },
+      "ranged_damage": {
+        "add": 0.25
+      },
+      "projectile_speed": {
+        "add": 0.25
+      },
+      "rarity": 30.0
+    }
+  },
+  "traits": {
+    "rod": [
+      {
+        "name": "silentgear:accelerate",
+        "level": 1
+      },
+      {
+        "name": "silentgear:sturdy",
+        "level": 1
+      }
+    ]
+  },
+  "model": {
+    "rod/all": [
+      {
+        "texture": "silentgear:rod_generic_hc",
+        "color": "#e6edc0"
+      }
+    ],
+    "rod/part": [
+      {
+        "texture": "silentgear:rod",
+        "color": "#e6edc0"
+      }
+    ]
+  }
+}
