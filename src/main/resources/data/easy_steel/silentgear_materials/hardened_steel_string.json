@@ -58,19 +58,19 @@
     "binding/all": [
       {
         "texture": "silentgear:binding_generic",
-        "color": "#aaaba2"
+        "color": "#8c8c89"
       }
     ],
     "binding/part": [
       {
         "texture": "silentgear:binding",
-        "color": "#aaaba2"
+        "color": "#8c8c89"
       }
     ],
     "cord/all": [
       {
         "texture": "silentgear:bowstring_string",
-        "color": "#aaaba2"
+        "color": "#8c8c89"
       },
       {
         "texture": "silentgear:arrow"
@@ -79,13 +79,13 @@
     "cord/part": [
       {
         "texture": "silentgear:bowstring",
-        "color": "#aaaba2"
+        "color": "#8c8c89"
       }
     ],
     "main/fragment": [
       {
         "texture": "silentgear:cloth",
-        "color": "#aaaba2"
+        "color": "#8c8c89"
       }
     ]
   }
