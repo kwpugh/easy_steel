@@ -21,14 +21,14 @@ public class EasySteelPlacedFeature
     public static void registerPlacedFeatures()
     {
         ORE_CASSITERITE_PLACED = PlacementUtils.register("ore_cassiterite",
-                EasySteelConfiguredFeature.ORE_CASSITERITE_CONFIGED, commonOrePlacement(16,
+                EasySteelConfiguredFeature.ORE_CASSITERITE_CONFIGED, commonOrePlacement(35,
                 HeightRangePlacement.uniform(VerticalAnchor.bottom(), VerticalAnchor.top())));
         ORE_RUTILE_PLACED = PlacementUtils.register("ore_rutile",
-                EasySteelConfiguredFeature.ORE_RUTILE_CONFIGED, commonOrePlacement(12,
-                HeightRangePlacement.uniform(VerticalAnchor.absolute(-32), VerticalAnchor.absolute(25))));
+                EasySteelConfiguredFeature.ORE_RUTILE_CONFIGED, commonOrePlacement(19,
+                HeightRangePlacement.uniform(VerticalAnchor.absolute(-40), VerticalAnchor.absolute(40))));
         ORE_WOLFRAMITE_PLACED = PlacementUtils.register("ore_wolframite",
-                EasySteelConfiguredFeature.ORE_WOLFRAMITE_CONFIGED, commonOrePlacement(10,
-                HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(5))));
+                EasySteelConfiguredFeature.ORE_WOLFRAMITE_CONFIGED, commonOrePlacement(16,
+                HeightRangePlacement.uniform(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(10))));
     }
 
 

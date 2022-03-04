@@ -45,8 +45,11 @@ public class EasySteel
 
     private void setup(final FMLCommonSetupEvent event)
     {
-        EasySteelConfiguredFeature.registerConfiguredFeatures();
-        EasySteelPlacedFeature.registerPlacedFeatures();
+        event.enqueueWork(() ->
+        {
+            EasySteelConfiguredFeature.registerConfiguredFeatures();
+            EasySteelPlacedFeature.registerPlacedFeatures();
+        });
 
         logger.info("EasySteel common setup complete");
     }
