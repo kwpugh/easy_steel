@@ -53,7 +53,7 @@ public class ExcavatorUtil
 
         BlockState state = world.getBlockState(pos);
         boolean isEffective = (effectiveOn.contains(state.getBlock()) || effectiveMaterials.contains(state.getMaterial()));
-        boolean witherImmune = BlockTags.WITHER_IMMUNE.contains(state.getBlock());
+        boolean witherImmune = state.is(BlockTags.WITHER_IMMUNE);
         
         if(isEffective && !witherImmune)	
         {

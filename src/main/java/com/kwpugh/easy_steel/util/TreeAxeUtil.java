@@ -91,16 +91,17 @@ public class TreeAxeUtil extends AxeItem {
         // Find all connected logs and count all connected leaves
         for (int i = 0; i < candidates.size(); i++)
         {
-            if (logs.size() > 200) return false; // Whatever this is, it's too big! I don't want to know what happens if I let you use this in an all-log RFTDim.
+            if(logs.size() > 200) return false; // Whatever this is, it's too big! I don't want to know what happens if I let you use this in an all-log RFTDim.
 
             BlockPos candidate = candidates.get(i);
-            Block block = world.getBlockState(candidate).getBlock();
+            BlockState state = world.getBlockState(candidate);
+            Block block = state.getBlock();
 
-            if (BlockTags.LEAVES.contains(block))
+            if(state.is(BlockTags.LEAVES))
             {
                 leaves++;
             }
-            else if (logs.size() == 0 || BlockTags.LOGS.contains(block))
+            else if (logs.size() == 0 || state.is(BlockTags.LOGS))
             {
                 logs.add(candidate);
 
@@ -198,7 +199,7 @@ public class TreeAxeUtil extends AxeItem {
 
         boolean validHarvest = !checkHarvestLevel || player.getMainHandItem().isCorrectToolForDrops(state);
         boolean isEffective = effectiveOn.contains(state.getBlock()) || effectiveMaterials.contains(state.getMaterial());
-        boolean witherImmune = BlockTags.WITHER_IMMUNE.contains(state.getBlock());
+        boolean witherImmune = state.is(BlockTags.WITHER_IMMUNE);
 
         if (validHarvest && isEffective && !witherImmune)
         {

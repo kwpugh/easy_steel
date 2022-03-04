@@ -11,7 +11,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.Tag;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DiggerItem;
@@ -39,7 +39,7 @@ import java.util.Optional;
 
 public class PaxelBase extends DiggerItem
 {
-	public PaxelBase(float attackDamageIn, float attackSpeedIn, Tier tier, Tag<Block> mineable,
+	public PaxelBase(float attackDamageIn, float attackSpeedIn, Tier tier, TagKey<Block> mineable,
 					 Properties builder)
 	{
 		super(attackDamageIn, attackSpeedIn, tier, TagInit.PAXEL_MINEABLE, builder);
@@ -155,9 +155,9 @@ public class PaxelBase extends DiggerItem
 	@Override
 	public float getDestroySpeed(ItemStack stack, BlockState state)
 	{
-		if (state.is(BlockTags.MINEABLE_WITH_AXE)) return speed;
-		if (state.is(BlockTags.MINEABLE_WITH_PICKAXE)) return speed;
-		if (state.is(BlockTags.MINEABLE_WITH_SHOVEL)) return speed;
+		if(state.is(BlockTags.MINEABLE_WITH_AXE)) return speed;
+		if(state.is(BlockTags.MINEABLE_WITH_PICKAXE)) return speed;
+		if(state.is(BlockTags.MINEABLE_WITH_SHOVEL)) return speed;
 		return super.getDestroySpeed(stack, state);
 	}
 
