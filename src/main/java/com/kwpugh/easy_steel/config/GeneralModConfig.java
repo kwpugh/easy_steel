@@ -22,60 +22,36 @@ public class GeneralModConfig
     public static ForgeConfigSpec.IntValue WOLFRAMITE_ORE_MIN_HEIGHT;
     public static ForgeConfigSpec.IntValue WOLFRAMITE_ORE_MAX_HEIGHT;
 
-    public static ForgeConfigSpec.BooleanValue CASSITERITE_ORE_DEEPSLATE_GENERATION;
-    public static ForgeConfigSpec.IntValue CASSITERITE_ORE_DEEPSLATE_CHANCE;
-    public static ForgeConfigSpec.IntValue CASSITERITE_ORE_DEEPSLATE_SIZE;
-    public static ForgeConfigSpec.IntValue CASSITERITE_ORE_DEEPSLATE_MIN_HEIGHT;
-    public static ForgeConfigSpec.IntValue CASSITERITE_ORE_DEEPSLATE_MAX_HEIGHT;
-
-    public static ForgeConfigSpec.BooleanValue RUTILE_ORE_DEEPSLATE_GENERATION;
-    public static ForgeConfigSpec.IntValue RUTILE_ORE_DEEPSLATE_CHANCE;
-    public static ForgeConfigSpec.IntValue RUTILE_ORE_DEEPSLATE_SIZE;
-    public static ForgeConfigSpec.IntValue RUTILE_ORE_DEEPSLATE_MIN_HEIGHT;
-    public static ForgeConfigSpec.IntValue RUTILE_ORE_DEEPSLATE_MAX_HEIGHT;
-
-    public static ForgeConfigSpec.BooleanValue WOLFRAMITE_ORE_DEEPSLATE_GENERATION;
-    public static ForgeConfigSpec.IntValue WOLFRAMITE_ORE_DEEPSLATE_CHANCE;
-    public static ForgeConfigSpec.IntValue WOLFRAMITE_ORE_DEEPSLATE_SIZE;
-    public static ForgeConfigSpec.IntValue WOLFRAMITE_ORE_DEEPSLATE_MIN_HEIGHT;
-    public static ForgeConfigSpec.IntValue WOLFRAMITE_ORE_DEEPSLATE_MAX_HEIGHT;
-
     public static ForgeConfigSpec.DoubleValue SHARP_FLINT_DROP_CHANCE;
 
     public static ForgeConfigSpec.IntValue FLINT_TOOLS_DURABILITY;
     public static ForgeConfigSpec.DoubleValue FLINT_TOOLS_MINING_SPEED;
     public static ForgeConfigSpec.DoubleValue FLINT_TOOLS_ATTACK_DAMAGE;
-    public static ForgeConfigSpec.IntValue FLINT_TOOLS_MINING_LEVEL;
     public static ForgeConfigSpec.IntValue FLINT_TOOLS_ENCHANTABILITY;
 
     public static ForgeConfigSpec.IntValue BRONZE_TOOLS_DURABILITY;
     public static ForgeConfigSpec.DoubleValue BRONZE_TOOLS_MINING_SPEED;
     public static ForgeConfigSpec.DoubleValue BRONZE_TOOLS_ATTACK_DAMAGE;
-    public static ForgeConfigSpec.IntValue BRONZE_TOOLS_MINING_LEVEL;
     public static ForgeConfigSpec.IntValue BRONZE_TOOLS_ENCHANTABILITY;
 
     public static ForgeConfigSpec.IntValue STEEL_TOOLS_DURABILITY;
     public static ForgeConfigSpec.DoubleValue STEEL_TOOLS_MINING_SPEED;
     public static ForgeConfigSpec.DoubleValue STEEL_TOOLS_ATTACK_DAMAGE;
-    public static ForgeConfigSpec.IntValue STEEL_TOOLS_MINING_LEVEL;
     public static ForgeConfigSpec.IntValue STEEL_TOOLS_ENCHANTABILITY;
 
     public static ForgeConfigSpec.IntValue TITANIUM_TOOLS_DURABILITY;
     public static ForgeConfigSpec.DoubleValue TITANIUM_TOOLS_MINING_SPEED;
     public static ForgeConfigSpec.DoubleValue TITANIUM_TOOLS_ATTACK_DAMAGE;
-    public static ForgeConfigSpec.IntValue TITANIUM_TOOLS_MINING_LEVEL;
     public static ForgeConfigSpec.IntValue TITANIUM_TOOLS_ENCHANTABILITY;
 
     public static ForgeConfigSpec.IntValue HARDENED_STEEL_TOOLS_DURABILITY;
     public static ForgeConfigSpec.DoubleValue HARDENED_STEEL_TOOLS_MINING_SPEED;
     public static ForgeConfigSpec.DoubleValue HARDENED_STEEL_TOOLS_ATTACK_DAMAGE;
-    public static ForgeConfigSpec.IntValue HARDENED_STEEL_TOOLS_MINING_LEVEL;
     public static ForgeConfigSpec.IntValue HARDENED_STEEL_TOOLS_ENCHANTABILITY;
 
     public static ForgeConfigSpec.IntValue TUNGSTEN_TOOLS_DURABILITY;
     public static ForgeConfigSpec.DoubleValue TUNGSTEN_TOOLS_MINING_SPEED;
     public static ForgeConfigSpec.DoubleValue TUNGSTEN_TOOLS_ATTACK_DAMAGE;
-    public static ForgeConfigSpec.IntValue TUNGSTEN_TOOLS_MINING_LEVEL;
     public static ForgeConfigSpec.IntValue TUNGSTEN_TOOLS_ENCHANTABILITY;
 
     public static ForgeConfigSpec.IntValue BRONZE_ARMOR_DURABILITY_MULTIPLIER;
@@ -125,68 +101,35 @@ public class GeneralModConfig
 
     public static void init(ForgeConfigSpec.Builder SERVER_BUILDER)
     {           
-        SERVER_BUILDER.comment("Cassiterite Ore Generation").push("cassiterite_ore");
+        SERVER_BUILDER.comment("Cassiterite and Deepslate Ore Generation").push("cassiterite_ore");
 
         CASSITERITE_ORE_GENERATION = SERVER_BUILDER.comment("Generate Cassiterite Ore in the world [true / false]").define("cassiteriteOreGeneration", true);
         CASSITERITE_ORE_SIZE = SERVER_BUILDER.comment("Size of Cassiterite Ore pockets [0-100, default: 9]").defineInRange("cassiteriteOreSize", 9, 0, 100);
-        CASSITERITE_ORE_CHANCE = SERVER_BUILDER.comment("Chances of Cassiterite Ore pocket being generated [0-30, default: 25]").defineInRange("cassiteriteOreChance", 25, 0, 30);
-        CASSITERITE_ORE_MIN_HEIGHT = SERVER_BUILDER.comment("Minimum height for Cassiterite Ore pocket generation [0-384, default: 40]").defineInRange("cassiteriteOreMinHeight", 40, 0, 384);
-        CASSITERITE_ORE_MAX_HEIGHT = SERVER_BUILDER.comment("Maximal height for Cassiterite Ore pocket generation [0-384, default: 200]").defineInRange("cassiteriteOreMaxHeight", 200, 0, 384);
+        CASSITERITE_ORE_CHANCE = SERVER_BUILDER.comment("Chances of Cassiterite Ore pocket being generated [0-60, default: 35]").defineInRange("cassiteriteOreChance", 35, 0, 60);
+        CASSITERITE_ORE_MIN_HEIGHT = SERVER_BUILDER.comment("Minimum height for Cassiterite Ore pocket generation [-64 to -384, default: -40]").defineInRange("cassiteriteOreMinHeight", -40, -64, 384);
+        CASSITERITE_ORE_MAX_HEIGHT = SERVER_BUILDER.comment("Maximal height for Cassiterite Ore pocket generation [-64 to -384, default: 250]").defineInRange("cassiteriteOreMaxHeight", 250, 0, 384);
 
         SERVER_BUILDER.pop();
 
 
-        SERVER_BUILDER.comment("Cassiterite Ore Deepslate Generation").push("cassiterite_ore_deepslate");
-
-        CASSITERITE_ORE_DEEPSLATE_GENERATION = SERVER_BUILDER.comment("Generate Cassiterite Ore Deepslate in the world [true / false]").define("cassiteriteOreDeepslateGeneration", true);
-        CASSITERITE_ORE_DEEPSLATE_SIZE = SERVER_BUILDER.comment("Size of Cassiterite Ore Deepslate pockets [0-100, default: 9]").defineInRange("cassiteriteOreDeepslateSize", 9, 0, 100);
-        CASSITERITE_ORE_DEEPSLATE_CHANCE = SERVER_BUILDER.comment("Chances of Cassiterite Ore Deepslate pocket being generated [0-30, default: 25]").defineInRange("cassiteriteOreDeepslateChance", 25, 0, 30);
-        CASSITERITE_ORE_DEEPSLATE_MIN_HEIGHT = SERVER_BUILDER.comment("Minimum height for Cassiterite Ore Deepslate pocket generation [-64 to 0, default: -63]").defineInRange("cassiteriteOreDeepslateMinHeight", -63, -64, 0);
-        CASSITERITE_ORE_DEEPSLATE_MAX_HEIGHT = SERVER_BUILDER.comment("Maximal height for Cassiterite Ore Deepslate pocket generation [-64 to 0, default: 0]").defineInRange("cassiteriteOreDeepslateMaxHeight", 0, -64, 0);
-
-        SERVER_BUILDER.pop();
-
-
-        SERVER_BUILDER.comment("Rutile Ore Generation").push("rutile");
+        SERVER_BUILDER.comment("Rutile Ore and Deepslate Generation").push("rutile");
 
         RUTILE_ORE_GENERATION = SERVER_BUILDER.comment("Generate Rutile Ore in the world [true / false]").define("rutileOreGeneration", true);
-        RUTILE_ORE_SIZE = SERVER_BUILDER.comment("Size of Rutile Ore pockets [0-100, default: 5]").defineInRange("rutileOreSize", 6, 0, 100);
-        RUTILE_ORE_CHANCE = SERVER_BUILDER.comment("Chances of Rutile Ore pocket being generated [0-30, default: 6]").defineInRange("rutileOreChance", 18, 0, 30);
-        RUTILE_ORE_MIN_HEIGHT = SERVER_BUILDER.comment("Minimum height for Rutile Ore pocket generation [0-384, default: 1]").defineInRange("rutileOreMinHeight", 1, 0, 384);
-        RUTILE_ORE_MAX_HEIGHT = SERVER_BUILDER.comment("Maximal height for Rutile Ore pocket generation [0-384, default: 50]").defineInRange("rutileOreMaxHeight", 50, 0, 384);
+        RUTILE_ORE_SIZE = SERVER_BUILDER.comment("Size of Rutile Ore pockets [0-100, default: 6]").defineInRange("rutileOreSize", 6, 0, 100);
+        RUTILE_ORE_CHANCE = SERVER_BUILDER.comment("Chances of Rutile Ore pocket being generated [0-60, default: 19]").defineInRange("rutileOreChance", 19, 0, 60);
+        RUTILE_ORE_MIN_HEIGHT = SERVER_BUILDER.comment("Minimum height for Rutile Ore pocket generation [-64 to -384, default: -40]").defineInRange("rutileOreMinHeight", -40, -64, 384);
+        RUTILE_ORE_MAX_HEIGHT = SERVER_BUILDER.comment("Maximal height for Rutile Ore pocket generation [-64 to-384, default: 40]").defineInRange("rutileOreMaxHeight", 40, -64, 384);
 
         SERVER_BUILDER.pop();
 
 
-        SERVER_BUILDER.comment("Rutile Ore Deepslate Generation").push("rutile_deepslate");
-
-        RUTILE_ORE_DEEPSLATE_GENERATION = SERVER_BUILDER.comment("Generate Rutile Ore Deepslate in the world [true / false]").define("rutileOreDeepslateGeneration", true);
-        RUTILE_ORE_DEEPSLATE_SIZE = SERVER_BUILDER.comment("Size of Rutile Ore Deepslate pockets [0-100, default: 5]").defineInRange("rutileOreDeepslateSize", 6, 0, 100);
-        RUTILE_ORE_DEEPSLATE_CHANCE = SERVER_BUILDER.comment("Chances of Rutile Ore Deepslate pocket being generated [0-30, default: 6]").defineInRange("rutileOreDeepslateChance", 18, 0, 30);
-        RUTILE_ORE_DEEPSLATE_MIN_HEIGHT = SERVER_BUILDER.comment("Minimum height for Rutile Ore Deepslate pocket generation [-64 to 0, default: -63]").defineInRange("rutileOreDeepslateMinHeight", -63, -64, 0);
-        RUTILE_ORE_DEEPSLATE_MAX_HEIGHT = SERVER_BUILDER.comment("Maximal height for Rutile Ore Deepslate pocket generation [-64 to 0, default: 0]").defineInRange("rutileOreDeepslateMaxHeight", 0, -64, 0);
-
-        SERVER_BUILDER.pop();
-
-
-        SERVER_BUILDER.comment("Wolframite Ore Generation").push("wolframite_ore");
+        SERVER_BUILDER.comment("Wolframite Ore and Deepslate Generation").push("wolframite_ore");
 
         WOLFRAMITE_ORE_GENERATION = SERVER_BUILDER.comment("Generate Wolframite Ore in the world [true / false]").define("wolframiteOreGeneration", true);
-        WOLFRAMITE_ORE_SIZE = SERVER_BUILDER.comment("Size of Wolframite Ore pockets [0-100, default: 5]").defineInRange("wolframiteOreSize", 6, 0, 100);
-        WOLFRAMITE_ORE_CHANCE = SERVER_BUILDER.comment("Chances of Wolframite Ore pocket being generated [0-30, default: 6]").defineInRange("wolframiteOreChance", 18, 0, 30);
-        WOLFRAMITE_ORE_MIN_HEIGHT = SERVER_BUILDER.comment("Minimum height for Wolframite Ore pocket generation [0-384, default: 1]").defineInRange("wolframiteOreMaxHeight", 1, 0, 384);
-        WOLFRAMITE_ORE_MAX_HEIGHT = SERVER_BUILDER.comment("Maximal height for Wolframite Ore pocket generation [0-384, default: 200]").defineInRange("wolframiteOreMaxHeight", 20, 0, 384);
-
-        SERVER_BUILDER.pop();
-
-
-        SERVER_BUILDER.comment("Wolframite Ore Deepslate Generation").push("wolframite_ore_deepslate");
-
-        WOLFRAMITE_ORE_DEEPSLATE_GENERATION = SERVER_BUILDER.comment("Generate Wolframite Ore Deepslate in the world [true / false]").define("wolframiteOreDeepslateGeneration", true);
-        WOLFRAMITE_ORE_DEEPSLATE_SIZE = SERVER_BUILDER.comment("Size of Wolframite OreDeepslate  pockets [0-100, default: 5]").defineInRange("wolframiteOreDeepslateSize", 6, 0, 100);
-        WOLFRAMITE_ORE_DEEPSLATE_CHANCE = SERVER_BUILDER.comment("Chances of Wolframite Ore Deepslate pocket being generated [0-30, default: 6]").defineInRange("wolframiteOreDeepslateChance", 18, 0, 30);
-        WOLFRAMITE_ORE_DEEPSLATE_MIN_HEIGHT = SERVER_BUILDER.comment("Minimum height for Wolframite Ore Deepslate pocket generation [-64 to 0, default: -63]").defineInRange("wolframiteOreDeepslateMaxHeight", -63, -64, 0);
-        WOLFRAMITE_ORE_DEEPSLATE_MAX_HEIGHT = SERVER_BUILDER.comment("Maximal height for Wolframite Ore Deepslate pocket generation [-64 to 0, default: 0]").defineInRange("wolframiteOreDeepslateMaxHeight", 0, -64, 0);
+        WOLFRAMITE_ORE_SIZE = SERVER_BUILDER.comment("Size of Wolframite Ore pockets [0-100, default: 6]").defineInRange("wolframiteOreSize", 6, 0, 100);
+        WOLFRAMITE_ORE_CHANCE = SERVER_BUILDER.comment("Chances of Wolframite Ore pocket being generated [0-60, default: 16]").defineInRange("wolframiteOreChance", 16, 0, 60);
+        WOLFRAMITE_ORE_MIN_HEIGHT = SERVER_BUILDER.comment("Minimum height for Wolframite Ore pocket generation [-64 to -384, default: -64]").defineInRange("wolframiteOreMaxHeight", -64, -64, 384);
+        WOLFRAMITE_ORE_MAX_HEIGHT = SERVER_BUILDER.comment("Maximal height for Wolframite Ore pocket generation [-64 to -384, default: 10]").defineInRange("wolframiteOreMaxHeight", 10, -64, 384);
 
         SERVER_BUILDER.pop();
 

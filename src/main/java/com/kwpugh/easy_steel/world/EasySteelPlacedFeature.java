@@ -22,7 +22,7 @@ public class EasySteelPlacedFeature
     {
         ORE_CASSITERITE_PLACED = PlacementUtils.register("ore_cassiterite",
                 EasySteelConfiguredFeature.ORE_CASSITERITE_CONFIGED, commonOrePlacement(35,
-                HeightRangePlacement.uniform(VerticalAnchor.bottom(), VerticalAnchor.top())));
+                HeightRangePlacement.uniform(VerticalAnchor.absolute(-40), VerticalAnchor.absolute(380))));
         ORE_RUTILE_PLACED = PlacementUtils.register("ore_rutile",
                 EasySteelConfiguredFeature.ORE_RUTILE_CONFIGED, commonOrePlacement(19,
                 HeightRangePlacement.uniform(VerticalAnchor.absolute(-40), VerticalAnchor.absolute(40))));
