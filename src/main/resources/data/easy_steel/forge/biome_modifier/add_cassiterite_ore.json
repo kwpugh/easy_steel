@@ -1,0 +1,5 @@
+{
+  "type": "easy_steel:easy_steel_codec",
+  "biomes": "#minecraft:is_overworld",
+  "feature": "easy_steel:cassiterite_ore_placed"
+}
