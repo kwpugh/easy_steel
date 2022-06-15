@@ -64,7 +64,7 @@ public class TreeAxeUtil extends AxeItem {
     @Override
     public boolean mineBlock(ItemStack stack, Level world, BlockState state, BlockPos pos, LivingEntity entityLiving)
     {
-        stack.hurt(3, random, null);
+        stack.hurt(3, world.getRandom(), null);
 
         if (entityLiving instanceof Player)
         {
@@ -206,7 +206,7 @@ public class TreeAxeUtil extends AxeItem {
             world.destroyBlock(pos, false);
             Block.dropResources(state, world, pos, null, player, player.getMainHandItem());
 
-            int exp = state.getExpDrop(world, pos, fortuneLevel, silkLevel);
+            int exp = state.getExpDrop(world, world.getRandom(), pos, fortuneLevel, silkLevel);
             if (exp > 0)
             {
                 state.getBlock().popExperience((ServerLevel) world, pos, exp);

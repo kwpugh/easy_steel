@@ -4,8 +4,7 @@ import com.kwpugh.easy_steel.config.EasySteelConfig;
 import com.kwpugh.easy_steel.group.GroupEasySteel;
 import com.kwpugh.easy_steel.init.BlockInit;
 import com.kwpugh.easy_steel.init.ItemInit;
-import com.kwpugh.easy_steel.world.EasySteelConfiguredFeature;
-import com.kwpugh.easy_steel.world.EasySteelPlacedFeature;
+import com.kwpugh.easy_steel.world.EasySteelBiomeCodecs;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -40,6 +39,9 @@ public class EasySteel
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
+
+        EasySteelBiomeCodecs.BIOME_MODIFIER_SERIALIZERS.register(FMLJavaModLoadingContext.get().getModEventBus());
+
         MinecraftForge.EVENT_BUS.register(this);
     }
 
@@ -47,8 +49,7 @@ public class EasySteel
     {
         event.enqueueWork(() ->
         {
-            EasySteelConfiguredFeature.registerConfiguredFeatures();
-            EasySteelPlacedFeature.registerPlacedFeatures();
+            // TBD
         });
 
         logger.info("EasySteel common setup complete");

@@ -96,7 +96,7 @@ public class CrossbowBase extends CrossbowItem
    public static void fireProjectiles(Level worldIn, LivingEntity shooter, InteractionHand handIn, ItemStack stack, float velocityIn, float inaccuracyIn)
    {
 	   List<ItemStack> list = getChargedProjectiles(stack);
-	   float[] afloat = getRandomSoundPitches(shooter.getRandom());
+	   float[] afloat = getRandomSoundPitches(random);
 
 	   for(int i = 0; i < list.size(); ++i)
 	   {

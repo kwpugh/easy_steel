@@ -1,23 +1,18 @@
 package com.kwpugh.easy_steel.items.flint;
 
-import java.util.List;
-
-import javax.annotation.Nullable;
-
 import com.kwpugh.easy_steel.init.ItemInit;
-
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.Tier;
+import net.minecraft.ChatFormatting;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.network.chat.Component;
-import net.minecraft.ChatFormatting;
-import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-import net.minecraft.world.item.Item.Properties;
+import javax.annotation.Nullable;
+import java.util.List;
 
 public class FlintMattock extends PickaxeItem
 {
@@ -42,6 +37,6 @@ public class FlintMattock extends PickaxeItem
 	public void appendHoverText(ItemStack stack, @Nullable Level worldIn, List<Component> tooltip, TooltipFlag flagIn)
 	{
 		super.appendHoverText(stack, worldIn, tooltip, flagIn);
-		tooltip.add((new TranslatableComponent("item.easy_steel.flint.line1").withStyle(ChatFormatting.GREEN)));
+		tooltip.add((Component.translatable("item.easy_steel.flint.line1").withStyle(ChatFormatting.GREEN)));
 	}
 }
