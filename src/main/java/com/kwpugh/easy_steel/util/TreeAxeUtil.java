@@ -136,7 +136,7 @@ public class TreeAxeUtil extends AxeItem {
                 int i = 0;
 
                 @SubscribeEvent
-                public void onTick(TickEvent.WorldTickEvent event)
+                public void onTick(TickEvent.LevelTickEvent event)
                 {
                     if (delay-- > 0) return;
                     delay = LOG_BREAK_DELAY;

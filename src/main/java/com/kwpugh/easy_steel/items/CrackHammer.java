@@ -21,13 +21,13 @@ public class CrackHammer extends Item
 	}
 
 	@Override
-    public boolean hasContainerItem(ItemStack stack)
+    public boolean hasCraftingRemainingItem(ItemStack stack)
     {
         return true;
     }
 
     @Override
-    public ItemStack getContainerItem(ItemStack stackIn)
+    public ItemStack getCraftingRemainingItem(ItemStack stackIn)
     {	
     	ItemStack stack = stackIn.copy();
     	stack.setDamageValue(getDamage(stack) + 1);
