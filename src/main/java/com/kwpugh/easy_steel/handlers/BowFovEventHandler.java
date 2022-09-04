@@ -11,7 +11,7 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 
 
 @EventBusSubscriber(modid= EasySteel.modid, bus=EventBusSubscriber.Bus.FORGE, value=Dist.CLIENT)
-public class ForgeEventHandlerClient
+public class BowFovEventHandler
 {
     static double zoom = GeneralModConfig.BOW_ZOOM.get();
 

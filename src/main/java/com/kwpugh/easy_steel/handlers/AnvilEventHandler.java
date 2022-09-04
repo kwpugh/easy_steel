@@ -11,7 +11,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 
 @EventBusSubscriber(modid = EasySteel.modid, bus = EventBusSubscriber.Bus.FORGE )
-public class ForgeEventHandler
+public class AnvilEventHandler
 {
 	@SubscribeEvent
 	public static void upgradeSomeTools(AnvilUpdateEvent event)

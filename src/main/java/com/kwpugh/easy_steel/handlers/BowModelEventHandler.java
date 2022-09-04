@@ -9,7 +9,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
 @Mod.EventBusSubscriber(modid = EasySteel.modid, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class ModEventHandlerClient
+public class BowModelEventHandler
 {
     @SubscribeEvent
     public static void setModelProperties(FMLClientSetupEvent event)
