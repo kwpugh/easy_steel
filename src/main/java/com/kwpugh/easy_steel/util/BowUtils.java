@@ -10,31 +10,30 @@ import java.util.function.Predicate;
 
 public final class BowUtils
 {
-    public static void setupBowFov(ComputeFovModifierEvent event, Predicate<Item> itemChecker, float zoomVal)
+    public static void setupBowFov(ComputeFovModifierEvent event, Predicate<Item> predicate, float zoomValue)
     {
-        float baseFOV = event.getFovModifier();
-        float myNewFOV = 1.0F;
+        float oldFOV = event.getFovModifier();
+        float newFOV = 1.0F;
 
-        ItemStack heldItemStack = event.getPlayer().getMainHandItem();
-        if (heldItemStack.isEmpty()) {
-            return;
-        }
-        Item heldItem = heldItemStack.getItem();
-        int useRemaining = event.getPlayer().getTicksUsingItem();
-        if (heldItem instanceof BowItem)
+        ItemStack stack = event.getPlayer().getMainHandItem();
+        if (stack.isEmpty()) return;
+
+        Item item = stack.getItem();
+        int ticks = event.getPlayer().getTicksUsingItem();
+        if (item instanceof BowItem)
         {
             float zoom = 1.0F;
-            if (itemChecker.test(heldItem))
+            if (predicate.test(item))
             {
-                zoom = zoomVal;
+                zoom = zoomValue;
             }
             else {
                 return;
             }
-            myNewFOV = baseFOV - (useRemaining * zoom / 20.0F);
-            if (myNewFOV < baseFOV - zoom)
-                myNewFOV = (baseFOV - zoom);
-            event.setNewFovModifier(myNewFOV);
+            newFOV = oldFOV - (ticks * zoom / 20.0F);
+            if (newFOV < oldFOV - zoom)
+                newFOV = (oldFOV - zoom);
+            event.setNewFovModifier(newFOV);
         }
     }
 
