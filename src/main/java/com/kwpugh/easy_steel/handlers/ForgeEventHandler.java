@@ -1,4 +1,4 @@
-package com.kwpugh.easy_steel.util;
+package com.kwpugh.easy_steel.handlers;
 
 import com.kwpugh.easy_steel.EasySteel;
 import com.kwpugh.easy_steel.init.ItemInit;
@@ -11,7 +11,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 
 @EventBusSubscriber(modid = EasySteel.modid, bus = EventBusSubscriber.Bus.FORGE )
-public class AnvilEventHandler
+public class ForgeEventHandler
 {
 	@SubscribeEvent
 	public static void upgradeSomeTools(AnvilUpdateEvent event)

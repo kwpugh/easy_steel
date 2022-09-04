@@ -1,12 +1,20 @@
 package com.kwpugh.easy_steel.lists;
 
+import com.kwpugh.easy_steel.EasySteel;
 import com.kwpugh.easy_steel.config.GeneralModConfig;
 import com.kwpugh.easy_steel.init.ItemInit;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.ForgeTier;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.TierSortingRegistry;
+import net.minecraftforge.fml.common.Mod;
+
+import java.util.List;
 
 public class ToolMaterialTiers
 {
@@ -47,26 +55,56 @@ public class ToolMaterialTiers
     private static int tungstenEnchantability = GeneralModConfig.TUNGSTEN_TOOLS_ENCHANTABILITY.get();
 
 
-    public static final Tier FLINT = new ForgeTier(flintMiningLevel, flintDurability, (float) flintMiningSpeed, (float) flintAttackDamage, flintEnchantability,
+    public static final Tier FLINT = new ForgeTier(flintMiningLevel,
+            flintDurability,
+            (float) flintMiningSpeed,
+            (float) flintAttackDamage,
+            flintEnchantability,
             BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(Items.FLINT));
 
-    public static final Tier BRONZE = new ForgeTier(bronzeMiningLevel, bronzeDurability, (float) bronzeMiningSpeed, (float) bronzeAttackDamage, bronzeEnchantability,
+    public static final Tier BRONZE = new ForgeTier(bronzeMiningLevel,
+            bronzeDurability, (float) bronzeMiningSpeed,
+            (float) bronzeAttackDamage,
+            bronzeEnchantability,
             BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(ItemInit.BRONZE_INGOT.get()));
 
-    public static final Tier STEEL = new ForgeTier(steelMiningLevel, steelDurability, (float) steelMiningSpeed, (float) steelAttackDamage, steelEnchantability,
+    public static final Tier STEEL = new ForgeTier(steelMiningLevel,
+            steelDurability,
+            (float) steelMiningSpeed,
+            (float) steelAttackDamage,
+            steelEnchantability,
             BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(ItemInit.STEEL_INGOT.get()));
 
-    public static final Tier TITANIUM = new ForgeTier(titaniumMiningLevel, titaniumDurability, (float) titaniumMiningSpeed, (float) titaniumAttackDamage, titaniumEnchantability,
+    public static final Tier TITANIUM = new ForgeTier(titaniumMiningLevel,
+            titaniumDurability,
+            (float) titaniumMiningSpeed,
+            (float) titaniumAttackDamage,
+            titaniumEnchantability,
             BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(ItemInit.TITANIUM_ALLOY_INGOT.get()));
 
-    public static final Tier HARDENED_STEEL = new ForgeTier(hardenedSteelMiningLevel, hardenedSteelDurability, (float) hardenedSteelMiningSpeed, (float) hardenedSteelAttackDamage, hardenedSteelEnchantability,
+    public static final Tier HARDENED_STEEL = new ForgeTier(hardenedSteelMiningLevel,
+            hardenedSteelDurability,
+            (float) hardenedSteelMiningSpeed,
+            (float) hardenedSteelAttackDamage,
+            hardenedSteelEnchantability,
             BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(ItemInit.HARDENED_STEEL_INGOT.get()));
 
-    public static final Tier TUNGSTEN = new ForgeTier(tungstenMiningLevel, tungstenDurability, (float) tungstenMiningSpeed, (float) tungstenAttackDamage, tungstenEnchantability,
+    public static final Tier TUNGSTEN = new ForgeTier(tungstenMiningLevel,
+            tungstenDurability,
+            (float) tungstenMiningSpeed,
+            (float) tungstenAttackDamage,
+            tungstenEnchantability,
             BlockTags.NEEDS_DIAMOND_TOOL, () -> Ingredient.of(ItemInit.TUNGSTEN_CARBIDE_INGOT.get()));
 
 
 
-
-
+    public static void register()
+    {
+        TierSortingRegistry.registerTier(FLINT, new ResourceLocation(EasySteel.modid, "flint"), List.of(Tiers.STONE), List.of(Tiers.IRON));
+        TierSortingRegistry.registerTier(BRONZE, new ResourceLocation(EasySteel.modid, "bronze"), List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
+        TierSortingRegistry.registerTier(STEEL, new ResourceLocation(EasySteel.modid, "steel"), List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
+        TierSortingRegistry.registerTier(TITANIUM, new ResourceLocation(EasySteel.modid, "titanium"), List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
+        TierSortingRegistry.registerTier(HARDENED_STEEL, new ResourceLocation(EasySteel.modid, "hardened_steel"), List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
+        TierSortingRegistry.registerTier(TUNGSTEN, new ResourceLocation(EasySteel.modid, "tungsten"), List.of(Tiers.DIAMOND), List.of(Tiers.NETHERITE));
+    }
 }

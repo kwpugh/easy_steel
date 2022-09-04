@@ -2,23 +2,22 @@ package com.kwpugh.easy_steel.init;
 
 import com.kwpugh.easy_steel.EasySteel;
 import com.kwpugh.easy_steel.config.GeneralModConfig;
-import com.kwpugh.easy_steel.items.*;
-import com.kwpugh.easy_steel.items.misc.SharpFlint;
+import com.kwpugh.easy_steel.items.CrackHammer;
+import com.kwpugh.easy_steel.items.HandShovel;
+import com.kwpugh.easy_steel.items.baseclasses.*;
 import com.kwpugh.easy_steel.items.flint.FlintHatchet;
 import com.kwpugh.easy_steel.items.flint.FlintKnife;
 import com.kwpugh.easy_steel.items.flint.FlintMattock;
 import com.kwpugh.easy_steel.items.flint.FlintShovel;
 import com.kwpugh.easy_steel.items.misc.IronLinks;
+import com.kwpugh.easy_steel.items.misc.SharpFlint;
 import com.kwpugh.easy_steel.items.powders.Carbon;
-import com.kwpugh.easy_steel.items.baseclasses.*;
-
 import com.kwpugh.easy_steel.lists.*;
 import net.minecraft.world.entity.EquipmentSlot;
-
 import net.minecraft.world.item.*;
-import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 public class ItemInit
 {

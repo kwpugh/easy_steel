@@ -41,7 +41,7 @@ public class EasySteel
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
 
         EasySteelBiomeCodecs.BIOME_MODIFIER_SERIALIZERS.register(FMLJavaModLoadingContext.get().getModEventBus());
-
+        
         MinecraftForge.EVENT_BUS.register(this);
     }
 

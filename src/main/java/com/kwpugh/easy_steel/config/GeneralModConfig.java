@@ -81,6 +81,8 @@ public class GeneralModConfig
     public static ForgeConfigSpec.IntValue TUNGSTEN_ARMOR_PROTECTION_LEGGINGS;
     public static ForgeConfigSpec.IntValue TUNGSTEN_ARMOR_PROTECTION_FEET;
 
+    public static ForgeConfigSpec.DoubleValue BOW_ZOOM;
+
     public static void init(ForgeConfigSpec.Builder SERVER_BUILDER)
     {
         SERVER_BUILDER.comment("Hand Sovel drop chances").push("hand_shovel");
@@ -217,6 +219,13 @@ public class GeneralModConfig
         TUNGSTEN_ARMOR_PROTECTION_BODY = SERVER_BUILDER.comment("Tungsten armor protection body [1-50, default: 8]").defineInRange("tungstenArmorProtectionBody", 8, 1, 50);
         TUNGSTEN_ARMOR_PROTECTION_LEGGINGS = SERVER_BUILDER.comment("Tungsten armor protection leggings [1-50, default: 6]").defineInRange("tungstenArmorProtectionLeggings", 6, 1, 50);
         TUNGSTEN_ARMOR_PROTECTION_FEET = SERVER_BUILDER.comment("Tungsten armor protection feet [1-50, default: 3]").defineInRange("tungstenArmorProtectionFeet", 3, 1, 50);
+
+        SERVER_BUILDER.pop();
+
+
+        SERVER_BUILDER.comment("Bow Fov Zoom").push("bow_zoom");
+
+        BOW_ZOOM = SERVER_BUILDER.comment("Bow Fov Zoom [0-1, default: .45]").defineInRange("bow_zoom_value", .45, .1, .9);
 
         SERVER_BUILDER.pop();
     }
