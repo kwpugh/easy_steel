@@ -1,4 +1,4 @@
-package com.kwpugh.easy_steel.handlers;
+package com.kwpugh.easy_steel.util.handlers;
 
 import com.kwpugh.easy_steel.EasySteel;
 import com.kwpugh.easy_steel.config.GeneralModConfig;

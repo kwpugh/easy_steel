@@ -54,7 +54,7 @@ public class HammerBase extends PickaxeItem
 			}
 		}
 
-		return super.mineBlock(stack, world, state, pos, entity);
+		return true;
 	}
 	
 	@Override
