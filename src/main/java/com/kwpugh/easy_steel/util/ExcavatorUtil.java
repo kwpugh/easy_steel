@@ -21,9 +21,12 @@ import net.minecraft.world.level.Level;
 public class ExcavatorUtil
 {
     public static final Random random = new Random();
+    static int blocksBroken;
 
-    public static void attemptBreakNeighbors(Level world, BlockPos pos, Player player, TagKey effectiveOn, Set<Material> effectiveMaterials)
+    public static int attemptBreakNeighbors(Level world, BlockPos pos, Player player, TagKey effectiveOn, Set<Material> effectiveMaterials)
     {
+        blocksBroken = 0;
+
         HitResult trace = calcRayTrace(world, player, ClipContext.Fluid.ANY);
 
         if (trace.getType() == HitResult.Type.BLOCK)
@@ -47,6 +50,8 @@ public class ExcavatorUtil
                 }
             }
         }
+
+        return blocksBroken;
     }
 
     public static void attemptBreak(Level world, BlockPos pos, Player player, TagKey effectiveOn, Set<Material> effectiveMaterials)
@@ -54,13 +59,14 @@ public class ExcavatorUtil
 
         BlockState state = world.getBlockState(pos);
         //boolean isEffective = (effectiveOn.contains(state.getBlock()) || effectiveMaterials.contains(state.getMaterial()));
-        boolean isEffective =state.is(effectiveOn) || effectiveMaterials.contains(state.getMaterial());
+        boolean isEffective = state.is(effectiveOn) || effectiveMaterials.contains(state.getMaterial());
         boolean witherImmune = state.is(BlockTags.WITHER_IMMUNE);
 
         if(isEffective && !witherImmune)
         {
             world.destroyBlock(pos, false);
             Block.dropResources(state, world, pos, null, player, player.getMainHandItem());
+            blocksBroken = blocksBroken + 1;
         }
     }
 

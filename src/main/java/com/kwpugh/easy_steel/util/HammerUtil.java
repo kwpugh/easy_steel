@@ -21,8 +21,12 @@ public class HammerUtil
 {
     public static final Random random = new Random();
 
-    public static void attemptBreakNeighbors(Level world, BlockPos pos, Player player, Set<Material> effectiveMaterials)
-    {    	
+    static int blocksBroken;
+
+    public static int attemptBreakNeighbors(Level world, BlockPos pos, Player player, Set<Material> effectiveMaterials)
+    {
+        blocksBroken = 0;
+
     	HitResult trace = calcRayTrace(world, player, ClipContext.Fluid.ANY);
 
         if (trace.getType() == HitResult.Type.BLOCK)
@@ -46,6 +50,8 @@ public class HammerUtil
                 }
             }
         }
+
+        return blocksBroken;
     }
 
     public static void attemptBreak(Level world, BlockPos pos, Player player, Set<Material> effectiveMaterials)
@@ -63,6 +69,7 @@ public class HammerUtil
             {
                 world.destroyBlock(pos, false);  //true or false?
                 Block.dropResources(state, world, pos, null, player, player.getMainHandItem());
+                blocksBroken = blocksBroken + 1;
             }
         }
     }

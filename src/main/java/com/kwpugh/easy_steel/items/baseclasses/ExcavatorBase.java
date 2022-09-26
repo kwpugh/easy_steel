@@ -1,6 +1,7 @@
 package com.kwpugh.easy_steel.items.baseclasses;
 
 import com.google.common.collect.ImmutableSet;
+import com.kwpugh.easy_steel.config.GeneralModConfig;
 import com.kwpugh.easy_steel.util.ExcavatorUtil;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
@@ -30,6 +31,8 @@ import java.util.Set;
 public class ExcavatorBase extends ShovelItem
 {
 	public static final Set<Material> EFFECTIVE_MATERIALS = ImmutableSet.of(Material.DIRT);
+	static boolean fullDamage = GeneralModConfig.FULL_DAMAGE.get();
+	static int blocksBroken;
 
 	public ExcavatorBase(Tier tier, int attackDamageIn, float attackSpeedIn, Properties builder)
 	{
@@ -42,10 +45,15 @@ public class ExcavatorBase extends ShovelItem
 
 		if (entity instanceof Player)
 		{
-			ExcavatorUtil.attemptBreakNeighbors(world, pos, (Player) entity, BlockTags.MINEABLE_WITH_SHOVEL, EFFECTIVE_MATERIALS);
+			blocksBroken = ExcavatorUtil.attemptBreakNeighbors(world, pos, (Player) entity, BlockTags.MINEABLE_WITH_SHOVEL, EFFECTIVE_MATERIALS);
+
+			if(fullDamage)
+			{
+				stack.hurt(blocksBroken - 1, world.random, null);
+			}
 		}
 
-		return true;
+		return super.mineBlock(stack, world, state, pos, entity);
 	}
 
 	@Override

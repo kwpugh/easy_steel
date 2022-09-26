@@ -82,6 +82,7 @@ public class GeneralModConfig
     public static ForgeConfigSpec.IntValue TUNGSTEN_ARMOR_PROTECTION_FEET;
 
     public static ForgeConfigSpec.DoubleValue BOW_ZOOM;
+    public static ForgeConfigSpec.BooleanValue FULL_DAMAGE;
 
     public static void init(ForgeConfigSpec.Builder SERVER_BUILDER)
     {
@@ -226,6 +227,13 @@ public class GeneralModConfig
         SERVER_BUILDER.comment("Bow Fov Zoom").push("bow_zoom");
 
         BOW_ZOOM = SERVER_BUILDER.comment("Bow Fov Zoom [0-1, default: .45]").defineInRange("bow_zoom_value", .45, .1, .9);
+
+        SERVER_BUILDER.pop();
+
+
+        SERVER_BUILDER.comment("Hammer/Excavator Full Damage").push("full_damage");
+
+        FULL_DAMAGE = SERVER_BUILDER.comment("Hammer/Excavator Full Damage [true/false, default: true]").define("full_damage", true);
 
         SERVER_BUILDER.pop();
     }

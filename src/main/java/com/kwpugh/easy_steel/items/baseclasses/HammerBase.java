@@ -1,6 +1,9 @@
 package com.kwpugh.easy_steel.items.baseclasses;
 
 import com.google.common.collect.ImmutableSet;
+import com.kwpugh.easy_steel.EasySteel;
+import com.kwpugh.easy_steel.config.EasySteelConfig;
+import com.kwpugh.easy_steel.config.GeneralModConfig;
 import com.kwpugh.easy_steel.util.HammerUtil;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
@@ -17,7 +20,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.common.TierSortingRegistry;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -29,8 +31,10 @@ import java.util.Set;
  */
 
 public class HammerBase extends PickaxeItem
-{	
+{
 	public static final Set<Material> EFFECTIVE_MATERIALS = ImmutableSet.of(Material.STONE, Material.METAL, Material.GLASS, Material.ICE, Material.ICE_SOLID, Material.HEAVY_METAL);
+	static boolean fullDamage = GeneralModConfig.FULL_DAMAGE.get();
+	static int blocksBroken;
 
 	public HammerBase(Tier tier, int attackDamageIn, float attackSpeedIn, Properties builder)
 	{
@@ -50,11 +54,16 @@ public class HammerBase extends PickaxeItem
 
 			if(isHarvestable && isWithinHarvestLevel)
 			{
-				HammerUtil.attemptBreakNeighbors(world, pos, player, EFFECTIVE_MATERIALS);
+				blocksBroken = HammerUtil.attemptBreakNeighbors(world, pos, player, EFFECTIVE_MATERIALS);
+
+				if(fullDamage)
+				{
+					stack.hurt(blocksBroken - 1, world.random, null);
+				}
 			}
 		}
 
-		return true;
+		return super.mineBlock(stack, world, state, pos, entity);
 	}
 	
 	@Override
