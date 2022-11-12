@@ -20,7 +20,7 @@ public final class BowUtils
 
         Item item = stack.getItem();
         int ticks = event.getPlayer().getTicksUsingItem();
-        if (item instanceof BowItem)
+        if (item instanceof BowItem && PlayerEquipsUtil.hasArrowInInventory(event.getPlayer()))
         {
             float zoom = 1.0F;
             if (predicate.test(item))

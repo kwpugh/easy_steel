@@ -3,6 +3,7 @@ package com.kwpugh.easy_steel.lists;
 import com.kwpugh.easy_steel.EasySteel;
 import com.kwpugh.easy_steel.config.GeneralModConfig;
 import com.kwpugh.easy_steel.init.ItemInit;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -45,7 +46,7 @@ public class BronzeArmorMaterial implements ArmorMaterial
     @Override
     public SoundEvent getEquipSound()
     {
-        return new SoundEvent(new ResourceLocation("item.armor.equip_iron"));
+        return SoundEvents.ARMOR_EQUIP_IRON;
     }
 
     @Override
