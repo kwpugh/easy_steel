@@ -12,7 +12,7 @@
   "toolEfficiency": 9,
   "tints": {
     "glyph": "steel_glyph",
-    "texture": "steel"
+    "texture": "c8ccc2"
   },
   "textures": [
     "metal",
