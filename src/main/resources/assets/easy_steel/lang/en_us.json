@@ -1,21 +1,21 @@
 {
 	"item.easy_steel.crack_hammer": "Crack Hammer",
-	"item.easy_steel.crack_hammer.line1": "Used is crafting table to make various ores into powders",
-	"item.easy_steel.crack_hammer.jei.line1": "The Crack Hammer is used to obtain powders for use in making various alloys like Bronze, Steel, Titanium, Hardened Steel and Tungsten-carbide.",
-	"item.easy_steel.crack_hammer.jei.line2": "Use the Crack Hammer in a crafting table on vanilla ores and Easy Steel ores to obtain powders.",
+	"item.easy_steel.crack_hammer.line1": "Used in a crafting table to make various ores into powders",
+	"item.easy_steel.crack_hammer.jei.line1": "The Crack Hammer is used to obtain powders for use in making various alloys like Bronze, Steel, Titanium, Hardened Steel and Tungsten Carbide.",
+	"item.easy_steel.crack_hammer.jei.line2": "Use the Crack Hammer in a crafting table on vanilla ores or Easy Steel ores to obtain powders.",
 	
 	"item.easy_steel.iron_links": "Iron Links",
-	"item.easy_steel.iron_links.line1": "Used to make vanilla Chain Mail",
+	"item.easy_steel.iron_links.line1": "Used to make Chain Mail",
 	
 	"item.easy_steel.sharp_flint": "Sharp Flint",
 	"item.easy_steel.sharp_flint.line1": "A piece of flint with a very sharp edge",
 	"item.easy_steel.sharp_flint.line2": "Use a hand shovel on gravel to obtain",	
 	"item.easy_steel.sharp_flint.jei.line1": "Sharp Flint, as the name implies, is a form of flint with a very sharp edge, making it especially good for primative tools.",
-	"item.easy_steel.sharp_flint.jei.line2": "Tools made from Sharp Flint are generally better than stone tools in most respects.",
+	"item.easy_steel.sharp_flint.jei.line2": "Tools made from Sharp Flint are better than stone tools in most respects.",
 	"item.easy_steel.sharp_flint.jei.line3": "Sharp Flint can be obtained by using a Hand Shovel on Gravel.",	
 	"item.easy_steel.hand_shovel": "Hand Shovel",
 	"item.easy_steel.hand_shovel.line1": "Used to collect sharp flint from gravel",
-	"item.easy_steel.hand_shovel.jei.line1": "The Hand Shovel is a useful early game tool for obtaining Sharp Flint",	
+	"item.easy_steel.hand_shovel.jei.line1": "The Hand Shovel is a useful early game tool for obtaining Sharp Flint.",	
 	"item.easy_steel.hand_shovel.jei.line2": "It can used like a regular shovel on Gravel, with a chance of dropping Sharp Flint or regular flint.",	
 	"item.easy_steel.hand_shovel.jei.line3": "Drop chances can be adjusted in the config file.",	
 	"item.easy_steel.flint.line1": "Better than a stone tool",
@@ -25,7 +25,7 @@
 	"item.easy_steel.flint_hatchet": "Flint Hatchet",
 
 	"item.easy_steel.flint_knife": "Flint Knife",
-	"item.easy_steel.flint_knife.line1": "Not a weapon.  Used to obtain string from wool and sheeps",
+	"item.easy_steel.flint_knife.line1": "Not a good weapon.  Used to obtain string from wool and sheeps",
 	"item.easy_steel.flint_hoe": "Flint Hoe",
 
 	"block.easy_steel.cassiterite_ore": "Cassiterite",
@@ -188,8 +188,8 @@
 
 	"tetra.material.titanium": "Titanium",
 	"tetra.material.titanium.prefix": "Titanium",
-	"tetra.material.titanium_alloy": "Titanium Alloy",
-	"tetra.material.titanium_alloy.prefix": "Titanium Alloy",
+	"tetra.material.titanium_alloy": "Titanium-Alloy",
+	"tetra.material.titanium_alloy.prefix": "Titanium-Alloy",
 	"tetra.material.hardened_steel": "Hardened Steel",
 	"tetra.material.hardened_steel.prefix": "Hardened Steel",
 	"tetra.material.tungsten": "Tungsten",
